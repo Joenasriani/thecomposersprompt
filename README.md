@@ -1,96 +1,120 @@
 # The Modern Composer’s Prompt
 
-## Music Theory & Harmony in the Age of Artificial Intelligence
+### Music Theory & Harmony in the Age of Artificial Intelligence
 
-An interactive workbook by **Joe Nasr** connecting music theory, harmonic listening and composition through natural-language specification. The curriculum moves from intervals and modes to modern harmony, arrangement and the evaluation of generated music.
+**An interactive publication by [Joe Nasr](https://github.com/Joenasriani)**
 
-The central practice is to identify a musical decision, describe it precisely, and evaluate whether the resulting music expresses it. Prompts are treated as requests to test, not guarantees of a particular musical output.
+*The Modern Composer’s Prompt* examines how knowledge of musical structure can inform composition when musical intentions are expressed through natural language. It brings together a structured manuscript, listening exercises, playable demonstrations and editable composition prompts.
 
-## Open the workbook
+The premise is straightforward: **musical terminology helps us specify an intention; listening tells us whether the musical result fulfils it.** A prompt is a specification to evaluate, not a guarantee of what a generative system will produce.
 
-1. Download this repository using **Code → Download ZIP**, then extract it.
-2. Open [`index.html`](index.html) in a modern desktop or mobile browser.
-3. Choose a practice room or a chapter from the contents. Press **Play example** to enable audio.
+## Access the publication
 
-The workbook is self-contained. No installation, build step, account, API key or external music service is required to read the material and play the demonstrations. GitHub's file viewer displays source code; download the HTML to run it.
+**[Download the workbook](https://github.com/Joenasriani/thecomposersprompt/archive/refs/heads/main.zip)** · **[View the source](index.html)** · **[Report an issue](https://github.com/Joenasriani/thecomposersprompt/issues)**
 
-Alternatively, serve the folder locally with Python:
+1. Download and extract the repository ZIP.
+2. Open `index.html` in a modern browser.
+3. Select a practice room or manuscript chapter. Use **Play example** to activate sound where available.
+
+The publication is a **self-contained HTML application**. Reading the manuscript and playing its embedded demonstrations require no installation, account, build process, API key or music-generation subscription. GitHub's file preview shows the source rather than running the application.
+
+For local HTTP serving, optionally run:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open <http://localhost:8000>. Audio and clipboard behaviour can vary in embedded previews and under browser security restrictions.
+Then visit `http://localhost:8000`.
 
-## What is included
+## Publication at a glance
 
-- **11 practice rooms** with explanations, listening tasks and editable, copyable prompts.
-- **42 reading sections**, including the preface, numbered and supplementary chapters, and six appendices.
-- Playable keyboards with note labels, root markers and playback highlighting.
-- Chord-by-chord displays that include bass notes.
-- A sustained pedal for modal listening and a meter exercise with adjustable tempo.
-- A visual arrangement planner, prompt desk and listening journal.
-- Chapter search and browser-local reading progress.
-
-### Practice rooms
-
-| Room | Musical focus |
+| Component | Scope |
 | --- | --- |
-| 01 | Intervals and melodic versus harmonic playback |
-| 02 | Modes and characteristic scale degrees |
-| 03 | Triads, sevenths, ninths and suspended chords |
-| 04 | Authentic, deceptive, plagal and half-cadence gestures |
-| 05 | Tempo and grouping in 3/4, 4/4 and 5/4 |
-| 06 | Instrument entrances and arrangement contrast |
-| 07 | Musical briefs and listening-based revision |
-| 08 | Modal interchange and the borrowed minor iv |
-| 09 | Secondary dominants and tonicization |
-| 10 | Chord voicing and connected upper voices |
-| 11 | Pivot-chord modulation and a new tonal centre |
+| Complete manuscript | 42 reading sections, including preface, numbered and supplementary chapters, and six appendices |
+| Interactive practice | 11 listening and composition rooms |
+| Musical demonstrations | Playable keyboards, note and root indicators, chord/bass displays and synthesized playback |
+| Composition workflow | Editable, copyable briefs and prompts; arrangement planning; listening journal |
+| Reading tools | Searchable chapter contents and browser-local reading progress |
 
-### Curriculum
+The manuscript develops ideas from intervals, scales and modes through harmonic function, chromaticism, modulation, arrangement and evaluation of generated material. **The eleven practice rooms demonstrate selected concepts; they do not represent eleven equivalents of the full manuscript chapters.**
 
-The manuscript covers foundations, perceptual primitives, melody and phrase, harmonic colour, chromaticism, modulation, arrangement, generation workflows and comparative tool syntax. The practice rooms develop selected concepts; not every chapter has an interactive exercise yet.
+### Interactive practice rooms
 
-## Teaching approach and accuracy
+| Room | Topic | Listening or compositional focus |
+| :---: | --- | --- |
+| 01 | Intervals | Melodic and harmonic presentation |
+| 02 | Modes | Characteristic degrees and modal colour |
+| 03 | Chord vocabulary | Triads, sevenths, ninths and suspensions |
+| 04 | Cadences | Authentic, deceptive, plagal and half-cadence gestures |
+| 05 | Meter | Tempo and grouping in 3/4, 4/4 and 5/4 |
+| 06 | Arrangement | Instrument entrances and contrast |
+| 07 | Prompt desk | Briefs, listening and iterative revision |
+| 08 | Modal interchange | Borrowed chords, including the minor iv |
+| 09 | Secondary dominants | Tonicization and directed harmonic movement |
+| 10 | Voicing | Voice connection and chord spacing |
+| 11 | Modulation | Pivot-chord movement between tonal centres |
 
-The keyboard demonstrations use explicit pitches in twelve-tone equal temperament and a simple synthesized tone. They illustrate pitch relationships rather than reproducing acoustic piano timbre. They do not model microtonal intonation or every musical tradition.
+## Method: specify, hear, evaluate, revise
 
-The application does **not** run a language model or generate songs. Prompts can be copied into a separate music-generation service of the reader's choice. No generated result has been tested merely because a prompt appears in the workbook.
+The exercises connect four activities:
 
-This is a developing educational edition, not a peer-reviewed textbook. A targeted accuracy revision corrected note spelling, synchronized cadence displays, sustained-pedal playback and several overstated claims. Chapters 3.5, 4, 24 and 29 include revised teaching text and clearly labelled original wording for reference. The remaining research claims and platform-specific details still require a complete source review. Feature availability and syntax can change across tools and versions.
+1. **Identify** a musical relationship or compositional choice using appropriate terminology.
+2. **Hear** an isolated demonstration, where an interactive example is provided.
+3. **Specify** a musical intention through an editable natural-language brief.
+4. **Evaluate and revise** the resulting music by listening for the intended properties.
 
-## Privacy and persistence
+The workbook does **not** integrate a language model, generate finished tracks or claim that a particular prompt will yield a reproducible musical result. Copyable prompts are intended for experiments in external tools chosen by the reader; their outputs must be assessed independently.
 
-The application contains no analytics, login or generation-service integration. Reading progress and the listening journal use local storage in the current browser, where available. They are not synchronized between devices and may be removed when browser data is cleared. Copy important notes before closing a restricted preview or clearing storage.
+## Scope and editorial status
 
-Audio begins only after user interaction. External reference links open third-party resources when followed.
+This repository contains a **developing educational edition**, not a peer-reviewed textbook or a comprehensive verification of every historical, scientific or product-specific claim.
 
-## Repository structure
+The keyboard uses explicit pitches in twelve-tone equal temperament and simple synthesized tones. Its purpose is to isolate and communicate musical relationships, **not** to emulate an acoustic piano, model microtonal intonation or encompass every musical tradition.
+
+A targeted editorial and demonstration revision addressed note spelling, cadence-display synchronization, sustained-pedal playback and selected overstatements. Revised teaching passages in **chapters 3.5, 4, 24 and 29** retain clearly labelled original wording for comparison. A complete source audit of the remaining research claims and changing platform-specific details is still outstanding.
+
+Music-generation services differ in capabilities, prompt interpretation and syntax; features mentioned in the manuscript may change by version. No successful generation or independent research validation should be inferred solely from a worked prompt.
+
+## Privacy and browser data
+
+There is no account system, analytics integration or built-in music-generation service. Reading progress and listening-journal data are stored locally in the browser when storage is available; they are not synchronized. Clearing browser data may delete them. Save important notes elsewhere.
+
+Audio playback requires user interaction. Browser security restrictions may affect sound or clipboard functions in embedded previews. External references lead to third-party websites only when opened.
+
+## Project files
 
 | File | Purpose |
 | --- | --- |
-| [`index.html`](index.html) | Complete workbook: interface, embedded manuscript, styles and application logic |
-| [`README.md`](README.md) | Project overview, usage and editorial status |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Guidance for educational and technical contributions |
-| [`LICENSE`](LICENSE) | Creative Commons Attribution 4.0 International legal text |
+| [`index.html`](index.html) | Standalone interface, embedded manuscript, interactive exercises, styles and application logic |
+| [`README.md`](README.md) | Publication overview, access instructions, methodology and editorial status |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Contribution procedure and accuracy expectations |
+| [`LICENSE`](LICENSE) | Creative Commons Attribution 4.0 International legal terms |
 
-## Contributions
+## Contributing and corrections
 
-Corrections to music theory, citations, accessibility, translations and browser behaviour are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md). For a factual correction, identify the chapter or practice room, explain the issue and supply a supporting source or a reproducible musical example.
+Contributions are welcome where they improve musical accuracy, editorial clarity, citation quality, accessibility or browser compatibility. Read [CONTRIBUTING.md](CONTRIBUTING.md) before proposing changes.
 
-## Author and attribution
+When reporting a musical issue, identify the **chapter or practice room**, provide the current and proposed wording or behaviour, and cite a reliable source or reproducible musical example. Distinguish an established theoretical convention from an interpretation and a platform-specific observation.
 
-Created by [Joe Nasr](https://github.com/Joenasriani).
+The workbook is maintained as a self-contained publication; contributions should preserve that architecture unless a change is explicitly agreed.
 
-Suggested attribution:
+## Citation and attribution
 
-> Joe Nasr, *The Modern Composer’s Prompt: Music Theory & Harmony in the Age of Artificial Intelligence*. Source: https://github.com/Joenasriani/thecomposersprompt. Licensed under CC BY 4.0. Indicate any modifications when redistributing an adaptation.
+**Author:** [Joe Nasr](https://github.com/Joenasriani)  
+**Title:** *The Modern Composer’s Prompt: Music Theory & Harmony in the Age of Artificial Intelligence*  
+**Repository:** https://github.com/Joenasriani/thecomposersprompt  
+**Year:** 2026
+
+Suggested citation:
+
+> Nasr, Joe (2026). *The Modern Composer’s Prompt: Music Theory & Harmony in the Age of Artificial Intelligence*. Interactive publication. GitHub. https://github.com/Joenasriani/thecomposersprompt
+
+For adapted or redistributed material, provide appropriate credit, a link to the license and an indication of changes.
 
 ## License
 
 Copyright © 2026 Joe Nasr.
 
-Except where otherwise identified, the original workbook, manuscript, examples, documentation and application source are licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**. Sharing and adaptation, including commercial use, are permitted under its attribution and other conditions. See the [full license](LICENSE) and [official license summary](https://creativecommons.org/licenses/by/4.0/).
+Except where separately identified, the original manuscript, workbook material, demonstrations, documentation and application source are offered under the **[Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**. Redistribution and adaptation, including commercial use, are permitted subject to that license's conditions. Read the [full license text](LICENSE).
 
-Third-party quotations, trademarks and externally linked resources remain subject to their respective rights. This license grants only rights the licensor has authority to grant. The material is provided without warranties as described in the license.
+Third-party quotations, referenced works and trademarks retain their respective rights. No rights are granted beyond those the licensor holds. The material is provided without warranties under the license terms.
