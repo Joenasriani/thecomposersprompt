@@ -2,8 +2,6 @@
 
 ### Music Theory & Harmony in the Age of Artificial Intelligence
 
-**An interactive publication by [Joe Nasr](https://github.com/Joenasriani)**
-
 *The Modern Composer’s Prompt* examines how knowledge of musical structure can inform composition when musical intentions are expressed through natural language. It brings together a structured manuscript, listening exercises, playable demonstrations and editable composition prompts.
 
 The premise is straightforward: **musical terminology helps us specify an intention; listening tells us whether the musical result fulfils it.** A prompt is a specification to evaluate, not a guarantee of what a generative system will produce.
@@ -98,6 +96,14 @@ When reporting a musical issue, identify the **chapter or practice room**, provi
 
 The workbook is maintained as a self-contained publication; contributions should preserve that architecture unless a change is explicitly agreed.
 
+## License
+
+Copyright © 2026 Joe Nasr.
+
+Except where separately identified, the original manuscript, workbook material, demonstrations, documentation and application source are offered under the **[Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**. Redistribution and adaptation, including commercial use, are permitted subject to that license's conditions. Read the [full license text](LICENSE).
+
+Third-party quotations, referenced works and trademarks retain their respective rights. No rights are granted beyond those the licensor holds. The material is provided without warranties under the license terms.
+
 ## Citation and attribution
 
 **Author:** [Joe Nasr](https://github.com/Joenasriani)  
@@ -111,10 +117,4 @@ Suggested citation:
 
 For adapted or redistributed material, provide appropriate credit, a link to the license and an indication of changes.
 
-## License
-
-Copyright © 2026 Joe Nasr.
-
-Except where separately identified, the original manuscript, workbook material, demonstrations, documentation and application source are offered under the **[Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**. Redistribution and adaptation, including commercial use, are permitted subject to that license's conditions. Read the [full license text](LICENSE).
-
-Third-party quotations, referenced works and trademarks retain their respective rights. No rights are granted beyond those the licensor holds. The material is provided without warranties under the license terms.
+<sub>Created by [Joe Nasr](https://github.com/Joenasriani).</sub>
