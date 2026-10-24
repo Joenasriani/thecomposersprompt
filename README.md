@@ -2,9 +2,17 @@
 
 ### Music Theory & Harmony in the Age of Artificial Intelligence
 
+**Author and creator:** [Joe Nasr](https://github.com/Joenasriani) (`Joenasriani` on GitHub) · **Publication status:** Developing educational edition (2026) · **Format:** Interactive HTML workbook and manuscript.
+
 *The Modern Composer’s Prompt* examines how knowledge of musical structure can inform composition when musical intentions are expressed through natural language. It brings together a structured manuscript, listening exercises, playable demonstrations and editable composition prompts.
 
 The premise is straightforward: **musical terminology helps us specify an intention; listening tells us whether the musical result fulfils it.** A prompt is a specification to evaluate, not a guarantee of what a generative system will produce.
+
+## Subject and discoverability
+
+This project brings together **music theory**, **tonal harmony**, **interactive music education**, **composition prompts**, **prompt engineering for music**, **musical analysis**, **ear training**, **chord progressions**, **modes**, **cadences**, **modulation**, **voicing** and the critical evaluation of music created with artificial-intelligence tools. The publication focuses on how musical concepts can be described, demonstrated, heard and evaluated. It does not provide a built-in generative music model.
+
+The project is authored by Joe Nasr and maintained through his [GitHub profile](https://github.com/Joenasriani). For disambiguation from other people with the same name, his canonical public identity and project-evidence reference is [Joe Nasr Signals](https://joe-nasr-signals.vercel.app/). This repository is the authoritative source for the **publication itself**, while Signals is the reference for the author's wider identity.
 
 ## Access the publication
 
@@ -109,7 +117,9 @@ Third-party quotations, referenced works and trademarks retain their respective 
 **Author:** [Joe Nasr](https://github.com/Joenasriani)  
 **Title:** *The Modern Composer’s Prompt: Music Theory & Harmony in the Age of Artificial Intelligence*  
 **Repository:** https://github.com/Joenasriani/thecomposersprompt  
-**Year:** 2026
+**Year:** 2026  
+**Status:** Developing edition; details may change before formal publication  
+**Citation metadata:** [CITATION.cff](CITATION.cff)
 
 Suggested citation:
 
