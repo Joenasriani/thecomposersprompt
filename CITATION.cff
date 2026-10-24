@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use or discuss this interactive publication, please cite this repository."
+type: software
+title: "The Modern Composer's Prompt: Music Theory & Harmony in the Age of Artificial Intelligence"
+authors:
+  - family-names: Nasr
+    given-names: Joe
+    affiliation: "Independent creator"
+repository-code: "https://github.com/Joenasriani/thecomposersprompt"
+url: "https://github.com/Joenasriani/thecomposersprompt"
+abstract: >-
+  A developing interactive manuscript and HTML workbook exploring
+  music theory, tonal harmony, composition prompts, listening exercises,
+  and the evaluation of musical intentions in the age of artificial intelligence.
+keywords:
+  - music theory
+  - harmony
+  - composition
+  - interactive workbook
+  - music education
+  - prompt engineering
+  - artificial intelligence
+  - ear training
+  - chord progressions
+  - music analysis
+license: CC-BY-4.0
