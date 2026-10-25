@@ -18,7 +18,6 @@ function setAppearance(mode,persist=false){
 }
 themeSelect.addEventListener('change',()=>setAppearance(themeSelect.value,true));
 themeMedia.addEventListener?.('change',()=>{if(appearance==='system')setAppearance('system')});
-setAppearance(appearance);
 
 const data = {
  maj7:{name:'Cmaj7',notes:['C4','E4','G4','B4'],steps:[0,4,7,11],keys:['c/4','e/4','g/4','b/4'],acc:[]},
@@ -30,7 +29,7 @@ function refreshMusicColors(){
  const ink=getComputedStyle(document.documentElement).getPropertyValue('--ui-ink').trim();
  const score=document.getElementById('score');
  if(score)score.style.color=ink;
- if(typeof update==='function'&&typeof data!=='undefined'&&document.getElementById('harmony'))update();
+ if(document.getElementById('harmony')?.value)update();
 }
 const $=id=>document.getElementById(id),select=$('harmony'),visual=$('visual'),engine=$('engine'),score=$('score'),status=$('status');
 let synth=null,webgl=null,scene,camera,group,renderer,animation,resizeObserver;
@@ -105,4 +104,4 @@ function update(){
  notation(chord);if(webgl)noteVisuals(chord);status.textContent=chord.name+' selected. Press play to hear it.';$('state').textContent=chord.name.toUpperCase();
 }
 select.addEventListener('change',update);$('play').addEventListener('click',()=>sound(data[select.value].notes));
-init3d();update();
+init3d();setAppearance(appearance);update();
