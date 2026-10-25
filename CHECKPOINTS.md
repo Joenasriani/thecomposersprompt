@@ -84,3 +84,10 @@ Never turn an assumption into a passing checkpoint. Preserve history when correc
 - Verification status: Source committed only. npm install, build, browser rendering, music theory, audio, accessibility and responsive QA NOT YET VERIFIED.
 - Next: Build/test, correct any failed notation API or playback behavior, produce visual evidence and finish one end-to-end lesson.
 - Gate 1: BLOCKED pending verification and user acceptance.
+
+### 2026-10-25 – Build verification infrastructure
+- Added `.github/workflows/stage1-build.yml` to install dependencies, build the Stage 1 Vite application and upload compiled output.
+- Build run: https://github.com/Joenasriani/thecomposersprompt/actions/runs/40208465255
+- Verification: CI initially observed IN PROGRESS. Build success and browser rendering not yet certified.
+- Local npm network access unavailable in this execution environment.
+- Remaining: compilation outcome, WebGL and audio testing, notation checks, mobile and accessibility review.
