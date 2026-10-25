@@ -1,0 +1,77 @@
+# Development Checkpoints
+
+**Roadmap:** [Locked Roadmap v1.0](ROADMAP.md)  
+**Status as of 2026-10-25:** Stage 1 NOT ACCEPTED. Stage 2 NOT STARTED. Stage 3 NOT STARTED.  
+**Rule:** A committed file, merged PR or plausible screenshot is not proof of a tested, accepted release.
+
+## Baseline – confirmed historical repository work
+
+| Item | Status | Evidence or qualification |
+| --- | --- | --- |
+| Complete existing workbook on `main` | Present | `index.html` |
+| Manuscript reading sections | Documented baseline: 42 | README and existing application; must be regression-inventoried |
+| Practice rooms | Documented baseline: 11 | README and existing application; must be regression-inventoried |
+| License | Present | `LICENSE`: CC BY 4.0 |
+| Documentation | Present | README, CONTRIBUTING, CITATION.cff |
+| Initial editorial homepage design study | Merged, **not approved** | [PR #1](https://github.com/Joenasriani/thecomposersprompt/pull/1), `prototype/index.html` |
+| Three.js integration | NOT IMPLEMENTED | Existing prototype uses SVG / native Web Audio |
+| Tone.js integration | NOT IMPLEMENTED | No working integrated exercise established |
+| VexFlow integration | NOT IMPLEMENTED | No synchronized notation established |
+| Full visual redesign | NOT IMPLEMENTED | Existing workbook UI remains |
+| Live visual/audio acceptance testing | NOT VERIFIED | Screenshots are not a complete interaction test |
+
+## Stage 1 – Creative Foundation & Working Prototype
+
+| Checkpoint | State | Required verification |
+| --- | --- | --- |
+| 1.1 Source/library due diligence | OPEN | GitHub references, license notices, compatibility record |
+| 1.2 Visual identity and responsive design system | OPEN | Reviewed design spec, screenshots at mobile and desktop sizes |
+| 1.3 Three.js musical visualization | OPEN | Real note/chord-driven live WebGL effect with graceful fallback |
+| 1.4 Tone.js playback integration | OPEN | Pitch/timing verification and mobile interaction |
+| 1.5 VexFlow synced notation | OPEN | Notation and audio remain aligned |
+| 1.6 Homepage + complete music lesson | OPEN | Navigable, interactive prototype test |
+| 1.7 Accessibility and UX checks | OPEN | Keyboard, contrast, reduced-motion and mobile audit |
+| 1.8 Gate 1 user acceptance | BLOCKED | Requires verified 1.1–1.7 and explicit approval |
+
+## Stage 2 – Complete Interactive Publication
+
+| Checkpoint | State |
+| --- | --- |
+| 2.1 All 11 practice rooms redesigned and tested | NOT STARTED |
+| 2.2 All 42 reading sections preserved and presented | NOT STARTED |
+| 2.3 Compose workspace integrated | NOT STARTED |
+| 2.4 Navigation, storage and migration verified | NOT STARTED |
+| 2.5 Gate 2 acceptance | NOT STARTED |
+
+## Stage 3 – QA & Public Release
+
+| Checkpoint | State |
+| --- | --- |
+| 3.1 Comprehensive musical/function regression tests | NOT STARTED |
+| 3.2 Responsive/browser/audio performance checks | NOT STARTED |
+| 3.3 Accessibility and editorial integrity review | NOT STARTED |
+| 3.4 Documentation, licensing, release package | NOT STARTED |
+| 3.5 Verified public deployment and Gate 3 acceptance | NOT STARTED |
+
+## Progress log
+| Date | Change | Verification | Next |
+| --- | --- | --- | --- |
+| 2026-10-25 | Locked three-stage roadmap approved in conversation | Decision only, not implementation | Commit governance record |
+| 2026-10-25 | Existing editorial prototype had been merged as PR #1 | GitHub file/PR evidence; not feature-complete or approved | Begin true Stage 1 implementation on a new development branch |
+
+## Future checkpoint entry template
+
+```markdown
+### YYYY-MM-DD – Checkpoint X.Y
+- Branch / PR / commit:
+- Files changed:
+- Implemented:
+- Tested (browser, device, method, outcomes):
+- Evidence:
+- Known defects:
+- Protected baseline regression result:
+- Gate state: OPEN / VERIFIED / ACCEPTED / BLOCKED
+- Next independent action:
+```
+
+Never turn an assumption into a passing checkpoint. Preserve history when correcting erroneous status claims.
