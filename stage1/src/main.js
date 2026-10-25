@@ -3,12 +3,35 @@ import * as THREE from 'three';
 import * as Tone from 'tone';
 import { Renderer, Stave, StaveNote, Voice, Formatter, Accidental } from 'vexflow';
 
+const themeSelect=document.getElementById('theme');
+const themeMedia=window.matchMedia('(prefers-color-scheme: light)');
+const storedTheme=(()=>{try{return localStorage.getItem('composer-theme')}catch{return null}})();
+let appearance=['system','light','dark'].includes(storedTheme)?storedTheme:'system';
+function setAppearance(mode,persist=false){
+ appearance=mode;
+ const light=mode==='light'||(mode==='system'&&themeMedia.matches);
+ document.documentElement.dataset.theme=light?'light':'dark';
+ themeSelect.value=mode;
+ document.getElementById('theme-color').content=light?'#faf9f5':'#111219';
+ if(persist)try{localStorage.setItem('composer-theme',mode)}catch{}
+ if(typeof refreshMusicColors==='function')refreshMusicColors();
+}
+themeSelect.addEventListener('change',()=>setAppearance(themeSelect.value,true));
+themeMedia.addEventListener?.('change',()=>{if(appearance==='system')setAppearance('system')});
+setAppearance(appearance);
+
 const data = {
  maj7:{name:'Cmaj7',notes:['C4','E4','G4','B4'],steps:[0,4,7,11],keys:['c/4','e/4','g/4','b/4'],acc:[]},
  minor:{name:'Cm',notes:['C4','Eb4','G4'],steps:[0,3,7],keys:['c/4','e/4','g/4'],acc:[[1,'b']]},
  sus4:{name:'Csus4',notes:['C4','F4','G4'],steps:[0,5,7],keys:['c/4','f/4','g/4'],acc:[]},
  dom7:{name:'C7',notes:['C4','E4','G4','Bb4'],steps:[0,4,7,10],keys:['c/4','e/4','g/4','b/4'],acc:[[3,'b']]}
 };
+function refreshMusicColors(){
+ const ink=getComputedStyle(document.documentElement).getPropertyValue('--ui-ink').trim();
+ const score=document.getElementById('score');
+ if(score)score.style.color=ink;
+ if(typeof update==='function'&&typeof data!=='undefined'&&document.getElementById('harmony'))update();
+}
 const $=id=>document.getElementById(id),select=$('harmony'),visual=$('visual'),engine=$('engine'),score=$('score'),status=$('status');
 let synth=null,webgl=null,scene,camera,group,renderer,animation,resizeObserver;
 function noteVisuals(chord){
@@ -39,7 +62,7 @@ function initFallback(){
 function notation(chord){
  score.replaceChildren();try{
  const inner=document.createElement('div');score.appendChild(inner);
- const vex=new Renderer(inner,Renderer.Backends.SVG);vex.resize(330,112);const ctx=vex.getContext();ctx.setFillStyle('#f1efe7');ctx.setStrokeStyle('#f1efe7');
+ const vex=new Renderer(inner,Renderer.Backends.SVG);vex.resize(330,112);const ctx=vex.getContext();const notationInk=getComputedStyle(document.documentElement).getPropertyValue('--ui-ink').trim();ctx.setFillStyle(notationInk);ctx.setStrokeStyle(notationInk);
  const stave=new Stave(5,10,320);stave.addClef('treble').setContext(ctx).draw();
  const note=new StaveNote({clef:'treble',keys:chord.keys,duration:'w'});chord.acc.forEach(([i,type])=>note.addModifier(new Accidental(type),i));
  const voice=new Voice({numBeats:4,beatValue:4});voice.addTickables([note]);new Formatter().joinVoices([voice]).format([voice],240);voice.draw(ctx,stave);
