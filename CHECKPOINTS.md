@@ -24,11 +24,11 @@
 
 | Checkpoint | State | Required verification |
 | --- | --- | --- |
-| 1.1 Source/library due diligence | OPEN | GitHub references, license notices, compatibility record |
+| 1.1 Source/library due diligence | IN PROGRESS | GitHub references, license notices, compatibility record |
 | 1.2 Visual identity and responsive design system | OPEN | Reviewed design spec, screenshots at mobile and desktop sizes |
-| 1.3 Three.js musical visualization | OPEN | Real note/chord-driven live WebGL effect with graceful fallback |
-| 1.4 Tone.js playback integration | OPEN | Pitch/timing verification and mobile interaction |
-| 1.5 VexFlow synced notation | OPEN | Notation and audio remain aligned |
+| 1.3 Three.js musical visualization | IMPLEMENTED / UNTESTED | Real note/chord-driven live WebGL effect with graceful fallback |
+| 1.4 Tone.js playback integration | IMPLEMENTED / UNTESTED | Pitch/timing verification and mobile interaction |
+| 1.5 VexFlow synced notation | IMPLEMENTED / UNTESTED | Notation and audio remain aligned |
 | 1.6 Homepage + complete music lesson | OPEN | Navigable, interactive prototype test |
 | 1.7 Accessibility and UX checks | OPEN | Keyboard, contrast, reduced-motion and mobile audit |
 | 1.8 Gate 1 user acceptance | BLOCKED | Requires verified 1.1–1.7 and explicit approval |
@@ -75,3 +75,24 @@
 ```
 
 Never turn an assumption into a passing checkpoint. Preserve history when correcting erroneous status claims.
+
+### 2026-10-25 – Stage 1 implementation started
+- Branch: `feature/stage1-musical-foundation`.
+- Files: `stage1/package.json`, `stage1/index.html`, `stage1/src/main.js`, `stage1/src/style.css`, `stage1/README.md`.
+- Confirmed from upstream: Three.js, Tone.js, VexFlow all publish MIT licenses; dependency versions pinned. Compatibility and bundled notices remain to be tested.
+- Implemented source-level integration: Three.js WebGL chord geometry; Tone.js synth; VexFlow notation; fallback 2D visual.
+- Verification status: Source committed only. npm install, build, browser rendering, music theory, audio, accessibility and responsive QA NOT YET VERIFIED.
+- Next: Build/test, correct any failed notation API or playback behavior, produce visual evidence and finish one end-to-end lesson.
+- Gate 1: BLOCKED pending verification and user acceptance.
+
+### 2026-10-25 – Build verification infrastructure
+- Added `.github/workflows/stage1-build.yml` to install dependencies, build the Stage 1 Vite application and upload compiled output.
+- Build run: https://github.com/Joenasriani/thecomposersprompt/actions/runs/40208465255
+- Verification: CI initially observed IN PROGRESS. Build success and browser rendering not yet certified.
+- Local npm network access unavailable in this execution environment.
+- Remaining: compilation outcome, WebGL and audio testing, notation checks, mobile and accessibility review.
+
+### 2026-10-25 – CI build confirmation
+- GitHub Actions run [40208465255](https://github.com/Joenasriani/thecomposersprompt/actions/runs/40208465255) completed with **success** for commit `54a24ab`.
+- Build verification now **PASSED**: dependency installation, Vite build, expected dist output per workflow steps. Earlier failed workflow runs remain part of history.
+- Scope of evidence: successful CI compilation only, NOT verified rendering, audio playback, notation accuracy, mobile visual QA, or full Stage 1 acceptance.

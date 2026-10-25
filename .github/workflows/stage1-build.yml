@@ -1,0 +1,33 @@
+name: Stage 1 build verification
+on:
+  pull_request:
+    paths:
+      - 'stage1/**'
+      - '.github/workflows/stage1-build.yml'
+  push:
+    branches:
+      - feature/stage1-musical-foundation
+    paths:
+      - 'stage1/**'
+      - '.github/workflows/stage1-build.yml'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: stage1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Build
+        run: npm run build
+      - name: Inspect output
+        run: test -s dist/index.html && test -d dist/assets
+      - uses: actions/upload-artifact@v4
+        with:
+          name: composer-stage1-build
+          path: stage1/dist/
