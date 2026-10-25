@@ -91,3 +91,8 @@ Never turn an assumption into a passing checkpoint. Preserve history when correc
 - Verification: CI initially observed IN PROGRESS. Build success and browser rendering not yet certified.
 - Local npm network access unavailable in this execution environment.
 - Remaining: compilation outcome, WebGL and audio testing, notation checks, mobile and accessibility review.
+
+### 2026-10-25 – CI build confirmation
+- GitHub Actions run [40208465255](https://github.com/Joenasriani/thecomposersprompt/actions/runs/40208465255) completed with **success** for commit `54a24ab`.
+- Build verification now **PASSED**: dependency installation, Vite build, expected dist output per workflow steps. Earlier failed workflow runs remain part of history.
+- Scope of evidence: successful CI compilation only, NOT verified rendering, audio playback, notation accuracy, mobile visual QA, or full Stage 1 acceptance.
