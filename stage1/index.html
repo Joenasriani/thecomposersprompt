@@ -1,1 +1,34 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#111219"><title>The Modern Composer’s Prompt – Harmonic Laboratory</title></head><body><div class="shell"><header><strong>THE MODERN COMPOSER’S PROMPT <span>/ LAB 01</span></strong><nav><a href="#explore">Explore</a><a href="../index.html#book-0">Read ↗</a><a href="../index.html#studio">Compose ↗</a></nav></header><main><div class="micro"><span>HARMONIC RELATIONSHIPS</span><span>INTERACTIVE STUDY / 001</span></div><section class="experience" id="explore"><div class="stage"><div class="stage-head"><span>● MUSIC AS GEOMETRY</span><span id="engine">LOADING</span></div><div id="visual" role="img" aria-label="Spatial diagram of the chosen chord"><canvas id="fallback"></canvas></div><div class="stage-foot"><span>CHOOSE A HARMONY TO RESHAPE THE FIELD</span><span id="state">READY</span></div></div><div class="panel"><span class="eyebrow">01 / HARMONIC LANGUAGE</span><h1>Hear the<br><em>distance.</em></h1><p class="lead">Select a harmony. Hear its pitches. Observe how the relationships between them change.</p><label for="harmony">HARMONY</label><select id="harmony"><option value="maj7">C major seventh · Cmaj7</option><option value="minor">C minor · Cm</option><option value="sus4">C suspended fourth · Csus4</option><option value="dom7">C dominant seventh · C7</option></select><div id="score" aria-label="Notation for selected chord"></div><label>INDIVIDUAL NOTES</label><div id="pitches" class="pitches"></div><button id="play" class="play">▶ HEAR THE CHORD</button><p role="status" aria-live="polite" id="status">Audio starts on interaction.</p><small>Equal-tempered pitches. Spatial positions encode pitch class, not literal sound propagation.</small></div></section><div class="micro bottom"><span>THEORY → SOUND → STRUCTURE</span><span>ONE RELATIONSHIP AT A TIME</span></div></main><footer><span>STAGE 1 / DEVELOPMENT EXPERIMENT</span><a href="../index.html">CURRENT PUBLICATION ↗</a><small>Joe Nasr</small></footer></div><script type="module" src="/src/main.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#111219"><title>The Modern Composer’s Prompt – Harmonic Laboratory</title></head>
+<body>
+<div class="ui-shell">
+<header class="ui-header">
+<a class="ui-brand" href="#explore" aria-label="The Modern Composer’s Prompt, Explore laboratory">THE MODERN COMPOSER’S PROMPT <span class="ui-brand__context">/ LAB 01</span></a>
+<nav class="ui-nav" aria-label="Publication navigation"><a class="ui-nav__link" aria-current="page" href="#explore">Explore</a><a class="ui-nav__link" href="https://joenasriani.github.io/thecomposersprompt/#book-0">Read ↗</a><a class="ui-nav__link" href="https://joenasriani.github.io/thecomposersprompt/#studio">Compose ↗</a></nav>
+</header>
+<main id="explore">
+<div class="ui-page-meta ui-overline"><span>Harmonic relationships</span><span>Interactive study / 001</span></div>
+<section class="ui-workspace" aria-label="Harmonic laboratory">
+<div class="ui-workspace__visual">
+<div class="ui-visual__heading"><span>● MUSIC AS GEOMETRY</span><span id="engine">LOADING</span></div>
+<div class="ui-visual__canvas" id="visual" role="img" aria-label="Spatial diagram of the chosen chord"><canvas id="fallback" aria-hidden="true"></canvas></div>
+<div class="ui-visual__footer"><span>SELECT HARMONY TO RESHAPE THE FIELD</span><span id="state">READY</span></div>
+</div>
+<div class="ui-workspace__controls">
+<span class="ui-overline ui-overline--accent">01 / HARMONIC LANGUAGE</span>
+<h1 class="ui-heading">Hear the<br><em>distance.</em></h1>
+<p class="ui-intro">Select a harmony. Hear its pitches. Observe how the relationships between them change.</p>
+<div class="ui-field"><label class="ui-field__label" for="harmony">Harmony</label>
+<select class="ui-select" id="harmony"><option value="maj7">C major seventh · Cmaj7</option><option value="minor">C minor · Cm</option><option value="sus4">C suspended fourth · Csus4</option><option value="dom7">C dominant seventh · C7</option></select></div>
+<div class="ui-score" id="score" aria-label="Notation for selected chord"></div>
+<hr class="ui-divider">
+<div class="ui-field"><span class="ui-field__label" id="pitches-label">Individual notes</span><div class="ui-notes" id="pitches" role="group" aria-labelledby="pitches-label"></div></div>
+<button class="ui-button-primary" id="play" type="button">▶ HEAR THE CHORD</button>
+<p class="ui-status" role="status" aria-live="polite" id="status">Audio starts on interaction.</p>
+<p class="ui-help">Equal-tempered pitches. Spatial positions encode pitch class, not literal sound propagation.</p>
+</div></section>
+<div class="ui-bottomline ui-overline"><span>Theory → sound → structure</span><span>One relationship at a time</span></div>
+</main>
+<footer class="ui-footer"><span>STAGE 1 / DEVELOPMENT EXPERIMENT</span><div class="ui-footer__links"><a href="https://joenasriani.github.io/thecomposersprompt/">Current publication ↗</a><a href="https://github.com/Joenasriani/thecomposersprompt">Source ↗</a></div><small class="ui-footer__credit">Joe Nasr</small></footer>
+</div><script type="module" src="/src/main.js"></script></body></html>
