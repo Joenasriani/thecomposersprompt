@@ -104,3 +104,10 @@ Never turn an assumption into a passing checkpoint. Preserve history when correc
 - Adjusted Tone.js synthesizer envelope (attack 12 ms, decay 110 ms, sustain 0.22, release 180 ms); prior tones receive `releaseAll`, with new attacks staggered by 55 ms and 460 ms note duration.
 - These are source-level changes, not yet listener-approved sound design. Confirm successive chords, rapid clicks, mobile playback, responsive header/footer, notation visibility and full bundle build before merge.
 - Stage 1 acceptance remains blocked.
+
+### 2026-10-25 – Light / Dark / System appearance control
+- Added an appearance selector in the common application header with Light, Dark and System modes.
+- Appearance preferences persist in localStorage where available; System follows the OS preference via prefers-color-scheme and reacts to change.
+- The shared UI token sheet defines a coordinated light palette for layout, navigation and form controls; score ink and harmonic visualization colors change with the selected mode.
+- Source changes are confined to the development PR #4. GitHub Actions build and human visual/audio accessibility checks required before production deployment.
+- Stage 1 remains NOT ACCEPTED; manuscript and existing public book remain unchanged.
