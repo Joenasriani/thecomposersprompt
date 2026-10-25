@@ -45,11 +45,37 @@ function notation(chord){
  const voice=new Voice({numBeats:4,beatValue:4});voice.addTickables([note]);new Formatter().joinVoices([voice]).format([voice],240);voice.draw(ctx,stave);
  }catch(e){console.warn('Notation error',e);score.textContent='Notation unavailable on this device.'}
 }
+let playbackRequest=0;
+let playStatusTimer;
 async function sound(notes){
- try{await Tone.start();if(!synth){synth=new Tone.PolySynth(Tone.Synth,{oscillator:{type:'sine'},envelope:{attack:.025,decay:.2,sustain:.35,release:.7}}).toDestination();synth.volume.value=-11}
- synth.triggerAttackRelease(notes,'2n');status.textContent=notes.join(' · ')+' sounding';$('state').textContent='SOUNDING';setTimeout(()=>{$('state').textContent='READY'},1100)
- }catch(error){status.textContent='Audio unavailable – check your browser sound settings.';console.error(error)}
+ const request=++playbackRequest;
+ clearTimeout(playStatusTimer);
+ try{
+  await Tone.start();
+  if(request!==playbackRequest)return;
+  if(!synth){
+   synth=new Tone.PolySynth(Tone.Synth,{
+    oscillator:{type:'sine'},
+    envelope:{attack:.012,decay:.11,sustain:.22,release:.18}
+   }).toDestination();
+   synth.volume.value=-13;
+  }
+  // Release previous notes immediately, then articulate the new harmony after
+  // a short transition. Avoid the long overlapping half-note tails.
+  const time=Tone.now();
+  synth.releaseAll(time);
+  synth.triggerAttackRelease(notes,.46,time+.055);
+  status.textContent=notes.join(' · ')+' sounding';
+  $('state').textContent='SOUNDING';
+  playStatusTimer=setTimeout(()=>{
+   if(request===playbackRequest)$('state').textContent='READY';
+  },740);
+ }catch(error){
+  status.textContent='Audio unavailable – check your browser sound settings.';
+  console.error(error);
+ }
 }
+
 function update(){
  const chord=data[select.value];$('pitches').replaceChildren();
  chord.notes.forEach(note=>{const button=document.createElement('button');button.type='button';button.textContent=note;button.setAttribute('aria-label','Play '+note);button.addEventListener('click',()=>sound([note]));$('pitches').appendChild(button)});
