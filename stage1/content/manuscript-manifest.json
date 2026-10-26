@@ -1,11 +1,16 @@
 {
   "schemaVersion": 1,
   "source": {
-    "filename": "THE_COMPOSERS_PROMPT_FULL_BOOK_157_PAGES.pdf",
-    "sha256": "aaf735bf2b2c4a35f671d517720d6473a9b9d8f93195cc8de453e4d56140f4a8",
+    "filename": "THE_COMPOSERS_PROMPT_FULL_BOOK_157_PAGES_PUBLICATION_CORRECTED.pdf",
+    "sha256": "b68dd911982649c7dc5da83525167da2f75422265647ec1b5e38e869217692eb",
+    "bytes": 2911209,
     "pages": 157,
-    "status": "candidate-authoritative",
-    "note": "The original PDF is supplied in conversation, not yet committed to the repository"
+    "status": "authoritative-publication-source",
+    "title": "The Composer’s Prompt",
+    "subtitle": "Music Theory as Specification in the Age of AI",
+    "author": "Joe Nasr",
+    "publicationInformation": "Music theory and harmony · Chapters 1–33 · Appendices A–F",
+    "note": "Uploaded final user-corrected PDF. Binary not yet committed to GitHub; exact SHA-256 pins the source. Original legacy workbook remains on main."
   },
   "learningSequence": [
     "name",
