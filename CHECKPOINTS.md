@@ -127,3 +127,12 @@ Never turn an assumption into a passing checkpoint. Preserve history when correc
 - Manuscript title in PDF is `The Composer’s Prompt – Music Theory as Specification in the Age of AI`; existing application marketing title differs. Maintain separate source-title and web-project-title fields until explicitly reconciled.
 - The PDF binary is **not yet stored in this Git repository**. Manifest records filename and hash so later ingestion can verify source identity.
 - Structural inventory only; complete chapter segmentation, illustrations, music-theory QA and acceptance remain OPEN. No production content replacement.
+
+### 2026-10-26 – Final publication-corrected manuscript verified and locked
+- **Authoritative source:** `THE_COMPOSERS_PROMPT_FULL_BOOK_157_PAGES_PUBLICATION_CORRECTED.pdf` (newly supplied by user).
+- SHA-256: `b68dd911982649c7dc5da83525167da2f75422265647ec1b5e38e869217692eb`; 2,911,209 bytes; 157 PDF pages.
+- Front matter confirmed on PDF page 4: `Music theory and harmony · Chapters 1–33 · Appendices A–F`. Previous page-4 inconsistency **RESOLVED** by user-corrected edition.
+- Title page PDF page 3: `THE COMPOSER’S PROMPT — Music Theory as Specification in the Age of AI`; Joe Nasr. This is the book's actual title. The legacy web-application title remains unchanged pending separate product-branding decision; no longer treat book-title variance as a PDF error.
+- TOC confirmed PDF pages 5–6: 37 chapter entries (1–33 plus 3.5, 6.5, 28.5, 31.5), conclusion and six appendices = 44 navigation entries.
+- Manifest source identity now set to `authoritative-publication-source`. Replaces earlier candidate source for future editorial ingestion; earlier audit history retained for traceability.
+- **Boundary:** Full PDF binary is uploaded in conversation, not in GitHub. Content migration, editorial segment QA and all interactive testing remain outstanding. Production not modified.
