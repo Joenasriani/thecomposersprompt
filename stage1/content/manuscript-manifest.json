@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "filename": "THE_COMPOSERS_PROMPT_FULL_BOOK_157_PAGES.pdf",
+    "sha256": "aaf735bf2b2c4a35f671d517720d6473a9b9d8f93195cc8de453e4d56140f4a8",
+    "pages": 157,
+    "status": "candidate-authoritative",
+    "note": "The original PDF is supplied in conversation, not yet committed to the repository"
+  },
+  "learningSequence": [
+    "name",
+    "construct",
+    "hear/recognize",
+    "apply",
+    "verify"
+  ],
+  "entries": [
+    {
+      "id": "chapter-1",
+      "number": "1",
+      "title": "THE COMPOSER'S NEW INSTRUMENT",
+      "printedPage": 2,
+      "pdfPage": 8
+    },
+    {
+      "id": "chapter-2",
+      "number": "2",
+      "title": "WHY THE MACHINE NEEDS YOUR THEORY",
+      "printedPage": 5,
+      "pdfPage": 11
+    },
+    {
+      "id": "chapter-3",
+      "number": "3",
+      "title": "FOUR STRATEGIES FOR PROMPTING THEORY",
+      "printedPage": 8,
+      "pdfPage": 14
+    },
+    {
+      "id": "chapter-3-5",
+      "number": "3.5",
+      "title": "THE PROMPT ARCHITECTURE",
+      "printedPage": 11,
+      "pdfPage": 17
+    },
+    {
+      "id": "chapter-4",
+      "number": "4",
+      "title": "THE EMOTIONAL GRAMMAR OF INTERVALS",
+      "printedPage": 14,
+      "pdfPage": 20
+    },
+    {
+      "id": "chapter-5",
+      "number": "5",
+      "title": "SCALES AND MODES",
+      "printedPage": 17,
+      "pdfPage": 23
+    },
+    {
+      "id": "chapter-6",
+      "number": "6",
+      "title": "KEY AND TONAL CENTER AS CONTAINERS",
+      "printedPage": 22,
+      "pdfPage": 28
+    },
+    {
+      "id": "chapter-6-5",
+      "number": "6.5",
+      "title": "FROM SCALES TO CHORDS",
+      "printedPage": 25,
+      "pdfPage": 31
+    },
+    {
+      "id": "chapter-7",
+      "number": "7",
+      "title": "PROGRESSIONS AND THE TRANSLATION MATRIX",
+      "printedPage": 32,
+      "pdfPage": 38
+    },
+    {
+      "id": "chapter-8",
+      "number": "8",
+      "title": "THE TEMPORAL GRID",
+      "printedPage": 35,
+      "pdfPage": 41
+    },
+    {
+      "id": "chapter-9",
+      "number": "9",
+      "title": "MELODIC CONTOUR AND TEXTURE",
+      "printedPage": 37,
+      "pdfPage": 43
+    },
+    {
+      "id": "chapter-10",
+      "number": "10",
+      "title": "THE LEVEL 1 SPECIFICATION",
+      "printedPage": 39,
+      "pdfPage": 45
+    },
+    {
+      "id": "chapter-11",
+      "number": "11",
+      "title": "HARMONIC FUNCTION, PHRASE, AND CADENCE",
+      "printedPage": 42,
+      "pdfPage": 48
+    },
+    {
+      "id": "chapter-12",
+      "number": "12",
+      "title": "THE MELODIC LINE AND VOICE LEADING",
+      "printedPage": 45,
+      "pdfPage": 51
+    },
+    {
+      "id": "chapter-13",
+      "number": "13",
+      "title": "ARR-SPEC — FROM HARMONY TO SECTION DESIGN",
+      "printedPage": 49,
+      "pdfPage": 55
+    },
+    {
+      "id": "chapter-14",
+      "number": "14",
+      "title": "EXTENSIONS AND ALTERATIONS",
+      "printedPage": 53,
+      "pdfPage": 59
+    },
+    {
+      "id": "chapter-15",
+      "number": "15",
+      "title": "MODAL INTERCHANGE",
+      "printedPage": 56,
+      "pdfPage": 62
+    },
+    {
+      "id": "chapter-16",
+      "number": "16",
+      "title": "SECONDARY DOMINANTS AND TONICIZATION",
+      "printedPage": 59,
+      "pdfPage": 65
+    },
+    {
+      "id": "chapter-17",
+      "number": "17",
+      "title": "VOICING AND VOICE LEADING",
+      "printedPage": 62,
+      "pdfPage": 68
+    },
+    {
+      "id": "chapter-18",
+      "number": "18",
+      "title": "PARALLEL HARMONY AND PLANING",
+      "printedPage": 64,
+      "pdfPage": 70
+    },
+    {
+      "id": "chapter-19",
+      "number": "19",
+      "title": "THE LEVEL 3 COMPOSITION SPECIFICATION",
+      "printedPage": 66,
+      "pdfPage": 72
+    },
+    {
+      "id": "chapter-20",
+      "number": "20",
+      "title": "MODULATION AND MUSICAL FORM",
+      "printedPage": 68,
+      "pdfPage": 74
+    },
+    {
+      "id": "chapter-21",
+      "number": "21",
+      "title": "THE TIMELINE, NOT THE EQUIPMENT LIST",
+      "printedPage": 72,
+      "pdfPage": 78
+    },
+    {
+      "id": "chapter-22",
+      "number": "22",
+      "title": "SPECIFICATION BEFORE GENERATION",
+      "printedPage": 76,
+      "pdfPage": 82
+    },
+    {
+      "id": "chapter-23",
+      "number": "23",
+      "title": "THE GENERATION CAMPAIGN",
+      "printedPage": 79,
+      "pdfPage": 85
+    },
+    {
+      "id": "chapter-24",
+      "number": "24",
+      "title": "NEGATIVE, WEIGHTED, AND REFERENCE CONTROL",
+      "printedPage": 82,
+      "pdfPage": 88
+    },
+    {
+      "id": "chapter-25",
+      "number": "25",
+      "title": "SECTION EDITING, STEMS, AND THE DAW",
+      "printedPage": 85,
+      "pdfPage": 91
+    },
+    {
+      "id": "chapter-26",
+      "number": "26",
+      "title": "THE FOUR COMPOSER–SPECIFIER COMPETENCIES",
+      "printedPage": 88,
+      "pdfPage": 94
+    },
+    {
+      "id": "chapter-27",
+      "number": "27",
+      "title": "EXERCISES FROM SOUND TO SPECIFICATION",
+      "printedPage": 91,
+      "pdfPage": 97
+    },
+    {
+      "id": "chapter-28",
+      "number": "28",
+      "title": "LEARNING BY TEACHING AND CORRECTING",
+      "printedPage": 94,
+      "pdfPage": 100
+    },
+    {
+      "id": "chapter-28-5",
+      "number": "28.5",
+      "title": "THE THREE LOOPS AND THE HARMONY DECISION RECORD",
+      "printedPage": 96,
+      "pdfPage": 102
+    },
+    {
+      "id": "chapter-29",
+      "number": "29",
+      "title": "SUNO – TRANSLATING THE MUSICAL PLAN",
+      "printedPage": 98,
+      "pdfPage": 104
+    },
+    {
+      "id": "chapter-30",
+      "number": "30",
+      "title": "UDIO – PROSE, SECTIONS AND EVIDENCE",
+      "printedPage": 101,
+      "pdfPage": 107
+    },
+    {
+      "id": "chapter-31",
+      "number": "31",
+      "title": "WHAT CHANGES BETWEEN TOOLS?",
+      "printedPage": 103,
+      "pdfPage": 109
+    },
+    {
+      "id": "chapter-31-5",
+      "number": "31.5",
+      "title": "OTHER GENERATION AND COMPOSITION WORKFLOWS",
+      "printedPage": 105,
+      "pdfPage": 111
+    },
+    {
+      "id": "chapter-32",
+      "number": "32",
+      "title": "THE COMPLETE SPECIFICATION – UNIFIED CAPSTONE",
+      "printedPage": 107,
+      "pdfPage": 113
+    },
+    {
+      "id": "chapter-33",
+      "number": "33",
+      "title": "ADVANCED SCALES, MODES & COMPUTATIONAL COMPOSITION",
+      "printedPage": 110,
+      "pdfPage": 116
+    },
+    {
+      "id": "conclusion",
+      "title": "CONCLUSION: FROM MUSICAL KNOWLEDGE TO COMPOSITIONAL JUDGMENT",
+      "printedPage": 123,
+      "pdfPage": 129
+    },
+    {
+      "id": "appendix-a",
+      "title": "APPENDIX A: PROMPT TEMPLATES",
+      "printedPage": 129,
+      "pdfPage": 135
+    },
+    {
+      "id": "appendix-b",
+      "title": "APPENDIX B: DIAGNOSTIC CHECKLISTS",
+      "printedPage": 135,
+      "pdfPage": 141
+    },
+    {
+      "id": "appendix-c",
+      "title": "APPENDIX C: GLOSSARY",
+      "printedPage": 138,
+      "pdfPage": 144
+    },
+    {
+      "id": "appendix-d",
+      "title": "APPENDIX D: THE FOUR-WEEK INTENSIVE",
+      "printedPage": 141,
+      "pdfPage": 147
+    },
+    {
+      "id": "appendix-e",
+      "title": "APPENDIX E: STARTER PROMPT PACK",
+      "printedPage": 144,
+      "pdfPage": 150
+    },
+    {
+      "id": "appendix-f",
+      "title": "APPENDIX F: TOOL LANDSCAPE REFERENCE",
+      "printedPage": 147,
+      "pdfPage": 153
+    }
+  ]
+}
