@@ -1,4 +1,5 @@
 import './style.css';
+import { CHORDS } from './music/chords.js';
 import * as THREE from 'three';
 import * as Tone from 'tone';
 import { Renderer, Stave, StaveNote, Voice, Formatter, Accidental } from 'vexflow';
@@ -19,12 +20,8 @@ function setAppearance(mode,persist=false){
 themeSelect.addEventListener('change',()=>setAppearance(themeSelect.value,true));
 themeMedia.addEventListener?.('change',()=>{if(appearance==='system')setAppearance('system')});
 
-const data = {
- maj7:{name:'Cmaj7',notes:['C4','E4','G4','B4'],steps:[0,4,7,11],keys:['c/4','e/4','g/4','b/4'],acc:[]},
- minor:{name:'Cm',notes:['C4','Eb4','G4'],steps:[0,3,7],keys:['c/4','e/4','g/4'],acc:[[1,'b']]},
- sus4:{name:'Csus4',notes:['C4','F4','G4'],steps:[0,5,7],keys:['c/4','f/4','g/4'],acc:[]},
- dom7:{name:'C7',notes:['C4','E4','G4','Bb4'],steps:[0,4,7,10],keys:['c/4','e/4','g/4','b/4'],acc:[[3,'b']]}
-};
+const data=CHORDS;
+
 function refreshMusicColors(){
  const ink=getComputedStyle(document.documentElement).getPropertyValue('--ui-ink').trim();
  const score=document.getElementById('score');
