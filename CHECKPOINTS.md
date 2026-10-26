@@ -136,3 +136,10 @@ Never turn an assumption into a passing checkpoint. Preserve history when correc
 - TOC confirmed PDF pages 5–6: 37 chapter entries (1–33 plus 3.5, 6.5, 28.5, 31.5), conclusion and six appendices = 44 navigation entries.
 - Manifest source identity now set to `authoritative-publication-source`. Replaces earlier candidate source for future editorial ingestion; earlier audit history retained for traceability.
 - **Boundary:** Full PDF binary is uploaded in conversation, not in GitHub. Content migration, editorial segment QA and all interactive testing remain outstanding. Production not modified.
+
+### 2026-10-26 – Begin architecture refactor: canonical music model
+- User requested continuation after final manuscript registration. GitHub `publication/` folder was not present on development branch at this check; final PDF binary upload remains outstanding. Do not confuse the committed manifest with the actual PDF.
+- Extracted chord examples into `stage1/src/music/chords.js`; the application imports these definitions rather than embedding them inside the DOM controller.
+- Added model consistency validation (pitch classes versus written notes/score arrays) and `stage1/tests/chords.test.js` for four harmonies, accidentals and invalid inputs.
+- Added `npm test` to Stage 1 and GitHub Actions workflow before Vite compilation.
+- Source changes committed on PR #4's branch; green CI, full separation of audio/notation/graphics, responsive QA and manuscript migration still pending. The module boundary is the first step, **not** a completed or frozen architecture.
