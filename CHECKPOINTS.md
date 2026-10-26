@@ -118,3 +118,12 @@ Never turn an assumption into a passing checkpoint. Preserve history when correc
 - Proposed boundaries documented for music data, audio, notation, graphics, app state, theme, routing, Explore/Read/Compose, and tests.
 - Latest pre-audit commit CI check successful: https://github.com/Joenasriani/thecomposersprompt/actions/runs/40217388582 . Compile success does not mean browser or accessibility verified.
 - Next: Refactor to independent modules and validate before integrating corrected manuscript. Stage 1 Gate 1 remains blocked.
+
+### 2026-10-26 – Revised 157-page manuscript received and inventoried
+- Source supplied in conversation: `THE_COMPOSERS_PROMPT_FULL_BOOK_157_PAGES.pdf`, 157 pages; SHA-256 `aaf735bf2b2c4a35f671d517720d6473a9b9d8f93195cc8de453e4d56140f4a8`.
+- Created `stage1/content/manuscript-manifest.json` from its table of contents: **37 chapter entries**, including chapters 3.5, 6.5, 28.5 and 31.5, plus one conclusion and six appendices (44 navigation entries). Chapters are not equivalent to the former 42 reading screens.
+- The first governing content rule reads: **name → construct → hear/recognize → apply → verify**; the app provides playback and testing, the manuscript supplies reasoning.
+- Source frontmatter inconsistency: page 4 says 'Chapters 1–32' while the TOC includes Chapter 33. Do not silently edit the manuscript; flag for editorial confirmation.
+- Manuscript title in PDF is `The Composer’s Prompt – Music Theory as Specification in the Age of AI`; existing application marketing title differs. Maintain separate source-title and web-project-title fields until explicitly reconciled.
+- The PDF binary is **not yet stored in this Git repository**. Manifest records filename and hash so later ingestion can verify source identity.
+- Structural inventory only; complete chapter segmentation, illustrations, music-theory QA and acceptance remain OPEN. No production content replacement.
