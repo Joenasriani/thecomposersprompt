@@ -16,8 +16,12 @@
   },
   "deployment": {
     "provider": "vercel",
-    "root_directory": "book",
-    "verification_status": "NOT RECHECKED"
+    "project": "thecomposersprompt-book",
+    "root_directory": null,
+    "source_directory": "websites/landing",
+    "build_command": "node websites/landing/build.mjs",
+    "output_directory": "websites/landing/dist",
+    "verification_status": "VERCEL_READY_PUBLIC_HTTP_NOT_RECHECKED"
   },
   "checkout": {
     "provider": "none",
@@ -43,12 +47,12 @@
   "routes": [
     {
       "path": "/",
-      "file": "book/index.html",
+      "file": "websites/landing/dist/index.html",
       "indexable": true
     },
     {
       "path": "/THE_COMPOSERS_PROMPT.pdf",
-      "file": "book/THE_COMPOSERS_PROMPT.pdf",
+      "file": "websites/landing/dist/THE_COMPOSERS_PROMPT.pdf",
       "indexable": false
     }
   ],
