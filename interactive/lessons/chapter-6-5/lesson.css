@@ -35,3 +35,10 @@
 .header .brand-logo picture{display:block;line-height:0}
 .header .brand-logo[data-logo-fallback]{background:#000}
 .header .brand-logo img{object-fit:contain}
+
+.harmonic-view{padding:30px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(20px,4vw,50px);align-items:center}
+.harmonic-view .harmonic-display{min-width:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px}
+.harmonic-view #selected-chord{font-weight:650;letter-spacing:.01em;margin-bottom:14px}
+#harmonic-keyboard{display:block;width:100%;max-width:100%;height:auto;max-height:170px}
+.harmonic-view .hint{margin-bottom:0}
+@media(max-width:760px){.harmonic-view{grid-template-columns:1fr;gap:14px;padding:24px 0}.harmonic-view .harmonic-display{padding:14px}}
