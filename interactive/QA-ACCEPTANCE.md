@@ -50,3 +50,6 @@ The approved Chapter 6.5 review demonstrates the target reading flow, but neithe
 3. Implement the full chapter lesson as standalone modules under `interactive/` and preview it independently.
 4. Verify audio, keyboard key-center alignment, staff alignment and responsive screens.
 5. Keep original deployment untouched until observed parity and approval.
+
+## Executable browser suite (added 2026-10-27)
+`tests/browser-chapter-6-5.spec.mjs` runs a real Chromium flow when a browser-accessible server and Playwright package are available. Run with `node --test interactive/tests/browser-chapter-6-5.spec.mjs` from repository root after installing Playwright/Chromium locally. The source file lives exclusively under interactive/. Tests check responsive widths, dynamic staff/keyboard updates, seven white keys, mocked audio activation, and appearance controls. This suite is **NOT YET RUN** against the deployed preview; do not infer browser PASS from GitHub static CI.
