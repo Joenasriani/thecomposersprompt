@@ -56,3 +56,10 @@ const notation=read('music/compact-notation.js');
 assert.match(notation,/new VF\.StaveNote/,'VexFlow note engraving missing');
 assert.match(notation,/new VF\.Accidental/,'Accidental engraving missing');
 assert.match(ext,/naturals\.length<7/,'Harmonic piano requires at least seven white keys');
+
+assert.match(lesson,/id="piano-note-feedback"/,'Playable piano feedback missing');
+assert.match(ext,/attachPianoInteraction/,'Playable keyboard binding missing');
+assert.match(ext,/data-midi/,'Piano keys must carry exact pitch numbers');
+const piano=read('music/interactive-piano.js');
+assert.match(piano,/pointerdown/,'Pointer interaction missing');
+assert.match(piano,/keydown/,'Keyboard interaction missing');
