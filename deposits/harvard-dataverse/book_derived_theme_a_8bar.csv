@@ -1,0 +1,9 @@
+example_id,bar,chord,key_center,meter,quarter_note_bpm,roman_numeral,source_locator,evidence_type
+THEME_A_8,1,C,C major,4/4,96,I,The Composer's Prompt chapter 10 section 10.1,book_specification
+THEME_A_8,2,G,C major,4/4,96,V,The Composer's Prompt chapter 10 section 10.1,book_specification
+THEME_A_8,3,Am,C major,4/4,96,vi,The Composer's Prompt chapter 10 section 10.1,book_specification
+THEME_A_8,4,F,C major,4/4,96,IV,The Composer's Prompt chapter 10 section 10.1,book_specification
+THEME_A_8,5,C,C major,4/4,96,I,The Composer's Prompt chapter 10 section 10.1,book_specification
+THEME_A_8,6,F,C major,4/4,96,IV,The Composer's Prompt chapter 10 section 10.1,book_specification
+THEME_A_8,7,G,C major,4/4,96,V,The Composer's Prompt chapter 10 section 10.1,book_specification
+THEME_A_8,8,C,C major,4/4,96,I,The Composer's Prompt chapter 10 section 10.1,book_specification
