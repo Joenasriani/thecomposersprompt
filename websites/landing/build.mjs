@@ -1,4 +1,4 @@
-import { mkdir, copyFile, readFile, stat } from 'node:fs/promises';
+import { mkdir, copyFile, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { createHash } from 'node:crypto';
 
@@ -21,4 +21,9 @@ if (data.length !== 5204343 || blob !== 'fe10bb14c36bdd22ec791031b02d43fb5d8fabd
 await mkdir(destination, { recursive: true });
 await copyFile(source, resolve(destination, 'index.html'));
 await copyFile(pdf, resolve(destination, 'THE_COMPOSERS_PROMPT.pdf'));
+const assets = resolve(destination, 'assets');
+await mkdir(assets, { recursive: true });
+for (const filename of ['The_Composers_Prompt_Cover_Web.webp', 'the_composers_prompt_by_Joe_Nasr.png']) {
+  await copyFile(resolve(root, 'websites/landing/assets', filename), resolve(assets, filename));
+}
 console.log('Final-book landing assets assembled with verified locked PDF checksum.');
