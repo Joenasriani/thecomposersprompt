@@ -16,3 +16,9 @@ The canonical final PDF remains `book/THE_COMPOSERS_PROMPT.pdf` with Git blob `f
 **Verification:** Vercel deployment READY; domain assignment verified through Vercel. Public HTTP, responsive visual QA, actual PDF request and bookstore publication remain NOT RECHECKED or BLOCKED until tested. No PayPal.
 
 See `../../COMPONENTS.md` and `../../publication.json`.
+
+## SEO and voluntary support
+
+The landing build emits `robots.txt` and `sitemap.xml` from the canonical landing URL and serves the original approved WebP/PNG cover files. `websites/landing/index.html` includes a separate voluntary **Support the Work** link to `https://www.paypal.com/ncp/payment/CPDJMD3HV9D6Y`. This contribution link is not the publication checkout, does not gate the PDF, and must not be copied into the bookstore's `checkout` identity or paid-product records. No payment test is authorized. The book remains free to read and download.
+
+**Status:** Changes committed to GitHub; Vercel rollout and public HTTP verification remain NOT RECHECKED while the team deployment limit is in force.
