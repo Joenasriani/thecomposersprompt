@@ -1,0 +1,89 @@
+{
+  "schema": "zenodo-preparation-v1",
+  "status": "DRAFT_NOT_SUBMITTED",
+  "resource_type": {
+    "type": "publication",
+    "subtype": "book",
+    "verify_in_ui": true
+  },
+  "title": "The Composer’s Prompt",
+  "additional_titles": [
+    {
+      "type": "subtitle",
+      "title": "Music Theory and Harmony for Computational Music Prompting"
+    }
+  ],
+  "creators": [
+    {
+      "person": {
+        "given_name": "Joe",
+        "family_name": "Nasr",
+        "display_name": "Joe Nasr"
+      },
+      "affiliations": [],
+      "identifiers": []
+    }
+  ],
+  "publisher": "Zenodo (default; confirm original publisher before deposit)",
+  "publication_date": null,
+  "publication_year": 2026,
+  "language": "eng",
+  "version": "1.0.0",
+  "description": "The Composer’s Prompt: Music Theory and Harmony for Computational Music Prompting is a 159-page educational digital book addressing the application of music theory and harmony to computational music prompting. Its coverage extends from intervals, modes, and chord functions to musical form, audio-generation specifications, and verification. The book is intended as an instructional and practical reference for musicians, educators, and users of generative music systems. It is not presented as a peer-reviewed study or as experimentally validated research. This record concerns the final copyright-protected PDF edition and not the separately licensed interactive edition.",
+  "keywords": [
+    "music theory",
+    "harmony",
+    "computational music",
+    "generative music",
+    "music prompting",
+    "musical form",
+    "audio generation",
+    "music education"
+  ],
+  "subjects": [
+    {
+      "term": "Music theory"
+    },
+    {
+      "term": "Music education"
+    },
+    {
+      "term": "Computer-assisted music"
+    }
+  ],
+  "files": [
+    {
+      "source": "book/THE_COMPOSERS_PROMPT.pdf",
+      "upload_name": "THE_COMPOSERS_PROMPT.pdf",
+      "bytes": 5204343,
+      "git_blob_sha1": "fe10bb14c36bdd22ec791031b02d43fb5d8fabde",
+      "pages": 159,
+      "sha256": null
+    }
+  ],
+  "access": {
+    "files_visibility": "public",
+    "metadata_visibility": "public",
+    "license_selection": "CUSTOM_RIGHTS_PENDING_UI_CONFIRMATION",
+    "custom_rights_title": "All rights reserved – The Composer’s Prompt (2026)",
+    "custom_rights_text": "Copyright © 2026 Joseph Ribal Nasr.\n\nPublished under the name Joe Nasr.\n\nJoe Nasr and Joseph Ribal Nasr refer to the same person and copyright holder.\n\nAll rights reserved, except as otherwise specified by the publication's applicable license.",
+    "cc_by_4_for_this_pdf": false
+  },
+  "relationships": {
+    "repository_url": "https://github.com/Joenasriani/thecomposersprompt",
+    "repository_relation": "reference-only; choose formal related-identifier relation only when verified",
+    "interactive_edition": "separate artifact; do not assert identical version or transfer CC BY license"
+  },
+  "doi": null,
+  "concept_doi": null,
+  "record_url": null,
+  "orcid": null,
+  "affiliation": null,
+  "funding": null,
+  "conflicts": null,
+  "ai_disclosure": null,
+  "first_publication_date_verification": "PENDING",
+  "original_publisher_verification": "PENDING",
+  "duplicate_record_check": "PENDING",
+  "approval": "NOT_GRANTED"
+}
