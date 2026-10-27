@@ -1,0 +1,25 @@
+{
+  "title": "Music-Theory Harmonic Specification Examples from The Composer’s Prompt (educational reference candidate)",
+  "authors": [
+    {
+      "name": "Joe Nasr",
+      "copyright_holder": "Joseph Ribal Nasr"
+    }
+  ],
+  "year": 2026,
+  "resource_type": "Curated nonempirical educational reference data (candidate)",
+  "description": "Structured educational annotations of written music-theory examples from the final book. These are authored harmonic specifications and proposed evaluation cases, not observed audio results, model benchmark scores, or empirical study measurements.",
+  "source_book": {
+    "title": "The Composer’s Prompt",
+    "subtitle": "Music Theory and Harmony for Computational Music Prompting",
+    "path": "book/THE_COMPOSERS_PROMPT.pdf",
+    "git_blob_sha": "fe10bb14c36bdd22ec791031b02d43fb5d8fabde",
+    "sha256": "f6d9300b778e82d55bfdf084d95c379b03c760c53022dcb88c58ba6b8fc6799c",
+    "pages": 159,
+    "rights": "Free to read; all rights reserved; external reference not included in deposit"
+  },
+  "dataset_license": "UNDECIDED; do not default to CC0",
+  "doi": null,
+  "publication_status": "NOT READY / NOT DEPOSITED",
+  "proposed_collection": "UNVERIFIED"
+}
