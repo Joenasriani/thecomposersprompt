@@ -24,3 +24,9 @@ References: https://support.dataverse.harvard.edu/getting-started ; https://supp
 
 ## Additional verified work (27 October 2026)
 Committed `book_derived_theme_a_8bar.csv`, its codebook, `CANDIDATE_DATA_VERIFICATION.md`, and `DATAVERSE_METADATA_CANDIDATE.json`. The eight-bar extract is a genuine authored symbolic example, not manufactured observations. Dataset-wide source audit and research-data eligibility remain unresolved. No final PDF modifications or external deposits.
+
+## Subsequent repair — 27 October 2026
+
+PASS: Newly committed `book_derived_six_cases.csv` (6 source-labelled design cases), `book_derived_48_chord_events.csv` (48 position-labelled written chord targets), `VALIDATED_CANDIDATE_SCOPE.md`, and `DATA_RELEASE_DECISION.md`. The 48 records reconcile with the six source cases, while **no audio observations exist**. Retain incomplete 40-bar cells rather than filling by inference. The second-book material is omitted from these new files. This establishes a narrower source-traceable reference package, **not** Harvard eligibility or completed independent audit of every field in the private corpus.
+
+Outstanding: confirmation of research-data eligibility; permission and collection access; exact dataset copyright/licence approval; external duplicates check; final author approval for any upload. Status remains NOT READY. No book or Zenodo change.
