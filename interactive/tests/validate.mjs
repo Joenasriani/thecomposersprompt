@@ -53,3 +53,7 @@ assert.match(lesson,/id="harmonic-staff"/,'Staff notation SVG missing');
 assert.match(ext,/renderStaff\(chord\)/,'Staff must update on chord selection');
 
 assert.match(ext,/naturals\.length<7/,'Harmonic piano requires at least seven white keys');
+
+assert.match(ext,/𝄞/,'Treble G clef glyph missing');
+assert.match(ext,/𝄢/,'Bass F clef glyph missing');
+assert.doesNotMatch(ext,/textContent=clef==='treble'\?'Treble':'Bass'/,'Text-only clef labels must not replace symbols');
