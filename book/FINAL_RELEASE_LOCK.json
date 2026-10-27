@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "status": "LOCKED_FINAL",
+  "publication_id": "the-composers-prompt",
+  "title": "The Composer’s Prompt",
+  "subtitle": "Music Theory and Harmony for Computational Music Prompting",
+  "publication_credit": "Joe Nasr",
+  "copyright_holder": "Joseph Ribal Nasr",
+  "copyright_year": 2026,
+  "rights": "All rights reserved; free to read; no unauthorized resale or redistribution, except uses permitted by law",
+  "file": "book/THE_COMPOSERS_PROMPT.pdf",
+  "git_blob_sha": "fe10bb14c36bdd22ec791031b02d43fb5d8fabde",
+  "bytes": 5204343,
+  "pages": 159,
+  "scope": "Final published PDF is immutable without explicit fresh authorization. Do not edit, replace, rename, regenerate, recompress, reflow, or alter PDF, cover, text, copyright page, metadata embedded in PDF, or release identity as part of landing-page, interactive module, catalogue, SEO, or deployment work.",
+  "allowed_without_book_modification": [
+    "Prepare and adjust standalone landing page",
+    "Update independently stored publication and bookstore metadata, without changing locked book facts",
+    "Deploy website and verify links",
+    "Add catalogue listing for free-to-read book",
+    "Fix website-only presentation defects"
+  ],
+  "separation": "Existing interactive edition retains its previously granted CC BY 4.0 permissions. This lock does not revoke that license.",
+  "changes": "Any amendment to locked PDF requires express permission and a new verified release record.",
+  "deployment_status": "NOT RECHECKED"
+}
