@@ -9,7 +9,7 @@ assert.ok(legacy.includes('bookdata'),'Legacy interactive manuscript data must r
 const lesson=read('lessons/chapter-6-5/index.html');
 const titleLogo=read('assets/composers-prompt-title.svg');
 assert.match(titleLogo,/data:image\/webp;base64,/,'Supplied title logo must be embedded in repository asset');
-assert.match(legacy,/src="\.\/assets\/composers-prompt-title\.svg"/,'Home logo asset missing');
+assert.match(legacy,/src="\.\/assets\/composers-prompt-title-light\.webp"/,'Home light logo path missing');
 assert.match(lesson,/data-dark-src="\.\.\/\.\.\/assets\/composers-prompt-title\.svg"/,'Lesson dark logo missing');
 assert.match(lesson,/data-light-src="\.\.\/\.\.\/assets\/composers-prompt-title-light\.webp"/,'Lesson light-logo reference missing');
 const cssLogo=read('lessons/chapter-6-5/lesson.css');
