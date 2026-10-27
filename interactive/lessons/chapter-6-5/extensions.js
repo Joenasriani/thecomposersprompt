@@ -12,7 +12,7 @@ export function keyboardGeometry(notes){
  let start=low;while(!whiteClasses.has(start%12))start--;
  let end=high;while(!whiteClasses.has(end%12))end++;
  const naturals=[];for(let n=start;n<=end;n++)if(whiteClasses.has(n%12))naturals.push(n);
- if(naturals.length<5){while(naturals.length<5){const next=naturals.at(-1)+1;let candidate=next;while(!whiteClasses.has(candidate%12))candidate++;naturals.push(candidate);}}
+ if(naturals.length<7){while(naturals.length<7){const next=naturals.at(-1)+1;let candidate=next;while(!whiteClasses.has(candidate%12))candidate++;naturals.push(candidate);}}
  return {naturals,active:new Set(midis),rootPc:pitchClass(notes[0]),width:naturals.length*48};
 }
 function renderStaff(chord){
