@@ -26,7 +26,15 @@ function renderStaff(chord){
   const top=37+g*115, bottom=top+40;
   // Five lines: bottom is E4 in treble or G2 in bass.
   for(let i=0;i<5;i++)element(svg,'line',{x1:68,x2:399,y1:top+i*10,y2:top+i*10,stroke:'currentColor','stroke-width':.85,opacity:.6});
-  element(svg,'text',{x:8,y:top+22,fill:'currentColor','font-size':12}).textContent=clef==='treble'?'Treble':'Bass';
+  // Unicode musical clefs are anchored to their reference staff lines.
+  // G clef curls around the second line from bottom (G4, y=bottom-10).
+  // F clef's two dots straddle the second line from top (F3, y=top+10).
+  const clefGlyph=clef==='treble'?'𝄞':'𝄢';
+  const clefY=clef==='treble'?bottom+8:top+23;
+  element(svg,'text',{x:78,y:clefY,fill:'currentColor',
+    'font-family':'Bravura, Noto Music, Noto Sans Symbols 2, DejaVu Sans, serif',
+    'font-size':clef==='treble'?67:48,
+    'aria-label':clef==='treble'?'G clef':'F clef'}).textContent=clefGlyph;
   chord.notes.filter(n=>staffForPitch(n)===clef).forEach((note,j)=>{
    const step=staffSteps(note,clef),y=bottom-step*5,x=210;
    // Ledger lines are spaced every two diatonic steps outside the staff.
