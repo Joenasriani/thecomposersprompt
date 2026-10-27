@@ -14,7 +14,7 @@ assert.match(lesson,/src="\.\.\/\.\.\/assets\/composers-prompt-title\.svg"/,'Les
 const cssLogo=read('lessons/chapter-6-5/lesson.css');
 assert.match(cssLogo,/\.brand-logo img/,'Responsive logo CSS required');
 assert.match(legacy,/href="\.\/lessons\/chapter-6-5\/index\.html"/,'Interactive home must link Chapter 6.5');
-assert.match(lesson,/class="brand" href="\.\.\/\.\.\/index\.html"/,'Lesson must return to interactive home');
+assert.match(lesson,/class="brand brand-logo" href="\.\.\/\.\.\/index\.html"/,'Lesson must return to interactive home');
 assert.match(lesson,/src="\.\/extensions\.js"/,'Full lesson audio controls must load');
 assert.ok(existsSync(resolve(root,'lessons/chapter-6-5/extensions.js')),'Chapter extension module missing');
 assert.ok(existsSync(resolve(root,'music/chapter-6-5.js')),'Theory model missing');
