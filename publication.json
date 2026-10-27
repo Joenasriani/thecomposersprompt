@@ -66,5 +66,14 @@
     "free_to_read": true,
     "redistribution_allowed": false,
     "previous_cc_by_material_unchanged": true
+  },
+  "publication_authority": {
+    "status": "FINAL_LOCKED",
+    "canonical_edition": "2026 digital PDF edition",
+    "canonical_file": "book/THE_COMPOSERS_PROMPT.pdf",
+    "git_blob_sha": "fe10bb14c36bdd22ec791031b02d43fb5d8fabde",
+    "release_lock": "book/FINAL_RELEASE_LOCK.json",
+    "precedence": "For the finalized book publication, this record and the hash-locked PDF supersede earlier draft manuscript and interactive workbook descriptions. The interactive workbook remains a separate edition with its existing license.",
+    "change_control": "Explicit approval required for any change to final book file or locked publication identity."
   }
 }
