@@ -94,7 +94,7 @@ Audio playback requires user interaction. Browser security restrictions may affe
 | [`index.html`](index.html) | Standalone interface, embedded manuscript, interactive exercises, styles and application logic |
 | [`README.md`](README.md) | Publication overview, access instructions, methodology and editorial status |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | Contribution procedure and accuracy expectations |
-| [`LICENSE`](LICENSE) | Creative Commons Attribution 4.0 International legal terms |
+| [`LICENSE`](LICENSE) | CC BY 4.0 terms for the existing interactive workbook edition; not a license for the separately issued final PDF |
 
 ## Contributing and corrections
 
@@ -104,13 +104,15 @@ When reporting a musical issue, identify the **chapter or practice room**, provi
 
 The workbook is maintained as a self-contained publication; contributions should preserve that architecture unless a change is explicitly agreed.
 
-## License
+## Rights and edition distinction
 
-Copyright © 2026 Joe Nasr.
+**Existing interactive workbook and repository materials.** Material previously offered under [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE) remains subject to that license where applicable. The license allows redistribution and adaptation, including commercial use, subject to its terms. Publishing a differently licensed edition does not revoke rights already granted under CC BY 4.0.
 
-Except where separately identified, the original manuscript, workbook material, demonstrations, documentation and application source are offered under the **[Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**. Redistribution and adaptation, including commercial use, are permitted subject to that license's conditions. Read the [full license text](LICENSE).
+**The Composer’s Prompt – finalized PDF book (2026).** The separate, finalized PDF edition, bearing the title *The Composer’s Prompt: Music Theory and Harmony for Computational Music Prompting*, is **free to read but copyright protected**. Copyright © 2026 J. Nasr. All rights reserved. No permission is granted to resell, redistribute, republish, reproduce or commercially exploit that PDF, in whole or in part, without prior written permission from J. Nasr, except as permitted by applicable copyright law. Official publication access: https://reasoning-and-logic.vercel.app/.
 
-Third-party quotations, referenced works and trademarks retain their respective rights. No rights are granted beyond those the licensor holds. The material is provided without warranties under the license terms.
+**Scope.** The PDF's all-rights-reserved notice applies to that separately distributed edition and does not retroactively withdraw any CC BY 4.0 rights in previously licensed material. The existing repository [LICENSE](LICENSE) remains the complete CC BY 4.0 license text for applicable materials. Do not interpret it as a grant of rights to the finalized PDF as a whole.
+
+Third-party quotations, referenced works and trademarks retain their respective rights. No rights are granted beyond those held by the relevant rights holders.
 
 ## Citation and attribution
 
