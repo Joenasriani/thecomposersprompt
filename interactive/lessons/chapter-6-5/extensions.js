@@ -22,7 +22,7 @@ function renderChord(id){
  svg.setAttribute('aria-label',`${chord.name}: ${chord.notes.join(', ')}`);
  layout.naturals.forEach((n,i)=>{
   const x=i*48;element(svg,'rect',{x,y:3,width:48,height:126,rx:1,class:'white-key'});
-  if(layout.active.has(n))element(svg,'circle',{cx:x+24,cy:107,r:5,class:pitchClass(chord.notes[0])===n%12?'active-root':'active-note'});
+  if(layout.active.has(n))element(svg,'circle',{cx:x+24,cy:107,r:5,class:(id==='C/E'||id==='C/G'?0:pitchClass(chord.notes[0]))===n%12?'active-root':'active-note'});
   element(svg,'text',{x:x+24,y:148,'text-anchor':'middle',class:'key-label'}).textContent=sharpNames[n%12];
  });
  for(let i=0;i<layout.naturals.length-1;i++){
