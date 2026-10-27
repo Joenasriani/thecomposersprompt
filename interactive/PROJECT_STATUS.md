@@ -21,3 +21,9 @@ Do not confuse static source checks with visual/audio PASS.
 
 ## Strict external exclusions
 Outside this application's root: repository `index.html`, `.github/`, `book/`, `websites/`, `deposits/`, book metadata and release locks. No changes outside `interactive/`.
+
+## 2026-10-27 browser-validation attempt
+- PASS: An automated headless Chromium test suite was added at `tests/browser-chapter-6-5.spec.mjs`; it covers 320, 375, 768, 1024 and 1440 px, chord notes, minimum seven white keys, responsive overflow, mocked AudioContext voice startup and theme switching.
+- BLOCKED: Live Pages URL could not be loaded using the available browser/web session; local shell cannot resolve github.com. The test suite has **not been executed against the actual page** and its assertions may require further adjustments.
+- FIX: Existing SVG staff still renders text labels instead of conventional clef symbols, and chords' noteheads/accidentals have not passed independent engraving checks. Do not label conventional score rendering PASS.
+- PENDING: Shared component extraction and Chapter 1 development are gated on actual browser acceptance, as requested.
