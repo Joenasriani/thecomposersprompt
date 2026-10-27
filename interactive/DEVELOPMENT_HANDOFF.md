@@ -21,3 +21,6 @@ Verify Chapter 6.5 in a browser (notation clefs/accidentals/ledger lines/chord c
 
 ## “Update repo” convention
 Audit current interactive source; synchronize README, handoff, manifest, status, architecture, design and theory rules, chapter progress, QA, changelog and app-local tests. Commit **only `interactive/**` files** and check CI. Keep sibling projects protected and record unresolved evidence accurately.
+
+## Browser QA gate — 2026-10-27
+Run `tests/browser-chapter-6-5.spec.mjs` with Playwright Chromium against an accessible local static server or Pages URL. This test was committed but not executable in the current disconnected browser environment. Review conventional clef rendering and staff engraving manually. **Do not extract components or start mass chapter conversion until the actual browser gate passes.**
