@@ -19,7 +19,7 @@ for (const width of [320,375,768,1024,1440]){
    const button=page.locator(`button[data-chord="${id}"]`).first();
    assert.equal(await button.count(),1,`Missing chord control ${id}`);
    await button.click();
-   assert.ok((await page.locator('#harmonic-staff ellipse').count())>=3,`Staff notes missing for ${id}`);
+   assert.ok((await page.locator('#harmonic-staff svg').count())===1,`Engraved staff missing for ${id}`);
    assert.ok((await page.locator('#harmonic-keyboard .white-key').count())>=7,'At least seven white keys');
    assert.ok((await page.locator('#harmonic-keyboard circle').count())>=3,`Piano markers missing for ${id}`);
   }
