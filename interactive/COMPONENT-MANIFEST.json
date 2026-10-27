@@ -3,14 +3,14 @@
   "workstream": "interactive",
   "applicationTitle": "The Composer’s Prompt",
   "updated": "2026-10-27",
-  "productionIntendedEntry": "index.html (preserved legacy; no production migration authorized)",
+  "productionIntendedEntry": "No production-root ownership; interactive preview at interactive/index.html",
   "migrationState": "copy-only-consolidation-in-progress",
   "manifestScope": "interactive-owned sources only",
   "components": [
     {
       "id": "legacy-root",
-      "path": "index.html",
-      "role": "preserved-public-entry",
+      "path": "interactive/index.html",
+      "role": "preserved-copy-of-legacy-workbook; root outside ownership",
       "state": "preserve",
       "qa": "NOT RECHECKED browser"
     },
@@ -139,5 +139,19 @@
     "design": "interactive/DESIGN_SYSTEM.md",
     "musicRules": "interactive/MUSIC_THEORY_RULES.md",
     "changelog": "interactive/CHANGELOG.md"
+  },
+  "scopePolicy": {
+    "ownedPathPrefix": "interactive/",
+    "writePolicy": "All writes, new files and updates are strictly under interactive/. Never modify repository root, .github workflows, book/, websites/, deposits/ or other independent projects without separate explicit permission.",
+    "repositoryStructure": "multi-project monorepo; interactive is an isolated workstream",
+    "externalReferencesReadOnly": [
+      "index.html",
+      "book/THE_COMPOSERS_PROMPT.pdf",
+      "publication.json",
+      "book/FINAL_RELEASE_LOCK.json",
+      "websites/",
+      "deposits/",
+      ".github/"
+    ]
   }
 }
