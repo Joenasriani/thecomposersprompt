@@ -9,14 +9,15 @@
   "edition": "2026 digital edition · Free to read",
   "sales_status": "closed",
   "access": "free_to_read",
-  "canonical_url": "https://thecomposersprompt.vercel.app/book/",
+  "canonical_url": "https://thecomposersprompt-book.vercel.app/",
   "catalogue_url": "https://reasoning-and-logic.vercel.app/",
   "repository": {
     "current": "Joenasriani/thecomposersprompt"
   },
   "deployment": {
     "provider": "vercel",
-    "root_directory": "."
+    "root_directory": "book",
+    "verification_status": "NOT RECHECKED"
   },
   "checkout": {
     "provider": "none",
@@ -35,17 +36,18 @@
       "PDF"
     ],
     "file_path": "book/THE_COMPOSERS_PROMPT.pdf",
-    "git_blob_sha": "fe10bb14c36bdd22ec791031b02d43fb5d8fabde"
+    "git_blob_sha": "fe10bb14c36bdd22ec791031b02d43fb5d8fabde",
+    "public_file": "THE_COMPOSERS_PROMPT.pdf"
   },
   "description": "A 159-page book on applying music theory and harmony to computational music prompting, from intervals, modes and chord functions to musical form, audio-generation specifications and verification.",
   "routes": [
     {
-      "path": "/book/",
+      "path": "/",
       "file": "book/index.html",
       "indexable": true
     },
     {
-      "path": "/book/THE_COMPOSERS_PROMPT.pdf",
+      "path": "/THE_COMPOSERS_PROMPT.pdf",
       "file": "book/THE_COMPOSERS_PROMPT.pdf",
       "indexable": false
     }
@@ -56,7 +58,7 @@
     "kindLabel": "Free digital book",
     "cover": "",
     "coreIdea": "Translate musical ideas into specified, testable instructions for generative music tools.",
-    "storeLine": "159 pages · 33 chapters plus supplementary sections · Appendices A–F · Free PDF"
+    "storeLine": "159 pages · Free PDF · Copyright protected"
   },
   "rights": {
     "type": "all_rights_reserved",
