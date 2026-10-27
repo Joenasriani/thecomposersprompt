@@ -22,6 +22,7 @@ jobs:
         run: |
           node interactive/tests/validate.mjs
           node interactive/tests/music-model.mjs
+          node interactive/tests/staff-model.mjs
           node --check interactive/lessons/chapter-6-5/lesson.js
           node --check interactive/lessons/chapter-6-5/extensions.js
       - name: Verify legacy site is still preserved at repository root
