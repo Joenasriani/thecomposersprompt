@@ -27,3 +27,10 @@ Outside this application's root: repository `index.html`, `.github/`, `book/`, `
 - BLOCKED: Live Pages URL could not be loaded using the available browser/web session; local shell cannot resolve github.com. The test suite has **not been executed against the actual page** and its assertions may require further adjustments.
 - FIX: Existing SVG staff still renders text labels instead of conventional clef symbols, and chords' noteheads/accidentals have not passed independent engraving checks. Do not label conventional score rendering PASS.
 - PENDING: Shared component extraction and Chapter 1 development are gated on actual browser acceptance, as requested.
+
+## 2026-10-27 VexFlow notation integration
+- The Chapter 6.5 provisional custom staff generator was replaced by a small, **optional** VexFlow 5.0.0 adapter in `music/compact-notation.js`; it is linked by a pinned jsDelivr script in the lesson page.
+- The shared pitch model, seven-white-key piano and audio remain independent. VexFlow does **not** power the keyboard, visuals or prompts.
+- If VexFlow fails to load, the notation container shows a non-blocking message and keyboard/chord text/audio remain available.
+- CDN connectivity and browser rendering are **NOT RECHECKED**. Before marking PASS, confirm actual engraved clefs, accidentals, ledger lines, notation stacking, correct registers and real mobile display. A future fully self-hosted dependency under `interactive/` would eliminate external CDN reliance.
+- VexFlow: MIT license. Retain required notices with all redistributed bundles. This adapter does not change any sibling projects or the book.
