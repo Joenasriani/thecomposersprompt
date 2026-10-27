@@ -1,15 +1,18 @@
-# Book landing page and deployment
+# Final-book landing website
 
-**Status: PREPARATION; LIVE DEPLOYMENT NOT RECHECKED.** This directory owns landing-page workflow documentation. The current HTML source is **still** at `../../book/index.html` for backward compatibility with the provisionally configured Vercel Root Directory `book`. This is intentionally a temporary placement, not a second book edition.
+**Source:** `websites/landing/index.html`  
+**Build:** `node websites/landing/build.mjs` from repository root  
+**Output:** `websites/landing/dist/` (generated, not authoritative)  
+**Vercel project:** `thecomposersprompt-book`  
+**Branch:** `main`  
+**Production domain:** https://thecomposersprompt-book.vercel.app/  
+**Vercel project:** `prj_kldrSI2Wa72Gpm8ivIe150gDzfGu`  
+**Deployment:** `dpl_2FLBSbGpap566E8kH3pDJMHQpMLG` (READY when checked)
 
-The locked book is `../../book/THE_COMPOSERS_PROMPT.pdf`; the canonical publication metadata and book rights are in `../../publication.json` and `../../book/FINAL_RELEASE_LOCK.json`. Landing-page edits must never regenerate or overwrite the PDF.
+The canonical final PDF remains `book/THE_COMPOSERS_PROMPT.pdf` with Git blob `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`. Build copies the file to website output only after verifying the file size and Git blob SHA. It never changes the authoritative source. Do not commit `dist/` outputs as new publication versions.
 
-## Safe migration gate
+**Legacy landing HTML:** `book/index.html` is superseded as the standalone landing source, but intentionally retained until cross-project deployment review. The root `index.html` and `stage1/` belong to the separate interactive edition and must not be changed by this workstream.
 
-1. Verify which Vercel project and branch deploy the standalone landing site; record current Root Directory, build/output settings, routes and published URL.
-2. Create an independently served landing root here only after deciding how the PDF will be served without duplicate, divergent canonical files.
-3. Update `publication.json` deployment paths and routes to match the verified site; update bookstore staging references.
-4. Verify mobile/desktop rendering, PDF link, indexing and actual domain; only then retire `book/index.html` as a landing source with a coordinated commit.
-5. Preserve root `index.html` and `stage1/`, the interactive edition, without modification.
+**Verification:** Vercel deployment READY; domain assignment verified through Vercel. Public HTTP, responsive visual QA, actual PDF request and bookstore publication remain NOT RECHECKED or BLOCKED until tested. No PayPal.
 
-The provisional domain `https://thecomposersprompt-book.vercel.app/` is **not yet verified**.
+See `../../COMPONENTS.md` and `../../publication.json`.
