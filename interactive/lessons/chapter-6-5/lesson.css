@@ -29,3 +29,9 @@
  .header nav{gap:7px}
  .header select{padding:5px}
 }
+
+/* Light artwork sits directly on the page; fallback retains the dark logo's legibility. */
+.header .brand-logo{background:transparent}
+.header .brand-logo picture{display:block;line-height:0}
+.header .brand-logo[data-logo-fallback]{background:#000}
+.header .brand-logo img{object-fit:contain}
