@@ -1,16 +1,22 @@
 {
   "schemaVersion": 1,
   "source": {
-    "filename": "THE_COMPOSERS_PROMPT_FULL_BOOK_157_PAGES_PUBLICATION_CORRECTED.pdf",
-    "sha256": "b68dd911982649c7dc5da83525167da2f75422265647ec1b5e38e869217692eb",
-    "bytes": 2911209,
-    "pages": 157,
-    "status": "authoritative-publication-source",
+    "repository": "Joenasriani/thecomposersprompt",
+    "branch": "main",
+    "path": "book/THE_COMPOSERS_PROMPT.pdf",
+    "releaseLock": "book/FINAL_RELEASE_LOCK.json",
+    "metadata": "publication.json",
+    "gitBlobSha": "fe10bb14c36bdd22ec791031b02d43fb5d8fabde",
+    "bytes": 5204343,
+    "pages": 159,
+    "status": "FINAL_LOCKED",
     "title": "The Composer’s Prompt",
-    "subtitle": "Music Theory as Specification in the Age of AI",
+    "subtitle": "Music Theory and Harmony for Computational Music Prompting",
     "author": "Joe Nasr",
-    "publicationInformation": "Music theory and harmony · Chapters 1–33 · Appendices A–F",
-    "note": "Uploaded final user-corrected PDF. Binary not yet committed to GitHub; exact SHA-256 pins the source. Original legacy workbook remains on main."
+    "copyrightHolder": "Joseph Ribal Nasr",
+    "copyrightYear": 2026,
+    "rights": "All rights reserved; free to read. Existing interactive workbook retains previously granted CC BY 4.0 terms.",
+    "note": "Canonical locked publication on main. Do not modify PDF, cover, text, embedded metadata or release identity without express authorization. Existing entries were extracted from a prior manuscript and must be revalidated against this 159-page edition before use."
   },
   "learningSequence": [
     "name",
@@ -321,5 +327,6 @@
       "printedPage": 147,
       "pdfPage": 153
     }
-  ]
+  ],
+  "inventoryStatus": "provisional-prior-edition-requires-final-PDF-verification"
 }
