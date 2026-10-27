@@ -1,7 +1,8 @@
-# Landing-page assets
+# Final-book landing cover assets
 
-Upload the approved final-book cover to this folder as `book-cover.png`.
+- `The_Composers_Prompt_Cover_Web.webp` — lightweight responsive on-page cover (135,828 bytes).
+- `the_composers_prompt_by_Joe_Nasr.png` — high-resolution fallback and social-preview image (2,023,400 bytes).
 
-This image is a **website-only display asset** and must not alter or replace the locked `book/THE_COMPOSERS_PROMPT.pdf`.
+These are the approved, user-uploaded assets. Keep source filenames stable. The landing build copies both to its generated `assets/` folder; it does not alter either source image or the locked canonical PDF `../../../book/THE_COMPOSERS_PROMPT.pdf`.
 
-Preserve original proportions and colors. The canonical final-book PDF remains the source of truth.
+Display covers with preserved aspect ratio; no stretch, arbitrary crop or recoloring.
