@@ -1,0 +1,29 @@
+name: Interactive static integrity
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'interactive/**'
+      - '.github/workflows/interactive-integrity.yml'
+  pull_request:
+    paths:
+      - 'interactive/**'
+      - '.github/workflows/interactive-integrity.yml'
+  workflow_dispatch:
+jobs:
+  static-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check interactive standalone sources and theory fixtures
+        run: node interactive/tests/validate.mjs
+      - name: Verify legacy site is still preserved at repository root
+        run: cmp index.html interactive/index.html
+      - name: Verify static lesson asset routes
+        run: |
+          test -s interactive/lessons/chapter-6-5/index.html
+          test -s interactive/lessons/chapter-6-5/lesson.css
+          test -s interactive/lessons/chapter-6-5/lesson.js
