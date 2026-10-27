@@ -31,3 +31,11 @@ Run `tests/browser-chapter-6-5.spec.mjs` with Playwright Chromium against an acc
 - The URL must expose only the standalone `interactive/` application at the domain root, including `/lessons/chapter-6-5/`. Do not use the GitHub Pages /thecomposersprompt/interactive/ path as the canonical link.
 - Domain assignment is verified; **the new deployment and browser response still require confirmation**. This change is configuration-only until a new production deployment finishes.
 - No change to sibling websites, separate book, or repository-root public entry.
+
+## Current baseline · 2026-10-27 (supersedes older deployment and legacy-home notes)
+- Canonical app: https://thecomposersprompt-lab.vercel.app/ ; Vercel project root `interactive/`, static/no framework. Domain assignment verified; fresh build and browser response **NOT RECHECKED**. Latest READY deployment remains older commit `728d435` as checked.
+- `interactive/index.html` is now the active modern application homepage. The former workbook copy was archived bit-for-bit at `interactive/obsolete/index.html` and marked historical/read-only. Repository-root `index.html` remains unchanged outside scope; GitHub Pages still publishes it separately.
+- Chapter 6.5: the custom piano SVG is an interactive per-note Web Audio pilot (pointer, Enter, Space), preserving seven-white-key minimum and note dots; full chord-building and real touch/audio QA are PENDING.
+- Optional VexFlow 5.0.0 compact staff is supporting notation only; keyboard, visualizations, prompts and sound remain independent. No MuseScore/LilyPond/score editing systems.
+- Final acceptance: browser confirmation at 320/375/768/1024/1440, clefs/accidentals, piano sound/touch, accessibility, navigation/asset paths, light artwork, and Vercel production deployment **NOT RECHECKED**.
+- No changes to root landing, the final book, `.github/`, other projects, or external publication rights.

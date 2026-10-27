@@ -3,23 +3,16 @@
   "workstream": "interactive",
   "applicationTitle": "The Composer’s Prompt",
   "updated": "2026-10-27",
-  "productionIntendedEntry": "No production-root ownership; interactive preview at interactive/index.html",
-  "migrationState": "copy-only-consolidation-in-progress",
+  "productionIntendedEntry": "interactive/index.html (Vercel project root interactive/)",
+  "migrationState": "modern-interactive-home-and-archived-workbook; deployment-browser-QA-pending",
   "manifestScope": "interactive-owned sources only",
   "components": [
     {
-      "id": "legacy-root",
-      "path": "interactive/index.html",
-      "role": "preserved-copy-of-legacy-workbook; root outside ownership",
-      "state": "preserve",
-      "qa": "NOT RECHECKED browser"
-    },
-    {
       "id": "interactive-home",
       "path": "interactive/index.html",
-      "role": "copied-interactive-landing",
+      "role": "modern interactive application landing",
       "state": "implemented",
-      "qa": "PASS source; NOT RECHECKED browser"
+      "qa": "PASS committed source; NOT RECHECKED Vercel browser"
     },
     {
       "id": "chapter-6-5",
@@ -74,6 +67,34 @@
       "path": "interactive/experiments/stage1/",
       "role": "preserved-experiment",
       "state": "preserve"
+    },
+    {
+      "id": "legacy-archive",
+      "path": "interactive/obsolete/index.html",
+      "role": "exact former interactive workbook copy, historical read-only",
+      "state": "archived",
+      "qa": "PASS Git blob source; NOT RECHECKED historical functionality"
+    },
+    {
+      "id": "compact-notation",
+      "path": "interactive/music/compact-notation.js",
+      "role": "optional VexFlow 5.0.0 notation renderer",
+      "state": "implemented-under-qa",
+      "qa": "PASS static; NOT RECHECKED browser/CDN"
+    },
+    {
+      "id": "playable-piano",
+      "path": "interactive/music/interactive-piano.js",
+      "role": "pointer-and-keyboard Web Audio note-input adapter",
+      "state": "implemented-under-qa",
+      "qa": "PASS static and pitch tests; NOT RECHECKED actual browser/audio/touch"
+    },
+    {
+      "id": "piano-tests",
+      "path": "interactive/tests/interactive-piano.mjs",
+      "role": "MIDI pitch spelling regression fixture",
+      "state": "implemented",
+      "qa": "PASS prior integrity workflow"
     }
   ],
   "protectedSources": [
@@ -109,14 +130,18 @@
     "githubPages": {
       "expectedUrl": "https://joenasriani.github.io/thecomposersprompt/",
       "entry": "index.html",
-      "status": "PASS GitHub Actions pages deployment for 5d33ce8; browser HTTP/interaction NOT RECHECKED",
+      "status": "Old repository-root page remains outside ownership, historical URL is not canonical; browser NOT RECHECKED",
       "lessonUrl": "https://joenasriani.github.io/thecomposersprompt/interactive/lessons/chapter-6-5/"
     },
     "vercelLab": {
       "projectId": "prj_9WZWGf5PTxXP90SloTeGncV4DWJH",
       "project": "thecomposersprompt-lab",
+      "canonicalUrl": "https://thecomposersprompt-lab.vercel.app/",
+      "rootDirectory": "interactive",
+      "framework": null,
       "lastCheckedBranch": "main",
-      "status": "READY deployment observed; exact root and browser QA UNKNOWN"
+      "lastReadyGitSha": "728d4354cdfb8ffd95e56a055222631e69180094",
+      "status": "config verified; deployment of current main NOT RECHECKED"
     },
     "bookLanding": {
       "project": "thecomposersprompt-book",
@@ -125,12 +150,12 @@
   },
   "gates": {
     "beforeMigration": [
-      "complete actual browser/audio/keyboard/notation/mobile QA",
-      "verify deep links/assets in deployed Pages",
-      "confirm chapter/legacy parity",
-      "obtain explicit production migration approval"
+      "Vercel root configuration set to interactive/",
+      "verify production deployment against latest main",
+      "complete actual desktop/mobile/touch/audio/accessibility QA",
+      "ensure archive navigability and runtime third-party licensing notices"
     ],
-    "productionChangeAuthorized": false
+    "productionChangeAuthorized": true
   },
   "continuity": {
     "startHere": "interactive/DEVELOPMENT_HANDOFF.md",
