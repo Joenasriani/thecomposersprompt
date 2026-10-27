@@ -13,3 +13,10 @@ Read [ARCHITECTURE-AND-DEPLOYMENT.md](ARCHITECTURE-AND-DEPLOYMENT.md) before cha
 The interactive experience is called **The Composer’s Prompt**. The separate book PDF is a read-only musical source for this workstream even if the owner makes future publication edits possible. Use independently authored lesson explanations and explicit musical verification; do not alter the PDF, `publication.json`, or its release lock.
 
 **Do not assume the existing root `index.html` can be moved safely.** Until deployed routing, Vercel root/build settings and behavioral parity have been verified, it remains the production-intended entry point. The new lesson preview on development PR #4 is experimental and not yet part of `main`.
+
+## Component registry and verification gate
+
+- [COMPONENT-MANIFEST.json](COMPONENT-MANIFEST.json) — machine-readable inventory of current sources, deployments, protected paths and migration conditions.
+- [QA-ACCEPTANCE.md](QA-ACCEPTANCE.md) — musical, interactive, accessibility and deployment test criteria. An untested route or feature is **NOT RECHECKED**, not PASS.
+
+The `interactive/` directory is presently the documented destination for a future modular application; it is **not yet the production code root**. Retain root `index.html` and existing prototype/Stage 1 code until parity and routing checks have passed.
