@@ -19,7 +19,11 @@ jobs:
         with:
           node-version: '22'
       - name: Check interactive standalone sources and theory fixtures
-        run: node interactive/tests/validate.mjs
+        run: |
+          node interactive/tests/validate.mjs
+          node interactive/tests/music-model.mjs
+          node --check interactive/lessons/chapter-6-5/lesson.js
+          node --check interactive/lessons/chapter-6-5/extensions.js
       - name: Verify legacy site is still preserved at repository root
         run: cmp index.html interactive/index.html
       - name: Verify static lesson asset routes
@@ -27,3 +31,5 @@ jobs:
           test -s interactive/lessons/chapter-6-5/index.html
           test -s interactive/lessons/chapter-6-5/lesson.css
           test -s interactive/lessons/chapter-6-5/lesson.js
+          test -s interactive/lessons/chapter-6-5/extensions.js
+          test -s interactive/music/chapter-6-5.js
