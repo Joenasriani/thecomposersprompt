@@ -1,4 +1,4 @@
-import { mkdir, copyFile, readFile } from 'node:fs/promises';
+import { mkdir, copyFile, readFile, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { createHash } from 'node:crypto';
 
@@ -26,4 +26,8 @@ await mkdir(assets, { recursive: true });
 for (const filename of ['The_Composers_Prompt_Cover_Web.webp', 'the_composers_prompt_by_Joe_Nasr.png']) {
   await copyFile(resolve(root, 'websites/landing/assets', filename), resolve(assets, filename));
 }
+await writeFile(resolve(destination, 'robots.txt'),
+  'User-agent: *\\nAllow: /\\nSitemap: https://thecomposersprompt-book.vercel.app/sitemap.xml\\n');
+await writeFile(resolve(destination, 'sitemap.xml'),
+  '<?xml version="1.0" encoding="UTF-8"?>\\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://thecomposersprompt-book.vercel.app/</loc></url></urlset>\\n');
 console.log('Final-book landing assets assembled with verified locked PDF checksum.');
