@@ -1,4 +1,3 @@
-import './lesson.css';
 const $=id=>document.getElementById(id);
 const modes={major:{label:'C major',notes:['C4','E4','G4'],pcs:[0,4,7],description:'Major third: E is 4 semitones above C. The perfect fifth G is 7 semitones above C.'},minor:{label:'C minor',notes:['C4','Eb4','G4'],pcs:[0,3,7],description:'Minor third: E♭ is 3 semitones above C. The perfect fifth G remains 7 semitones above C.'}};
 let mode='major';
