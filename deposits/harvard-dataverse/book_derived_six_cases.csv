@@ -1,0 +1,7 @@
+case_id,case_name,representation,case_role,key_center,meter,quarter_note_bpm,bar_count,chord_sequence,source_pdf_page,observed_audio_status
+"CP001","Theme A baseline","written_symbolic_specification","baseline","C major","4/4","96","8","C | G | Am | F | C | F | G | C","35","NOT_COLLECTED"
+"CP002","Extended harmony","written_symbolic_specification","multiple_changes","C major","4/4","96","8","Cmaj7 | G7 | Am7 | Fmaj7 | Cmaj9 | Fmaj7 | G9 | Cmaj9","60","NOT_COLLECTED"
+"CP003","Borrowed iv","written_symbolic_specification","single_chord_change","C major","4/4","96","8","C | G | Am | F | C | Fm | G | C","62","NOT_COLLECTED"
+"CP004","Applied dominant pair","written_symbolic_specification","two_chord_change","C major","4/4","96","8","C | G | A7 | Dm | C | F | G | C","65","NOT_COLLECTED"
+"CP005","Matched control","written_symbolic_specification","matched_control","C major","4/4","96","8","C | G | Am7 | Dm | C | F | G | C","65","NOT_COLLECTED"
+"CP006","Matched test","written_symbolic_specification","matched_test","C major","4/4","96","8","C | G | A7 | Dm | C | F | G | C","66","NOT_COLLECTED"
