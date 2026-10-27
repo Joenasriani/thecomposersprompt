@@ -34,3 +34,9 @@ Outside this application's root: repository `index.html`, `.github/`, `book/`, `
 - If VexFlow fails to load, the notation container shows a non-blocking message and keyboard/chord text/audio remain available.
 - CDN connectivity and browser rendering are **NOT RECHECKED**. Before marking PASS, confirm actual engraved clefs, accidentals, ledger lines, notation stacking, correct registers and real mobile display. A future fully self-hosted dependency under `interactive/` would eliminate external CDN reliance.
 - VexFlow: MIT license. Retain required notices with all redistributed bundles. This adapter does not change any sibling projects or the book.
+
+## Playable piano pilot (2026-10-27)
+- Added reusable `music/interactive-piano.js` for pointer/touch and accessible Enter/Space keyboard activation.
+- Chapter 6.5 harmonic keyboard keys now trigger Web Audio single notes, with live note readout; chord selections and seven-white-key minimum preserved.
+- `tests/interactive-piano.mjs` checks MIDI-to-spelled-note correspondence and is imported by existing validation tests.
+- Scope: individual-key playback pilot only. Multi-key chord building, playback-follow animation and real-device browser QA are **PENDING / NOT RECHECKED**.
