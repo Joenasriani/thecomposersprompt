@@ -1,7 +1,18 @@
-# Harvard Dataverse deposit preparation only
+# Harvard Dataverse — readiness only
 
-**Status: NOT READY / NOT DEPOSITED / persistent ID UNKNOWN.** This directory is for Harvard Dataverse readiness, not a confirmed institutional deposit.
+**DEVELOP FURTHER / NOT READY / NOT DEPOSITED. No DOI or acceptance verified.**
 
-Reference canonical release identity from `../../publication.json`, `../../book/FINAL_RELEASE_LOCK.json` and the locked PDF `../../book/THE_COMPOSERS_PROMPT.pdf`. Prepare a clearly identified appropriate dataset, documentation, methods, provenance, rights statement and metadata only when the proposed deposit type is confirmed as eligible. Do not present the final book PDF alone as a verified dataset or scholarly peer-reviewed work; do not confuse interactive source-code licensing with the final PDF's all-rights-reserved notice.
+This directory governs preparation for a **separate curated educational/reference dataset**, not publication of the finalized reviewed book as research data. The book at `../../book/THE_COMPOSERS_PROMPT.pdf` is the sole locked source, identified by `../../publication.json` and `../../book/FINAL_RELEASE_LOCK.json`. It must remain unchanged and is **excluded from any open-licensed Harvard dataset package**. The earlier book versions are superseded; the current book's final editorial review is not being reopened.
 
-Do not invent DOI, accession, affiliation, permission, review, file inventory or approval. No upload/submission without explicit approval.
+## Read this audit first
+- [Eligibility decision and Phase 0](ELIGIBILITY_DECISION.md)
+- [Rights and file boundaries](RIGHTS_AND_FILE_SCOPE.md)
+- [Source provenance and methods limits](PROVENANCE_AND_METHOD.md)
+- [Candidate file inventory](SUBMISSION_INVENTORY.md)
+- [Submission readiness matrix](READINESS_AUDIT.md)
+
+The separately prepared local v2.5 candidate files are **not deposited here or externally submitted**. They contain curated theory/specification tables, not collected empirical observations. A prior candidate README contains superseded wording about the book edition; do not treat that package as a public-upload inventory until source/provenance crosswalk, quality and rights review are completed.
+
+**Rights:** Copyright © 2026 Joseph Ribal Nasr. Published under the name Joe Nasr. Joe Nasr and Joseph Ribal Nasr refer to the same person and copyright holder. All rights reserved, except as otherwise specified by the publication's applicable license. Existing root interactive CC BY 4.0 rights do not apply to the locked final book. The candidate dataset's licence is not yet authorized.
+
+**Never assert a Harvard collection, depositor role, DOI, peer review, research outcomes or publication without evidence. No upload or submission without explicit release approval.**
