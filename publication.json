@@ -57,10 +57,10 @@
     }
   ],
   "catalogue": {
-    "status": "draft",
+    "status": "published",
     "theme": "generative-music",
     "kindLabel": "Free digital book",
-    "cover": "",
+    "cover": "https://thecomposersprompt-book.vercel.app/assets/the_composers_prompt_by_Joe_Nasr.png",
     "coreIdea": "Translate musical ideas into specified, testable instructions for generative music tools.",
     "storeLine": "159 pages · Free PDF · Copyright protected"
   },
