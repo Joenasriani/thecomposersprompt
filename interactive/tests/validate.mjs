@@ -47,3 +47,6 @@ const ext=read('lessons/chapter-6-5/extensions.js');
 assert.match(ext,/keyboardGeometry/,'Keyboard geometry model missing');
 assert.match(ext,/renderChord\(id\)/,'Chord-to-keyboard synchronization missing');
 assert.match(ext,/viewBox/,'Dynamic register-aware viewBox missing');
+
+assert.match(lesson,/id="harmonic-staff"/,'Staff notation SVG missing');
+assert.match(ext,/renderStaff\(chord\)/,'Staff must update on chord selection');
