@@ -12,3 +12,20 @@
 .quick-controls button[aria-pressed=true]{border:2px solid var(--accent);background:var(--soft);padding:8px 14px}
 .chapter-extension .explanation{max-width:75ch}
 @media(max-width:760px){.chapter-extension{padding:27px 0}.quick-controls button{flex:1 0 auto}.reference-table th,.reference-table td{padding:9px}}
+
+/* Supplied title artwork: proportional scaling, no distortion or horizontal overflow. */
+.header{min-height:102px;flex-wrap:wrap;padding:12px 0}
+.header .brand-logo{display:inline-flex;align-items:center;flex:0 0 auto;min-width:0;padding:5px 9px;background:#000;border-radius:3px;line-height:0}
+.header .brand-logo img{display:block;width:clamp(164px,19vw,212px);height:auto;aspect-ratio:340/118}
+.header nav{margin-left:auto;justify-content:flex-end;flex-wrap:wrap}
+@media(max-width:640px){
+ .header{min-height:90px;gap:10px}
+ .header .brand-logo img{width:clamp(132px,40vw,166px)}
+ .header nav{gap:10px}
+ .header nav a{font-size:12px}
+}
+@media(max-width:360px){
+ .header .brand-logo img{width:126px}
+ .header nav{gap:7px}
+ .header select{padding:5px}
+}
