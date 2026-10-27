@@ -1,3 +1,5 @@
+> **CURRENT OWNERSHIP CONTRACT (2026-10-27):** `interactive/` is this standalone application's ONLY writable root. The repository includes independent websites, book content and other workstreams. All development, assets, docs and tests remain under `interactive/`; external root files, `.github/` and sibling directories are read-only unless separately authorized. Earlier notes below are archival observations; where they conflict with the current source, see [DEVELOPMENT_HANDOFF.md](DEVELOPMENT_HANDOFF.md), [PROJECT_STATUS.md](PROJECT_STATUS.md) and [COMPONENT-MANIFEST.json](COMPONENT-MANIFEST.json). The Chapter 6.5 lesson and music/staff models ARE implemented under `interactive/`, contrary to older pre-migration statements.
+
 # Interactive edition — component inventory and deployment contract
 
 Audit: 2026-10-27. Scope: interactive-owned artifacts only. This document records observed source and Vercel API evidence; it does not authorize a migration.
