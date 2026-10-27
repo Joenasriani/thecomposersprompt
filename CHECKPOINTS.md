@@ -96,3 +96,50 @@ Never turn an assumption into a passing checkpoint. Preserve history when correc
 - GitHub Actions run [40208465255](https://github.com/Joenasriani/thecomposersprompt/actions/runs/40208465255) completed with **success** for commit `54a24ab`.
 - Build verification now **PASSED**: dependency installation, Vite build, expected dist output per workflow steps. Earlier failed workflow runs remain part of history.
 - Scope of evidence: successful CI compilation only, NOT verified rendering, audio playback, notation accuracy, mobile visual QA, or full Stage 1 acceptance.
+
+### 2026-10-25 – Shared interface and chord-tail refinement (review branch)
+- Branch: `design/stage1-shared-ui-foundation`.
+- Introduced `stage1/src/ui-foundation.css` as the shared token, layout, responsive header/footer, navigation and control stylesheet; replaced conflicting page-specific CSS in `stage1/src/style.css` with a single import.
+- Reworked `stage1/index.html` to use reusable semantic UI classes across the laboratory. No manuscript changes.
+- Adjusted Tone.js synthesizer envelope (attack 12 ms, decay 110 ms, sustain 0.22, release 180 ms); prior tones receive `releaseAll`, with new attacks staggered by 55 ms and 460 ms note duration.
+- These are source-level changes, not yet listener-approved sound design. Confirm successive chords, rapid clicks, mobile playback, responsive header/footer, notation visibility and full bundle build before merge.
+- Stage 1 acceptance remains blocked.
+
+### 2026-10-25 – Light / Dark / System appearance control
+- Added an appearance selector in the common application header with Light, Dark and System modes.
+- Appearance preferences persist in localStorage where available; System follows the OS preference via prefers-color-scheme and reacts to change.
+- The shared UI token sheet defines a coordinated light palette for layout, navigation and form controls; score ink and harmonic visualization colors change with the selected mode.
+- Source changes are confined to the development PR #4. GitHub Actions build and human visual/audio accessibility checks required before production deployment.
+- Stage 1 remains NOT ACCEPTED; manuscript and existing public book remain unchanged.
+
+### 2026-10-25 – Architecture audit / pre-freeze gate
+- Audit: `stage1/ARCHITECTURE-AUDIT.md` on PR #4 branch.
+- Verdict: NOT READY TO FREEZE. Monolithic app orchestration, missing validated content schema, routing and behavioral tests are P0 structural gaps.
+- Proposed boundaries documented for music data, audio, notation, graphics, app state, theme, routing, Explore/Read/Compose, and tests.
+- Latest pre-audit commit CI check successful: https://github.com/Joenasriani/thecomposersprompt/actions/runs/40217388582 . Compile success does not mean browser or accessibility verified.
+- Next: Refactor to independent modules and validate before integrating corrected manuscript. Stage 1 Gate 1 remains blocked.
+
+### 2026-10-26 – Revised 157-page manuscript received and inventoried
+- Source supplied in conversation: `THE_COMPOSERS_PROMPT_FULL_BOOK_157_PAGES.pdf`, 157 pages; SHA-256 `aaf735bf2b2c4a35f671d517720d6473a9b9d8f93195cc8de453e4d56140f4a8`.
+- Created `stage1/content/manuscript-manifest.json` from its table of contents: **37 chapter entries**, including chapters 3.5, 6.5, 28.5 and 31.5, plus one conclusion and six appendices (44 navigation entries). Chapters are not equivalent to the former 42 reading screens.
+- The first governing content rule reads: **name → construct → hear/recognize → apply → verify**; the app provides playback and testing, the manuscript supplies reasoning.
+- Source frontmatter inconsistency: page 4 says 'Chapters 1–32' while the TOC includes Chapter 33. Do not silently edit the manuscript; flag for editorial confirmation.
+- Manuscript title in PDF is `The Composer’s Prompt – Music Theory as Specification in the Age of AI`; existing application marketing title differs. Maintain separate source-title and web-project-title fields until explicitly reconciled.
+- The PDF binary is **not yet stored in this Git repository**. Manifest records filename and hash so later ingestion can verify source identity.
+- Structural inventory only; complete chapter segmentation, illustrations, music-theory QA and acceptance remain OPEN. No production content replacement.
+
+### 2026-10-26 – Final publication-corrected manuscript verified and locked
+- **Authoritative source:** `THE_COMPOSERS_PROMPT_FULL_BOOK_157_PAGES_PUBLICATION_CORRECTED.pdf` (newly supplied by user).
+- SHA-256: `b68dd911982649c7dc5da83525167da2f75422265647ec1b5e38e869217692eb`; 2,911,209 bytes; 157 PDF pages.
+- Front matter confirmed on PDF page 4: `Music theory and harmony · Chapters 1–33 · Appendices A–F`. Previous page-4 inconsistency **RESOLVED** by user-corrected edition.
+- Title page PDF page 3: `THE COMPOSER’S PROMPT — Music Theory as Specification in the Age of AI`; Joe Nasr. This is the book's actual title. The legacy web-application title remains unchanged pending separate product-branding decision; no longer treat book-title variance as a PDF error.
+- TOC confirmed PDF pages 5–6: 37 chapter entries (1–33 plus 3.5, 6.5, 28.5, 31.5), conclusion and six appendices = 44 navigation entries.
+- Manifest source identity now set to `authoritative-publication-source`. Replaces earlier candidate source for future editorial ingestion; earlier audit history retained for traceability.
+- **Boundary:** Full PDF binary is uploaded in conversation, not in GitHub. Content migration, editorial segment QA and all interactive testing remain outstanding. Production not modified.
+
+### 2026-10-26 – Begin architecture refactor: canonical music model
+- User requested continuation after final manuscript registration. GitHub `publication/` folder was not present on development branch at this check; final PDF binary upload remains outstanding. Do not confuse the committed manifest with the actual PDF.
+- Extracted chord examples into `stage1/src/music/chords.js`; the application imports these definitions rather than embedding them inside the DOM controller.
+- Added model consistency validation (pitch classes versus written notes/score arrays) and `stage1/tests/chords.test.js` for four harmonies, accidentals and invalid inputs.
+- Added `npm test` to Stage 1 and GitHub Actions workflow before Vite compilation.
+- Source changes committed on PR #4's branch; green CI, full separation of audio/notation/graphics, responsive QA and manuscript migration still pending. The module boundary is the first step, **not** a completed or frozen architecture.
