@@ -12,3 +12,7 @@
 - Added static validation and music/staff-model fixtures.
 
 These are source-history summaries, not proof of independently checked browser behavior.
+
+## 2026-10-27 — Browser acceptance harness
+- Added isolated Playwright Chromium smoke suite under `interactive/tests/` for Chapter 6.5.
+- Browser URL could not be accessed by available runtime; browser QA BLOCKED, component extraction deferred.
