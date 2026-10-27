@@ -45,3 +45,9 @@
 
 .notation-region{width:100%;margin:3px 0 8px;min-width:0}
 #harmonic-staff{width:100%;display:block;height:auto;max-height:240px;overflow:visible;color:var(--text)}
+
+/* Reusable playable keyboard: preserve visual proportions and unobstructed notes. */
+#harmonic-keyboard .piano-touch{cursor:pointer;touch-action:manipulation}
+#harmonic-keyboard .piano-touch:focus-visible{stroke:var(--accent);stroke-width:3}
+#harmonic-keyboard circle,#harmonic-keyboard text{pointer-events:none}
+.piano-note-feedback{font-size:.81rem;color:var(--muted);margin:4px 0 8px}
