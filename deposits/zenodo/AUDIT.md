@@ -1,6 +1,6 @@
 # Zenodo publication-readiness audit – 2026-10-27
 
-Scope: read-only verification of authority files; documentation changes confined to `deposits/zenodo/`. This is not a Zenodo account audit or an independent PDF render inspection.
+Scope: authoritative repository files inspected read-only; Zenodo documentation changes confined to `deposits/zenodo/`. This is not a Zenodo account audit or an independent PDF render inspection.
 
 | Check | Status | Evidence / outstanding action |
 |---|---|---|
@@ -14,16 +14,28 @@ Scope: read-only verification of authority files; documentation changes confined
 | Actual custom rights field acceptance | BLOCKED | Test custom statement and save draft in authenticated Zenodo UI, then inspect preview |
 | First-publication date | FIX | 2026 is known, precise first-public date not verified; Zenodo accepts year-only EDTF |
 | Original publisher | UNKNOWN | Confirm if book has already been formally issued elsewhere; otherwise Zenodo default |
-| DOI and duplicate search | UNKNOWN | No DOI asserted; check existing records/account before creating new deposit |
+| DOI and duplicate search | UNKNOWN | Public exact-title web searches found no matching record (not exhaustive); authenticated account and Zenodo search remain necessary |
 | Full PDF text, images, figures, links and embedded metadata | NOT RECHECKED | Final book locked; any defects would require separate explicit authorization, not silent edits |
 | Third-party content permissions | UNKNOWN | Copyright holder to attest permission for embedded graphics, samples, excerpts and other protected material |
-| Zenodo resource subtype in live draft | NOT RECHECKED | Confirm Publication / Book selection in current UI |
+| Zenodo resource subtype | PASS | Official Zenodo documents confirm resource type required; verify available Publication / Book selector when drafting |
 | Personal ORCID, affiliation, funding and conflicts | UNKNOWN | Leave unset unless independently verified / author confirmed |
 | AI-assistance disclosure obligations | UNKNOWN | Confirm accurate disclosure and applicable destination requirements, do not fabricate |
 | GitHub metadata consistency | PASS | Metadata grounded in inspected authoritative source records |
 | Zenodo account and draft created | BLOCKED | Not accessed, created, uploaded or saved |
 | Explicit approval to publish | BLOCKED | Not granted |
 | Actual published record | BLOCKED | None verified; no DOI/URL/date fabricated |
+
+## Additional independent Zenodo documentation checks
+
+Official guidance rechecked 2026-10-27:
+- Custom license/right statement accepted in principle, while CC BY 4.0 is default: https://help.zenodo.org/docs/deposit/describe-records/licenses/
+- Public files and publicly visible metadata are distinct settings: https://help.zenodo.org/docs/deposit/create-new-upload/
+- Publication date is mandatory; first public release date for previously published works; year-only EDTF is supported: https://help.zenodo.org/docs/deposit/describe-records/publication-date/
+- New version creates a different linked record and persistent identifier: https://help.zenodo.org/docs/deposit/manage-versions/
+- Zenodo will mint a DOI on public publication unless the object already has its own DOI: https://help.zenodo.org/docs/deposit/about-records/
+- Official help pages are inconsistent about post-publication minor file-edit windows (create-upload says 45 days; manage-files describes 30-day initiation and 45-day finalization). No post-publication file replacement is planned or authorized here: https://help.zenodo.org/docs/deposit/manage-files/
+
+**Readiness decision:** technically prepared as an offline metadata plan; **NOT READY** for a verified Zenodo submission until exact binary inspection, first-publication/publisher confirmation, rights evidence and saved-draft validation are complete. No scholarly/peer-review validation is claimed.
 
 ## Remaining actions – ordered
 
