@@ -1,3 +1,5 @@
+> **Repository navigation:** [COMPONENTS.md](COMPONENTS.md) identifies the authoritative final book, separate interactive edition, Zenodo and Harvard Dataverse preparation, and book landing-page workstream. This README principally covers the **interactive edition**. The final PDF is separately locked.
+
 > **Final book authority:** The finalized 2026 PDF publication is governed by [`publication.json`](publication.json) and [`book/FINAL_RELEASE_LOCK.json`](book/FINAL_RELEASE_LOCK.json), with the canonical file [`book/THE_COMPOSERS_PROMPT.pdf`](book/THE_COMPOSERS_PROMPT.pdf) (Git blob `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`). Publication credit: **Joe Nasr**; copyright holder: **Joseph Ribal Nasr**. This README describes the separate developing interactive edition. Its CC BY 4.0 permissions remain unaffected.
 
 # The Modern Composer’s Prompt
