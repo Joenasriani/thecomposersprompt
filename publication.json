@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "id": "the-composers-prompt",
+  "kind": "book",
+  "title": "The Composer’s Prompt",
+  "subtitle": "Music Theory and Harmony for Computational Music Prompting",
+  "author": "J. Nasr",
+  "copyright_holder": "Joseph Ribal Nasr",
+  "edition": "2026 digital edition · Free to read",
+  "sales_status": "closed",
+  "access": "free_to_read",
+  "canonical_url": "https://thecomposersprompt.vercel.app/book/",
+  "catalogue_url": "https://reasoning-and-logic.vercel.app/",
+  "repository": {
+    "current": "Joenasriani/thecomposersprompt"
+  },
+  "deployment": {
+    "provider": "vercel",
+    "root_directory": "."
+  },
+  "checkout": {
+    "provider": "none",
+    "mode": "free",
+    "product_id": "COMPOSERS-PROMPT-FREE",
+    "amount": "0.00",
+    "currency": "USD"
+  },
+  "release": {
+    "product_id": "COMPOSERS-PROMPT-FREE",
+    "price": "0.00",
+    "currency": "USD",
+    "book_pages": 159,
+    "version": "1.0.0",
+    "formats": [
+      "PDF"
+    ],
+    "file_path": "book/THE_COMPOSERS_PROMPT.pdf",
+    "git_blob_sha": "fe10bb14c36bdd22ec791031b02d43fb5d8fabde"
+  },
+  "description": "A 159-page book on applying music theory and harmony to computational music prompting, from intervals, modes and chord functions to musical form, audio-generation specifications and verification.",
+  "routes": [
+    {
+      "path": "/book/",
+      "file": "book/index.html",
+      "indexable": true
+    },
+    {
+      "path": "/book/THE_COMPOSERS_PROMPT.pdf",
+      "file": "book/THE_COMPOSERS_PROMPT.pdf",
+      "indexable": false
+    }
+  ],
+  "catalogue": {
+    "status": "draft",
+    "theme": "generative-music",
+    "kindLabel": "Free digital book",
+    "cover": "",
+    "coreIdea": "Translate musical ideas into specified, testable instructions for generative music tools.",
+    "storeLine": "159 pages · 33 chapters plus supplementary sections · Appendices A–F · Free PDF"
+  },
+  "rights": {
+    "type": "all_rights_reserved",
+    "copyright": "Copyright © 2026 Joseph Ribal Nasr. All rights reserved.",
+    "free_to_read": true,
+    "redistribution_allowed": false,
+    "previous_cc_by_material_unchanged": true
+  }
+}
