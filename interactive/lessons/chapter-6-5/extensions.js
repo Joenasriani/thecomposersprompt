@@ -1,4 +1,4 @@
-import {staffSteps,displayAccidental,staffForPitch} from '../../music/staff-model.js';
+import {renderCompactChord} from '../../music/compact-notation.js';
 import {CHORDS,THEME_A,frequency,midi,pitchClass} from '../../music/chapter-6-5.js';
 let audio;
 const NS='http://www.w3.org/2000/svg';
@@ -15,41 +15,11 @@ export function keyboardGeometry(notes){
  if(naturals.length<7){while(naturals.length<7){const next=naturals.at(-1)+1;let candidate=next;while(!whiteClasses.has(candidate%12))candidate++;naturals.push(candidate);}}
  return {naturals,active:new Set(midis),rootPc:pitchClass(notes[0]),width:naturals.length*48};
 }
-function renderStaff(chord){
- const svg=document.getElementById('harmonic-staff');if(!svg)return;
- svg.replaceChildren();
- const groups=['treble','bass'].filter(clef=>chord.notes.some(n=>staffForPitch(n)===clef));
- const height=groups.length===2?250:148;
- svg.setAttribute('viewBox',`0 0 420 ${height}`);
- svg.setAttribute('aria-label',chord.name+': '+chord.notes.join(', ')+' displayed on '+groups.join(' and ')+' staff');
- groups.forEach((clef,g)=>{
-  const top=37+g*115, bottom=top+40;
-  // Five lines: bottom is E4 in treble or G2 in bass.
-  for(let i=0;i<5;i++)element(svg,'line',{x1:68,x2:399,y1:top+i*10,y2:top+i*10,stroke:'currentColor','stroke-width':.85,opacity:.6});
-  // Unicode musical clefs are anchored to their reference staff lines.
-  // G clef curls around the second line from bottom (G4, y=bottom-10).
-  // F clef's two dots straddle the second line from top (F3, y=top+10).
-  const clefGlyph=clef==='treble'?'𝄞':'𝄢';
-  const clefY=clef==='treble'?bottom+8:top+23;
-  element(svg,'text',{x:78,y:clefY,fill:'currentColor',
-    'font-family':'Bravura, Noto Music, Noto Sans Symbols 2, DejaVu Sans, serif',
-    'font-size':clef==='treble'?67:48,
-    'aria-label':clef==='treble'?'G clef':'F clef'}).textContent=clefGlyph;
-  chord.notes.filter(n=>staffForPitch(n)===clef).forEach((note,j)=>{
-   const step=staffSteps(note,clef),y=bottom-step*5,x=210;
-   // Ledger lines are spaced every two diatonic steps outside the staff.
-   if(step<0){for(let st=-2;st>=step;st-=2)element(svg,'line',{x1:x-18,x2:x+18,y1:bottom-st*5,y2:bottom-st*5,stroke:'currentColor'});}
-   if(step>8){for(let st=10;st<=step;st+=2)element(svg,'line',{x1:x-18,x2:x+18,y1:bottom-st*5,y2:bottom-st*5,stroke:'currentColor'});}
-   element(svg,'ellipse',{cx:x,cy:y,rx:8,ry:5.5,fill:'currentColor',transform:`rotate(-15 ${x} ${y})`});
-   const accidental=displayAccidental(note);if(accidental)element(svg,'text',{x:x-32-((j%2)*17),y:y+5,fill:'currentColor','font-size':21}).textContent=accidental;
-  });
- });
-}
 
 function renderChord(id){
  const chord=CHORDS[id],svg=document.getElementById('harmonic-keyboard');
  if(!chord||!svg)return;
- const layout=keyboardGeometry(chord.notes);svg.replaceChildren();renderStaff(chord);
+ const layout=keyboardGeometry(chord.notes);svg.replaceChildren();renderCompactChord(document.getElementById('harmonic-staff'),chord);
  svg.setAttribute('viewBox',`0 0 ${layout.width} 154`);
  svg.setAttribute('aria-label',`${chord.name}: ${chord.notes.join(', ')}`);
  layout.naturals.forEach((n,i)=>{
