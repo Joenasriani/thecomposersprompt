@@ -1,0 +1,112 @@
+{
+  "schemaVersion": "1.0.0",
+  "workstream": "interactive",
+  "applicationTitle": "The Composer’s Prompt",
+  "updated": "2026-10-27",
+  "productionIntendedEntry": "index.html",
+  "migrationState": "not-started",
+  "manifestScope": "interactive-owned sources only",
+  "components": [
+    {
+      "id": "legacy-workbook",
+      "path": "index.html",
+      "role": "existing-interactive-site",
+      "state": "preserve",
+      "implementation": "standalone-html",
+      "verified": "repository-present",
+      "qa": "NOT RECHECKED"
+    },
+    {
+      "id": "editorial-prototype",
+      "path": "prototype/index.html",
+      "role": "design-prototype",
+      "state": "archive-in-place",
+      "implementation": "standalone-html",
+      "verified": "repository-present",
+      "qa": "NOT RECHECKED"
+    },
+    {
+      "id": "harmonic-laboratory",
+      "path": "stage1/",
+      "role": "experimental-vite-application",
+      "state": "preserve",
+      "implementation": "vite-three-tone-vexflow",
+      "verified": "repository-present",
+      "qa": "NOT RECHECKED"
+    },
+    {
+      "id": "reviewed-lesson",
+      "path": "stage1/lesson.html",
+      "ref": "design/stage1-shared-ui-foundation",
+      "role": "chapter-6.5-review-prototype",
+      "state": "development-pr-4-only",
+      "verified": "development-branch",
+      "qa": "NOT RECHECKED"
+    },
+    {
+      "id": "interactive-workstream",
+      "path": "interactive/",
+      "role": "future-modular-application-home",
+      "state": "documentation-and-manifests-only",
+      "verified": "repository-present",
+      "qa": "NOT RECHECKED"
+    }
+  ],
+  "protectedSources": [
+    {
+      "path": "book/THE_COMPOSERS_PROMPT.pdf",
+      "role": "authoritative-book-read-only",
+      "blobSha": "fe10bb14c36bdd22ec791031b02d43fb5d8fabde"
+    },
+    {
+      "path": "publication.json",
+      "role": "book-metadata-read-only"
+    },
+    {
+      "path": "book/FINAL_RELEASE_LOCK.json",
+      "role": "book-release-lock-read-only"
+    },
+    {
+      "path": "websites/landing/",
+      "role": "other-workstream"
+    },
+    {
+      "path": "deposits/",
+      "role": "other-workstream"
+    }
+  ],
+  "rights": {
+    "legacyInteractive": "CC BY 4.0 grant preserved",
+    "book": "All rights reserved, free to read; not automatically CC BY 4.0",
+    "newInteractive": "license decision required before publication",
+    "thirdParty": "retain respective notices"
+  },
+  "deployment": {
+    "githubPages": {
+      "expectedUrl": "https://joenasriani.github.io/thecomposersprompt/",
+      "entry": "index.html",
+      "status": "NOT RECHECKED"
+    },
+    "vercelLab": {
+      "projectId": "prj_9WZWGf5PTxXP90SloTeGncV4DWJH",
+      "project": "thecomposersprompt-lab",
+      "lastCheckedBranch": "main",
+      "status": "READY deployment observed; exact root and browser QA UNKNOWN"
+    },
+    "bookLanding": {
+      "project": "thecomposersprompt-book",
+      "status": "separate; excluded from this workstream"
+    }
+  },
+  "gates": {
+    "beforeMigration": [
+      "verify live entry route and exact Vercel root/build settings",
+      "inventory original 11 room behaviors",
+      "complete music rendering/playback parity tests",
+      "mobile and keyboard accessible QA",
+      "deploy isolated preview and inspect",
+      "obtain approval before changing entry path"
+    ],
+    "productionChangeAuthorized": false
+  }
+}
