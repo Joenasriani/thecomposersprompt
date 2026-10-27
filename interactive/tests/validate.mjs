@@ -63,3 +63,5 @@ assert.match(ext,/data-midi/,'Piano keys must carry exact pitch numbers');
 const piano=read('music/interactive-piano.js');
 assert.match(piano,/pointerdown/,'Pointer interaction missing');
 assert.match(piano,/keydown/,'Keyboard interaction missing');
+
+await import('./interactive-piano.mjs');
