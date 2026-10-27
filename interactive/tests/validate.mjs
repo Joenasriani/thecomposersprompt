@@ -50,3 +50,5 @@ assert.match(ext,/viewBox/,'Dynamic register-aware viewBox missing');
 
 assert.match(lesson,/id="harmonic-staff"/,'Staff notation SVG missing');
 assert.match(ext,/renderStaff\(chord\)/,'Staff must update on chord selection');
+
+assert.match(ext,/naturals\.length<7/,'Harmonic piano requires at least seven white keys');
