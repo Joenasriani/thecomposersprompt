@@ -41,3 +41,9 @@ assert.equal(manifest.productionChangeAuthorized??manifest.gates?.productionChan
 const book=manifest.protectedSources.find(x=>x.path==='book/THE_COMPOSERS_PROMPT.pdf');
 assert.ok(book,'Final book must remain explicitly protected');
 console.log('PASS: standalone lesson assets, theory fixtures, legacy app, experiment inventory, migration controls.');
+
+assert.match(lesson,/id="harmonic-keyboard"/,'Reusable harmonic reference keyboard missing');
+const ext=read('lessons/chapter-6-5/extensions.js');
+assert.match(ext,/keyboardGeometry/,'Keyboard geometry model missing');
+assert.match(ext,/renderChord\(id\)/,'Chord-to-keyboard synchronization missing');
+assert.match(ext,/viewBox/,'Dynamic register-aware viewBox missing');
