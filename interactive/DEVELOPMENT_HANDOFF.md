@@ -24,3 +24,10 @@ Audit current interactive source; synchronize README, handoff, manifest, status,
 
 ## Browser QA gate — 2026-10-27
 Run `tests/browser-chapter-6-5.spec.mjs` with Playwright Chromium against an accessible local static server or Pages URL. This test was committed but not executable in the current disconnected browser environment. Review conventional clef rendering and staff engraving manually. **Do not extract components or start mass chapter conversion until the actual browser gate passes.**
+
+## Canonical interactive web address — 2026-10-27
+- **Canonical public URL:** https://thecomposersprompt-lab.vercel.app/
+- Vercel project: `thecomposersprompt-lab` (`prj_9WZWGf5PTxXP90SloTeGncV4DWJH`). Project root directory is configured as `interactive`; framework is set to Other/none for static delivery of this folder's `index.html`.
+- The URL must expose only the standalone `interactive/` application at the domain root, including `/lessons/chapter-6-5/`. Do not use the GitHub Pages /thecomposersprompt/interactive/ path as the canonical link.
+- Domain assignment is verified; **the new deployment and browser response still require confirmation**. This change is configuration-only until a new production deployment finishes.
+- No change to sibling websites, separate book, or repository-root public entry.
