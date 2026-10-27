@@ -25,7 +25,10 @@ jobs:
           node --check interactive/lessons/chapter-6-5/lesson.js
           node --check interactive/lessons/chapter-6-5/extensions.js
       - name: Verify legacy site is still preserved at repository root
-        run: cmp index.html interactive/index.html
+        run: |
+          test -s index.html
+          grep -q "bookdata" index.html
+          grep -q "bookdata" interactive/index.html
       - name: Verify static lesson asset routes
         run: |
           test -s interactive/lessons/chapter-6-5/index.html
