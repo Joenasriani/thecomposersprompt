@@ -3,53 +3,77 @@
   "workstream": "interactive",
   "applicationTitle": "The Composer’s Prompt",
   "updated": "2026-10-27",
-  "productionIntendedEntry": "index.html",
-  "migrationState": "not-started",
+  "productionIntendedEntry": "index.html (preserved legacy; no production migration authorized)",
+  "migrationState": "copy-only-consolidation-in-progress",
   "manifestScope": "interactive-owned sources only",
   "components": [
     {
-      "id": "legacy-workbook",
+      "id": "legacy-root",
       "path": "index.html",
-      "role": "existing-interactive-site",
+      "role": "preserved-public-entry",
       "state": "preserve",
-      "implementation": "standalone-html",
-      "verified": "repository-present",
-      "qa": "NOT RECHECKED"
+      "qa": "NOT RECHECKED browser"
     },
     {
-      "id": "editorial-prototype",
-      "path": "prototype/index.html",
-      "role": "design-prototype",
-      "state": "archive-in-place",
-      "implementation": "standalone-html",
-      "verified": "repository-present",
-      "qa": "NOT RECHECKED"
+      "id": "interactive-home",
+      "path": "interactive/index.html",
+      "role": "copied-interactive-landing",
+      "state": "implemented",
+      "qa": "PASS source; NOT RECHECKED browser"
     },
     {
-      "id": "harmonic-laboratory",
-      "path": "stage1/",
-      "role": "experimental-vite-application",
-      "state": "preserve",
-      "implementation": "vite-three-tone-vexflow",
-      "verified": "repository-present",
-      "qa": "NOT RECHECKED"
+      "id": "chapter-6-5",
+      "path": "interactive/lessons/chapter-6-5/index.html",
+      "role": "reference-interactive-lesson",
+      "state": "implemented-under-qa",
+      "qa": "PASS static; NOT RECHECKED browser/audio/notation"
     },
     {
-      "id": "reviewed-lesson",
-      "path": "stage1/lesson.html",
-      "ref": "design/stage1-shared-ui-foundation",
-      "role": "chapter-6.5-review-prototype",
-      "state": "development-pr-4-only",
-      "verified": "development-branch",
-      "qa": "NOT RECHECKED"
+      "id": "lesson-actions",
+      "path": "interactive/lessons/chapter-6-5/extensions.js",
+      "role": "chord-selector-keyboard-staff-audio-controller",
+      "state": "implemented-under-qa",
+      "qa": "NOT RECHECKED browser"
     },
     {
-      "id": "interactive-workstream",
-      "path": "interactive/",
-      "role": "future-modular-application-home",
-      "state": "documentation-and-manifests-only",
-      "verified": "repository-present",
-      "qa": "NOT RECHECKED"
+      "id": "chord-model",
+      "path": "interactive/music/chapter-6-5.js",
+      "role": "notes-chords-harmony",
+      "state": "implemented",
+      "qa": "PASS automated music tests"
+    },
+    {
+      "id": "staff-model",
+      "path": "interactive/music/staff-model.js",
+      "role": "diatonic-position-and-accidental-parser",
+      "state": "implemented-under-qa",
+      "qa": "PASS unit tests; NOT RECHECKED engraving"
+    },
+    {
+      "id": "light-logo",
+      "path": "interactive/assets/composers-prompt-title-light.webp",
+      "role": "deferred-light-theme-image",
+      "state": "PENDING user upload; absent on main",
+      "qa": "BLOCKED missing asset"
+    },
+    {
+      "id": "dark-logo",
+      "path": "interactive/assets/composers-prompt-title.svg",
+      "role": "existing-theme-artwork",
+      "state": "implemented",
+      "qa": "PASS source"
+    },
+    {
+      "id": "prototype-copy",
+      "path": "interactive/experiments/prototype/index.html",
+      "role": "preserved-prototype",
+      "state": "preserve"
+    },
+    {
+      "id": "stage1-copy",
+      "path": "interactive/experiments/stage1/",
+      "role": "preserved-experiment",
+      "state": "preserve"
     }
   ],
   "protectedSources": [
@@ -85,7 +109,8 @@
     "githubPages": {
       "expectedUrl": "https://joenasriani.github.io/thecomposersprompt/",
       "entry": "index.html",
-      "status": "NOT RECHECKED"
+      "status": "PASS GitHub Actions pages deployment for 5d33ce8; browser HTTP/interaction NOT RECHECKED",
+      "lessonUrl": "https://joenasriani.github.io/thecomposersprompt/interactive/lessons/chapter-6-5/"
     },
     "vercelLab": {
       "projectId": "prj_9WZWGf5PTxXP90SloTeGncV4DWJH",
@@ -100,13 +125,19 @@
   },
   "gates": {
     "beforeMigration": [
-      "verify live entry route and exact Vercel root/build settings",
-      "inventory original 11 room behaviors",
-      "complete music rendering/playback parity tests",
-      "mobile and keyboard accessible QA",
-      "deploy isolated preview and inspect",
-      "obtain approval before changing entry path"
+      "complete actual browser/audio/keyboard/notation/mobile QA",
+      "verify deep links/assets in deployed Pages",
+      "confirm chapter/legacy parity",
+      "obtain explicit production migration approval"
     ],
     "productionChangeAuthorized": false
+  },
+  "continuity": {
+    "startHere": "interactive/DEVELOPMENT_HANDOFF.md",
+    "projectStatus": "interactive/PROJECT_STATUS.md",
+    "chapters": "interactive/CHAPTER_PROGRESS.md",
+    "design": "interactive/DESIGN_SYSTEM.md",
+    "musicRules": "interactive/MUSIC_THEORY_RULES.md",
+    "changelog": "interactive/CHANGELOG.md"
   }
 }
