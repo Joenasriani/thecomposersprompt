@@ -7,7 +7,7 @@ Scope: authoritative repository files inspected read-only; Zenodo documentation 
 | Phase 0 classification | PASS | Educational book, not empirical validation or peer-reviewed article |
 | Canonical title, subtitle, creator and holder | PASS | `publication.json`, `book/FINAL_RELEASE_LOCK.json` |
 | Locked PDF identity in release records | PASS | 159 pages; 5,204,343 bytes; blob SHA-1 fe10bb14c36bdd22ec791031b02d43fb5d8fabde |
-| Independent binary checksum / PDF contents | NOT RECHECKED | Requires download and comparison of the canonical binary; do not claim verified in this audit |
+| GitHub PDF blob identity | PASS | Direct GitHub fetch of `book/THE_COMPOSERS_PROMPT.pdf` on `main` returned `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`, matching locked release records. GitHub reported base64 content length 0. |\n| Independent binary checksum / PDF contents | BLOCKED | GitHub connector did not supply binary bytes (base64 result empty; blob fetch produced UnicodeDecodeError). SHA-256, page count and internal PDF inspection cannot be independently verified from this tool. |
 | Copyright statement throughout preparation | PASS | `metadata.json`, `RIGHTS.md`, `README.md` |
 | Separate interactive edition licensing | PASS | No PDF CC BY 4.0; older interactive terms preserved |
 | Zenodo license and public visibility capabilities | PASS | Official Zenodo docs, see README |
@@ -35,7 +35,7 @@ Official guidance rechecked 2026-10-27:
 - Zenodo will mint a DOI on public publication unless the object already has its own DOI: https://help.zenodo.org/docs/deposit/about-records/
 - Official help pages are inconsistent about post-publication minor file-edit windows (create-upload says 45 days; manage-files describes 30-day initiation and 45-day finalization). No post-publication file replacement is planned or authorized here: https://help.zenodo.org/docs/deposit/manage-files/
 
-**Readiness decision:** technically prepared as an offline metadata plan; **NOT READY** for a verified Zenodo submission until exact binary inspection, first-publication/publisher confirmation, rights evidence and saved-draft validation are complete. No scholarly/peer-review validation is claimed.
+**Readiness decision:** metadata plan prepared in repository; GitHub blob identity independently cross-checked, but byte-level PDF validation is blocked by the connected retrieval method; **NOT READY** for a verified Zenodo submission until exact binary inspection, first-publication/publisher confirmation, rights evidence and saved-draft validation are complete. No scholarly/peer-review validation is claimed.
 
 ## Remaining actions – ordered
 
