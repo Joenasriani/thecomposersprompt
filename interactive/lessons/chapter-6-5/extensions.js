@@ -1,3 +1,4 @@
+import {attachPianoInteraction,noteFromMidi} from '../../music/interactive-piano.js';
 import {renderCompactChord} from '../../music/compact-notation.js';
 import {CHORDS,THEME_A,frequency,midi,pitchClass} from '../../music/chapter-6-5.js';
 let audio;
@@ -23,7 +24,7 @@ function renderChord(id){
  svg.setAttribute('viewBox',`0 0 ${layout.width} 154`);
  svg.setAttribute('aria-label',`${chord.name}: ${chord.notes.join(', ')}`);
  layout.naturals.forEach((n,i)=>{
-  const x=i*48;element(svg,'rect',{x,y:3,width:48,height:126,rx:1,class:'white-key'});
+  const x=i*48;element(svg,'rect',{x,y:3,width:48,height:126,rx:1,class:'white-key piano-touch','data-midi':n,tabindex:0,role:'button','aria-label':'Play '+noteFromMidi(n)});
   if(layout.active.has(n))element(svg,'circle',{cx:x+24,cy:107,r:5,class:(id==='C/E'||id==='C/G'?0:pitchClass(chord.notes[0]))===n%12?'active-root':'active-note'});
   element(svg,'text',{x:x+24,y:148,'text-anchor':'middle',class:'key-label'}).textContent=sharpNames[n%12];
  });
@@ -31,7 +32,7 @@ function renderChord(id){
   const lower=layout.naturals[i],higher=layout.naturals[i+1];
   if(higher-lower!==2)continue;
   const n=lower+1,x=(i+1)*48-15;
-  element(svg,'rect',{x,y:3,width:30,height:73,rx:2,class:'black-key'});
+  element(svg,'rect',{x,y:3,width:30,height:73,rx:2,class:'black-key piano-touch','data-midi':n,tabindex:0,role:'button','aria-label':'Play '+noteFromMidi(n)});
   if(layout.active.has(n))element(svg,'circle',{cx:x+15,cy:57,r:5,class:'active-note'});
  }
  document.getElementById('selected-chord').textContent=`${chord.name} · ${chord.notes.map(n=>n.replace('b','♭').replace('#','♯')).join(' · ')}`;
@@ -53,4 +54,25 @@ function bind(group,output){
  });
 }
 ['qualities','diatonic','inversions','sevenths','progression'].forEach(group=>bind(group+'-choices',group+'-result'));
+async function playPianoMidi(value){
+ try{
+  audio??=new (window.AudioContext||window.webkitAudioContext)();
+  await audio.resume();
+  const at=audio.currentTime+.012;
+  const oscillator=audio.createOscillator(),gain=audio.createGain();
+  oscillator.type='sine';oscillator.frequency.value=440*Math.pow(2,(value-69)/12);
+  gain.gain.setValueAtTime(.0001,at);
+  gain.gain.exponentialRampToValueAtTime(.085,at+.016);
+  gain.gain.exponentialRampToValueAtTime(.0001,at+.55);
+  oscillator.connect(gain).connect(audio.destination);
+  oscillator.start(at);oscillator.stop(at+.57);
+  const readout=document.getElementById('piano-note-feedback');
+  if(readout)readout.textContent='Played '+noteFromMidi(value);
+ }catch{
+  const readout=document.getElementById('piano-note-feedback');
+  if(readout)readout.textContent='Audio unavailable; selected note '+noteFromMidi(value);
+ }
+}
+attachPianoInteraction(document.getElementById('harmonic-keyboard'),{onNote:playPianoMidi});
+
 renderChord('C');
