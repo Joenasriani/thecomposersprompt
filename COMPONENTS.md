@@ -9,10 +9,10 @@ This repository contains **different artifacts and workflows**, not interchangea
 | Interactive workbook | root `index.html` | Existing self-contained interactive edition | Interactive website | SEPARATE EDITION |
 | Interactive experiment | `stage1/` | Vite-based experimental interface | Interactive website | WORK IN PROGRESS |
 | Editorial prototype | `prototype/` | Prototype, not final PDF or live landing | Interactive website | PROTOTYPE |
-| Book landing page | `book/index.html` | Existing landing source at current configured Vercel root | Landing-page workstream | PRE-DEPLOYMENT; PATH TRANSITION PENDING |
+| Book landing page | `websites/landing/index.html` | Standalone source, built with locked PDF copied into deploy output | Landing-page workstream | VERCEL READY; PUBLIC HTTP NOT RECHECKED |
 | Zenodo preparation | `deposits/zenodo/` | Deposit-specific documentation and metadata | Zenodo workstream | NOT READY / NOT DEPOSITED |
 | Harvard Dataverse preparation | `deposits/harvard-dataverse/` | Deposit-specific documentation and metadata | Dataverse workstream | NOT READY / NOT DEPOSITED |
-| Landing deployment ownership | `websites/landing/` | Landing-page instructions, checks and future migration | Landing-page workstream | PREPARATION |
+| Landing deployment ownership | `websites/landing/` | Landing source, build script and deployment instructions | Landing-page workstream | VERCEL READY |
 
 ## Governing rules
 
@@ -21,7 +21,7 @@ This repository contains **different artifacts and workflows**, not interchangea
 3. `publication.json` governs final-book descriptive metadata; `book/FINAL_RELEASE_LOCK.json` governs its immutable release. The public canonical URL in `publication.json` is **planned, NOT RECHECKED** until Vercel verification.
 4. Root `index.html`, `prototype/`, `stage1/`, `CITATION.cff` and the existing root `LICENSE` belong to the **separate interactive edition**, with its pre-existing CC BY 4.0 permissions. Do not apply that license or citation wholesale to the final PDF.
 5. Deposit packages must reference the final PDF's locked identity without copying a divergent PDF or claiming a DOI, accession number, institutional approval, peer review or completed deposit before independently verified.
-6. The existing landing HTML remains at `book/index.html` **temporarily** for compatibility with the planned Vercel Root Directory `book`. The folder `websites/landing/` is the deployment workstream's home; move the actual HTML source there only as a separate, coordinated deployment-path change after verifying Vercel settings. Do not maintain two untracked HTML copies.
+6. The standalone landing source is now `websites/landing/index.html` and its verified-checksum build copies the locked PDF to generated output. The superseded `book/index.html` remains temporarily for compatibility; do not edit it as the new primary source or remove it before checking other deployment dependencies.
 7. No PayPal changes, live deployment, repository restructure, file deletion, or public deposit are authorized by this document.
 
 ## Workstream handoff
