@@ -16,4 +16,4 @@ The manuscript is embedded in `index.html` as reading-section data. Keep each se
 
 ## Scope and licensing
 
-Submit only material you have permission to contribute. Contributions are intended to be distributed under the repository's CC BY 4.0 license. Identify third-party material, attribution requirements and any exceptions explicitly. Do not include secrets or personal information in issues, examples or pull requests.
+Submit only material you have permission to contribute. Contributions to the existing interactive workbook are intended to be distributed under the repository's CC BY 4.0 license. This does not apply to the separately published, all-rights-reserved final PDF of *The Composer’s Prompt*. Do not submit or redistribute that PDF as though it were CC BY 4.0 licensed. Identify third-party material, attribution requirements and any exceptions explicitly. Do not include secrets or personal information in issues, examples or pull requests.
