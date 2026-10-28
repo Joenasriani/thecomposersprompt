@@ -13,6 +13,7 @@ export function renderCompactChord(container,chord){
   const renderer=new VF.Renderer(container,VF.Renderer.Backends.SVG);
   renderer.resize(width,height);
   const ctx=renderer.getContext();
+  ctx.setFillStyle('currentColor');ctx.setStrokeStyle('currentColor');
   groups.forEach((clef,i)=>{
    const stave=new VF.Stave(12,16+i*115,390);
    stave.addClef(clef).setContext(ctx).draw();
@@ -26,7 +27,7 @@ export function renderCompactChord(container,chord){
    voice.draw(ctx,stave);
   });
   const image=container.querySelector('svg');
-  if(image){image.setAttribute('role','img');image.setAttribute('aria-label',chord.name+' notation: '+chord.notes.join(', '));image.style.width='100%';image.style.height='auto';}
+  if(image){image.setAttribute('role','img');image.setAttribute('aria-label',chord.name+' notation: '+chord.notes.join(', '));image.setAttribute('viewBox',`0 0 ${width} ${height}`);image.setAttribute('preserveAspectRatio','xMidYMid meet');image.style.display='block';image.style.width='100%';image.style.maxWidth='100%';image.style.height='auto';image.style.color='var(--text)';image.style.overflow='hidden';}
   return true;
  }catch(err){container.replaceChildren();container.textContent='Notation unavailable; keyboard and note names remain available.';return false;}
 }
