@@ -24,3 +24,11 @@ These are source-history summaries, not proof of independently checked browser b
 - Optional VexFlow 5.0.0 compact staff is supporting notation only; keyboard, visualizations, prompts and sound remain independent. No MuseScore/LilyPond/score editing systems.
 - Final acceptance: browser confirmation at 320/375/768/1024/1440, clefs/accidentals, piano sound/touch, accessibility, navigation/asset paths, light artwork, and Vercel production deployment **NOT RECHECKED**.
 - No changes to root landing, the final book, `.github/`, other projects, or external publication rights.
+
+## 2026-10-28 — Repository-driven layout remediation
+- Removed obsolete image-logo CSS from Chapter 6.5; retained plain title navigation.
+- Consolidated mobile header and panel containment rules for 320–1440px target widths.
+- Constrained optional VexFlow SVG to its panel, added responsive viewBox behavior and theme-aware foreground colors.
+- Applied bounded keyboard sizing and local horizontal scrolling for data tables, instead of allowing page-level overflow.
+- Added static regression checks for mobile CSS, absence of obsolete logo markup and notation scaling.
+- Browser viewport, accessibility and audio interaction are NOT RECHECKED; do not classify as visual PASS until executed.
