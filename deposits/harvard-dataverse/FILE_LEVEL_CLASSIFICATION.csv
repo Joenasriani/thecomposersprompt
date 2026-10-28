@@ -1,0 +1,10 @@
+file,publication_role,contents,empirical_observations,license_status,upload_candidate
+book_derived_theme_a_8bar.csv,original_curated_data,8 authored chord specifications,no,UNDECIDED,yes
+book_derived_six_cases.csv,original_curated_data,6 written comparison cases,no,UNDECIDED,yes
+book_derived_48_chord_events.csv,original_curated_data,48 position-labelled chord events,no,UNDECIDED,yes
+book_derived_theme_a_8bar_CODEBOOK.md,documentation,field definitions and provenance,no,UNDECIDED,yes
+PROVENANCE_AND_METHOD.md,methodology,source and derivation boundaries,no,UNDECIDED,yes
+VALIDATED_CANDIDATE_SCOPE.md,validation_documentation,checks and limits,no,UNDECIDED,yes
+PUBLICATION_TYPE_AND_METADATA.md,metadata_draft,dataset-level description,no,UNDECIDED,yes
+book/THE_COMPOSERS_PROMPT.pdf,external_reference,final reviewed book,no,ALL_RIGHTS_RESERVED,no
+index.html,excluded_separate_edition,interactive workbook,no,PREEXISTING_CC_BY_4_0,no
