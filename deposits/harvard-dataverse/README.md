@@ -4,6 +4,9 @@
 
 This directory governs preparation for a **separate curated educational/reference dataset**, not publication of the finalized reviewed book as research data. The book at `../../book/THE_COMPOSERS_PROMPT.pdf` is the sole locked source, identified by `../../publication.json` and `../../book/FINAL_RELEASE_LOCK.json`. It must remain unchanged and is **excluded from any open-licensed Harvard dataset package**. The earlier book versions are superseded; the current book's final editorial review is not being reopened.
 
+## Publication type
+**Dataset** (a nonempirical curated educational reference corpus, NOT a book/empirical study). See [publication type, description, and metadata](PUBLICATION_TYPE_AND_METADATA.md), [deposit README](DEPOSIT_README.md), and [file-level classification](FILE_LEVEL_CLASSIFICATION.csv).
+
 ## Read this audit first
 - [Eligibility decision and Phase 0](ELIGIBILITY_DECISION.md)
 - [Rights and file boundaries](RIGHTS_AND_FILE_SCOPE.md)
