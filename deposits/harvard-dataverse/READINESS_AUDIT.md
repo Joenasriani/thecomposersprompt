@@ -7,7 +7,7 @@
 | Publication identity and copyright | PASS | Joe Nasr / Joseph Ribal Nasr / 2026 confirmed in records |
 | Book is not called a dataset | PASS | Distinct education-book and annotated-data classifications |
 | Harvard software vs repository distinguished | PASS | Official Harvard and Dataverse documentation reviewed |
-| Standalone book eligible as research dataset | BLOCKED | Book-only submission is outside described research-data purpose |
+| Standalone book eligible as research dataset | UNKNOWN | General Terms broadly define dataset, but research-data scope screening applies; no book-only submission proposed |
 | Curated educational tables meet Harvard research-data scope | UNKNOWN | Harvard-specific curation/eligibility decision not verified |
 | Row-level provenance, source mapping and independent musical audit | FIX | Verify every sourced data value and music-theory assertion |
 | Existing candidate dataset actually deposited in assigned GitHub directory | FIX | One source-traceable eight-bar educational example plus codebook now committed; broader private corpus not imported |
@@ -30,3 +30,7 @@ Committed `book_derived_theme_a_8bar.csv`, its codebook, `CANDIDATE_DATA_VERIFIC
 PASS: Newly committed `book_derived_six_cases.csv` (6 source-labelled design cases), `book_derived_48_chord_events.csv` (48 position-labelled written chord targets), `VALIDATED_CANDIDATE_SCOPE.md`, and `DATA_RELEASE_DECISION.md`. The 48 records reconcile with the six source cases, while **no audio observations exist**. Retain incomplete 40-bar cells rather than filling by inference. The second-book material is omitted from these new files. This establishes a narrower source-traceable reference package, **not** Harvard eligibility or completed independent audit of every field in the private corpus.
 
 Outstanding: confirmation of research-data eligibility; permission and collection access; exact dataset copyright/licence approval; external duplicates check; final author approval for any upload. Status remains NOT READY. No book or Zenodo change.
+
+## Official policy recheck — 28 October 2026
+
+See [POLICY_VERIFICATION_2026-10-28.md](POLICY_VERIFICATION_2026-10-28.md). Clarification: book-only submissions are NOT proven universally prohibited; whether a book satisfies this repository's research-data scope is unconfirmed. Our selected resource remains the separate curated educational data candidate. The supplied Zenodo DOI's metadata has not been independently verified. No account access or licence approval. 
