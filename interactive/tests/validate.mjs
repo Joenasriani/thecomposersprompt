@@ -62,3 +62,11 @@ assert.match(piano,/pointerdown/,'Pointer interaction missing');
 assert.match(piano,/keydown/,'Keyboard interaction missing');
 
 await import('./interactive-piano.mjs');
+
+const designCss=read('lessons/chapter-6-5/lesson.css');
+assert.match(designCss,/\.harmonic-display\{overflow:hidden\}/,'Notation must not overflow its panel');
+assert.match(designCss,/\.reference-table\{max-width:100%;overflow-x:auto/,'Tables must scroll locally');
+assert.match(designCss,/@media\(max-width:640px\)/,'Small-mobile layout rules missing');
+assert.doesNotMatch(designCss,/\.header \.brand-logo/,'Deferred image-logo styling must be absent');
+assert.doesNotMatch(lesson,/<picture>/,'Deferred image logo must not render');
+assert.match(notation,/preserveAspectRatio/,'Notation must scale without distortion');
