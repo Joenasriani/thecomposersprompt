@@ -19,3 +19,9 @@ The separately prepared local v2.5 candidate files are **not deposited here or e
 **Rights:** Copyright © 2026 Joseph Ribal Nasr. Published under the name Joe Nasr. Joe Nasr and Joseph Ribal Nasr refer to the same person and copyright holder. All rights reserved, except as otherwise specified by the publication's applicable license. Existing root interactive CC BY 4.0 rights do not apply to the locked final book. The candidate dataset's licence is not yet authorized.
 
 **Never assert a Harvard collection, depositor role, DOI, peer review, research outcomes or publication without evidence. No upload or submission without explicit release approval.**
+
+## Official repository policy and complete subset codebook (28 October 2026)
+- [Official Harvard research-data scope, metadata, rights and development decision](OFFICIAL_HARVARD_POLICY_AND_DEVELOPMENT_2026-10-28.md)
+- [Complete three-CSV codebook and row-grain clarification](DATASET_CODEBOOK_ALL_CSV.md)
+
+**Important:** Six labelled instructional cases comprise **five unique sequences**; 48 chord-position rows and the eight-row Theme A baseline are nested/redundant representations, not independent research observations. Harvard scope approval, licence, authenticated contact/collection and exact publication authorization are still missing.
