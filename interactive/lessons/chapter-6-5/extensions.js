@@ -9,7 +9,7 @@ function renderChord(id){
  const chord=CHORDS[id],svg=document.getElementById('harmonic-keyboard');
  if(!chord||!svg)return;
  renderCompactChord(document.getElementById('harmonic-staff'),chord);
- renderPiano(svg,{notes:chord.notes,root:chord.notes[0],playable:true,label:`${chord.name}: ${chord.notes.join(', ')}`});
+ renderPiano(svg,{notes:chord.notes,root:(id==='C/E'||id==='C/G'?'C4':chord.notes[0]),playable:true,label:`${chord.name}: ${chord.notes.join(', ')}`});
  document.getElementById('selected-chord').textContent=`${chord.name} · ${chord.notes.map(n=>n.replace('b','♭').replace('#','♯')).join(' · ')}`;
 }
 function bind(group,output){
