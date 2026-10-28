@@ -10,7 +10,7 @@ const titleLogo=read('assets/composers-prompt-title.svg');
 assert.match(titleLogo,/data:image\/webp;base64,/,'Supplied title logo must be embedded in repository asset');
 assert.match(home,/The Composer’s Prompt/,'Home text title missing');
 const cssLogo=read('lessons/chapter-6-5/lesson.css');
-assert.match(cssLogo,/Plain text title/,'Responsive text title rules missing');
+assert.match(cssLogo,/\.header \.brand\{/,'Responsive text title rules missing');
 assert.match(home,/href="\.\/lessons\/chapter-6-5\/"/,'Interactive home must link Chapter 6.5');
 assert.match(lesson,/class="brand" href="\.\.\/\.\.\/index\.html"/,'Lesson must return to interactive home');
 assert.match(lesson,/src="\.\/extensions\.js"/,'Full lesson audio controls must load');
