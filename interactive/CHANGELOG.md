@@ -32,3 +32,10 @@ These are source-history summaries, not proof of independently checked browser b
 - Applied bounded keyboard sizing and local horizontal scrolling for data tables, instead of allowing page-level overflow.
 - Added static regression checks for mobile CSS, absence of obsolete logo markup and notation scaling.
 - Browser viewport, accessibility and audio interaction are NOT RECHECKED; do not classify as visual PASS until executed.
+
+## 2026-10-28 — Shared keyboard design
+- Introduced `music/piano-renderer.js` as the single SVG piano geometry and marker implementation for Chapter 6.5.
+- Both the introductory major/minor comparison and harmonic reference use one 48-unit white-key grid, matching black-key placement, 5-unit note markers, note labels and minimum seven white keys.
+- Preserved individual-note playback on the harmonic reference; the introductory diagram stays chord-selection driven.
+- Root marker in C major inversions remains attached to C rather than the inversion's bass pitch.
+- Browser and device visual verification remain NOT RECHECKED.
