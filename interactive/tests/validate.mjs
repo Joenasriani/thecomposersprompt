@@ -44,7 +44,7 @@ assert.match(lesson,/id="harmonic-keyboard"/,'Reusable harmonic reference keyboa
 const ext=read('lessons/chapter-6-5/extensions.js');
 assert.match(ext,/keyboardGeometry/,'Keyboard geometry model missing');
 assert.match(ext,/renderChord\(id\)/,'Chord-to-keyboard synchronization missing');
-assert.match(ext,/viewBox/,'Dynamic register-aware viewBox missing');
+assert.match(read('music/piano-renderer.js'),/viewBox/,'Shared piano SVG must use dynamic viewBox');
 
 assert.match(lesson,/id="harmonic-staff"/,'Optional compact notation container missing');
 assert.match(lesson,/vexflow@5\.0\.0\/build\/cjs\/vexflow\.js/,'VexFlow must be version-pinned');
@@ -52,11 +52,11 @@ assert.match(ext,/renderCompactChord/,'Chord-to-notation hook missing');
 const notation=read('music/compact-notation.js');
 assert.match(notation,/new VF\.StaveNote/,'VexFlow note engraving missing');
 assert.match(notation,/new VF\.Accidental/,'Accidental engraving missing');
-assert.match(ext,/naturals\.length<7/,'Harmonic piano requires at least seven white keys');
+assert.match(read('music/piano-renderer.js'),/naturals\.length<7/,'Piano requires at least seven white keys');
 
 assert.match(lesson,/id="piano-note-feedback"/,'Playable piano feedback missing');
 assert.match(ext,/attachPianoInteraction/,'Playable keyboard binding missing');
-assert.match(ext,/data-midi/,'Piano keys must carry exact pitch numbers');
+assert.match(read('music/piano-renderer.js'),/data-midi/,'Piano keys must carry exact pitch numbers');
 const piano=read('music/interactive-piano.js');
 assert.match(piano,/pointerdown/,'Pointer interaction missing');
 assert.match(piano,/keydown/,'Keyboard interaction missing');
@@ -70,3 +70,8 @@ assert.match(designCss,/@media\(max-width:640px\)/,'Small-mobile layout rules mi
 assert.doesNotMatch(designCss,/\.header \.brand-logo/,'Deferred image-logo styling must be absent');
 assert.doesNotMatch(lesson,/<picture>/,'Deferred image logo must not render');
 assert.match(notation,/preserveAspectRatio/,'Notation must scale without distortion');
+
+const sharedPiano=read('music/piano-renderer.js');
+assert.match(sharedPiano,/export function renderPiano/,'Shared keyboard renderer missing');
+assert.match(read('lessons/chapter-6-5/lesson.js'),/renderPiano/,'Initial lesson must use shared renderer');
+assert.match(ext,/renderPiano/,'Harmonic reference must use shared renderer');
