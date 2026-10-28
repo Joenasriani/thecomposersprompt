@@ -51,3 +51,9 @@
 #harmonic-keyboard .piano-touch:focus-visible{stroke:var(--accent);stroke-width:3}
 #harmonic-keyboard circle,#harmonic-keyboard text{pointer-events:none}
 .piano-note-feedback{font-size:.81rem;color:var(--muted);margin:4px 0 8px}
+
+/* Plain text title: artwork intentionally deferred. Responsive header without logo. */
+.header{min-height:68px;padding:12px 0;gap:12px}
+.header .brand{font-size:clamp(14px,2vw,17px);font-weight:700;letter-spacing:-.015em;line-height:1.3;max-width:100%;text-decoration:none}
+.header nav{min-width:0;margin-left:auto;gap:clamp(8px,2vw,18px)}
+@media(max-width:640px){.header{min-height:0;display:flex;flex-direction:column;align-items:stretch;gap:12px;padding:17px 0}.header .brand{font-size:16px}.header nav{margin:0;justify-content:space-between;flex-wrap:wrap;gap:8px}.header nav a{font-size:13px}.header select{font-size:13px;padding:6px 8px}}

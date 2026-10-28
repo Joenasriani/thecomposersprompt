@@ -5,7 +5,7 @@
 :root{color-scheme:light;--bg:#f8f7f3;--fg:#222a31;--muted:#596270;--line:#dadbd6;--accent:#285b93}*{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,Arial,sans-serif}
 main,header,footer{max-width:1100px;margin:auto;padding:clamp(22px,4vw,48px)}header{display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line);flex-wrap:wrap}
-.brand{display:inline-flex;align-items:center;min-height:68px}.brand img{width:clamp(160px,25vw,245px);height:auto;display:block;background:#121212;border-radius:4px;padding:5px}
+.brand{display:inline-block;font-weight:650;font-size:clamp(1rem,2vw,1.16rem);line-height:1.3;letter-spacing:-.02em;text-decoration:none;color:var(--fg);max-width:100%}
 nav{display:flex;gap:18px;flex-wrap:wrap}a{color:var(--accent)}nav a{text-decoration:none;color:var(--fg)}
 .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:700;color:var(--muted)}
 h1{font:normal clamp(2.1rem,5vw,3.8rem)/1.14 Georgia,serif;letter-spacing:-.035em;max-width:790px}
@@ -15,8 +15,9 @@ article{background:#fff;border:1px solid var(--line);border-radius:12px;padding:
 footer{color:var(--muted);font-size:.86rem;border-top:1px solid var(--line)}
 @media(prefers-color-scheme:dark){:root{color-scheme:dark;--bg:#141820;--fg:#f2efe8;--muted:#c2c8d0;--line:#414752;--accent:#abc9fb}article{background:#202630}.action{background:#e7e8e4;color:#1d252d}.brand img{background:#101010}}
 @media(max-width:500px){header{gap:6px}nav{gap:12px}article{padding:22px}main{padding-top:28px}}
+@media(max-width:620px){header{align-items:flex-start;gap:10px;padding-top:17px;padding-bottom:17px}.brand{flex-basis:100%}nav{font-size:.88rem}main{padding-top:22px}h1{font-size:clamp(2rem,9vw,2.8rem)}.lead{font-size:1rem}.lessons{margin-top:24px}}
 </style></head><body>
-<header><a class="brand" href="./index.html" aria-label="The Composer’s Prompt interactive home"><img src="./assets/composers-prompt-title.svg" alt="The Composer’s Prompt" width="340" height="118"></a><nav aria-label="Navigation"><a href="#lessons">Lessons</a></nav></header>
+<header><a class="brand" href="./index.html">The Composer’s Prompt</a><nav aria-label="Navigation"><a href="#lessons">Lessons</a></nav></header>
 <main><p class="eyebrow">Interactive edition · Music theory and harmony</p><h1>Musical ideas, explored through the keyboard, sound, visuals, and prompts.</h1><p class="lead">This edition is being developed chapter by chapter. Study harmonic relationships, listen to examples, and connect musical principles to compositional specifications.</p>
 <section id="lessons" class="lessons" aria-label="Interactive lessons"><article><p class="eyebrow">Chapter 6.5 · Available development lesson</p><h2>From scales to chords</h2><p>Major and minor triads, diatonic harmony, inversions, sevenths, keyboard demonstrations, and comparative listening.</p><a class="action" href="./lessons/chapter-6-5/">Open interactive lesson</a></article><article><p class="eyebrow">In development</p><h2>More chapters</h2><p>Further lessons will follow once musical accuracy, accessibility, and responsive browser behavior are verified.</p></article></section>
 </main>
