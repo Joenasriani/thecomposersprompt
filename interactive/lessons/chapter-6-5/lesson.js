@@ -1,15 +1,8 @@
+import {renderPiano} from '../../music/piano-renderer.js';
 const $=id=>document.getElementById(id);
 const modes={major:{label:'C major',notes:['C4','E4','G4'],pcs:[0,4,7],description:'Major third: E is 4 semitones above C. The perfect fifth G is 7 semitones above C.'},minor:{label:'C minor',notes:['C4','Eb4','G4'],pcs:[0,3,7],description:'Minor third: E♭ is 3 semitones above C. The perfect fifth G remains 7 semitones above C.'}};
 let mode='major';
-const white=[0,2,4,5,7,9,11,12], blacks=[{pc:1,left:0},{pc:3,left:1},{pc:6,left:3},{pc:8,left:4},{pc:10,left:5}];
-const NS='http://www.w3.org/2000/svg';
-function node(tag,attrs,parent){const e=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs))e.setAttribute(k,String(v));parent.appendChild(e);return e;}
-function renderKeyboard(){
- const svg=$('keyboard');svg.replaceChildren();const w=52,x=2,y=9,h=133;
- white.forEach((pc,i)=>{const isOn=modes[mode].pcs.includes(pc);node('rect',{x:x+i*w,y,width:w,height:h,rx:2,class:'white-key'},svg);if(isOn)node('circle',{cx:x+i*w+w/2,cy:114,r:6,class:pc===0?'active-root':'active-note'},svg);const names=['C','D','E','F','G','A','B','C'];node('text',{x:x+i*w+w/2,y:153,'text-anchor':'middle',class:'key-label'},svg).textContent=names[i];});
- blacks.forEach(({pc,left})=>{const leftEdge=x+(left+1)*w-16;node('rect',{x:leftEdge,y,width:32,height:78,rx:2,class:'black-key'},svg);if(modes[mode].pcs.includes(pc))node('circle',{cx:leftEdge+16,cy:61,r:6,class:'active-note'},svg);});
- svg.setAttribute('aria-label',modes[mode].label+' notes highlighted: '+modes[mode].notes.join(', '));
-}
+function renderKeyboard(){const data=modes[mode];renderPiano($('keyboard'),{notes:data.notes,root:data.notes[0],label:data.label+' notes highlighted: '+data.notes.join(', ')});}
 function setMode(next){mode=next;for(const k of Object.keys(modes)){$(k).setAttribute('aria-pressed',String(k===mode));}
  const data=modes[mode];$('explanation').textContent=data.description;$('chord-name').textContent=data.label.toUpperCase();$('notes').textContent=data.notes.map(n=>n.replace('Eb','E♭')).join(' · ');$('play').textContent='▶ Play '+data.label;renderKeyboard();}
 $('major').addEventListener('click',()=>setMode('major'));$('minor').addEventListener('click',()=>setMode('minor'));
