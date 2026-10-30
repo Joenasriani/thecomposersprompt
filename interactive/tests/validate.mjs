@@ -75,3 +75,5 @@ const sharedPiano=read('music/piano-renderer.js');
 assert.match(sharedPiano,/export function renderPiano/,'Shared keyboard renderer missing');
 assert.match(read('lessons/chapter-6-5/lesson.js'),/renderPiano/,'Initial lesson must use shared renderer');
 assert.match(ext,/renderPiano/,'Harmonic reference must use shared renderer');
+
+const audioSource=read('music/audio-engine.js');assert.match(audioSource,/export async function playNotes/,'Single shared audio engine required');assert.doesNotMatch(js,/createOscillator/);assert.doesNotMatch(ext,/createOscillator/);assert.doesNotMatch(sharedPiano,/chapter-6-5\\.js/,'Shared piano must not depend on chapter model');

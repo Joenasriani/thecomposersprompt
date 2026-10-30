@@ -1,3 +1,4 @@
+import {playNotes} from '../../music/audio-engine.js';
 import {renderPiano} from '../../music/piano-renderer.js';
 const $=id=>document.getElementById(id);
 const modes={major:{label:'C major',notes:['C4','E4','G4'],pcs:[0,4,7],description:'Major third: E is 4 semitones above C. The perfect fifth G is 7 semitones above C.'},minor:{label:'C minor',notes:['C4','Eb4','G4'],pcs:[0,3,7],description:'Minor third: E♭ is 3 semitones above C. The perfect fifth G remains 7 semitones above C.'}};
@@ -6,10 +7,7 @@ function renderKeyboard(){const data=modes[mode];renderPiano($('keyboard'),{note
 function setMode(next){mode=next;for(const k of Object.keys(modes)){$(k).setAttribute('aria-pressed',String(k===mode));}
  const data=modes[mode];$('explanation').textContent=data.description;$('chord-name').textContent=data.label.toUpperCase();$('notes').textContent=data.notes.map(n=>n.replace('Eb','E♭')).join(' · ');$('play').textContent='▶ Play '+data.label;renderKeyboard();}
 $('major').addEventListener('click',()=>setMode('major'));$('minor').addEventListener('click',()=>setMode('minor'));
-let ctx=null,activeVoices=[];
-function stopVoices(){const now=ctx?.currentTime||0;for(const v of activeVoices){try{v.gain.gain.cancelScheduledValues(now);v.gain.gain.setTargetAtTime(0,now,.016);v.osc.stop(now+.12);}catch{}}activeVoices=[];}
-function hz(note){const m=/^([A-G])([#b]?)(\d)$/.exec(note);const base={C:0,D:2,E:4,F:5,G:7,A:9,B:11}[m[1]];const semitone=base+(m[2]==='#'?1:m[2]==='b'?-1:0);return 440*Math.pow(2,((+m[3]+1)*12+semitone-69)/12);}
-$('play').addEventListener('click',async()=>{try{ctx??=new (window.AudioContext||window.webkitAudioContext)();await ctx.resume();stopVoices();const now=ctx.currentTime+.045;for(const note of modes[mode].notes){const osc=ctx.createOscillator(),gain=ctx.createGain();osc.type='sine';osc.frequency.value=hz(note);gain.gain.setValueAtTime(0,now);gain.gain.linearRampToValueAtTime(.095,now+.014);gain.gain.exponentialRampToValueAtTime(.035,now+.18);gain.gain.setValueAtTime(.035,now+.53);gain.gain.exponentialRampToValueAtTime(.0001,now+.72);osc.connect(gain).connect(ctx.destination);osc.start(now);osc.stop(now+.74);activeVoices.push({osc,gain});}}catch(err){$('feedback').textContent='Audio unavailable in this browser.';console.error(err);}});
+$('play').addEventListener('click',async()=>{try{await playNotes(modes[mode].notes,{duration:.72,level:.095});}catch(err){$('feedback').textContent='Audio unavailable in this browser.';console.error(err);}});
 document.querySelectorAll('[data-answer]').forEach(b=>b.addEventListener('click',()=>{const correct=b.dataset.answer==='E';$('feedback').textContent=correct?'Correct. E4 becomes E♭4, lowering the third by one semitone.':'Not quite. C stays the root and G stays the fifth; compare the middle note.';$('feedback').dataset.correct=String(correct);}));
 const theme=$('theme'),media=matchMedia('(prefers-color-scheme: dark)');let stored='system';try{stored=localStorage.getItem('composer-theme')||'system'}catch{}if(!['system','light','dark'].includes(stored))stored='system';theme.value=stored;
 function applyTheme(){const light=theme.value==='light'||(theme.value==='system'&&!media.matches);document.documentElement.dataset.theme=light?'light':'dark';document.querySelector('meta[name="theme-color"]').content=light?'#f8f7f3':'#111219';}
