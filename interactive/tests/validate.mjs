@@ -28,7 +28,7 @@ assert.match(js,/C4','E4','G4/);
 assert.match(js,/C4','Eb4','G4/);
 assert.match(js,/pcs:\[0,4,7\]/);
 assert.match(js,/pcs:\[0,3,7\]/);
-assert.match(js,/function hz\(note\)/);
+assert.match(js,/playNotes/,'Introductory lesson must use shared audio');
 assert.match(js,/aria-pressed/);
 assert.ok(existsSync(resolve(root,'experiments/prototype/index.html')));
 assert.ok(existsSync(resolve(root,'experiments/stage1/src/main.js')));
