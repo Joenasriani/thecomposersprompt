@@ -39,3 +39,10 @@ These are source-history summaries, not proof of independently checked browser b
 - Preserved individual-note playback on the harmonic reference; the introductory diagram stays chord-selection driven.
 - Root marker in C major inversions remains attached to C rather than the inversion's bass pitch.
 - Browser and device visual verification remain NOT RECHECKED.
+
+## Implementation checkpoint — 2026-10-30
+- PASS source: common scientific pitch helpers extracted to `music/pitch.js`; shared `piano-renderer.js` no longer imports Chapter 6.5.
+- PASS source: `music/audio-engine.js` centralizes Web Audio context and note/chord scheduling; Chapter 6.5's two controllers invoke its `playNotes` API.
+- PASS static integrity: commit `d71d7b0` (GitHub workflow successful).
+- NOT RECHECKED: real browser audio playback, polyphony/retrigger behavior, mobile touch, VexFlow engraving and multi-viewport appearance.
+- Remaining gates: a reusable lesson data/interaction contract, reproducible Playwright execution, verified deployment provenance, accurate documentation and runtime error handling. This checkpoint does not approve mass-producing chapters.

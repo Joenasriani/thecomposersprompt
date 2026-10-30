@@ -49,3 +49,10 @@ Decision: NOT READY for chapter-scale replication. Complete foundation gates bef
 PASS = executed and verified; FIX = source defect; PARTIAL = implemented but incomplete; NOT RECHECKED = no current empirical QA; BLOCKED = an external constraint prevents acceptance.
 
 No application source was changed by this audit.
+
+## Implementation checkpoint — 2026-10-30
+- PASS source: common scientific pitch helpers extracted to `music/pitch.js`; shared `piano-renderer.js` no longer imports Chapter 6.5.
+- PASS source: `music/audio-engine.js` centralizes Web Audio context and note/chord scheduling; Chapter 6.5's two controllers invoke its `playNotes` API.
+- PASS static integrity: commit `d71d7b0` (GitHub workflow successful).
+- NOT RECHECKED: real browser audio playback, polyphony/retrigger behavior, mobile touch, VexFlow engraving and multi-viewport appearance.
+- Remaining gates: a reusable lesson data/interaction contract, reproducible Playwright execution, verified deployment provenance, accurate documentation and runtime error handling. This checkpoint does not approve mass-producing chapters.
