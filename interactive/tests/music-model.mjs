@@ -18,3 +18,6 @@ assert.deepEqual(CHORDS.G7.notes,['G4','B4','D5','F5']);
 for(const id of [...DIATONIC,...THEME_A]) assert.ok(CHORDS[id],id);
 assert.throws(()=>midi('H4'));
 console.log('PASS: pitches, enharmonics, quality intervals, diatonic triads, inversions, sevenths, Theme A.');
+
+import {midi as coreMidi,frequency as coreFrequency,pitchClass as corePc} from '../music/pitch.js';
+assert.equal(coreMidi('C4'),60);assert.equal(coreMidi('D#4'),coreMidi('Eb4'));assert.equal(coreFrequency('A4'),440);assert.equal(corePc('B3'),11);assert.throws(()=>coreMidi('H4'));assert.throws(()=>coreMidi('C-5'));

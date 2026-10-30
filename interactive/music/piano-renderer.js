@@ -1,4 +1,4 @@
-import {midi,pitchClass} from './chapter-6-5.js';
+import {midi,pitchClass} from './pitch.js';
 import {noteFromMidi} from './interactive-piano.js';
 const NS='http://www.w3.org/2000/svg';
 const WHITE=new Set([0,2,4,5,7,9,11]);

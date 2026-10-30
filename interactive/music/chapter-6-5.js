@@ -1,3 +1,5 @@
+import {pitchClass} from './pitch.js';
+export {midi,frequency,pitchClass} from './pitch.js';
 // Chapter 6.5 pitch and harmonic reference. Scientific pitch notation; A4=440 Hz.
 export const CHORDS=Object.freeze({
  C:{name:'C major',notes:['C4','E4','G4'],semitones:[0,4,7],numeral:'I'},
@@ -19,12 +21,4 @@ export const CHORDS=Object.freeze({
 });
 export const DIATONIC=['C','Dm','Em','F','G','Am','Bdim'];
 export const THEME_A=['C','G','Am','F','C','F','G','C'];
-export function midi(note){
- const m=/^([A-G])([#b]?)(-?\d+)$/.exec(note);
- if(!m)throw new Error('Invalid scientific pitch: '+note);
- const base={C:0,D:2,E:4,F:5,G:7,A:9,B:11}[m[1]];
- return (Number(m[3])+1)*12+base+(m[2]==='#'?1:m[2]==='b'?-1:0);
-}
-export function frequency(note){return 440*Math.pow(2,(midi(note)-69)/12)}
-export function pitchClass(note){return ((midi(note)%12)+12)%12}
 export function chordPcs(id){return CHORDS[id].notes.map(pitchClass)}
