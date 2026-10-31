@@ -77,3 +77,15 @@ assert.match(read('lessons/chapter-6-5/lesson.js'),/renderPiano/,'Initial lesson
 assert.match(ext,/renderPiano/,'Harmonic reference must use shared renderer');
 
 const audioSource=read('music/audio-engine.js');assert.match(audioSource,/export async function playNotes/,'Single shared audio engine required');assert.doesNotMatch(js,/createOscillator/);assert.doesNotMatch(ext,/createOscillator/);assert.doesNotMatch(sharedPiano,/chapter-6-5\\.js/,'Shared piano must not depend on chapter model');
+
+for(const suffix of ['1','2','3','3-5','4','5']){
+ const page=read('lessons/chapter-'+suffix+'/index.html');
+ const script=read('lessons/chapter-'+suffix+'/main.js');
+ assert.match(page,/data-lesson-root/,'Missing lesson mount for '+suffix);
+ assert.match(page,/lesson\.css/,'Missing shared styling for '+suffix);
+ assert.match(script,/mountLesson/,'Shared lesson runtime absent in '+suffix);
+ assert.match(script,/defineLesson/,'Validated lesson contract absent in '+suffix);
+ assert.match(home,new RegExp('lessons/chapter-'+suffix+'/'),'Home link absent for '+suffix);
+}
+assert.match(read('lessons/lesson-runtime.js'),/validateExamples/,'Renderer must verify section/example parity');
+assert.match(read('vercel.json'),/"deploymentEnabled": false/,'Vercel must remain manual-only');
