@@ -1,10 +1,8 @@
-// Run with: npm install --no-save playwright && npx playwright install chromium
-// Then: node --test interactive/tests/browser-chapter-6-5.spec.mjs
-// Requires a reachable deployed URL or a static web server at BASE_URL.
+// Browser acceptance runs against a local server managed by tools/browser-acceptance.mjs.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { chromium } from 'playwright';
-const BASE_URL=process.env.BASE_URL||'https://joenasriani.github.io/thecomposersprompt/interactive/lessons/chapter-6-5/';
+const BASE_URL=process.env.LESSON_URL||'http://127.0.0.1:4173/lessons/chapter-6-5/';
 for (const width of [320,375,768,1024,1440]){
  test(`Chapter 6.5 browser QA at ${width}px`,async()=>{
   const browser=await chromium.launch({headless:true});
