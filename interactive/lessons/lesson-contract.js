@@ -16,7 +16,7 @@ export function validateExamples(definition,examples){
  if(!Array.isArray(examples)||examples.length!==definition.sections.length)throw new Error('Lesson sections and examples must align');
  for(let i=0;i<examples.length;i++){
   const x=examples[i],s=definition.sections[i];
-  if(x.id!==s.id||x.title!==s.title||!Array.isArray(x.paragraphs)||!x.paragraphs.length)throw new Error('Example does not match section: '+s.id);
+  if((x.id!==undefined&&x.id!==s.id)||x.title!==s.title||!Array.isArray(x.paragraphs)||!x.paragraphs.length)throw new Error('Example does not match section: '+s.id);
   if(x.notes)for(const note of x.notes)midi(note);
   if(x.question){
    const q=x.question;
