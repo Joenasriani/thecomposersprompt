@@ -54,3 +54,15 @@ button,select{max-width:100%}
 :where(button,select,a):focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 @media(max-width:760px){.lesson-card,.practice,.harmonic-view{grid-template-columns:minmax(0,1fr)}.harmonic-view{gap:14px}.harmonic-view .harmonic-display{padding:clamp(12px,3vw,18px)}.lesson-copy,.instrument{padding:clamp(16px,4vw,23px)}.chapter-extension{padding:27px 0}}
 @media(max-width:640px){#app{padding-inline:clamp(14px,4vw,22px)}.header{min-height:0;flex-direction:column;align-items:stretch;gap:12px;padding:17px 0}.header .brand{font-size:16px;flex-basis:auto}.header nav{margin:0;justify-content:space-between;gap:8px}.header nav a,.header select{font-size:13px}.header select{padding:6px 8px}.compare{flex-wrap:wrap}.compare .choice{min-width:min(100%,140px)}.quick-controls button{flex:1 1 auto}.answers{flex-wrap:wrap}.answers button{min-width:52px;flex:1 1 auto}h1{font-size:clamp(32px,8.3vw,42px)}h2{font-size:clamp(25px,6.8vw,32px)}.notation-region{margin:0 0 8px}}
+
+:root{--layout-max:1200px;--layout-gutter:clamp(16px,4vw,48px);--space-2:8px;--space-3:12px;--space-4:16px;--space-6:24px;--space-8:32px;--space-12:48px;--space-16:64px}
+#app{max-width:var(--layout-max);padding-inline:var(--layout-gutter)}
+.header{min-height:76px}
+.breadcrumb{margin-top:var(--space-8)}
+.lede{margin-bottom:var(--space-8)}
+.lesson-copy,.instrument{padding:clamp(20px,3vw,40px)}
+.practice{padding-block:var(--space-12);gap:var(--space-8)}
+.next{padding-block:var(--space-8) var(--space-16)}
+footer{padding-block:var(--space-6) var(--space-12)}
+@media(max-width:760px){.practice{padding-block:var(--space-8)}.lesson-copy,.instrument{padding:var(--space-6)}}
+@media(max-width:640px){#app{padding-inline:var(--layout-gutter)}.breadcrumb{margin-top:var(--space-6)}.lede{margin-bottom:var(--space-6)}.lesson-copy,.instrument{padding:var(--space-4)}}
