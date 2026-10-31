@@ -11,8 +11,9 @@ export const PARTIALS=Object.freeze([
 let context=null;
 let voices=[];
 
-export async function playNotes(notes,{duration=.9,level=.065,replace=true}={}){
+export async function playNotes(notes,{duration=.9,level=.065,replace=true,spacing=0}={}){
  if(!Array.isArray(notes)||notes.length===0)throw new Error('Nonempty note array required');
+ if(!Number.isFinite(spacing)||spacing<0||spacing>10)throw new RangeError('Invalid note spacing');
  if(!(duration>ENVELOPE.attack+ENVELOPE.release)||!(level>0&&level<=1))throw new RangeError('Invalid playback envelope');
  const pitches=notes.map(note=>frequency(midi(note)));
  const Audio=globalThis.AudioContext||globalThis.webkitAudioContext;
@@ -32,20 +33,21 @@ export async function playNotes(notes,{duration=.9,level=.065,replace=true}={}){
   voices=[];
  }
  const next=[];
- for(const pitch of pitches){
+ for(const [index,pitch] of pitches.entries()){
+  const noteAt=at+index*spacing;
   for(const partial of PARTIALS){
    const osc=context.createOscillator(),gain=context.createGain();
    osc.type='sine';osc.frequency.value=pitch*partial.ratio;
    const amplitude=level*partial.amplitude;
-   const attackEnd=at+ENVELOPE.attack;
-   const releaseStart=at+duration-ENVELOPE.release;
+   const attackEnd=noteAt+ENVELOPE.attack;
+   const releaseStart=noteAt+duration-ENVELOPE.release;
    const decayAtRelease=amplitude*Math.exp(-partial.decay*(releaseStart-attackEnd));
-   gain.gain.setValueAtTime(0,at);
+   gain.gain.setValueAtTime(0,noteAt);
    gain.gain.linearRampToValueAtTime(amplitude,attackEnd);
    gain.gain.exponentialRampToValueAtTime(Math.max(.00001,decayAtRelease),releaseStart);
-   gain.gain.linearRampToValueAtTime(0,at+duration);
+   gain.gain.linearRampToValueAtTime(0,noteAt+duration);
    osc.connect(gain).connect(context.destination);
-   osc.start(at);osc.stop(at+duration+.015);
+   osc.start(noteAt);osc.stop(noteAt+duration+.015);
    next.push({osc,gain});
   }
  }
