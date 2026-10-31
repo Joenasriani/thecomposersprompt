@@ -18,6 +18,7 @@ export function validateExamples(definition,examples){
   const x=examples[i],s=definition.sections[i];
   if((x.id!==undefined&&x.id!==s.id)||x.title!==s.title||!Array.isArray(x.paragraphs)||!x.paragraphs.length)throw new Error('Example does not match section: '+s.id);
   if(x.notes)for(const note of x.notes)midi(note);
+  if(x.playback!==undefined&&!['simultaneous','sequential'].includes(x.playback))throw new Error('Invalid playback mode in '+s.id);
   if(x.question){
    const q=x.question;
    if(!Array.isArray(q.options)||q.options.length<2||!Number.isInteger(q.answer)||q.answer<0||q.answer>=q.options.length||!q.correct||!q.incorrect)throw new Error('Invalid exercise in '+s.id);

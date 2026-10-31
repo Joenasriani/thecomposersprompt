@@ -26,3 +26,9 @@ await playNotes(['D4']);
 assert.ok(calls.some(c=>c[0]==='fade'),'Replacement must fade previous voices');
 await assert.rejects(()=>playNotes(['H4']));
 console.log('PASS: piano harmonic decay, smooth onset, fade-out, chord voices, replacement, invalid pitch');
+
+const before=calls.length;
+await playNotes(['C4','D4'],{duration:.36,spacing:.4});
+const starts=calls.slice(before).filter(c=>c[0]==='start');
+assert.equal(starts.length,2*PARTIALS.length);
+assert.ok(starts[PARTIALS.length][1]-starts[0][1]>=.399,'Sequential playback must separate note starts');

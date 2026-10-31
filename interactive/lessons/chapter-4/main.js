@@ -74,12 +74,13 @@ mountLesson({definition,examples:[
     "title": "Melodic and harmonic intervals",
     "paragraphs": [
       "A melodic interval sounds sequentially. A harmonic interval sounds simultaneously. Their expressive effects depend on timbre, harmony, register and context.",
-      "This playback sounds pitches together. For a successive melodic interval, the notes must be articulated one after the other."
+      "This example plays B4 followed by C5. The pitches are successive, rather than simultaneous."
     ],
     "notes": [
       "B4",
       "C5"
     ],
+    "playback": "sequential",
     "prompt": "Write a short melodic phrase that moves upward from B4 to C5 in succession, rather than sounding the two pitches simultaneously. Keep instrument and dynamics constant to compare the semitone motion."
   },
   {

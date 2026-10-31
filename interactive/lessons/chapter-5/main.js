@@ -40,6 +40,7 @@ mountLesson({definition,examples:[
       "B4",
       "C5"
     ],
+    "playback": "sequential",
     "question": {
       "text": "Do D Dorian and C Ionian use different pitch-class collections?",
       "options": [
