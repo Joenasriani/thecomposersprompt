@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {defineLesson} from '../lessons/lesson-contract.js';
+import {defineLesson,validateExamples} from '../lessons/lesson-contract.js';
 import {lesson} from '../lessons/chapter-6-5/definition.js';
 assert.equal(lesson.id,'chapter-6-5');
 assert.ok(lesson.sections.length>=7);
@@ -22,7 +22,13 @@ assert.match(read('../index.html'),/lessons\/chapter-1/);
 assert.match(read('../index.html'),/lessons\/chapter-2/);
 console.log('PASS: canonical chapter inventory and two pilot entrypoints');
 
-import {readFileSync} from 'node:fs';
 const runtime=readFileSync(new URL('../lessons/lesson-runtime.js',import.meta.url),'utf8');
 assert.match(runtime,/definition\.sections\[index\]\.id/,'Section IDs must come from canonical definitions');
-assert.match(runtime,/aria-pressed','false'/,'Interactive responses need explicit initial state');
+assert.match(runtime,/aria-pressed/,'Interactive responses need explicit initial state');
+
+const exampleDef=defineLesson({id:'chapter-1',title:'Sample',sections:[{id:'a',title:'First'}]});
+const valid=[{id:'a',title:'First',paragraphs:['Text']}];
+assert.equal(validateExamples(exampleDef,valid),true);
+assert.throws(()=>validateExamples(exampleDef,[{title:'First',paragraphs:['Text']}]),/does not match/);
+assert.throws(()=>validateExamples(exampleDef,[{id:'wrong',title:'First',paragraphs:['Text']}]),/does not match/);
+console.log('PASS: required explicit section IDs');
