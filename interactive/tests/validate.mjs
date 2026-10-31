@@ -5,13 +5,14 @@ import assert from 'node:assert/strict';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const read=p=>readFileSync(resolve(root,p),'utf8');
 const home=read('index.html');
+const modular=read('chapters.html');
 const lesson=read('lessons/chapter-6-5/index.html');
 const titleLogo=read('assets/composers-prompt-title.svg');
 assert.match(titleLogo,/data:image\/webp;base64,/,'Supplied title logo must be embedded in repository asset');
-assert.match(home,/The Composer’s Prompt/,'Home text title missing');
+assert.match(home,/id="bookdata"/,'Original full workbook must remain restored');
 const cssLogo=read('lessons/chapter-6-5/lesson.css');
 assert.match(cssLogo,/\.header \.brand\{/,'Responsive text title rules missing');
-assert.match(home,/href="\.\/lessons\/chapter-6-5\/"/,'Interactive home must link Chapter 6.5');
+assert.match(modular,/href="\.\/lessons\/chapter-6-5\/"/,'Modular chapter index must link Chapter 6.5');
 assert.match(lesson,/class="brand" href="\.\.\/\.\.\/index\.html"/,'Lesson must return to interactive home');
 assert.match(lesson,/src="\.\/extensions\.js"/,'Full lesson audio controls must load');
 assert.ok(existsSync(resolve(root,'lessons/chapter-6-5/extensions.js')),'Chapter extension module missing');
@@ -85,7 +86,7 @@ for(const suffix of ['1','2','3','3-5','4','5']){
  assert.match(page,/lesson\.css/,'Missing shared styling for '+suffix);
  assert.match(script,/mountLesson/,'Shared lesson runtime absent in '+suffix);
  assert.match(script,/defineLesson/,'Validated lesson contract absent in '+suffix);
- assert.match(home,new RegExp('lessons/chapter-'+suffix+'/'),'Home link absent for '+suffix);
+ assert.match(modular,new RegExp('lessons/chapter-'+suffix+'/'),'Modular chapter link absent for '+suffix);
 }
 assert.match(read('lessons/lesson-runtime.js'),/validateExamples/,'Renderer must verify section/example parity');
 assert.match(read('vercel.json'),/"deploymentEnabled": false/,'Vercel must remain manual-only');

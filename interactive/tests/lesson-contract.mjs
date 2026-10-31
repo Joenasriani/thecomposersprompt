@@ -18,8 +18,8 @@ for(const id of ['chapter-1','chapter-2']){
  assert.match(html,/lesson\.css/);assert.match(html,/main\.js/);
  assert.match(script,/mountLesson/);assert.match(script,/defineLesson/);
 }
-assert.match(read('../index.html'),/lessons\/chapter-1/);
-assert.match(read('../index.html'),/lessons\/chapter-2/);
+assert.match(read('../chapters.html'),/lessons\/chapter-1/);
+assert.match(read('../chapters.html'),/lessons\/chapter-2/);
 console.log('PASS: canonical chapter inventory and two pilot entrypoints');
 
 const runtime=readFileSync(new URL('../lessons/lesson-runtime.js',import.meta.url),'utf8');
