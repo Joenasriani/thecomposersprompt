@@ -32,3 +32,9 @@ Verified instructional defect fixed: Chapter 4 described successive B4–C5 but 
 Browser/device acceptance remains NOT RECHECKED. Local Chromium is installed, but the current test runner cannot load live GitHub resources in the isolated execution environment; no claim of real-browser PASS is warranted. To execute browser QA, obtain a local copy of the accepted GitHub tree or run the pinned Playwright suite in a network-accessible environment. Current GitHub static CI is not equivalent to Playwright acceptance.
 
 Remaining chapter-completion gaps include: visual diagrams/keyboard annotations beyond the Chapter 6.5 specialized piano; full per-section parity for Chapters 1–5; systematic audio/context checks for scales, modes and phrases; accessibility; touch and click-free audio on physical hardware. Do not label these pilots production-complete.
+
+## Browser acceptance harness — 2026-10-31
+- `npm run test:browser` now starts an ephemeral local HTTP server at 127.0.0.1:4173, runs the Chapter 6.5 and pilot Chromium suites against the local checked-out source, and terminates the server. `npm run test:browser:pilots` runs only the six pilot chapters.
+- Prerequisites: `cd interactive && npm install && npx playwright install chromium`. A network connection is needed to install Playwright/Chromium, and Chapter 6.5 still loads VexFlow from a CDN; offline runs may not engrave notation.
+- The browser runner was committed but **not executed** in the current environment. Static GitHub CI passing does not imply browser test passage.
+- Vercel remains explicitly manual-only and is not used by this harness.
