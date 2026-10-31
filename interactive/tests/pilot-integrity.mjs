@@ -12,3 +12,5 @@ for(const num of [1,2]){
 }
 assert.match(read('../lessons/lesson-runtime.js'),/playNotes/);
 console.log('PASS: pilot pages, shared renderer and book inventory registration');
+
+for(const id of ['3','3-5','4','5']){const base='../lessons/chapter-'+id+'/';assert.match(read(base+'main.js'),/mountLesson/);assert.match(read(base+'index.html'),/main\\.js/);assert.match(read('../index.html'),new RegExp('lessons/chapter-'+id+'/'));}
