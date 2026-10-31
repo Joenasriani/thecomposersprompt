@@ -21,3 +21,8 @@ for(const id of ['chapter-1','chapter-2']){
 assert.match(read('../index.html'),/lessons\/chapter-1/);
 assert.match(read('../index.html'),/lessons\/chapter-2/);
 console.log('PASS: canonical chapter inventory and two pilot entrypoints');
+
+import {readFileSync} from 'node:fs';
+const runtime=readFileSync(new URL('../lessons/lesson-runtime.js',import.meta.url),'utf8');
+assert.match(runtime,/definition\.sections\[index\]\.id/,'Section IDs must come from canonical definitions');
+assert.match(runtime,/aria-pressed','false'/,'Interactive responses need explicit initial state');
