@@ -38,7 +38,7 @@ test('Browser audio activation and appearance controls',async()=>{
  });
  await page.goto(BASE_URL,{waitUntil:'networkidle'});
  await page.locator('button[data-chord="Cm"]').click();
- assert.equal(await page.evaluate(()=>window.__starts),3,'Triad should start three voices on click');
+ assert.equal(await page.evaluate(()=>window.__starts),9,'Triad should start three harmonic partials per note');
  await page.locator('#theme').selectOption('dark');
  assert.equal(await page.locator('html').getAttribute('data-theme'),'dark');
  await page.locator('#theme').selectOption('light');
