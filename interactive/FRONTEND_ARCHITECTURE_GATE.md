@@ -56,3 +56,10 @@ No application source was changed by this audit.
 - PASS static integrity: commit `d71d7b0` (GitHub workflow successful).
 - NOT RECHECKED: real browser audio playback, polyphony/retrigger behavior, mobile touch, VexFlow engraving and multi-viewport appearance.
 - Remaining gates: a reusable lesson data/interaction contract, reproducible Playwright execution, verified deployment provenance, accurate documentation and runtime error handling. This checkpoint does not approve mass-producing chapters.
+
+## Continuation checkpoint — 2026-10-31
+- Added validated lesson metadata contract at `lessons/lesson-contract.js` and a Chapter 6.5 definition fixture. The existing DOM lesson remains procedural; this is a schema foundation, not a completed lifecycle migration.
+- Added app-local `package.json`, `tools/serve.mjs`, and lesson-contract test for reproducible local work. Playwright browser execution is still NOT RECHECKED.
+- Audio quality requirement: tapped piano notes must not emit a sharp click at onset or termination. Shared `audio-engine.js` now uses a 35 ms attack and 85 ms release with a zero-gain start/end and replacement fade; the browser audio stub and Node regression cover these controls.
+- Explicit release policy: Vercel deployment remains manual-only under `interactive/vercel.json`; no production deployment authorized by this checkpoint. GitHub source changes are not evidence of an updated Vercel release.
+- Still OPEN: browser acceptance at five widths, accessibility/piano sound on a real device, VexFlow notation fidelity and migration from procedural controllers into reusable lesson architecture.
