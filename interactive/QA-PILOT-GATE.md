@@ -23,3 +23,12 @@ Do not continue mass-producing Chapters 3 onward until pilot browser and source-
 - Static CI success is not browser acceptance. Physical browser rendering, tab/focus behavior, screen readers, real audio quality, and actual VexFlow note engraving remain **NOT RECHECKED**.
 - Before approving the new material as book-faithful final chapters, review the full text, tables and illustrations against the source, not just the selected concepts used in these pilots.
 - Production release is explicitly **NOT AUTHORIZED**; do not run Vercel deploy or change Vercel routing.
+
+## Source fidelity and runtime audit — 2026-10-31
+Source inspected locally: supplied final 158-page PDF, printed book pages 2–21 (physical PDF pages 8–27). The source separates musical specifications, generated recordings and evidence. Pilot examples conform at the concept level, but they are not complete reproductions of every original diagram, exercise, guided variation or section.
+
+Verified instructional defect fixed: Chapter 4 described successive B4–C5 but the generic player sounded its notes simultaneously; Chapter 5's seven-note collection likewise played as a dense chord. Shared audio now supports explicit per-note spacing, with Chapter 4's melodic demonstration and Chapter 5's natural-note scale configured as sequences. Other simultaneous chord examples remain simultaneous. Tests cover scheduling and source contract.
+
+Browser/device acceptance remains NOT RECHECKED. Local Chromium is installed, but the current test runner cannot load live GitHub resources in the isolated execution environment; no claim of real-browser PASS is warranted. To execute browser QA, obtain a local copy of the accepted GitHub tree or run the pinned Playwright suite in a network-accessible environment. Current GitHub static CI is not equivalent to Playwright acceptance.
+
+Remaining chapter-completion gaps include: visual diagrams/keyboard annotations beyond the Chapter 6.5 specialized piano; full per-section parity for Chapters 1–5; systematic audio/context checks for scales, modes and phrases; accessibility; touch and click-free audio on physical hardware. Do not label these pilots production-complete.
