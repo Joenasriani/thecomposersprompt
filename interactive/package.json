@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "test": "node tests/validate.mjs && node tests/music-model.mjs && node tests/staff-model.mjs && node tests/lesson-contract.mjs",
+    "test": "node tests/validate.mjs && node tests/music-model.mjs && node tests/staff-model.mjs && node tests/lesson-contract.mjs && node tests/audio-engine.mjs",
     "test:browser": "node --test tests/browser-chapter-6-5.spec.mjs",
     "serve": "node tools/serve.mjs"
   },
