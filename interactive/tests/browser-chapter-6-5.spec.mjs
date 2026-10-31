@@ -33,7 +33,7 @@ test('Browser audio activation and appearance controls',async()=>{
  await page.addInitScript(()=>{
   window.__starts=0;
   class Osc{constructor(){this.frequency={value:0};this.type='sine'} connect(g){return g}start(){window.__starts++}stop(){}}
-  class Gain{constructor(){const x=()=>{};this.gain={setValueAtTime:x,exponentialRampToValueAtTime:x,cancelScheduledValues:x,setTargetAtTime:x}}connect(){return this}}
+  class Gain{constructor(){const x=()=>{};this.gain={setValueAtTime:x,exponentialRampToValueAtTime:x,linearRampToValueAtTime:x,cancelScheduledValues:x,setTargetAtTime:x}}connect(){return this}}
   window.AudioContext=class{constructor(){this.currentTime=0;this.destination={}}resume(){return Promise.resolve()}createOscillator(){return new Osc()}createGain(){return new Gain()}};
  });
  await page.goto(BASE_URL,{waitUntil:'networkidle'});
