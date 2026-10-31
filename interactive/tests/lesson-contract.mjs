@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {defineLesson} from '../lessons/lesson-contract.js';
+import {lesson} from '../lessons/chapter-6-5/definition.js';
+assert.equal(lesson.id,'chapter-6-5');
+assert.ok(lesson.sections.length>=7);
+assert.ok(Object.isFrozen(lesson));
+assert.ok(Object.isFrozen(lesson.sections));
+assert.throws(()=>defineLesson({id:'bad',title:'x',sections:[{id:'a',title:'A'}]}));
+assert.throws(()=>defineLesson({id:'chapter-1',title:'x',sections:[{id:'a',title:'A'},{id:'a',title:'B'}]}));
+console.log('PASS: lesson schema and first chapter definition');
