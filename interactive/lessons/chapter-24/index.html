@@ -1,0 +1,51 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f8f7f3"><title>Chapter 24: Negative and Weighted Control · The Composer’s Prompt</title><link rel="stylesheet" href="../chapter-6-5/lesson.css"><link rel="stylesheet" href="../chapter-reference.css"><script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow.js"></script></head><body><div id="app"><header class="header"><a class="brand" href="../../index.html">The Composer’s Prompt</a><nav aria-label="Lesson navigation"><a href="#instruction">Instruction</a><a href="#manuscript">Manuscript</a><select id="theme" aria-label="Appearance"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></nav></header><main><div class="breadcrumb">CHAPTER 24 <span>/</span> MUSIC THEORY AND HARMONY <span>/</span> REVIEW</div><h1>Negative and Weighted Control</h1><p class="lede">Explore 24.1 separate prompt text from interface controls through an annotated pitch reference, then study the complete recovered chapter. The keyboard is a theory reference, not generated music.</p><section class="reference-grid" id="instruction"><div><p class="eyebrow">01 · COMPARE & LISTEN</p><h2>24.1 Separate Prompt Text from Interface Controls</h2><p>Explore 24.1 separate prompt text from interface controls through an annotated pitch reference, then study the complete recovered chapter. The keyboard is a theory reference, not generated music.</p><div class="reference-controls" id="reference-controls" role="group" aria-label="Select an example"></div><p id="current-pitches" aria-live="polite"></p><p class="reference-help">Notation is a compact pitch reference; duration and musical context are explained separately.</p></div><div class="reference-panel"><div class="instrument-heading"><span>INTERACTIVE HARMONIC REFERENCE</span><span>CHAPTER 24</span></div><div class="reference-staff notation-region" id="reference-staff"></div><svg class="reference-keyboard" id="reference-piano" role="img" aria-label="Interactive piano reference"></svg><p id="reference-piano-feedback" class="piano-note-feedback" aria-live="polite">Tap a key to hear its pitch.</p><button id="play-reference" type="button" class="play">▶ Play selected example</button></div></section><section class="chapter-extension" aria-labelledby="spec-heading"><p class="eyebrow">02 · COMPOSITIONAL SPECIFICATION</p><h2 id="spec-heading">From musical knowledge to a testable prompt</h2><p>This specification illustrates the chapter's central principle. Treat the generated result as material to analyze, not a guaranteed realization.</p><div class="reference-prompt" id="reference-prompt"></div><p><button class="copy-button" id="copy-reference" type="button">Copy specification</button> <span id="copy-status" class="reference-help" aria-live="polite"></span></p></section><p class="review-warning">Original manuscript contains a repeated subsection sequence; both retained pending editorial reconciliation.</p><article id="manuscript" class="chapter-manuscript" aria-label="Recovered chapter manuscript"><p class="eyebrow">03 · COMPLETE SOURCE INSTRUCTION</p><h2>Chapter 24: Negative and Weighted Control</h2>
+<h3>24.1 Separate Prompt Text from Interface Controls</h3>
+<p>A musical description and a product setting are different inputs. Suno&#39;s official Creative Sliders help describes Weirdness, Style Influence and, with an audio upload, Audio Influence. Adjust these in the interface where available. This does not establish typed strings such as <code>style_weight: 0.8</code> or <code>weirdness_constraint: 0.3</code> as supported prompt commands.</p>
+<p><a href="https://help.suno.com/en/articles/6141377">Source: Suno, How to Use Creative Sliders</a>. Checked 24 October 2026. Availability can vary by mode or account.</p>
+<p>The original field names <code>negative_tags</code>, <code>vocal_gender</code> and <code>persona_id</code> are not validated as native prompt syntax in this edition. An API wrapper may use its own field names; consult its documentation before using them in code.</p>
+<h3>24.2 Describe What to Include and Exclude</h3>
+<blockquote>
+<p>Indie-folk in D major, quarter-note tempo 88 BPM. Fingerpicked acoustic guitar and intimate vocal, with a sparse acoustic accompaniment. Avoid distorted electric guitar and electronic drums.</p>
+</blockquote>
+<p>This is a plain-language request. Check the generated arrangement to see whether the exclusions were followed. Where a product provides a dedicated exclusion control, use its documented interface.</p>
+<h3>24.3 Test One Control at a Time</h3>
+<p>Keep the prompt fixed and vary one available setting. Record the displayed value and compare several outputs. A single generation cannot isolate the effect of a setting from random variation.</p>
+<p>The original Udio examples used a leading minus sign as an exclusion operator. That operator was not verified in this audit; this edition does not teach it as reliable syntax.</p>
+<details class="original-wording"><summary>Original wording before the accuracy revision (reference only)</summary><p class="source-note">Superseded text. Includes unsupported or corrected claims; use the revised lesson above.</p><h2>Chapter 24: Negative and Weighted Control</h2>
+<h3>24.1 Suno Parameters</h3>
+<ul>
+<li><strong><code>negative_tags</code></strong>: styles to avoid</li>
+<li><strong><code>style_weight</code></strong> (0–1): adherence to the style prompt</li>
+<li><strong><code>weirdness_constraint</code></strong>: creative deviation</li>
+<li><strong><code>vocal_gender</code></strong>: vocal specification</li>
+<li><strong><code>persona_id</code></strong>: cross-song vocal consistency</li>
+</ul>
+<p><strong>Complete parameter example:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Indie-folk, 88 BPM, D major key, fingerpicked guitar, intimate vocals&quot;
+<em>negative_tags:</em> &quot;distorted guitars, trap hi-hats, electronic drums, autotune, rap&quot;
+<em>style_weight:</em> 0.8
+<em>weirdness_constraint:</em> 0.3
+<em>vocal_gender:</em> female</p>
+</blockquote>
+<p><strong>Parameter-specific examples:</strong></p>
+<p><strong>Avoiding genre contamination:</strong> <em>negative_tags:</em> &quot;metal, punk, EDM, trap, country&quot;
+<strong>Avoiding specific instruments:</strong> <em>negative_tags:</em> &quot;saxophone, brass, synth leads&quot;
+<strong>Avoiding production styles:</strong> <em>negative_tags:</em> &quot;lo-fi, distorted, muddy, over-compressed&quot;
+<strong>Enforcing genre purity:</strong> <em>style_weight:</em> 0.9, <em>weirdness_constraint:</em> 0.1
+<strong>Encouraging creative deviation:</strong> <em>style_weight:</em> 0.5, <em>weirdness_constraint:</em> 0.7</p>
+<h3>24.2 Udio Syntax</h3>
+<p><strong>Exclusion example:</strong></p>
+<blockquote>
+<p>&quot;medieval folk, acoustic instruments, <strong>-electronic drums, -synthesizer, -electric guitar</strong>&quot;</p>
+</blockquote>
+<p><strong>Style weight example:</strong></p>
+<blockquote>
+<p>&quot;indie-folk with tight adherence to genre conventions, <strong>-modern pop production, -autotune</strong>&quot;</p>
+</blockquote>
+<p><strong>Negative tag example:</strong></p>
+<blockquote>
+<p>&quot;ambient classical, strings and piano only, <strong>-percussion, -drums, -rhythm section</strong>&quot;</p>
+</blockquote>
+<hr>
+</details></article><div class="review-warning">Editorial review build. Chapter 6.5 components are imported directly without modifying the frozen source. Notation is a compact reference, not a full engraved composition. Browser, accessibility and real-device audio QA remain pending.</div></main><footer>THE COMPOSER’S PROMPT <span>CHAPTER 24 · REVIEW BUILD · NO PRODUCTION RELEASE</span></footer></div><script id="chapter-data" type="application/json">{"kind":"text","examples":[["Reference 1","C4","E4","G4"],["Reference 2","C4","Eb4","G4"]],"heading":"24.1 Separate Prompt Text from Interface Controls","description":"Explore 24.1 separate prompt text from interface controls through an annotated pitch reference, then study the complete recovered chapter. The keyboard is a theory reference, not generated music.","prompt":"Indie-folk in D major, quarter-note tempo 88 BPM. Fingerpicked acoustic guitar and intimate vocal, with a sparse acoustic accompaniment. Avoid distorted electric guitar and electronic drums."}</script><script>document.getElementById('reference-prompt').textContent=JSON.parse(document.getElementById('chapter-data').textContent).prompt</script><script type="module" src="../chapter-reference.js"></script></body></html>
