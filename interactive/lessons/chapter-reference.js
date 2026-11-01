@@ -1,7 +1,7 @@
-import {renderPiano} from '../../music/piano-renderer.js';
-import {playNotes} from '../../music/audio-engine.js';
-import {attachPianoInteraction,noteFromMidi} from '../../music/interactive-piano.js';
-import {renderCompactChord} from '../../music/compact-notation.js';
+import {renderPiano} from '../music/piano-renderer.js';
+import {playNotes} from '../music/audio-engine.js';
+import {attachPianoInteraction,noteFromMidi} from '../music/interactive-piano.js';
+import {renderCompactChord} from '../music/compact-notation.js';
 const data=JSON.parse(document.getElementById('chapter-data').textContent),$=id=>document.getElementById(id);let selected=0;
 const display=n=>n.replace(/b(?=\d)/,'♭').replace(/#(?=\d)/,'♯');
 function render(){const item=data.examples[selected],notes=item.slice(1);$('reference-controls').replaceChildren();data.examples.forEach((entry,i)=>{let b=document.createElement('button');b.type='button';b.textContent=entry[0];b.setAttribute('aria-pressed',String(i===selected));b.addEventListener('click',()=>{selected=i;render()});$('reference-controls').append(b)});$('current-pitches').textContent=item[0]+' · '+notes.map(display).join(' · ');renderPiano($('reference-piano'),{notes,root:notes[0],playable:true,label:item[0]+': '+notes.join(', ')});renderCompactChord($('reference-staff'),{name:item[0],notes});$('reference-piano-feedback').textContent='Tap a piano key to hear its pitch.';}
