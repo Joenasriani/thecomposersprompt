@@ -1,0 +1,78 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f8f7f3"><title>Chapter 3: Four Strategies for Prompting Theory · The Composer’s Prompt</title><link rel="stylesheet" href="../reference.css"></head><body><div id="app"><header class="header"><a href="../../../index.html" class="brand">THE COMPOSER’S PROMPT</a><nav aria-label="Chapter navigation"><a href="../chapter-1/">1</a><a href="../chapter-2/">2</a><a href="../chapter-3/">3</a><a href="../chapter-3-5/">3.5</a><a href="../chapter-4/">4</a><a href="../chapter-5/">5</a></nav></header><main><div class="breadcrumb">CHAPTER 3 / MUSIC THEORY AND HARMONY / EDITORIAL PREVIEW</div><h1>Four Strategies for Prompting Theory</h1><p class="lede">These examples are theoretical reference sounds, not demonstrations of language-model reasoning. Compare the specificity of the named constraints.</p><section class="study-module" aria-label="Interactive reference"><div class="study-copy"><p class="eyebrow">INTERACTIVE STUDY · CHAPTER 3</p><h2>Theory and sound in context</h2><p>These examples are theoretical reference sounds, not demonstrations of language-model reasoning. Compare the specificity of the named constraints.</p><div class="study-actions" id="choices" role="group" aria-label="Choose musical example"></div><div class="score-wrap" id="score" aria-label="Symbolic pitches on the staff"></div><p id="selected" aria-live="polite"></p></div><div class="study-instrument"><p class="eyebrow">PITCH REFERENCE</p><div class="music-keys" id="keyboard" role="img" aria-label="Selected musical pitch classes on a piano keyboard"></div><button type="button" class="play-reference" id="play">Play reference</button><p class="minor-label" id="audio-message" role="status">Synthesized reference tones, not generator output.</p><div class="prompt-example" id="prompt-display"></div><button type="button" class="copy-prompt" id="copy">Copy compositional specification</button><p class="minor-label" id="copy-message" role="status"></p></div></section><article class="content" aria-label="Complete recovered manuscript"><h2>Chapter 3: Four Strategies for Prompting Theory</h2>
+<p>The research on teaching LLMs music theory has identified four strategies that mirror how humans learn. Each is a <strong>pedagogical move</strong> as much as a technical trick. They can be used individually or in combination, and they form the methodological foundation for everything that follows.</p>
+<h3>3.1 In-Context Learning (ICL)</h3>
+<p>In-context learning involves providing the model with a &quot;mini-lesson&quot; inside the prompt itself. You supply definitions and a few examples of the concept before asking your question. This is the prompt-level equivalent of a teacher introducing a concept, modeling it, and then asking the student to apply it. The model, like a student, performs better when it has a definition and a worked example to anchor the new task.</p>
+<p>Consider this ICL prompt for teaching cadence classification:</p>
+<blockquote>
+<p>&quot;A cadence is a harmonic goal at the end of a phrase. An <strong>authentic cadence</strong> is V–I and sounds final. A <strong>half cadence</strong> ends on V and sounds open. A <strong>deceptive cadence</strong> is V–vi and postpones resolution. Example: the progression C–F–G–C ends V–I, so it is an authentic cadence. Example: the progression Am–Dm–E ends on E (V of A minor), so it is a half cadence. Now classify this progression: G–C–D–G. Show your reasoning.&quot;</p>
+</blockquote>
+<p>The prompt defines the concept, gives two worked examples (one authentic, one half), and then presents a novel test case. The model has to map the test case onto the definitions, using the examples as templates. This is not a trivial exercise for the model—it must recognize that G–C–D–G ends on G, that G is the tonic of G major, and that the final progression D–G is V–I, making it an authentic cadence. But the ICL structure makes the task tractable.</p>
+<p>The same structure works for more advanced concepts. Here is an ICL prompt for secondary dominants:</p>
+<blockquote>
+<p>&quot;A <strong>secondary dominant</strong> is a dominant seventh chord that tonicizes a scale degree other than the tonic. In C major, A7 is V/ii because it resolves to Dm. D7 is V/V because it resolves to G. E7 is V/vi because it resolves to Am. Example: the progression C–A7–Dm–G7–C contains A7 (V/ii) and G7 (V/I). Now identify all secondary dominants in this progression: C–E7–Am–D7–G7–C.&quot;</p>
+</blockquote>
+<p>And here is one for modal interchange:</p>
+<blockquote>
+<p>&quot;<strong>Modal interchange</strong> borrows chords from the parallel mode. In C major, ♭VI is A♭ (from C minor), ♭VII is B♭ (from C minor), and iv is Fm (from C minor). Example: C–A♭–B♭–C uses ♭VI and ♭VII from C minor. Now identify the borrowed chords in this progression: C–Fm–C–A♭–G–C.&quot;</p>
+</blockquote>
+<p>In each case, the ICL prompt provides the <strong>definition</strong>, the <strong>mapping</strong> (which chord is which function), and a <strong>worked example</strong> before presenting the test case. The model&#39;s performance on the test case is a measure of whether the mini-lesson succeeded.</p>
+<p><strong>Classroom translation:</strong> Assign students to write a mini-lesson for an LLM on a harmony topic (e.g., &quot;secondary dominants&quot; or &quot;predominant function&quot;). The prompt must include a definition, a worked example, and a novel test case. The assessment criterion is not whether the prompt &quot;sounds good,&quot; but whether a target model&#39;s output on the test case demonstrates correct theoretical reasoning. This exercise forces the student to articulate the concept clearly enough that a machine can apply it—which is the deepest test of understanding.</p>
+<h3>3.2 Chain-of-Thought (CoT) Prompting</h3>
+<p>CoT encourages the AI to &quot;think out loud&quot; by explicitly working through the steps of a music-theory problem. You can guide this by providing a step-by-step worked example. The model, like a student, is more likely to reach the correct answer if it shows its work.</p>
+<p>Consider this CoT prompt for cadence classification:</p>
+<blockquote>
+<p>&quot;To identify this cadence, I first analyze the final two chords. They are V and I, which is an authentic cadence. Now analyze the cadence in this progression using the same steps: Dm–G7–C–F–G7–C.&quot;</p>
+</blockquote>
+<p>The prompt models the reasoning process—identify the final two chords, determine their function, classify the cadence—and then asks the model to apply the same process to a new progression. The model must first identify the final two chords (G7–C), then determine their function (V–I in C major), then classify the cadence (authentic). If it skips a step, the output will be less reliable.</p>
+<p>CoT is particularly effective for multi-step tasks like harmonic analysis. Consider this prompt for analyzing a four-bar chorale phrase:</p>
+<blockquote>
+<p>&quot;Analyze this four-bar phrase step by step. Step 1: Identify the key by checking the final chord and the leading tone. Step 2: Label each chord&#39;s root and quality. Step 3: Assign Roman numerals. Step 4: Identify non-chord tones. Step 5: Name the cadence. Phrase: [chord sequence].&quot;</p>
+</blockquote>
+<p>The prompt breaks the analysis into five discrete steps, each of which is a separate theoretical operation. The model must perform them in order, and the output reveals which step—if any—failed. If the model misidentifies the key, the Roman numerals will be wrong; if it mislabels the chords, the cadence will be wrong. The CoT structure makes the failure diagnosable.</p>
+<p>CoT is also useful for modulation detection:</p>
+<blockquote>
+<p>&quot;To detect a modulation, I first look for a new leading tone, then check for a cadence in the new key, then confirm with a pivot chord. Now analyze this passage for possible modulation: C–Am–F–G–D–Bm–G–A–D.&quot;</p>
+</blockquote>
+<p>The prompt models the three-step process—new leading tone, cadence in new key, pivot chord—and then asks the model to apply it. The model must notice that the passage moves from C major (C–Am–F–G) to D major (D–Bm–G–A–D), that the new leading tone is C♯ (implied by the A major chord), and that the G chord functions as a pivot (IV in D, V in C). The CoT structure makes the reasoning explicit.</p>
+<p><strong>Classroom translation:</strong> Have students write a CoT prompt for a harmonic analysis task, then compare the model&#39;s step-by-step output to their own analysis. Discrepancies become the lesson: <em>Where did the model&#39;s reasoning diverge from yours? Which theoretical assumption was implicit in your prompt but not stated?</em> This turns the LLM into a <strong>reasoning mirror</strong>.</p>
+<h3>3.3 Role-Based Prompting</h3>
+<p>Assigning a specific persona to the AI primes it to use the correct vocabulary and analytical framework. A prompt that begins &quot;You are an expert music theorist with perfect pitch&quot; activates a different cluster of associations than a prompt that begins &quot;You are a helpful assistant.&quot; The role is a <strong>contextual frame</strong> that shapes the model&#39;s output.</p>
+<p>Consider the difference between these role prompts:</p>
+<p><strong>Functional-harmony pedagogue:</strong></p>
+<blockquote>
+<p>&quot;You are a music theory professor specializing in common-practice functional harmony. Analyze this progression using Roman numerals and T–S–D–T function labels: [progression].&quot;</p>
+</blockquote>
+<p><strong>Schenkerian analyst:</strong></p>
+<blockquote>
+<p>&quot;You are a Schenkerian analyst. Identify the Ursatz, the fundamental line, and the bass arpeggiation in this passage: [passage].&quot;</p>
+</blockquote>
+<p><strong>Neo-Riemannian theorist:</strong></p>
+<blockquote>
+<p>&quot;You are a neo-Riemannian theorist. Analyze this progression using P, L, and R transformations: [progression].&quot;</p>
+</blockquote>
+<p><strong>Jazz pedagogue:</strong></p>
+<blockquote>
+<p>&quot;You are a jazz theory teacher. Analyze this progression using ii–V–I chains, tritone substitutions, and modal interchange: [progression].&quot;</p>
+</blockquote>
+<p><strong>Pop-music analyst:</strong></p>
+<blockquote>
+<p>&quot;You are a popular-music scholar. Analyze this progression using schema theory (axis progression, double-plagal, etc.): [progression].&quot;</p>
+</blockquote>
+<p>Each role prompt activates a different theoretical vocabulary. The functional-harmony pedagogue will label chords with Roman numerals and T–S–D–T functions; the Schenkerian analyst will look for structural levels and prolongation; the neo-Riemannian theorist will describe chord relationships as transformations (P, L, R); the jazz pedagogue will identify ii–V–I chains and tritone substitutions; the pop-music analyst will invoke schemas like the axis progression. The same progression will receive five different analyses, each valid within its theoretical framework.</p>
+<p>The pedagogical value of role prompting goes beyond getting a good answer. It teaches students that <strong>theoretical perspective is a prompt parameter</strong>—that the choice of analytical framework shapes what the model sees. A student who wants a functional analysis must ask for one; a student who wants a Schenkerian analysis must ask for that. The role is not a decoration; it is a specification of the analytical lens.</p>
+<p><strong>Classroom translation:</strong> Have students analyze the same passage from multiple theoretical perspectives by changing the role prompt. Compare the outputs. The lesson is that no single analysis is &quot;the&quot; analysis; each framework reveals different features. The student learns to choose a lens deliberately, based on the analytical question they want to answer.</p>
+<h3>3.4 Process-Oriented Prompting</h3>
+<p>Instead of expecting the AI to have all theory memorized, process-oriented prompting teaches it <em>how to research and apply</em> concepts for a specific task. The workflow is: <strong>Research → Analyze → Extract → Compose → Evaluate</strong>. This is the prompt-level equivalent of a composition assignment: research the style, analyze its features, extract the principles, compose something new, and evaluate the result.</p>
+<p>Consider this process-oriented prompt:</p>
+<blockquote>
+<p>&quot;Research the harmonic language of 1970s Stevie Wonder. Extract three characteristic chord movements (e.g., chromatic mediants, modal interchange, extended dominants). Then compose an 8-bar progression in E♭ major that uses those three movements. Finally, evaluate whether your progression sounds stylistically authentic and explain why.&quot;</p>
+</blockquote>
+<p>The prompt walks the model through the full compositional process. First, it researches the style (&quot;harmonic language of 1970s Stevie Wonder&quot;). Second, it analyzes the findings (&quot;extract three characteristic chord movements&quot;). Third, it composes something new (&quot;compose an 8-bar progression in E♭ major&quot;). Fourth, it evaluates the result (&quot;evaluate whether your progression sounds stylistically authentic&quot;). Each step is a separate theoretical operation, and the output reveals which step succeeded.</p>
+<p>The same structure works for genre study:</p>
+<blockquote>
+<p>&quot;Research the chord progressions common in 1990s shoegaze. Extract the two most characteristic progressions. Compose a 16-bar verse-chorus structure using those progressions. Evaluate the result against the genre&#39;s conventions.&quot;</p>
+</blockquote>
+<p>Here the model must first identify what shoegaze progressions sound like (often modal, often using sus chords and open voicings), then extract the characteristic features, then compose a new progression, then evaluate it. The process is the pedagogy: the student learns the genre by watching the model research, analyze, compose, and evaluate.</p>
+<p><strong>Classroom translation:</strong> Assign students to use process-oriented prompting for a style they want to learn. The final submission is not the generated track but the <strong>research-to-evaluation chain</strong>: what did the model find, what did it extract, what did it compose, and how did it evaluate the result? The student&#39;s commentary on each step is the theory exercise.</p>
+<hr>
+</article><section class="editorial-note" aria-label="Editorial status">Complete recovered workbook chapter text retained. Interactive demonstrations are additional reference exercises and do not establish external model performance. Musical engraving is schematic pending formal notation QA; browser and device QA are pending.</section></main><footer class="review-footer">THE COMPOSER’S PROMPT · INTERACTIVE EDITORIAL PREVIEW · NO PRODUCTION RELEASE</footer></div><script id="lesson-data" type="application/json">{"examples":[["C major","C4","E4","G4"],["A minor","A3","C4","E4"]],"sequential":false}</script><script src="../reference.js"></script></body></html>
