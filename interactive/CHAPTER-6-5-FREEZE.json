@@ -1,0 +1,21 @@
+{
+  "status": "FROZEN_REFERENCE",
+  "revision": "d6475af6483f26760121859a0c6f633024ae0db2",
+  "branch": "reference/chapter-6-5-approved-baseline-2026-11-01",
+  "hashAlgorithm": "git-blob-sha1",
+  "root": "interactive/",
+  "files": {
+    "lessons/chapter-6-5/definition.js": "39c5cebcc07bd31644f4a565b10f4a3d54a7db2f",
+    "lessons/chapter-6-5/extensions.js": "4c8180cf0f668e66a6c1ae1ec6d1825d1a04e6d3",
+    "lessons/chapter-6-5/index.html": "e50c8a15bedfe6e9f05a949f737a667be56655ae",
+    "lessons/chapter-6-5/lesson.css": "ec822e87240514a35f4a33d809ad7af604854f18",
+    "lessons/chapter-6-5/lesson.js": "3c6585021ac1c67179aa486c3fef3b3ecf7834e3",
+    "music/audio-engine.js": "6deac895dc543e5b3f6d0f19a95a9891d1733192",
+    "music/chapter-6-5.js": "959fef5b0e1be303c1154a536f719777bc5ed598",
+    "music/compact-notation.js": "d092205da0b46ffbc888aa7495212728a12bd7fa",
+    "music/interactive-piano.js": "1fee26231157a902f71b995d9ed93651f5d441b1",
+    "music/piano-renderer.js": "7f52ee2848552a2f236b9d0b28eafc6afa0c8179",
+    "music/pitch.js": "349d21d38f2f1b8c26d7c1576281f476a9e14c80",
+    "music/staff-model.js": "66d2c2df754454105badc6385683d7bda9b827fb"
+  }
+}
