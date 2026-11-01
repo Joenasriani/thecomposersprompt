@@ -13,3 +13,14 @@
 #learning-check .answers{display:flex;flex-wrap:wrap;align-items:flex-start}
 #learning-check .answers button{flex:1 1 170px;text-align:left;min-height:48px}
 #learning-check .answers button[aria-pressed=true]{outline:2px solid var(--accent);outline-offset:1px}
+
+/* Android text-selection overlay fix: match frozen Chapter 6.5 piano interaction contract. */
+#reference-piano,#reference-piano *, .reference-keyboard,.reference-keyboard *{
+ -webkit-user-select:none!important;user-select:none!important;
+ -webkit-touch-callout:none!important;-webkit-tap-highlight-color:transparent!important;
+ touch-action:manipulation;
+}
+#reference-piano text,#reference-piano circle{pointer-events:none}
+#reference-piano ::selection,.reference-keyboard ::selection{background:transparent}
+#reference-piano .piano-touch{cursor:pointer;touch-action:manipulation}
+#reference-piano .piano-touch:focus-visible{outline:none;stroke:var(--accent);stroke-width:3}
