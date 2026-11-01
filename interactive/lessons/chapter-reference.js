@@ -47,3 +47,5 @@ if(data.kind==='scale'||data.kind==='interval'){
  label.textContent=data.kind==='scale'?'Notation shows the pitch collection; the playable example is sequential, not a simultaneous chord.':'Notation shows the pitch set; hear the selected pitches sequentially to study melodic interval distance.';
  $('reference-staff').after(label);
 }
+
+import './chapter-practice.js';
