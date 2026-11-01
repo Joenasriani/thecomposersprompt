@@ -1,0 +1,115 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f8f7f3"><title>Chapter 8: The Temporal Grid · The Composer’s Prompt</title><link rel="stylesheet" href="../chapter-6-5/lesson.css"><link rel="stylesheet" href="../chapter-reference.css"><script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow.js"></script></head><body><div id="app"><header class="header"><a class="brand" href="../../index.html">The Composer’s Prompt</a><nav aria-label="Lesson navigation"><a href="#instruction">Instruction</a><a href="#manuscript">Manuscript</a><select id="theme" aria-label="Appearance"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></nav></header><main><div class="breadcrumb">CHAPTER 8 <span>/</span> MUSIC THEORY AND HARMONY <span>/</span> REVIEW</div><h1>The Temporal Grid</h1><p class="lede">Compare reference pulse rates while studying the manuscript's distinction between BPM, meter and rhythmic feel. Playback demonstrates timing, not a completed arrangement.</p><section class="reference-grid" id="instruction"><div><p class="eyebrow">01 · COMPARE & LISTEN</p><h2>Tempo, meter and rhythmic feel</h2><p>Compare reference pulse rates while studying the manuscript's distinction between BPM, meter and rhythmic feel. Playback demonstrates timing, not a completed arrangement.</p><div class="reference-controls" id="reference-controls" role="group" aria-label="Select an example"></div><p id="current-pitches" aria-live="polite"></p><p class="reference-help">Pulse examples are pitch references only; timing is explicitly defined in the manuscript.</p></div><div class="reference-panel"><div class="instrument-heading"><span>INTERACTIVE HARMONIC REFERENCE</span><span>CHAPTER 8</span></div><div class="reference-staff notation-region" id="reference-staff"></div><svg class="reference-keyboard" id="reference-piano" role="img" aria-label="Interactive piano reference"></svg><p id="reference-piano-feedback" class="piano-note-feedback" aria-live="polite">Tap a key to hear its pitch.</p><button id="play-reference" type="button" class="play">▶ Play selected example</button></div></section><section class="chapter-extension" aria-labelledby="spec-heading"><p class="eyebrow">02 · COMPOSITIONAL SPECIFICATION</p><h2 id="spec-heading">From musical knowledge to a testable prompt</h2><p>This specification illustrates the chapter's central principle. Treat the generated result as material to analyze, not a guaranteed realization.</p><div class="reference-prompt" id="reference-prompt"></div><p><button class="copy-button" id="copy-reference" type="button">Copy specification</button> <span id="copy-status" class="reference-help" aria-live="polite"></span></p></section><article id="manuscript" class="chapter-manuscript" aria-label="Recovered chapter manuscript"><p class="eyebrow">03 · COMPLETE SOURCE INSTRUCTION</p><h2>Chapter 8: The Temporal Grid</h2>
+<h3>8.1 Tempo as a First-Class Parameter</h3>
+<p>Without a BPM number, the model defaults to genre averages; a &quot;lo-fi hip-hop beat&quot; without tempo lands around 80–90 BPM regardless of intent.</p>
+<p><strong>Tempo-specific prompt examples:</strong></p>
+<p><strong>Slow ballad:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Piano ballad, <strong>60 BPM</strong>, <strong>F major key</strong>, solo piano, strings, breathy vocals&quot;
+<em>Lyrics:</em> <code>[F]</code> … <code>[Dm]</code> … <code>[B♭]</code> … <code>[C]</code></p>
+</blockquote>
+<p><strong>Mid-tempo pop:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Pop, <strong>105 BPM</strong>, <strong>C major key</strong>, acoustic guitar, light drums, female vocals&quot;
+<em>Lyrics:</em> <code>[C]</code> … <code>[G]</code> … <code>[Am]</code> … <code>[F]</code></p>
+</blockquote>
+<p><strong>Uptempo dance:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;House, <strong>128 BPM</strong>, <strong>G minor key</strong>, four-on-the-floor kick, sidechained pad, plucked lead&quot;
+<em>Lyrics:</em> <code>[Gm]</code> … <code>[E♭]</code> … <code>[B♭]</code> … <code>[F]</code></p>
+</blockquote>
+<p><strong>Drum and bass:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Liquid drum and bass, <strong>174 BPM</strong>, <strong>A minor key</strong>, rolling breaks, sub bass, atmospheric pads&quot;
+<em>Lyrics:</em> <code>[Am]</code> … <code>[F]</code> … <code>[C]</code> … <code>[G]</code></p>
+</blockquote>
+<p><strong>Lo-fi:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Lo-fi hip hop, <strong>85 BPM</strong>, swung rhythm, <strong>D minor key</strong>, vinyl crackle, jazzy piano chords, mellow bass, tape hiss, soft hi-hats, rain ambience, instrumental only&quot;
+<em>Lyrics:</em> <code>[Dm9]</code> … <code>[Gm7]</code> … <code>[B♭maj7]</code> … <code>[A7sus4]</code></p>
+</blockquote>
+<p><strong>Reference BPM bands</strong> (from Chapter 3.5):</p>
+<table>
+<thead>
+<tr>
+<th align="left">BPM Range</th>
+<th align="left">Marking</th>
+<th align="left">Character</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">60–70</td>
+<td align="left">Adagio</td>
+<td align="left">Ballad, ambient, slow R&amp;B</td>
+</tr>
+<tr>
+<td align="left">70–90</td>
+<td align="left">Andante</td>
+<td align="left">Lo-fi, downtempo, R&amp;B, indie-folk</td>
+</tr>
+<tr>
+<td align="left">90–110</td>
+<td align="left">Moderato</td>
+<td align="left">Pop, indie, hip hop, singer-songwriter</td>
+</tr>
+<tr>
+<td align="left">110–130</td>
+<td align="left">Allegro</td>
+<td align="left">Pop-rock, dance, house, upbeat indie</td>
+</tr>
+<tr>
+<td align="left">130–150</td>
+<td align="left">Vivace</td>
+<td align="left">Rock, punk, uptempo electronic</td>
+</tr>
+<tr>
+<td align="left">150–180+</td>
+<td align="left">Presto</td>
+<td align="left">Drum and bass, metal, hardcore</td>
+</tr>
+</tbody></table>
+<h3>8.2 Meter Grouping</h3>
+<p><strong>Meter-specific prompt examples:</strong></p>
+<p><strong>Odd meter (7/8):</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Avant-prog and art pop, 104 BPM with alternating <strong>7/8 and 4/4</strong>, angular clean guitar, elastic distorted bass, dry acoustic drums, theatrical baritone, sparse verses, explosive final refrain&quot;</p>
+</blockquote>
+<p><strong>7/8 grouped 2+2+3:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Balkan folk-rock, <strong>7/8 grouped 2+2+3</strong>, 132 BPM, clarinet, electric guitar, driving tapan&quot;</p>
+</blockquote>
+<p><strong>5/4:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Progressive rock, <strong>5/4 time</strong>, 120 BPM, odd-meter riffing, Hammond organ, jazz-influenced drums&quot;</p>
+</blockquote>
+<p><strong>6/8:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Irish traditional, <strong>6/8 time</strong>, jig rhythm, fiddle, bodhrán, 108 BPM&quot;</p>
+</blockquote>
+<p><strong>3/4 waltz:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Viennese waltz, <strong>3/4 time</strong>, 160 BPM, full orchestra, sweeping strings&quot;</p>
+</blockquote>
+<h3>8.3 Rhythmic Feel</h3>
+<p><strong>Feel-specific prompt examples:</strong></p>
+<p><strong>Swing:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Big-band jazz, <strong>swing feel</strong>, 160 BPM, <strong>B♭ major key</strong>, brass section, walking bass, ride cymbal&quot;</p>
+</blockquote>
+<p><strong>Half-time:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Post-metal, <strong>half-time feel</strong>, 80 BPM, down-tuned guitars, massive drums, atmospheric vocals&quot;</p>
+</blockquote>
+<p><strong>Syncopated:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Funk, <strong>heavy syncopation</strong>, 105 BPM, <strong>E minor key</strong>, clavinet, slap bass, tight drums&quot;</p>
+</blockquote>
+<p><strong>Straight:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Synth-pop, <strong>straight 16th-note feel</strong>, 118 BPM, <strong>A minor key</strong>, analog synths, drum machine&quot;</p>
+</blockquote>
+<p><strong>Shuffle:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Electric blues, <strong>shuffle feel</strong>, 88 BPM, <strong>E major key</strong>, slide guitar, harmonica, walking bass&quot;</p>
+</blockquote>
+<hr>
+</article><div class="review-warning">Editorial review build. Chapter 6.5 components are imported directly without modifying the frozen source. Notation is a compact reference, not a full engraved composition. Browser, accessibility and real-device audio QA remain pending.</div></main><footer>THE COMPOSER’S PROMPT <span>CHAPTER 8 · REVIEW BUILD · NO PRODUCTION RELEASE</span></footer></div><script id="chapter-data" type="application/json">{"kind":"chord","examples":[["Quarter-note C","C4"],["Two-note pulse","C4","G4"],["Four-note cycle","C4","E4","G4","C5"]],"heading":"Tempo, meter and rhythmic feel","description":"Compare reference pulse rates while studying the manuscript's distinction between BPM, meter and rhythmic feel. Playback demonstrates timing, not a completed arrangement.","prompt":"Compose an instrumental piano sketch at 60 BPM in F major, in 4/4 meter. Use a clearly articulated quarter-note pulse, with restrained dynamics. Verify timing from the actual audio rather than genre expectations."}</script><script>document.getElementById('reference-prompt').textContent=JSON.parse(document.getElementById('chapter-data').textContent).prompt</script><script type="module" src="../chapter-reference.js"></script></body></html>
