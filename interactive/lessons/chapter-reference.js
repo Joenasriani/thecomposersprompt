@@ -48,4 +48,5 @@ if(data.kind==='scale'||data.kind==='interval'){
  $('reference-staff').after(label);
 }
 
-import './chapter-practice.js';
+import {buildPractice} from './chapter-practice.js';
+buildPractice(chapter);

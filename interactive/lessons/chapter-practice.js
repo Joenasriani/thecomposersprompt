@@ -37,7 +37,7 @@ const tasks={
 '31-5':{heading:'Tool-landscape comparison',question:'What provides a fair tool comparison?',answers:['Same brief and explicit acceptance criteria','Different unrelated prompts','Promotional feature claims only'],correct:0,why:'A consistent task and criteria separate differences in execution.'},
 '32':{heading:'Capstone diagnostic',question:'What completes a full musical specification study?',answers:['Brief, generated result, evidence and revision','Prompt text alone','A genre label'],correct:0,why:'A complete study compares a designed specification with actual musical output.'}
 };
-function buildPractice(){
+export function buildPractice(chapter){
  const lesson=tasks[chapter];if(!lesson)return;
  const main=document.querySelector('main'),before=document.querySelector('#manuscript');if(!main||!before)return;
  const section=document.createElement('section');section.className='practice';section.id='learning-check';section.setAttribute('aria-label',lesson.heading);
@@ -51,4 +51,4 @@ function buildPractice(){
  lesson.answers.forEach((a,i)=>{const b=document.createElement('button');b.type='button';b.textContent=a;b.addEventListener('click',()=>{answers.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));feedback.dataset.correct=String(i===lesson.correct);feedback.textContent=(i===lesson.correct?'Correct. ':'Not quite. ')+lesson.why});answers.append(b)});
  right.append(answers,feedback);section.append(left,right);main.insertBefore(section,before);
 }
-buildPractice();
+
