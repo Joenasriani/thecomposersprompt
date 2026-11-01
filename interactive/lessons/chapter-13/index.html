@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f8f7f3"><title>Chapter 13: The ARR-SPEC Method · The Composer’s Prompt</title><link rel="stylesheet" href="../chapter-6-5/lesson.css"><link rel="stylesheet" href="../chapter-reference.css"><script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow.js"></script></head><body><div id="app"><header class="header"><a class="brand" href="../../index.html">The Composer’s Prompt</a><nav aria-label="Lesson navigation"><a href="#instruction">Instruction</a><a href="#manuscript">Manuscript</a><select id="theme" aria-label="Appearance"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></nav></header><main><div class="breadcrumb">CHAPTER 13 <span>/</span> MUSIC THEORY AND HARMONY <span>/</span> REVIEW</div><h1>The ARR-SPEC Method</h1><p class="lede">Explore 13.1 specification before generation through an annotated pitch reference, then study the complete recovered chapter. The keyboard is a theory reference, not generated music.</p><section class="reference-grid" id="instruction"><div><p class="eyebrow">01 · COMPARE & LISTEN</p><h2>13.1 Specification Before Generation</h2><p>Explore 13.1 specification before generation through an annotated pitch reference, then study the complete recovered chapter. The keyboard is a theory reference, not generated music.</p><div class="reference-controls" id="reference-controls" role="group" aria-label="Select an example"></div><p id="current-pitches" aria-live="polite"></p><p class="reference-help">Notation is a compact pitch reference; duration and musical context are explained separately.</p></div><div class="reference-panel"><div class="instrument-heading"><span>INTERACTIVE HARMONIC REFERENCE</span><span>CHAPTER 13</span></div><div class="reference-staff notation-region" id="reference-staff"></div><svg class="reference-keyboard" id="reference-piano" role="img" aria-label="Interactive piano reference"></svg><p id="reference-piano-feedback" class="piano-note-feedback" aria-live="polite">Tap a key to hear its pitch.</p><button id="play-reference" type="button" class="play">▶ Play selected example</button></div></section><section class="chapter-extension" aria-labelledby="spec-heading"><p class="eyebrow">02 · COMPOSITIONAL SPECIFICATION</p><h2 id="spec-heading">From musical knowledge to a testable prompt</h2><p>This specification illustrates the chapter's central principle. Treat the generated result as material to analyze, not a guaranteed realization.</p><div class="reference-prompt" id="reference-prompt"></div><p><button class="copy-button" id="copy-reference" type="button">Copy specification</button> <span id="copy-status" class="reference-help" aria-live="polite"></span></p></section><article id="manuscript" class="chapter-manuscript" aria-label="Recovered chapter manuscript"><p class="eyebrow">03 · COMPLETE SOURCE INSTRUCTION</p><h2>Chapter 13: The ARR-SPEC Method</h2>
+<h3>13.1 Specification Before Generation</h3>
+<p>The <strong>ARR-SPEC</strong> model formalizes Level 2. A brief becomes a document specifying <em>key, tempo, bar-accurate section map, chord letters and Roman numerals, who enters and leaves when, the energy curve, vocal delivery, and mix intent</em>—then compiles that document into a Suno prompt.</p>
+<h3>13.2 Worked ARR-SPEC Examples</h3>
+<p><strong>ARR-SPEC #1 — Indie-rock:</strong></p>
+<p><strong>Specification:</strong></p>
+<ul>
+<li><strong>Key:</strong> E minor</li>
+<li><strong>Tempo:</strong> 92 BPM</li>
+<li><strong>Section map:</strong><ul>
+<li>Verse 1 (bars 1–8): <code>[Em] [C] [G] [D]</code> — establish tonic, half cadence on D</li>
+<li>Pre-chorus (bars 9–16): <code>[Am] [B7] [Em] [C]</code> — build dominant tension, authentic cadence on Em</li>
+<li>Chorus (bars 17–24): <code>[G] [D] [Em] [C]</code> — resolve to relative major, energy peak</li>
+<li>Bridge (bars 25–32): <code>[Am] [F] [C] [G]</code> — modal interchange to A minor, no cadence (open)</li>
+</ul>
+</li>
+<li><strong>Energy curve:</strong> low → medium → high → low → very high</li>
+</ul>
+<p><strong>Suno prompt:</strong></p>
+<blockquote>
+<p><em>Style:</em> Melancholic indie-rock, 92 BPM, <strong>E minor key</strong>, fingerpicked acoustic guitar, full band, strings, warm male vocals
+<em>Lyrics:</em>
+<code>[Verse 1]</code>
+<code>[Em]</code> … <code>[C]</code> … <code>[G]</code> … <code>[D]</code> (half cadence)
+<code>[Pre-Chorus]</code>
+<code>[Am]</code> … <code>[B7]</code> … <code>[Em]</code> … <code>[C]</code> (authentic cadence)
+<code>[Chorus]</code>
+<code>[G]</code> … <code>[D]</code> … <code>[Em]</code> … <code>[C]</code>
+<code>[Bridge]</code>
+<code>[Am]</code> … <code>[F]</code> … <code>[C]</code> … <code>[G]</code> (open)</p>
+</blockquote>
+<p><strong>ARR-SPEC #2 — Synthwave:</strong></p>
+<p><strong>Specification:</strong></p>
+<ul>
+<li><strong>Key:</strong> F# minor</li>
+<li><strong>Tempo:</strong> 110 BPM</li>
+<li><strong>Section map:</strong><ul>
+<li>Intro (bars 1–8): <code>[F#m] [D] [A] [E]</code> — establish groove, filtered</li>
+<li>Verse (bars 9–24): same progression, vocals enter</li>
+<li>Chorus (bars 25–40): <code>[D] [A] [E] [F#m]</code> — rotate progression, full synths</li>
+<li>Bridge (bars 41–48): <code>[Bm] [D] [A] [E]</code> — lift to relative major, no drums</li>
+<li>Final chorus (bars 49–64): return to chorus progression, double-time drums</li>
+</ul>
+</li>
+<li><strong>Energy curve:</strong> medium → medium → high → low → very high</li>
+</ul>
+<p><strong>Suno prompt:</strong></p>
+<blockquote>
+<p><em>Style:</em> Synthwave, 110 BPM, <strong>F# minor key</strong>, analog synth arpeggios, gated reverb drums, warm bass, retro 80s production
+<em>Lyrics:</em>
+<code>[Intro]</code> <code>[F#m]</code> … <code>[D]</code> … <code>[A]</code> … <code>[E]</code>
+<code>[Verse]</code> <code>[F#m]</code> … <code>[D]</code> … <code>[A]</code> … <code>[E]</code>
+<code>[Chorus]</code> <code>[D]</code> … <code>[A]</code> … <code>[E]</code> … <code>[F#m]</code>
+<code>[Bridge]</code> <code>[Bm]</code> … <code>[D]</code> … <code>[A]</code> … <code>[E]</code>
+<code>[Final Chorus]</code> <code>[D]</code> … <code>[A]</code> … <code>[E]</code> … <code>[F#m]</code></p>
+</blockquote>
+<p><strong>ARR-SPEC #3 — Jazz standard:</strong></p>
+<p><strong>Specification:</strong></p>
+<ul>
+<li><strong>Key:</strong> B♭ major</li>
+<li><strong>Tempo:</strong> 140 BPM (medium swing)</li>
+<li><strong>Section map:</strong><ul>
+<li>A1 (bars 1–8): <code>[B♭maj7] [Gm7] [Cm7] [F7]</code> — I–vi–ii–V</li>
+<li>A2 (bars 9–16): same, with variation</li>
+<li>B (bars 17–24): <code>[E♭maj7] [Cm7] [F7] [B♭maj7]</code> — IV–ii–V–I</li>
+<li>A3 (bars 25–32): return with ii–V–I cadence</li>
+</ul>
+</li>
+<li><strong>Energy curve:</strong> medium throughout, with improvisational peaks</li>
+</ul>
+<p><strong>Suno prompt:</strong></p>
+<blockquote>
+<p><em>Style:</em> Jazz trio, 140 BPM, <strong>B♭ major key</strong>, swing feel, piano comping, walking upright bass, ride cymbal, ii–V–I progressions
+<em>Lyrics:</em>
+<code>[A1]</code> <code>[B♭maj7]</code> … <code>[Gm7]</code> … <code>[Cm7]</code> … <code>[F7]</code>
+<code>[A2]</code> <code>[B♭maj7]</code> … <code>[Gm7]</code> … <code>[Cm7]</code> … <code>[F7]</code>
+<code>[B]</code> <code>[E♭maj7]</code> … <code>[Cm7]</code> … <code>[F7]</code> … <code>[B♭maj7]</code>
+<code>[A3]</code> <code>[B♭maj7]</code> … <code>[Gm7]</code> … <code>[Cm7]</code> … <code>[F7]</code> … <code>[B♭maj7]</code></p>
+</blockquote>
+<h3>13.3 Diagnostic Test</h3>
+<p>Compare the <strong>energy curve</strong> of the output to the specified curve. Where did the model flatten a build or rush a cadence? Revise the section-local production notes, not the global genre tags.</p>
+<hr>
+<h1>Part IV: Level 3 — Color and Chromaticism (Modern Harmony)</h1>
+<p><em>Level 2 specified the phrase&#39;s harmonic job, cadential target, and melodic embellishment. Level 3 adds a new grain of precision: <strong>color</strong>. The diatonic skeleton is now dressed with extensions and alterations, chromatic borrowings, localized tonicizations, specific voicings, and parallel motion.</em></p>
+</article><div class="review-warning">Editorial review build. Chapter 6.5 components are imported directly without modifying the frozen source. Notation is a compact reference, not a full engraved composition. Browser, accessibility and real-device audio QA remain pending.</div></main><footer>THE COMPOSER’S PROMPT <span>CHAPTER 13 · REVIEW BUILD · NO PRODUCTION RELEASE</span></footer></div><script id="chapter-data" type="application/json">{"kind":"text","examples":[["Reference 1","C4","E4","G4"],["Reference 2","C3","G3","E4"]],"heading":"13.1 Specification Before Generation","description":"Explore 13.1 specification before generation through an annotated pitch reference, then study the complete recovered chapter. The keyboard is a theory reference, not generated music.","prompt":"Style: Melancholic indie-rock, 92 BPM, E minor key , fingerpicked acoustic guitar, full band, strings, warm male vocals Lyrics: [Verse 1] [Em] … [C] … [G] … [D] (half cadence) [Pre-Chorus] [Am] … [B7] … [Em] … [C] (authentic cadence) [Chorus] [G] … [D] … [Em] … [C] [Bridge] [Am] … [F] … [C] … [G] (open)"}</script><script>document.getElementById('reference-prompt').textContent=JSON.parse(document.getElementById('chapter-data').textContent).prompt</script><script type="module" src="../chapter-reference.js"></script></body></html>
