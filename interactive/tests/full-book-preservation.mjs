@@ -1,0 +1,13 @@
+import {readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');
+const marker='<script id="bookdata" type="application/json">';
+const start=html.indexOf(marker);assert.ok(start>0,'Complete manuscript is required');
+const end=html.indexOf('</script>',start);assert.ok(end>start,'Manuscript script terminator missing');
+const chapters=JSON.parse(html.slice(start+marker.length,end));
+assert.equal(chapters.length,42,'All 42 original manuscript entries must survive');
+for(const title of ['Chapter 1:','Chapter 32:','Appendix A:','Appendix F:'])assert.ok(chapters.some(c=>c.title.startsWith(title)),title+' missing');
+for(const id of ['intervals','modes','chords','cadence','rhythm','arrangement','studio'])assert.ok(html.includes(id+':{')||html.includes(id+': {'),'Listening room '+id+' missing');
+for(const fragment of ['function keyboard()','function mark(','function play(','function promptBox(','function bindCopies(','function chapterList(','function route()'])assert.ok(html.includes(fragment),'Workbook feature '+fragment+' missing');
+assert.match(html,/lessons\\/chapter-6-5\\//,'Advanced piano lesson link missing');
+console.log('PASS: full manuscript and legacy interactive features preserved');
