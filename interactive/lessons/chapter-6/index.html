@@ -1,0 +1,95 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f8f7f3"><title>Chapter 6: Key and Mode as Containers · The Composer’s Prompt</title><link rel="stylesheet" href="../chapter-6-5/lesson.css"><link rel="stylesheet" href="../chapter-reference.css"><script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow.js"></script></head><body><div id="app"><header class="header"><a class="brand" href="../../index.html">The Composer’s Prompt</a><nav aria-label="Lesson navigation"><a href="#instruction">Instruction</a><a href="#manuscript">Manuscript</a><select id="theme" aria-label="Appearance"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></nav></header><main><div class="breadcrumb">CHAPTER 6 <span>/</span> MUSIC THEORY AND HARMONY <span>/</span> REVIEW</div><h1>Key and Mode as Containers</h1><p class="lede">Explore 6.1 the key declaration through an annotated pitch reference, then study the complete recovered chapter. The keyboard is a theory reference, not generated music.</p><section class="reference-grid" id="instruction"><div><p class="eyebrow">01 · COMPARE & LISTEN</p><h2>6.1 The Key Declaration</h2><p>Explore 6.1 the key declaration through an annotated pitch reference, then study the complete recovered chapter. The keyboard is a theory reference, not generated music.</p><div class="reference-controls" id="reference-controls" role="group" aria-label="Select an example"></div><p id="current-pitches" aria-live="polite"></p><p class="reference-help">Notation is a compact pitch reference; duration and musical context are explained separately.</p></div><div class="reference-panel"><div class="instrument-heading"><span>INTERACTIVE HARMONIC REFERENCE</span><span>CHAPTER 6</span></div><div class="reference-staff notation-region" id="reference-staff"></div><svg class="reference-keyboard" id="reference-piano" role="img" aria-label="Interactive piano reference"></svg><p id="reference-piano-feedback" class="piano-note-feedback" aria-live="polite">Tap a key to hear its pitch.</p><button id="play-reference" type="button" class="play">▶ Play selected example</button></div></section><section class="chapter-extension" aria-labelledby="spec-heading"><p class="eyebrow">02 · COMPOSITIONAL SPECIFICATION</p><h2 id="spec-heading">From musical knowledge to a testable prompt</h2><p>This specification illustrates the chapter's central principle. Treat the generated result as material to analyze, not a guaranteed realization.</p><div class="reference-prompt" id="reference-prompt"></div><p><button class="copy-button" id="copy-reference" type="button">Copy specification</button> <span id="copy-status" class="reference-help" aria-live="polite"></span></p></section><article id="manuscript" class="chapter-manuscript" aria-label="Recovered chapter manuscript"><p class="eyebrow">03 · COMPLETE SOURCE INSTRUCTION</p><h2>Chapter 6: Key and Mode as Containers</h2>
+<h3>6.1 The Key Declaration</h3>
+<p>The single most important Theory 101 prompt move is <strong>declaring the key in the Style box and reinforcing it with bracketed chords in the lyrics</strong>. Suno does not natively read chord symbols like a lead-sheet musician; if chord names appear without brackets, the model may literally sing them as lyrics. Bracketed chords—<code>[Am]</code> before a lyric line—function as structural harmony instructions, and pairing them with an explicit key declaration (&quot;A minor key&quot; in the Style box) &quot;sharply improves the hit rate&quot; and keeps the model within the correct scale collection (Am, Bdim, C, Dm, Em, F, G for A natural minor).</p>
+<p><strong>Diagnostic pair — with and without key declaration:</strong></p>
+<p><strong>Weak (no key):</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Melancholic indie-folk, acoustic guitar, 90 BPM, warm male vocals&quot;
+<em>Lyrics:</em> <code>[Am]</code> City sleeps and <code>[F]</code> I am wide awake / <code>[C]</code> Streetlights at the <code>[G]</code> window tremble soft</p>
+</blockquote>
+<p><strong>Strong (key declared):</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Melancholic indie-folk, acoustic guitar, 90 BPM, warm male vocals, <strong>A minor key</strong>&quot;
+<em>Lyrics:</em> (identical)</p>
+</blockquote>
+<p><strong>Four more key-declaration examples across genres:</strong></p>
+<p><strong>Example A — Major key, pop:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Upbeat pop, 120 BPM, <strong>C major key</strong>, bright piano, four-on-the-floor drums, female vocals&quot;
+<em>Lyrics:</em> <code>[C]</code> … <code>[G]</code> … <code>[Am]</code> … <code>[F]</code></p>
+</blockquote>
+<p><strong>Example B — Minor key, rock:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Hard rock, 140 BPM, <strong>E minor key</strong>, distorted guitars, driving drums, aggressive male vocals&quot;
+<em>Lyrics:</em> <code>[Em]</code> … <code>[C]</code> … <code>[G]</code> … <code>[D]</code></p>
+</blockquote>
+<p><strong>Example C — Modal, Dorian:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Fusion jazz, 132 BPM, <strong>D Dorian mode</strong>, electric piano, fretless bass, syncopated drums&quot;
+<em>Lyrics:</em> <code>[Dm7]</code> … <code>[G7]</code> … <code>[Dm7]</code> … <code>[G7]</code></p>
+</blockquote>
+<p><strong>Example D — Modal, Mixolydian:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Classic rock, 110 BPM, <strong>A Mixolydian mode</strong>, open guitar chords, tambourine, gritty vocals&quot;
+<em>Lyrics:</em> <code>[A]</code> … <code>[G]</code> … <code>[D]</code> … <code>[A]</code></p>
+</blockquote>
+<h3>6.2 The Singing-Chords Failure Mode</h3>
+<p>Without brackets, Suno may literally sing the chord names.</p>
+<p><strong>Prompt (failure mode):</strong></p>
+<blockquote>
+<p><em>Lyrics:</em> &quot;Am F G Em, walking through the rain tonight&quot;</p>
+</blockquote>
+<p><strong>Output:</strong> Suno sings &quot;A minor, F, G, E minor&quot; as lyrics instead of playing them instrumentally.</p>
+<p><strong>Prompt (corrected):</strong></p>
+<blockquote>
+<p><em>Lyrics:</em> <code>[Am]</code> Walking through the rain tonight <code>[F]</code> Shadows falling left and right</p>
+</blockquote>
+<p><strong>Additional failure-mode examples:</strong></p>
+<p><strong>Failure:</strong> &quot;C G Am F, I remember summer&quot;
+<strong>Corrected:</strong> <code>[C]</code> I remember <code>[G]</code> summer <code>[Am]</code> fading <code>[F]</code> slow</p>
+<p><strong>Failure:</strong> &quot;E minor, C major, G major, D major&quot;
+<strong>Corrected:</strong> <code>[Em]</code> … <code>[C]</code> … <code>[G]</code> … <code>[D]</code></p>
+<p>The lesson is that the prompt&#39;s syntax is not a neutral container; it is a <strong>semantic signal</strong>.</p>
+<h3>6.3 Modes Beyond Major and Minor in the Key Declaration</h3>
+<p><strong>Dorian:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Jazz fusion, <strong>Dorian mode in D</strong>, altered scale over dominant chords, comping with shell voicings and extensions, 120 BPM&quot;
+<em>Lyrics:</em> <code>[Dm7]</code> … <code>[G7]</code> … <code>[Dm7]</code> … <code>[G7]</code></p>
+</blockquote>
+<p><strong>Phrygian:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Flamenco-influenced rock, <strong>E Phrygian mode</strong>, nylon-string guitar, palmas, 95 BPM&quot;
+<em>Lyrics:</em> <code>[Em]</code> … <code>[F]</code> … <code>[Em]</code> … <code>[F]</code></p>
+</blockquote>
+<p><strong>Lydian:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Film-score orchestral, <strong>F Lydian mode</strong>, sweeping strings, harp, celestial choir, 70 BPM&quot;
+<em>Lyrics:</em> <code>[Fmaj7]</code> … <code>[G]</code> … <code>[Fmaj7]</code> … <code>[G]</code></p>
+</blockquote>
+<p><strong>Mixolydian:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Southern rock, <strong>G Mixolydian mode</strong>, slide guitar, Hammond organ, 100 BPM&quot;
+<em>Lyrics:</em> <code>[G]</code> … <code>[F]</code> … <code>[C]</code> … <code>[G]</code></p>
+</blockquote>
+<p><strong>Altered scale:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Modern jazz, <strong>altered scale over G7</strong>, saxophone solo, walking bass, ride cymbal, 160 BPM&quot;
+<em>Lyrics:</em> <code>[G7alt]</code> … <code>[Cmaj7]</code></p>
+</blockquote>
+<p><strong>Aeolian:</strong></p>
+<blockquote>
+<p><em>Style:</em> &quot;Gothic rock, <strong>A Aeolian mode</strong>, chorus guitar, driving bass, 130 BPM&quot;
+<em>Lyrics:</em> <code>[Am]</code> … <code>[F]</code> … <code>[G]</code> … <code>[Em]</code></p>
+</blockquote>
+<h3>6.4 Forcing Non-Major Modes</h3>
+<p><strong>Never rely solely on &quot;Dorian&quot; or &quot;maqam Hijaz.&quot;</strong> Pair the mode name with concrete anchors: root + interval sequence, reference piece (&quot;like Miles Davis&#39;s &#39;So What&#39;&quot;), or MIDI clip.</p>
+<p>For <strong>Hijaz maqam</strong>, the full specification:</p>
+<blockquote>
+<p>&quot;Hijaz maqam on D: <strong>D–E#–F–G–A–Bb–C–D</strong>; emphasize E#–F and A–Bb neighbor motion; texture: solo oud; tempo 66 BPM, 10/8; no Western harmony—only heterophonic variation&quot;</p>
+</blockquote>
+<p>The same principle applies to modal jazz:</p>
+<blockquote>
+<p>&quot;Dorian on D, intervals <strong>[0,2,3,5,7,9,10]</strong>, emphasize minor 7th, texture: Rhodes + muted guitar, 90 BPM, <strong>no major cadences</strong>&quot;</p>
+</blockquote>
+<p>The interval array <code>[0,2,3,5,7,9,10]</code> is a <strong>machine-readable specification</strong> of the Dorian scale (with 0 = D). The phrase &quot;no major cadences&quot; is a <strong>negative constraint</strong> that prevents the model from defaulting to V–I resolution. Together, they are more reliable than the bare word &quot;Dorian.&quot;</p>
+</article></main><footer>THE COMPOSER’S PROMPT <span>CHAPTER 6 · REVIEW BUILD · NO PRODUCTION RELEASE</span></footer></div><script id="chapter-data" type="application/json">{"kind":"chord","examples":[["Reference 1","C4","E4","G4"],["Reference 2","D4","F4","A4"]],"heading":"6.1 The Key Declaration","description":"Explore 6.1 the key declaration through an annotated pitch reference, then study the complete recovered chapter. The keyboard is a theory reference, not generated music.","prompt":"Style: \"Melancholic indie-folk, acoustic guitar, 90 BPM, warm male vocals\" Lyrics: [Am] City sleeps and [F] I am wide awake / [C] Streetlights at the [G] window tremble soft"}</script><script>document.getElementById('reference-prompt').textContent=JSON.parse(document.getElementById('chapter-data').textContent).prompt</script><script type="module" src="../chapter-reference.js"></script></body></html>
