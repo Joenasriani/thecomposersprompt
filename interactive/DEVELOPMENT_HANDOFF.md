@@ -39,3 +39,6 @@ Run `tests/browser-chapter-6-5.spec.mjs` with Playwright Chromium against an acc
 - Optional VexFlow 5.0.0 compact staff is supporting notation only; keyboard, visualizations, prompts and sound remain independent. No MuseScore/LilyPond/score editing systems.
 - Final acceptance: browser confirmation at 320/375/768/1024/1440, clefs/accidentals, piano sound/touch, accessibility, navigation/asset paths, light artwork, and Vercel production deployment **NOT RECHECKED**.
 - No changes to root landing, the final book, `.github/`, other projects, or external publication rights.
+
+## Frozen prompt-box usability rule — 2026-11-01
+Every compositional prompt box in the interactive edition MUST include an accessible copy-to-clipboard icon, visibly positioned inside the prompt box (upper right), available on desktop and touch devices. The icon must copy the exact prompt text, not labels or controls, and give an accessible success/failure status. Apply to all future chapters and manuscript prompt examples. Do not replace it with a text-only "Copy" button. The rule applies to all review and production lesson implementations; Chapter 6.5 itself remains frozen unless explicitly authorized. Never claim clipboard testing PASS until exercised in a browser.
