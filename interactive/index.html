@@ -159,6 +159,6 @@ const ref=document.createElement('a');ref.href=chapterPath('6.5');ref.innerHTML=
 const home=document.getElementById('home');home.insertBefore(section,home.querySelector('.hero')?.nextSibling||null);
 const lead=home.querySelector('.section:not(.interactive-collection) .lead');if(lead)lead.textContent='Select an interactive chapter above, use the listening labs for focused practice, or open the complete manuscript and six appendices in the reader.';
 const introNote=hero?.querySelector('.hero-note p');if(introNote)introNote.textContent='Move between chapter instruction, playable musical examples and usable composition prompts. The complete manuscript remains available separately.';
-const headerNav=document.querySelector('header nav');if(headerNav){const a=document.createElement('a');a.href='#interactive-chapters';a.textContent='Interactive chapters';headerNav.insertBefore(a,headerNav.firstChild);a.addEventListener('click',()=>{if(location.hash!=='#start'&&location.hash!==''){location.hash='start';requestAnimationFrame(()=>document.getElementById('interactive-chapters')?.scrollIntoView())}})}
+const headerNav=document.querySelector('header nav');if(headerNav){const a=document.createElement('a');a.href='#start';a.textContent='Interactive chapters';headerNav.insertBefore(a,headerNav.firstChild);a.addEventListener('click',()=>{setTimeout(()=>document.getElementById('interactive-chapters')?.scrollIntoView(),30)})}
 })();
 </script></body></html>
