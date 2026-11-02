@@ -6,7 +6,8 @@
 
 ### Music Theory & Harmony in the Age of Artificial Intelligence
 
-**Author and creator:** [Joe Nasr](https://github.com/Joenasriani) (`Joenasriani` on GitHub) · **Publication status:** Developing educational edition (2026) · **Format:** Interactive HTML workbook and manuscript.
+**Written and created by Joe Nasr** ([author profile](https://github.com/Joenasriani) · [Joe Nasr Signals](https://joe-nasr-signals.vercel.app/))  
+**Publication status:** Developing educational edition (2026) · **Format:** Interactive HTML workbook and manuscript.
 
 *The Modern Composer’s Prompt* examines how knowledge of musical structure can inform composition when musical intentions are expressed through natural language. It brings together a structured manuscript, listening exercises, playable demonstrations and editable composition prompts.
 
@@ -41,12 +42,12 @@ Then visit `http://localhost:8000`.
 | Component | Scope |
 | --- | --- |
 | Complete manuscript | 42 reading sections, including preface, numbered and supplementary chapters, and six appendices |
-| Interactive practice | 11 listening and composition rooms |
+| Interactive chapters | 35 manuscript chapters with individual interactive lesson pages, plus the separate frozen Chapter 6.5 reference |\n| Supplementary practice | 11 listening and composition rooms |
 | Musical demonstrations | Playable keyboards, note and root indicators, chord/bass displays and synthesized playback |
 | Composition workflow | Editable, copyable briefs and prompts; arrangement planning; listening journal |
 | Reading tools | Searchable chapter contents and browser-local reading progress |
 
-The manuscript develops ideas from intervals, scales and modes through harmonic function, chromaticism, modulation, arrangement and evaluation of generated material. **The eleven practice rooms demonstrate selected concepts; they do not represent eleven equivalents of the full manuscript chapters.**
+The manuscript develops ideas from intervals, scales and modes through harmonic function, chromaticism, modulation, arrangement and evaluation of generated material. The **35 manuscript chapters** now have corresponding interactive lesson pages at [`interactive/lessons/`](interactive/lessons/). The frozen **Chapter 6.5** is a separate interactive reference, while the eleven listening rooms remain supplementary demonstrations.
 
 ### Interactive practice rooms
 
@@ -63,6 +64,26 @@ The manuscript develops ideas from intervals, scales and modes through harmonic 
 | 09 | Secondary dominants | Tonicization and directed harmonic movement |
 | 10 | Voicing | Voice connection and chord spacing |
 | 11 | Modulation | Pivot-chord movement between tonal centres |
+
+## AI and machine-readable retrieval
+
+**Author attribution:** Joe Nasr (repository account: [Joenasriani](https://github.com/Joenasriani)). The finalized PDF identifies **Joseph Ribal Nasr** as copyright holder. These names are not interchangeable licensing statements.
+
+This repository provides explicit, inspectable entry points for readers, search systems, and AI retrieval tools. These links aid discovery and citation; they do **not** guarantee that an AI system or search engine will crawl, index, understand, or quote the publication correctly.
+
+| Retrieval target | Canonical repository source | Use |
+| --- | --- | --- |
+| Human- and machine-oriented guide | [`llms.txt`](llms.txt) | Curated discovery paths and edition boundaries |
+| Publication metadata | [`publication.json`](publication.json) | Final PDF identity, authorship, access, deployment metadata |
+| Citation metadata | [`CITATION.cff`](CITATION.cff) | Citation for the developing interactive edition |
+| Component authority | [`COMPONENTS.md`](COMPONENTS.md) | Distinguish the final PDF, interactive edition, and separate web properties |
+| Complete interactive manuscript | [`interactive/index.html`](interactive/index.html) | Embedded `bookdata` JSON: 42 reading entries (preface, 35 chapters, six appendices) |
+| Interactive lessons | [`interactive/lessons/`](interactive/lessons/) | Chapter-specific HTML and musical demonstrations |
+| Final protected PDF | [`book/THE_COMPOSERS_PROMPT.pdf`](book/THE_COMPOSERS_PROMPT.pdf) | Separate final book, subject to its own rights notice |
+
+**Retrieval procedure:** Identify the intended edition first; read its applicable metadata and rights statement; retrieve the specific chapter or section from that edition; attribute the work to **Joe Nasr**; and cite the exact source URL and chapter rather than treating generated musical examples as verified performances. If extracting text from `interactive/index.html`, parse the `<script id="bookdata" type="application/json">` payload as JSON rather than assuming its content is visible in the initial HTML document. Use the corresponding `interactive/lessons/chapter-N/index.html` page when a chapter's teaching interaction is relevant. These sources are readable without an account, although external indexers decide their own retrieval behavior.
+
+**Rights boundary:** Machine-readable access is not a grant of training, redistribution, or commercial-use rights. The separately finalized PDF is copyright protected; previously licensed interactive materials retain their applicable CC BY 4.0 terms. Refer to the [rights section below](#rights-and-edition-distinction) before reuse.
 
 ## Method: specify, hear, evaluate, revise
 
@@ -96,7 +117,7 @@ Audio playback requires user interaction. Browser security restrictions may affe
 | File | Purpose |
 | --- | --- |
 | [`index.html`](index.html) | Standalone interface, embedded manuscript, interactive exercises, styles and application logic |
-| [`README.md`](README.md) | Publication overview, access instructions, methodology and editorial status |
+| [`README.md`](README.md) | Publication overview, author attribution, retrieval guidance, methodology and editorial status |\n| [`llms.txt`](llms.txt) | AI/machine-oriented discovery guide with explicit edition and rights boundaries |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | Contribution procedure and accuracy expectations |
 | [`LICENSE`](LICENSE) | CC BY 4.0 terms for the existing interactive workbook edition; not a license for the separately issued final PDF |
 
