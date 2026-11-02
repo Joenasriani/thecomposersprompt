@@ -235,6 +235,6 @@ const headerNav=document.querySelector('header nav');if(headerNav){const a=docum
 (function(){
 const input=document.getElementById('theme'),media=window.matchMedia('(prefers-color-scheme: dark)');
 function apply(){const selected=input.value;document.documentElement.dataset.theme=selected==='system'?(media.matches?'dark':'light'):selected}
-input.value=localStorage.getItem('composer-appearance')||'system';input.addEventListener('change',()=>{localStorage.setItem('composer-appearance',input.value);apply()});media.addEventListener?.('change',()=>{if(input.value==='system')apply()});apply();
+input.value=localStorage.getItem('composer-theme')||'system';input.addEventListener('change',()=>{localStorage.setItem('composer-theme',input.value);apply()});media.addEventListener?.('change',()=>{if(input.value==='system')apply()});apply();
 })();
 </script></body></html>
