@@ -6,8 +6,8 @@ Audit: 2026-10-27. Scope: interactive-owned artifacts only. This document record
 
 ## Identity
 - Interactive educational experience: **The Composer’s Prompt** (software / educational website), a separate edition from the book.
-- Book source of musical facts: `book/THE_COMPOSERS_PROMPT.pdf` on `main`, 159 pages, Git blob `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`. Read-only reference. Book metadata and release lock must not be modified as part of interactive development.
-- Published under Joe Nasr; copyright holder Joseph Ribal Nasr. Distinguish the book's reserved rights from rights granted for earlier interactive content.
+- Book source of musical facts: `book/The_Composers_Prompt_Joe_Nasr.pdf` on `main`, 159 pages declared, Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`. Read-only reference. Book metadata and release lock must not be modified as part of interactive development.
+- Publication credit J. Nasr; copyright holder Joseph Ribal Nasr. Distinguish the book's reserved rights from rights granted for earlier interactive content.
 
 ## Source-of-truth inventory
 | Path | Observed role | Runtime/build | Status |
