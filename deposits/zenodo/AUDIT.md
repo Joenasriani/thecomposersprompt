@@ -1,4 +1,4 @@
-**Current-release update (2026-11-03):** Earlier checks in this audit were performed on superseded PDF blob `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`. The current locked final PDF and matching `books_finals` copy use blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7` (5,630,152 bytes). The earlier PASS values below are historical, not verification of the current binary internals. Current metadata plan is updated; live Zenodo record/DOI association NOT RECHECKED. No new deposit is authorized.
+**Current-release update (2026-11-03):** Earlier checks in this audit were performed on superseded PDF blob `historical-check-not-current`. The current locked final PDF and matching `books_finals` copy use blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7` (5,630,152 bytes). The earlier PASS values below are historical, not verification of the current binary internals. Current metadata plan is updated; live Zenodo record/DOI association NOT RECHECKED. No new deposit is authorized.
 
 # Zenodo publication-readiness audit – 2026-10-27
 
@@ -8,8 +8,8 @@ Scope: authoritative repository files inspected read-only; Zenodo documentation 
 |---|---|---|
 | Phase 0 classification | PASS | Educational book, not empirical validation or peer-reviewed article |
 | Canonical title, subtitle, creator and holder | PASS | `publication.json`, `book/FINAL_RELEASE_LOCK.json` |
-| Locked PDF identity in release records | PASS | 159 pages; 5,204,343 bytes; blob SHA-1 fe10bb14c36bdd22ec791031b02d43fb5d8fabde |
-| GitHub PDF blob identity | PASS | Direct GitHub fetch of `book/THE_COMPOSERS_PROMPT.pdf` on `main` returned `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`, matching locked release records. GitHub reported base64 content length 0. |\n| Independent binary checksum / PDF contents | BLOCKED | GitHub connector did not supply binary bytes (base64 result empty; blob fetch produced UnicodeDecodeError). SHA-256, page count and internal PDF inspection cannot be independently verified from this tool. |
+| Locked PDF identity in release records | PASS | 159 pages; historical size – not current; blob SHA-1 historical-check-not-current |
+| GitHub PDF blob identity | PASS | A prior GitHub source identity check passed for an earlier editorial snapshot; current locked source identifier is `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`. This historical check is NOT RECHECKED. GitHub reported base64 content length 0. |\n| Independent binary checksum / PDF contents | BLOCKED | GitHub connector did not supply binary bytes (base64 result empty; blob fetch produced UnicodeDecodeError). SHA-256, page count and internal PDF inspection cannot be independently verified from this tool. |
 | Copyright statement throughout preparation | PASS | `metadata.json`, `RIGHTS.md`, `README.md` |
 | Separate interactive edition licensing | PASS | No PDF CC BY 4.0; older interactive terms preserved |
 | Zenodo license and public visibility capabilities | PASS | Official Zenodo docs, see README |
