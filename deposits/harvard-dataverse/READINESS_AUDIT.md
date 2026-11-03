@@ -1,10 +1,12 @@
+**Current-release status (2026-11-03): FIX – Any previously recorded binary or derived-data checks below are historical and are NOT RECHECKED against the current locked PDF. Source-data checks must be rerun before deposit.**
+
 # Harvard Dataverse readiness audit — 27 October 2026
 
 | Check | Result | Evidence / corrective action |
 |---|---|---|
 | Correct source repository/main | PASS | Governing GitHub records inspected |
-| Final reviewed PDF remains locked | PASS | No edit; Git blob `fe10bb14c36bdd22ec791031b02d43fb5d8fabde` |
-| Publication identity and copyright | PASS | Joe Nasr / Joseph Ribal Nasr / 2026 confirmed in records |
+| Final reviewed PDF remains locked | PASS | No edit; Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7` |
+| Publication identity and copyright | PASS | J. Nasr / Joseph Ribal Nasr / 2026 confirmed in records |
 | Book is not called a dataset | PASS | Distinct education-book and annotated-data classifications |
 | Harvard software vs repository distinguished | PASS | Official Harvard and Dataverse documentation reviewed |
 | Standalone book eligible as research dataset | UNKNOWN | General Terms broadly define dataset, but research-data scope screening applies; no book-only submission proposed |
