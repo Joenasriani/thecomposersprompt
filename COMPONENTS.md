@@ -24,9 +24,9 @@ This repository contains **different artifacts and workflows**, not interchangea
 6. The standalone landing source is now `websites/landing/index.html` and its verified-checksum build copies the locked PDF to generated output. The superseded `book/index.html` remains temporarily for compatibility; do not edit it as the new primary source or remove it before checking other deployment dependencies.
 7. No PayPal changes, live deployment, repository restructure, file deletion, or public deposit are authorized by this document.
 
-## Legacy source files
+## Release source policy
 
-The pre-existing `interactive/THE_COMPOSERS_PROMPT.pdf` and `websites/landing/THE_COMPOSERS_PROMPT.pdf` use an older Git blob and are not the current locked final PDF. Preserve them pending a separate dependency review. The landing build uses only the checksum-locked file under `book/`; no website, archive, deposit, or retrieval guide should cite these older files as the final edition.
+The website build and interactive application reference the single canonical locked final book; all delivery files must be checksum-identical. The landing build uses only the checksum-locked file under `book/`; no website, archive, deposit, or retrieval guide should cite these older files as the final edition.
 
 ## Workstream handoff
 
