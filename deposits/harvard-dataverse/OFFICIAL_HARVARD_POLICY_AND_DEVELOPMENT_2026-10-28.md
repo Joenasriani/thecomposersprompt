@@ -13,13 +13,13 @@
 7. The Harvard repository selection flowchart is oriented especially to Harvard researchers and data generated during research projects; it is **guidance**, not approval of this particular educational corpus: https://support.dataverse.harvard.edu/harvard-repository-selection-flowchart .
 
 ## Decision for this exact project
-The **159-page final reviewed** book remains at `../../book/THE_COMPOSERS_PROMPT.pdf`, Git blob `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`. This workstream must **not** modify the book, copy it into an openly licensed dataset or apply the root interactive workbook's CC BY 4.0.
+The **159-page final reviewed** book remains at `../../book/The_Composers_Prompt_Joe_Nasr.pdf`, Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`. This workstream must **not** modify the book, copy it into an openly licensed dataset or apply the root interactive workbook's CC BY 4.0.
 
 **Candidate deposit**: the three book-derived CSV examples (eight-bar baseline, six authored cases and corresponding 48 events) and only the documentation necessary to understand and reproduce their *symbolic* content. They constitute **pedagogical authored annotations**, not independent measurements. The six cases are related, not six independent experimental subjects. The 48 event rows are repeated positions nested within these cases, not an n=48 empirical sample. Do not publish claims of statistical significance, objective evaluation accuracy, or music-generation system performance.
 
 **Research-data eligibility: UNKNOWN**. Harvard may deem an educational demonstration outside its research-data scope. Eligibility must be checked with Harvard staff using the exact sample description; expanding records by inference would not make the deposit more legitimate. Do not confuse suitability of Dataverse *software* with acceptance by Harvard's hosted repository.
 
-**Licensing: BLOCKED** until the rights holder explicitly approves a licence for **these CSV and supporting files**; the book is © 2026 Joseph Ribal Nasr, published as Joe Nasr, free to read and all rights reserved. CC BY 4.0 is permissible for data only if deliberately granted; it allows commercial reuse. The record must not inherit the root interactive edition's licence. The legally precise four-line author/copyright declaration is in `RIGHTS_AND_FILE_SCOPE.md`.
+**Licensing: BLOCKED** until the rights holder explicitly approves a licence for **these CSV and supporting files**; the book is © 2026 Joseph Ribal Nasr, credited to J. Nasr, free to read and all rights reserved. CC BY 4.0 is permissible for data only if deliberately granted; it allows commercial reuse. The record must not inherit the root interactive edition's licence. The legally precise four-line author/copyright declaration is in `RIGHTS_AND_FILE_SCOPE.md`.
 
 ## Missing operational inputs
 - [BLOCKED] Approve file-specific dataset terms and verify Harvard's live Terms UI, including default selection.
