@@ -7,7 +7,7 @@ const source = resolve(root, 'websites/landing/index.html');
 const pdf = resolve(root, 'book/The_Composers_Prompt_Joe_Nasr.pdf');
 const destination = resolve(root, 'websites/landing/dist');
 const html = await readFile(source, 'utf8');
-if (!html.includes('The Composer’s Prompt') || !html.includes('./THE_COMPOSERS_PROMPT.pdf')) {
+if (!html.includes('The Composer’s Prompt') || !html.includes('./The_Composers_Prompt_Joe_Nasr.pdf')) {
   throw new Error('Landing-page references are missing');
 }
 const data = await readFile(pdf);
@@ -20,7 +20,7 @@ if (blob !== '8a94b66dfe6aa2f4a42c2ddb9925269b117652b7') {
 }
 await mkdir(destination, { recursive: true });
 await copyFile(source, resolve(destination, 'index.html'));
-await copyFile(pdf, resolve(destination, 'THE_COMPOSERS_PROMPT.pdf'));
+await copyFile(pdf, resolve(destination, 'The_Composers_Prompt_Joe_Nasr.pdf'));
 const assets = resolve(destination, 'assets');
 await mkdir(assets, { recursive: true });
 for (const filename of ['The_Composers_Prompt_Cover_Web.webp', 'the_composers_prompt_by_Joe_Nasr.png']) {
@@ -34,7 +34,7 @@ await writeFile(resolve(destination, 'llms.txt'), `# The Composer’s Prompt –
 > Music theory and harmony for computational music prompting. Publication credit: J. Nasr. Copyright © 2026 Joseph Ribal Nasr. Free to read, not licensed for redistribution.
 
 - Canonical landing page: https://thecomposersprompt-book.vercel.app/
-- Free 159-page final PDF: https://thecomposersprompt-book.vercel.app/THE_COMPOSERS_PROMPT.pdf
+- Free 159-page final PDF: https://thecomposersprompt-book.vercel.app/The_Composers_Prompt_Joe_Nasr.pdf
 - Locked source: https://github.com/Joenasriani/thecomposersprompt/blob/main/book/The_Composers_Prompt_Joe_Nasr.pdf
 - Release metadata: https://github.com/Joenasriani/thecomposersprompt/blob/main/publication.json
 - Final release lock: https://github.com/Joenasriani/thecomposersprompt/blob/main/book/FINAL_RELEASE_LOCK.json
