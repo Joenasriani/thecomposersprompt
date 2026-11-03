@@ -1,9 +1,11 @@
+**Current-release status (2026-11-03): FIX – Any previously recorded binary or derived-data checks below are historical and are NOT RECHECKED against the current locked PDF. Source-data checks must be rerun before deposit.**
+
 # Candidate dataset investigation — 27 October 2026
 
 ## Checks actually executed
 - Inspected existing private candidate v2.5 files locally. All 14 CSVs opened via Python's `csv.DictReader`; two are intentionally **empty templates**, not collected records.
 - Counted candidate rows: 12 `music_semantics`, 48 `chord_events`, 40 `forty_bar_timeline`, 9 `forty_bar_harmonic_anchors`, 20 `arrangement_matrix`, 8 `instructional_evaluation_tasks`, 6 `compositional_cases`, 5 `section_plan`, 5 `arrangement_events`, 3 `comparison_designs`, 4 `cross_book_evidence_map`, 2 `source_register`.
-- Confirmed supplied final 159-page PDF full-file SHA256 `f6d9300b778e82d55bfdf084d95c379b03c760c53022dcb88c58ba6b8fc6799c`, corresponding to locked Git blob `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`.
+- Source PDF identity in the current release is the locked Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`; independent SHA-256 and dataset provenance remain NOT RECHECKED.
 - Extracted eight-bar Theme A from chapter 10 and made a separate explicit educational example with its own codebook in this folder. This is **not a replacement for the complete candidate corpus**.
 
 ## Findings
