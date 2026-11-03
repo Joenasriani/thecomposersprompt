@@ -9,7 +9,7 @@ Joe Nasr and Joseph Ribal Nasr refer to the same person and copyright holder.
 All rights reserved, except as otherwise specified by the publication's applicable license.
 
 ## Separation by component
-- **Final book**, `book/THE_COMPOSERS_PROMPT.pdf`: canonical 159-page free-to-read, all-rights-reserved edition. **REFERENCE ONLY, NEVER UPLOAD INTO HARVARD DATASET UNDER AN OPEN LICENCE.** Git blob `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`. No PDF modifications authorized.
+- **Final book**, `book/The_Composers_Prompt_Joe_Nasr.pdf`: canonical 159-page free-to-read, all-rights-reserved edition. **REFERENCE ONLY, NEVER UPLOAD INTO HARVARD DATASET UNDER AN OPEN LICENCE.** Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`. No PDF modifications authorized.
 - **Interactive edition**, root `index.html`, `LICENSE`, `CITATION.cff`: separate previously licensed CC BY 4.0 material; excluded from proposed Harvard dataset. Existing grants are not revoked.
 - **Curated CSV/JSON**, proposed independent dataset: currently **no approved dataset licence**. CC BY 4.0 would permit commercial adaptation/redistribution, and must not be used until explicitly approved. Do not accept Harvard's possible CC0 default inadvertently.
 - **Data dictionary, methods, source register, README and other documentation**: supporting files; evaluate quotations, source ownership, and permissions. A dataset-level licence must not silently encompass excluded book/interactive content.
