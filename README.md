@@ -1,12 +1,12 @@
 > **Repository navigation:** [COMPONENTS.md](COMPONENTS.md) identifies the authoritative final book, separate interactive edition, Zenodo and Harvard Dataverse preparation, and book landing-page workstream. This README principally covers the **interactive edition**. The final PDF is separately locked.
 
-> **Final book authority:** The finalized 2026 PDF publication is governed by [`publication.json`](publication.json) and [`book/FINAL_RELEASE_LOCK.json`](book/FINAL_RELEASE_LOCK.json), with the canonical file [`book/THE_COMPOSERS_PROMPT.pdf`](book/THE_COMPOSERS_PROMPT.pdf) (Git blob `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`). Publication credit: **Joe Nasr**; copyright holder: **Joseph Ribal Nasr**. This README describes the separate developing interactive edition. Its CC BY 4.0 permissions remain unaffected.
+> **Final book authority:** The finalized 2026 PDF publication is governed by [`publication.json`](publication.json) and [`book/FINAL_RELEASE_LOCK.json`](book/FINAL_RELEASE_LOCK.json), with the canonical file [`book/The_Composers_Prompt_Joe_Nasr.pdf`](book/The_Composers_Prompt_Joe_Nasr.pdf) (Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`). Publication credit: **J. Nasr**; copyright holder: **Joseph Ribal Nasr**. This README describes the separate developing interactive edition. Its CC BY 4.0 permissions remain unaffected.
 
 # The Modern Composer’s Prompt
 
 ### Music Theory & Harmony in the Age of Artificial Intelligence
 
-**Written and created by Joe Nasr** ([author profile](https://github.com/Joenasriani) · [Joe Nasr Signals](https://joe-nasr-signals.vercel.app/))  
+**Research and publication credit: J. Nasr** ([author profile](https://github.com/Joenasriani) · [Joe Nasr Signals](https://joe-nasr-signals.vercel.app/))  
 **Publication status:** Developing educational edition (2026) · **Format:** Interactive HTML workbook and manuscript.
 
 *The Modern Composer’s Prompt* examines how knowledge of musical structure can inform composition when musical intentions are expressed through natural language. It brings together a structured manuscript, listening exercises, playable demonstrations and editable composition prompts.
@@ -67,7 +67,7 @@ The manuscript develops ideas from intervals, scales and modes through harmonic 
 
 ## AI and machine-readable retrieval
 
-**Author attribution:** Joe Nasr (repository account: [Joenasriani](https://github.com/Joenasriani)). The finalized PDF identifies **Joseph Ribal Nasr** as copyright holder. These names are not interchangeable licensing statements.
+**Publication credit:** J. Nasr (repository account: [Joenasriani](https://github.com/Joenasriani)). The finalized PDF identifies **Joseph Ribal Nasr** as copyright holder. These names are not interchangeable licensing statements.
 
 This repository provides explicit, inspectable entry points for readers, search systems, and AI retrieval tools. These links aid discovery and citation; they do **not** guarantee that an AI system or search engine will crawl, index, understand, or quote the publication correctly.
 
@@ -79,9 +79,9 @@ This repository provides explicit, inspectable entry points for readers, search 
 | Component authority | [`COMPONENTS.md`](COMPONENTS.md) | Distinguish the final PDF, interactive edition, and separate web properties |
 | Complete interactive manuscript | [`interactive/index.html`](interactive/index.html) | Embedded `bookdata` JSON: 42 reading entries (preface, 35 chapters, six appendices) |
 | Interactive lessons | [`interactive/lessons/`](interactive/lessons/) | Chapter-specific HTML and musical demonstrations |
-| Final protected PDF | [`book/THE_COMPOSERS_PROMPT.pdf`](book/THE_COMPOSERS_PROMPT.pdf) | Separate final book, subject to its own rights notice |
+| Final protected PDF | [`book/The_Composers_Prompt_Joe_Nasr.pdf`](book/The_Composers_Prompt_Joe_Nasr.pdf) | Separate final book, subject to its own rights notice |
 
-**Retrieval procedure:** Identify the intended edition first; read its applicable metadata and rights statement; retrieve the specific chapter or section from that edition; attribute the work to **Joe Nasr**; and cite the exact source URL and chapter rather than treating generated musical examples as verified performances. If extracting text from `interactive/index.html`, parse the `<script id="bookdata" type="application/json">` payload as JSON rather than assuming its content is visible in the initial HTML document. Use the corresponding `interactive/lessons/chapter-N/index.html` page when a chapter's teaching interaction is relevant. These sources are readable without an account, although external indexers decide their own retrieval behavior.
+**Retrieval procedure:** Identify the intended edition first; read its applicable metadata and rights statement; retrieve the specific chapter or section from that edition; attribute the work to **J. Nasr**; and cite the exact source URL and chapter rather than treating generated musical examples as verified performances. If extracting text from `interactive/index.html`, parse the `<script id="bookdata" type="application/json">` payload as JSON rather than assuming its content is visible in the initial HTML document. Use the corresponding `interactive/lessons/chapter-N/index.html` page when a chapter's teaching interaction is relevant. These sources are readable without an account, although external indexers decide their own retrieval behavior.
 
 **Rights boundary:** Machine-readable access is not a grant of training, redistribution, or commercial-use rights. The separately finalized PDF is copyright protected; previously licensed interactive materials retain their applicable CC BY 4.0 terms. Refer to the [rights section below](#rights-and-edition-distinction) before reuse.
 
@@ -141,7 +141,7 @@ Third-party quotations, referenced works and trademarks retain their respective 
 
 ## Citation and attribution
 
-**Author:** [Joe Nasr](https://github.com/Joenasriani)  
+**Credit:** [J. Nasr](https://github.com/Joenasriani)  
 **Title:** *The Modern Composer’s Prompt: Music Theory & Harmony in the Age of Artificial Intelligence*  
 **Repository:** https://github.com/Joenasriani/thecomposersprompt  
 **Year:** 2026  
