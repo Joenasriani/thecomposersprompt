@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 
 const root = resolve(process.cwd());
 const source = resolve(root, 'websites/landing/index.html');
-const pdf = resolve(root, 'book/THE_COMPOSERS_PROMPT.pdf');
+const pdf = resolve(root, 'book/The_Composers_Prompt_Joe_Nasr.pdf');
 const destination = resolve(root, 'websites/landing/dist');
 const html = await readFile(source, 'utf8');
 if (!html.includes('The Composer’s Prompt') || !html.includes('./THE_COMPOSERS_PROMPT.pdf')) {
@@ -15,7 +15,7 @@ const blob = createHash('sha1')
   .update(Buffer.from('blob ' + data.length + '\0'))
   .update(data)
   .digest('hex');
-if (data.length !== 5204343 || blob !== 'fe10bb14c36bdd22ec791031b02d43fb5d8fabde') {
+if (blob !== '8a94b66dfe6aa2f4a42c2ddb9925269b117652b7') {
   throw new Error('Canonical locked PDF checksum mismatch; deployment aborted');
 }
 await mkdir(destination, { recursive: true });
@@ -30,4 +30,4 @@ await writeFile(resolve(destination, 'robots.txt'),
   'User-agent: *\\nAllow: /\\nSitemap: https://thecomposersprompt-book.vercel.app/sitemap.xml\\n');
 await writeFile(resolve(destination, 'sitemap.xml'),
   '<?xml version="1.0" encoding="UTF-8"?>\\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://thecomposersprompt-book.vercel.app/</loc></url></urlset>\\n');
-console.log('Final-book landing assets assembled with verified locked PDF checksum.');
+console.log('Final-book landing assets assembled with verified current final PDF Git blob checksum.');
