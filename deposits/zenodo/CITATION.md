@@ -2,9 +2,9 @@
 
 ## Before Zenodo publication
 
-Nasr, Joe. (2026). *The Composer’s Prompt: Music Theory and Harmony for Computational Music Prompting* (Version 1.0.0) [Digital book]. PDF edition. **DOI not yet assigned.**
+Nasr, J. (2026). *The Composer’s Prompt: Music Theory and Harmony for Computational Music Prompting* (Version 1.0.0) [Digital book]. PDF edition. **DOI association NOT RECHECKED:** the landing page references `10.5281/zenodo.23689714`; verify the actual public record, publication identity and file before citing it.
 
-Author name on the publication: **Joe Nasr**. Legal copyright holder: **Joseph Ribal Nasr**. These refer to one person, not two coauthors.
+Publication credit: **J. Nasr**. Legal copyright holder: **Joseph Ribal Nasr**. These refer to one person, not two separate contributors.
 
 ## After approved Zenodo publication
 
