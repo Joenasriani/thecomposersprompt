@@ -92,9 +92,9 @@
   ],
   "protectedSources": [
     {
-      "path": "book/THE_COMPOSERS_PROMPT.pdf",
+      "path": "book/The_Composers_Prompt_Joe_Nasr.pdf",
       "role": "authoritative-book-read-only",
-      "blobSha": "fe10bb14c36bdd22ec791031b02d43fb5d8fabde"
+      "blobSha": "8a94b66dfe6aa2f4a42c2ddb9925269b117652b7"
     },
     {
       "path": "publication.json",
@@ -164,7 +164,7 @@
     "repositoryStructure": "multi-project monorepo; interactive is an isolated workstream",
     "externalReferencesReadOnly": [
       "index.html",
-      "book/THE_COMPOSERS_PROMPT.pdf",
+      "book/The_Composers_Prompt_Joe_Nasr.pdf",
       "publication.json",
       "book/FINAL_RELEASE_LOCK.json",
       "websites/",
