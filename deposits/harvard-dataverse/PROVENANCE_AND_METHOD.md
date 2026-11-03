@@ -2,7 +2,8 @@
 
 ## Input authority
 - GitHub main: `publication.json` and `book/FINAL_RELEASE_LOCK.json`.
-- Original final PDF: `book/THE_COMPOSERS_PROMPT.pdf`, Git blob `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`, 159 pages.
+- Current canonical final PDF: `book/The_Composers_Prompt_Joe_Nasr.pdf`, Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`, declared 159 pages.
+- Historical dataset derivation referenced a superseded PDF (Git blob `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`); prior page references and content-derived values are NOT RECHECKED against the current release. Do not report those historical checks as current-release validation.
 - The final reviewed book is a source reference only. No new edit or review of its contents is required here.
 
 ## Candidate data production
