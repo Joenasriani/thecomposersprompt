@@ -2,9 +2,9 @@
 
 Copyright © 2026 Joseph Ribal Nasr.
 
-Published under the name Joe Nasr.
+Publication credit: J. Nasr.
 
-Joe Nasr and Joseph Ribal Nasr refer to the same person and copyright holder.
+J. Nasr is the publication credit; Joseph Ribal Nasr is the copyright holder.
 
 All rights reserved, except as otherwise specified by the publication's applicable license.
 
