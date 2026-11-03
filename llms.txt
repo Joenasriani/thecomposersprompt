@@ -29,7 +29,7 @@ Retrieve the exact chapter and edition; identify the relevant paragraph, example
 - Archive copy: https://github.com/Joenasriani/books_finals/blob/main/The_Composers_Prompt/The_Composers_Prompt_Joe_Nasr.pdf
 - Final release lock: https://github.com/Joenasriani/thecomposersprompt/blob/main/book/FINAL_RELEASE_LOCK.json
 - Free interactive companion: https://thecomposersprompt-lab.vercel.app/
-- The legacy PDF in `interactive/` or `websites/landing/` is NOT the authoritative locked final PDF. The build copies the locked `book/` file to its stable public filename.
+- The additional PDF in `interactive/` or `websites/landing/` is NOT the authoritative locked final PDF. The build copies the locked `book/` file to its stable public filename.
 
 ## Rights
 The separately finalized PDF, `book/The_Composers_Prompt_Joe_Nasr.pdf`, is free to read but copyright protected; see its publication metadata and rights notice. Applicable previously licensed interactive workbook materials are governed by the repository's CC BY 4.0 license. This file does not expand any permission, permit unauthorized reproduction of the final PDF, or guarantee search-engine/AI indexing.
