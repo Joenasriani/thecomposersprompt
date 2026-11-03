@@ -1,8 +1,8 @@
-**Current-release verification notice (2026-11-03):** This report records historical validations against PDF blob `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`. The current locked book blob is `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`. Cross-edition equivalence, source page positions and derived assertions remain NOT RECHECKED. Do not present the below historical PASS results as checks of the current book.
+**Current-release verification notice (2026-11-03):** This report records historical validations against PDF blob `historical-check-not-current`. The current locked book blob is `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`. Cross-edition equivalence, source page positions and derived assertions remain NOT RECHECKED. Do not present the below historical PASS results as checks of the current book.
 
 # Validated candidate scope and integrity checks — 27 October 2026
 
-Canonical book is FINAL REVIEWED and UNMODIFIED. PDF: 159 pages, SHA256 `f6d9300b778e82d55bfdf084d95c379b03c760c53022dcb88c58ba6b8fc6799c`; Git blob `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`.
+Current canonical book is FINAL LOCKED, 159 pages declared, Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`. Independent PDF SHA-256 and source-page revalidation are NOT RECHECKED.
 
 ## Source-limited validation actually completed
 - Six compositional cases were reconciled against **all 48** corresponding chord-event rows; each case has eight positions and correct sequence. **PASS** (machine cross-table consistency).
