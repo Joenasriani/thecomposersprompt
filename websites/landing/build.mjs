@@ -30,4 +30,18 @@ await writeFile(resolve(destination, 'robots.txt'),
   'User-agent: *\\nAllow: /\\nSitemap: https://thecomposersprompt-book.vercel.app/sitemap.xml\\n');
 await writeFile(resolve(destination, 'sitemap.xml'),
   '<?xml version="1.0" encoding="UTF-8"?>\\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://thecomposersprompt-book.vercel.app/</loc></url></urlset>\\n');
+await writeFile(resolve(destination, 'llms.txt'), `# The Composer’s Prompt – final digital book
+> Music theory and harmony for computational music prompting. Publication credit: J. Nasr. Copyright © 2026 Joseph Ribal Nasr. Free to read, not licensed for redistribution.
+
+- Canonical landing page: https://thecomposersprompt-book.vercel.app/
+- Free 159-page final PDF: https://thecomposersprompt-book.vercel.app/THE_COMPOSERS_PROMPT.pdf
+- Locked source: https://github.com/Joenasriani/thecomposersprompt/blob/main/book/The_Composers_Prompt_Joe_Nasr.pdf
+- Release metadata: https://github.com/Joenasriani/thecomposersprompt/blob/main/publication.json
+- Final release lock: https://github.com/Joenasriani/thecomposersprompt/blob/main/book/FINAL_RELEASE_LOCK.json
+- Free interactive companion (separate edition): https://thecomposersprompt-lab.vercel.app/
+- Bookstore catalogue: https://reasoning-and-logic.vercel.app/
+- Topics: intervals, scales, modes, tonal harmony, progressions, voice leading, harmonic rhythm, musical form, prompts as musical specifications and verification.
+- Edition boundary: The locked PDF is distinct from the earlier interactive workbook and its CC BY 4.0 licence.
+- Retrieval guidance: Cite the specific section and the final edition's canonical link. Search and AI access does not grant reproduction or training permission.
+`);
 console.log('Final-book landing assets assembled with verified current final PDF Git blob checksum.');
