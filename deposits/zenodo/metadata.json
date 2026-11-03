@@ -16,9 +16,9 @@
   "creators": [
     {
       "person": {
-        "given_name": "Joe",
+        "given_name": "J.",
         "family_name": "Nasr",
-        "display_name": "Joe Nasr"
+        "display_name": "J. Nasr"
       },
       "affiliations": [],
       "identifiers": []
@@ -53,10 +53,10 @@
   ],
   "files": [
     {
-      "source": "book/THE_COMPOSERS_PROMPT.pdf",
-      "upload_name": "THE_COMPOSERS_PROMPT.pdf",
-      "bytes": 5204343,
-      "git_blob_sha1": "fe10bb14c36bdd22ec791031b02d43fb5d8fabde",
+      "source": "book/The_Composers_Prompt_Joe_Nasr.pdf",
+      "upload_name": "The_Composers_Prompt_Joe_Nasr.pdf",
+      "bytes": 5630152,
+      "git_blob_sha1": "8a94b66dfe6aa2f4a42c2ddb9925269b117652b7",
       "pages": 159,
       "sha256": null
     }
@@ -66,7 +66,7 @@
     "metadata_visibility": "public",
     "license_selection": "CUSTOM_RIGHTS_PENDING_UI_CONFIRMATION",
     "custom_rights_title": "All rights reserved – The Composer’s Prompt (2026)",
-    "custom_rights_text": "Copyright © 2026 Joseph Ribal Nasr.\n\nPublished under the name Joe Nasr.\n\nJoe Nasr and Joseph Ribal Nasr refer to the same person and copyright holder.\n\nAll rights reserved, except as otherwise specified by the publication's applicable license.",
+    "custom_rights_text": "Copyright © 2026 Joseph Ribal Nasr.\\nPublication credit: J. Nasr.\\nAll rights reserved, except as permitted by applicable law.",
     "cc_by_4_for_this_pdf": false
   },
   "relationships": {
@@ -85,5 +85,6 @@
   "first_publication_date_verification": "PENDING",
   "original_publisher_verification": "PENDING",
   "duplicate_record_check": "PENDING",
-  "approval": "NOT_GRANTED"
+  "approval": "NOT_GRANTED",
+  "identity_verification": "GitHub source/archive blob matches locked release; independent PDF internals and Zenodo existing-record/DOI status NOT RECHECKED."
 }
