@@ -10,4 +10,4 @@ Written sequence: C | G | Am | F | C | F | G | C; Roman numerals I | V | vi | IV
 
 **Rights:** Educational data candidate derived from a book copyrighted © 2026 Joseph Ribal Nasr. The book stays free-to-read/all-rights-reserved. Independent data redistribution licence **NOT APPROVED**. Do not apply root interactive CC BY 4.0 or CC0 to these files automatically.
 
-**Source:** `../../book/THE_COMPOSERS_PROMPT.pdf`; final Git blob `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`; local author-uploaded matching PDF SHA-256 `f6d9300b778e82d55bfdf084d95c379b03c760c53022dcb88c58ba6b8fc6799c`.
+**Source:** `../../book/The_Composers_Prompt_Joe_Nasr.pdf`; current locked Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`; dataset-derived values remain NOT RECHECKED against this release.
