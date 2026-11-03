@@ -1,3 +1,5 @@
+**Current-release verification notice (2026-11-03):** This report records historical validations against PDF blob `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`. The current locked book blob is `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`. Cross-edition equivalence, source page positions and derived assertions remain NOT RECHECKED. Do not present the below historical PASS results as checks of the current book.
+
 # Validated candidate scope and integrity checks — 27 October 2026
 
 Canonical book is FINAL REVIEWED and UNMODIFIED. PDF: 159 pages, SHA256 `f6d9300b778e82d55bfdf084d95c379b03c760c53022dcb88c58ba6b8fc6799c`; Git blob `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`.
