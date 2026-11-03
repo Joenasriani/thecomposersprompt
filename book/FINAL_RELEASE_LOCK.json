@@ -20,7 +20,7 @@
     "Fix website-only presentation defects"
   ],
   "separation": "Existing interactive edition retains its previously granted CC BY 4.0 permissions. This lock does not revoke that license.",
-  "changes": "This source identity supersedes the deleted THE_COMPOSERS_PROMPT.pdf on user instruction, 2026-11-03. Any further amendment requires express permission and a new verified release record.",
+  "changes": "Canonical release remains immutable; public delivery uses the matching locked filename. Changes to the final book require explicit approval and a verified new release record.",
   "deployment_status": "NOT RECHECKED",
   "verification_note": "GitHub blob identity confirmed; bytes, page count and internal PDF inspection not independently rechecked after replacement."
 }
