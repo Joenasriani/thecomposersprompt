@@ -4,7 +4,7 @@
 
 ## Authority and scope
 
-Canonical book: `../../book/THE_COMPOSERS_PROMPT.pdf` (159 pages, 5,204,343 bytes, version 1.0.0). Git blob SHA-1: `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`. Authority: `../../publication.json`, `../../book/FINAL_RELEASE_LOCK.json`, `../../COMPONENTS.md`. Never edit, regenerate, repackage or replace this locked PDF or its release lock.
+Canonical book: `../../book/The_Composers_Prompt_Joe_Nasr.pdf` (159 pages, 5,630,152 bytes, version 1.0.0). Git blob SHA-1: `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`. Authority: `../../publication.json`, `../../book/FINAL_RELEASE_LOCK.json`, `../../COMPONENTS.md`. Never edit, regenerate, repackage or replace this locked PDF or its release lock.
 
 ## Deposit package files
 
@@ -17,10 +17,10 @@ Canonical book: `../../book/THE_COMPOSERS_PROMPT.pdf` (159 pages, 5,204,343 byte
 
 ## Recommended deposit form
 
-1. DOI: no verified pre-existing DOI; use Zenodo-generated DOI only after checking for duplicates. No reservation performed here.
+1. DOI: the book landing source mentions `10.5281/zenodo.23689714`, but a direct record lookup was not confirmed in this audit. Treat the older 'DOI unknown' statement as superseded by an unresolved verification conflict; verify the actual record and attached file before preparing any new deposit. Do not reserve or mint a duplicate DOI.
 2. Resource type: Publication / Book, subject to exact subtype in current UI.
 3. Main title: The Composer’s Prompt; additional title of type Subtitle: Music Theory and Harmony for Computational Music Prompting.
-4. Creator: one person, Joe Nasr (given names Joe, family name Nasr); no invented ORCID or affiliation.
+4. Creator credit: J. Nasr (single person; copyright holder Joseph Ribal Nasr). Verify exact first/given-name field requirements in Zenodo UI; do not invent affiliation.
 5. Publication date: enter **verified date of initial public release**; 2026 year documented, specific day unknown. If only year supported by evidence, Zenodo supports year-only EDTF `2026`. Confirm initial public release and publisher with author.
 6. Publisher: verify original publisher if previously issued; otherwise use Zenodo default.
 7. Description, keywords, version and English language: use `metadata.json`.
