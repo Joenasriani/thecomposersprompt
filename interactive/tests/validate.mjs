@@ -37,7 +37,7 @@ const manifest=JSON.parse(read('COMPONENT-MANIFEST.json'));
 assert.equal(manifest.scopePolicy.ownedPathPrefix,'interactive/');
 assert.match(manifest.productionIntendedEntry,/interactive\/index\.html/);
 assert.equal(manifest.gates?.productionChangeAuthorized,true);
-const book=manifest.protectedSources.find(x=>x.path==='book/THE_COMPOSERS_PROMPT.pdf');
+const book=manifest.protectedSources.find(x=>x.path==='book/The_Composers_Prompt_Joe_Nasr.pdf');
 assert.ok(book,'Final book must remain explicitly protected');
 console.log('PASS: standalone lesson assets, theory fixtures, legacy app, experiment inventory, migration controls.');
 
