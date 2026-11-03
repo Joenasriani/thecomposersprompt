@@ -2,7 +2,9 @@
 
 **DEVELOP FURTHER / NOT READY / NOT DEPOSITED. No DOI or acceptance verified.**
 
-This directory governs preparation for a **separate curated educational/reference dataset**, not publication of the finalized reviewed book as research data. The book at `../../book/THE_COMPOSERS_PROMPT.pdf` is the sole locked source, identified by `../../publication.json` and `../../book/FINAL_RELEASE_LOCK.json`. It must remain unchanged and is **excluded from any open-licensed Harvard dataset package**. The earlier book versions are superseded; the current book's final editorial review is not being reopened.
+This directory governs preparation for a **separate curated educational/reference dataset**, not publication of the finalized reviewed book as research data. The book at `../../book/The_Composers_Prompt_Joe_Nasr.pdf` is the sole locked source, identified by `../../publication.json` and `../../book/FINAL_RELEASE_LOCK.json`. It must remain unchanged and is **excluded from any open-licensed Harvard dataset package**. The earlier book versions are superseded; the current book's final editorial review is not being reopened.
+
+**Source-version notice (2026-11-03):** The current locked final book is `../../book/The_Composers_Prompt_Joe_Nasr.pdf`, Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`. Earlier Dataverse research notes and derived CSVs may have been validated against the superseded PDF (blob `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`). Their historical checks must not be treated as validation against the new release; source/page provenance crosswalk is NOT RECHECKED and any dataset publication is BLOCKED pending that audit.
 
 ## Publication type
 **Dataset** (a nonempirical curated educational reference corpus, NOT a book/empirical study). See [publication type, description, and metadata](PUBLICATION_TYPE_AND_METADATA.md), [deposit README](DEPOSIT_README.md), and [file-level classification](FILE_LEVEL_CLASSIFICATION.csv).
