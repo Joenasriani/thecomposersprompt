@@ -41,7 +41,7 @@
     ],
     "file_path": "book/The_Composers_Prompt_Joe_Nasr.pdf",
     "git_blob_sha": "8a94b66dfe6aa2f4a42c2ddb9925269b117652b7",
-    "public_file": "THE_COMPOSERS_PROMPT.pdf",
+    "public_file": "The_Composers_Prompt_Joe_Nasr.pdf",
     "verification_status": "GitHub blob confirmed; PDF page count and internals not independently rechecked"
   },
   "description": "A 159-page book on applying music theory and harmony to computational music prompting, from intervals, modes and chord functions to musical form, audio-generation specifications and verification.",
@@ -52,8 +52,8 @@
       "indexable": true
     },
     {
-      "path": "/THE_COMPOSERS_PROMPT.pdf",
-      "file": "websites/landing/dist/THE_COMPOSERS_PROMPT.pdf",
+      "path": "/The_Composers_Prompt_Joe_Nasr.pdf",
+      "file": "websites/landing/dist/The_Composers_Prompt_Joe_Nasr.pdf",
       "indexable": false
     }
   ],
