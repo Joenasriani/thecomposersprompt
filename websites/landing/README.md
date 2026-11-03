@@ -9,7 +9,7 @@
 **Vercel project:** `prj_kldrSI2Wa72Gpm8ivIe150gDzfGu`  
 **Deployment:** `dpl_2FLBSbGpap566E8kH3pDJMHQpMLG` (READY when checked)
 
-The canonical final PDF remains `book/THE_COMPOSERS_PROMPT.pdf` with Git blob `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`. Build copies the file to website output only after verifying the file size and Git blob SHA. It never changes the authoritative source. Do not commit `dist/` outputs as new publication versions.
+The canonical final PDF remains `book/The_Composers_Prompt_Joe_Nasr.pdf` with Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`. Build copies the current final source to the stable public URL `THE_COMPOSERS_PROMPT.pdf` only after verifying its Git blob SHA. It never changes the authoritative source. Do not commit `dist/` outputs as new publication versions.
 
 **Legacy landing HTML:** `book/index.html` is superseded as the standalone landing source, but intentionally retained until cross-project deployment review. The root `index.html` and `stage1/` belong to the separate interactive edition and must not be changed by this workstream.
 
