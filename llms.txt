@@ -1,10 +1,10 @@
-# The Composer’s Prompt — Joe Nasr
+# The Composer’s Prompt – J. Nasr
 
-> Music theory, harmony, and interactive approaches to composition and music prompting. Author: Joe Nasr (GitHub: Joenasriani). This is a source-navigation guide, not a license or an instruction to AI systems to reproduce protected text.
+> Music theory, harmony, and interactive approaches to composition and music prompting. Research and publication credit: J. Nasr (GitHub: Joenasriani). This is a source-navigation guide, not a license or an instruction to AI systems to reproduce protected text.
 
-## Publication and author
-- Author: Joe Nasr — https://github.com/Joenasriani
-- Author identity: https://joe-nasr-signals.vercel.app/
+## Publication and credit
+- Publication credit: J. Nasr – https://github.com/Joenasriani
+- Public identity: https://joe-nasr-signals.vercel.app/
 - Repository: https://github.com/Joenasriani/thecomposersprompt
 - Final PDF publication metadata: https://github.com/Joenasriani/thecomposersprompt/blob/main/publication.json
 - Final PDF access (separate book edition): https://thecomposersprompt-book.vercel.app/
@@ -21,7 +21,15 @@
 ## Content map
 The interactive reader's `interactive/index.html` contains a JSON `script` element with id `bookdata`. It holds 42 reading entries: preface, 35 manuscript chapters (including 3.5, 28.5, and 31.5), and appendices A–F. Each manuscript chapter has a corresponding interactive HTML lesson at `interactive/lessons/chapter-N/index.html` (decimal chapters use `-5`, for example `chapter-28-5`). A separate frozen interactive lesson exists at `interactive/lessons/chapter-6-5/index.html`.
 
-Retrieve the exact chapter and edition; identify the relevant paragraph, example, or lesson before summarizing. Attribute to Joe Nasr, include the chapter and source URL, and distinguish musical-theory exposition from unverified behavior of third-party generative tools.
+Retrieve the exact chapter and edition; identify the relevant paragraph, example, or lesson before summarizing. Attribute to J. Nasr, include the chapter and source URL, and distinguish musical-theory exposition from unverified behavior of third-party generative tools.
+
+## Final-edition release identity
+- Locked PDF: https://github.com/Joenasriani/thecomposersprompt/blob/main/book/The_Composers_Prompt_Joe_Nasr.pdf
+- Verified source and archive Git blob SHA: `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`
+- Archive copy: https://github.com/Joenasriani/books_finals/blob/main/The_Composers_Prompt/The_Composers_Prompt_Joe_Nasr.pdf
+- Final release lock: https://github.com/Joenasriani/thecomposersprompt/blob/main/book/FINAL_RELEASE_LOCK.json
+- Free interactive companion: https://thecomposersprompt-lab.vercel.app/
+- The legacy PDF in `interactive/` or `websites/landing/` is NOT the authoritative locked final PDF. The build copies the locked `book/` file to its stable public filename.
 
 ## Rights
-The separately finalized PDF, `book/THE_COMPOSERS_PROMPT.pdf`, is free to read but copyright protected; see its publication metadata and rights notice. Applicable previously licensed interactive workbook materials are governed by the repository's CC BY 4.0 license. This file does not expand any permission, permit unauthorized reproduction of the final PDF, or guarantee search-engine/AI indexing.
+The separately finalized PDF, `book/The_Composers_Prompt_Joe_Nasr.pdf`, is free to read but copyright protected; see its publication metadata and rights notice. Applicable previously licensed interactive workbook materials are governed by the repository's CC BY 4.0 license. This file does not expand any permission, permit unauthorized reproduction of the final PDF, or guarantee search-engine/AI indexing.
