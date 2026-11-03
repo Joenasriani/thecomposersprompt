@@ -9,7 +9,7 @@
 **Vercel project:** `prj_kldrSI2Wa72Gpm8ivIe150gDzfGu`  
 **Verified production deployment:** `dpl_BStkZdpEjdNpRf6SQVV3bgMd462e` (READY; commit `97703f4e0e521a14befd3057cf723188a7310a8b`)
 
-The canonical final PDF remains `book/The_Composers_Prompt_Joe_Nasr.pdf` with Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`. Build copies the current final source to the stable public URL `THE_COMPOSERS_PROMPT.pdf` only after verifying its Git blob SHA. It never changes the authoritative source. Do not commit `dist/` outputs as new publication versions.
+The canonical final PDF remains `book/The_Composers_Prompt_Joe_Nasr.pdf` with Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`. Build copies the current final source to the stable public URL `The_Composers_Prompt_Joe_Nasr.pdf` only after verifying its Git blob SHA. It never changes the authoritative source. Do not commit `dist/` outputs as new publication versions.
 
 **Legacy landing HTML:** `book/index.html` is superseded as the standalone landing source, but intentionally retained until cross-project deployment review. The root `index.html` and `stage1/` belong to the separate interactive edition and must not be changed by this workstream.
 
@@ -21,6 +21,6 @@ See `../../COMPONENTS.md` and `../../publication.json`.
 
 The landing build emits `robots.txt` and `sitemap.xml` from the canonical landing URL and serves the original approved WebP/PNG cover files. `websites/landing/index.html` includes a separate voluntary **Support the Work** link to `https://www.paypal.com/ncp/payment/CPDJMD3HV9D6Y`. This contribution link is not the publication checkout, does not gate the PDF, and must not be copied into the bookstore's `checkout` identity or paid-product records. No payment test is authorized. The book remains free to read and download.
 
-**Status:** Vercel production deployment READY for the version containing the free interactive companion. Public HTTP, PDF bytes served, and responsive visual QA remain NOT RECHECKED. The legacy `websites/landing/THE_COMPOSERS_PROMPT.pdf` is not used by the checksum-locked build and must not be cited as the final book.
+**Status:** Vercel production deployment READY for the version containing the free interactive companion. Public HTTP, PDF bytes served, and responsive visual QA remain NOT RECHECKED. The generated PDF uses the exact canonical filename and checksum-locked source.
 
 **Interactive companion:** https://thecomposersprompt-lab.vercel.app/ (independent of the final PDF edition).
