@@ -1,3 +1,5 @@
+**Current-release update (2026-11-03):** Earlier checks in this audit were performed on superseded PDF blob `fe10bb14c36bdd22ec791031b02d43fb5d8fabde`. The current locked final PDF and matching `books_finals` copy use blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7` (5,630,152 bytes). The earlier PASS values below are historical, not verification of the current binary internals. Current metadata plan is updated; live Zenodo record/DOI association NOT RECHECKED. No new deposit is authorized.
+
 # Zenodo publication-readiness audit – 2026-10-27
 
 Scope: authoritative repository files inspected read-only; Zenodo documentation changes confined to `deposits/zenodo/`. This is not a Zenodo account audit or an independent PDF render inspection.
