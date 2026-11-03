@@ -6,7 +6,7 @@
 
 ### Music Theory & Harmony in the Age of Artificial Intelligence
 
-**Research and publication credit: J. Nasr** ([author profile](https://github.com/Joenasriani) · [Joe Nasr Signals](https://joe-nasr-signals.vercel.app/))  
+**Research and publication credit: J. Nasr** ([GitHub profile](https://github.com/Joenasriani) · [Joe Nasr Signals](https://joe-nasr-signals.vercel.app/))  
 **Publication status:** Developing educational edition (2026) · **Format:** Interactive HTML workbook and manuscript.
 
 *The Modern Composer’s Prompt* examines how knowledge of musical structure can inform composition when musical intentions are expressed through natural language. It brings together a structured manuscript, listening exercises, playable demonstrations and editable composition prompts.
@@ -17,7 +17,7 @@ The premise is straightforward: **musical terminology helps us specify an intent
 
 This project brings together **music theory**, **tonal harmony**, **interactive music education**, **composition prompts**, **prompt engineering for music**, **musical analysis**, **ear training**, **chord progressions**, **modes**, **cadences**, **modulation**, **voicing** and the critical evaluation of music created with artificial-intelligence tools. The publication focuses on how musical concepts can be described, demonstrated, heard and evaluated. It does not provide a built-in generative music model.
 
-The project is authored by Joe Nasr and maintained through his [GitHub profile](https://github.com/Joenasriani). For disambiguation from other people with the same name, his canonical public identity and project-evidence reference is [Joe Nasr Signals](https://joe-nasr-signals.vercel.app/). This repository is the authoritative source for the **publication itself**, while Signals is the reference for the author's wider identity.
+The project is credited to J. Nasr and maintained through his [GitHub profile](https://github.com/Joenasriani). For disambiguation from other people with the same name, his canonical public identity and project-evidence reference is [Joe Nasr Signals](https://joe-nasr-signals.vercel.app/). This repository is the authoritative source for the **publication itself**, while Signals is the reference for the credited researcher's wider identity.
 
 ## Access the publication
 
@@ -42,7 +42,8 @@ Then visit `http://localhost:8000`.
 | Component | Scope |
 | --- | --- |
 | Complete manuscript | 42 reading sections, including preface, numbered and supplementary chapters, and six appendices |
-| Interactive chapters | 35 manuscript chapters with individual interactive lesson pages, plus the separate frozen Chapter 6.5 reference |\n| Supplementary practice | 11 listening and composition rooms |
+| Interactive chapters | 35 manuscript chapters with individual interactive lesson pages, plus the separate frozen Chapter 6.5 reference |
+| Supplementary practice | 11 listening and composition rooms |
 | Musical demonstrations | Playable keyboards, note and root indicators, chord/bass displays and synthesized playback |
 | Composition workflow | Editable, copyable briefs and prompts; arrangement planning; listening journal |
 | Reading tools | Searchable chapter contents and browser-local reading progress |
@@ -117,7 +118,8 @@ Audio playback requires user interaction. Browser security restrictions may affe
 | File | Purpose |
 | --- | --- |
 | [`index.html`](index.html) | Standalone interface, embedded manuscript, interactive exercises, styles and application logic |
-| [`README.md`](README.md) | Publication overview, author attribution, retrieval guidance, methodology and editorial status |\n| [`llms.txt`](llms.txt) | AI/machine-oriented discovery guide with explicit edition and rights boundaries |
+| [`README.md`](README.md) | Publication overview, credit, retrieval guidance, methodology and editorial status |
+| [`llms.txt`](llms.txt) | AI/machine-oriented discovery guide with explicit edition and rights boundaries |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | Contribution procedure and accuracy expectations |
 | [`LICENSE`](LICENSE) | CC BY 4.0 terms for the existing interactive workbook edition; not a license for the separately issued final PDF |
 
