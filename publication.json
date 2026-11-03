@@ -4,7 +4,7 @@
   "kind": "book",
   "title": "The Composer’s Prompt",
   "subtitle": "Music Theory and Harmony for Computational Music Prompting",
-  "author": "Joe Nasr",
+  "author": "J. Nasr",
   "copyright_holder": "Joseph Ribal Nasr",
   "edition": "2026 digital edition · Free to read",
   "sales_status": "closed",
@@ -21,7 +21,7 @@
     "source_directory": "websites/landing",
     "build_command": "node websites/landing/build.mjs",
     "output_directory": "websites/landing/dist",
-    "verification_status": "VERCEL_READY_PUBLIC_HTTP_NOT_RECHECKED"
+    "verification_status": "SOURCE_UPDATED_DEPLOYMENT_NOT_RECHECKED"
   },
   "checkout": {
     "provider": "none",
@@ -39,9 +39,10 @@
     "formats": [
       "PDF"
     ],
-    "file_path": "book/THE_COMPOSERS_PROMPT.pdf",
-    "git_blob_sha": "fe10bb14c36bdd22ec791031b02d43fb5d8fabde",
-    "public_file": "THE_COMPOSERS_PROMPT.pdf"
+    "file_path": "book/The_Composers_Prompt_Joe_Nasr.pdf",
+    "git_blob_sha": "8a94b66dfe6aa2f4a42c2ddb9925269b117652b7",
+    "public_file": "THE_COMPOSERS_PROMPT.pdf",
+    "verification_status": "GitHub blob confirmed; PDF page count and internals not independently rechecked"
   },
   "description": "A 159-page book on applying music theory and harmony to computational music prompting, from intervals, modes and chord functions to musical form, audio-generation specifications and verification.",
   "routes": [
@@ -74,8 +75,8 @@
   "publication_authority": {
     "status": "FINAL_LOCKED",
     "canonical_edition": "2026 digital PDF edition",
-    "canonical_file": "book/THE_COMPOSERS_PROMPT.pdf",
-    "git_blob_sha": "fe10bb14c36bdd22ec791031b02d43fb5d8fabde",
+    "canonical_file": "book/The_Composers_Prompt_Joe_Nasr.pdf",
+    "git_blob_sha": "8a94b66dfe6aa2f4a42c2ddb9925269b117652b7",
     "release_lock": "book/FINAL_RELEASE_LOCK.json",
     "precedence": "For the finalized book publication, this record and the hash-locked PDF supersede earlier draft manuscript and interactive workbook descriptions. The interactive workbook remains a separate edition with its existing license.",
     "change_control": "Explicit approval required for any change to final book file or locked publication identity."
