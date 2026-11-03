@@ -1,3 +1,5 @@
+**Provenance notice (2026-11-03):** This derived example was originally checked against a superseded PDF edition. Its chapter and page references are NOT RECHECKED against the current locked final PDF (`book/The_Composers_Prompt_Joe_Nasr.pdf`, blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`). The historical source identifier below is retained for auditability.
+
 # Codebook — directly sourced Theme A miniature reference
 
 **Scope:** One eight-bar symbolic teaching example sourced from final reviewed 159-page *The Composer’s Prompt*, chapter 10 §§10.1–10.2. This file is an **illustrative educational annotation, not empirical research data, a trained model benchmark, or proof of audio generation**. Its existence alone does not establish Harvard eligibility.
