@@ -27,9 +27,9 @@ for (const filename of ['The_Composers_Prompt_Cover_Web.webp', 'the_composers_pr
   await copyFile(resolve(root, 'websites/landing/assets', filename), resolve(assets, filename));
 }
 await writeFile(resolve(destination, 'robots.txt'),
-  'User-agent: *\\nAllow: /\\nSitemap: https://thecomposersprompt-book.vercel.app/sitemap.xml\\n');
+  'User-agent: *\nAllow: /\nSitemap: https://thecomposersprompt-book.vercel.app/sitemap.xml\n');
 await writeFile(resolve(destination, 'sitemap.xml'),
-  '<?xml version="1.0" encoding="UTF-8"?>\\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://thecomposersprompt-book.vercel.app/</loc></url></urlset>\\n');
+  '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://thecomposersprompt-book.vercel.app/</loc></url></urlset>\n');
 await writeFile(resolve(destination, 'llms.txt'), `# The Composer’s Prompt – final digital book
 > Music theory and harmony for computational music prompting. Publication credit: J. Nasr. Copyright © 2026 Joseph Ribal Nasr. Free to read, not licensed for redistribution.
 
