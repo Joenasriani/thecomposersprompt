@@ -20,10 +20,10 @@
     "revalidation_status": "NOT RECHECKED – derived records require source-level verification against current locked PDF."
   },
   "dataset_license": "Published related dataset CC BY 4.0; historic candidate-stage approval context does not describe current released dataset; Book remains all rights reserved",
-  "doi": "10.7910/DVN/STHUVV",
-  "publication_status": "HISTORICAL_CANDIDATE_STATUS_SUPERSEDED_BY_PUBLISHED_DATAVERSE_DATASET",
+  "doi": null,
+  "publication_status": "THIS_CANDIDATE_DOCUMENT_IS_HISTORICAL; A DISTINCT AUTHORITATIVE PUBLISHED_DATASET_REFERENCE_IS_LINKED_BELOW",
   "proposed_collection": "UNVERIFIED",
-  "candidate_document_status": "HISTORICAL_PRE_RELEASE_PROPOSAL_NOT_AUTHORITATIVE_PUBLISHED_METADATA",
+  "candidate_document_status": "HISTORICAL_PRE_RELEASE_PROPOSAL; NOT VERIFIED AS IDENTICAL TO PUBLISHED DATASET",
   "published_related_dataset": {
     "doi": "10.7910/DVN/STHUVV",
     "dataset_id": 14381133,
@@ -34,6 +34,6 @@
     "last_release_utc": "2026-11-04T16:03:54Z",
     "license": "CC BY 4.0",
     "verification": "LIVE_OFFICIAL_API_HTTP_200_2026_11_06",
-    "local_candidate_file_identity": "NOT_VERIFIED"
+    "local_candidate_file_identity": "UNVERIFIED_DO_NOT_ASSERT_RECORD_EQUIVALENCE"
   }
 }
