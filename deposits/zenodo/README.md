@@ -1,3 +1,7 @@
+> **CURRENT: PUBLISHED – 6 November 2026 LIVE OFFICIAL API HTTP 200.** The final protected Book is [Zenodo record 23689714](https://zenodo.org/records/23689714), DOI `10.5281/zenodo.23689714`, concept DOI `10.5281/zenodo.23689713` (same work), version 1.0.0, creator `Nasr, Joe`. Do not execute the original pre-deposit checklist or create a duplicate. The checksum of the Zenodo-downloaded PDF has not been compared with GitHub's locked file. Everything below this note is **historical preparation**, not active next steps.
+
+## Historical pre-deposit preparation
+
 > **CURRENT STATUS – 2026-11-06:** **PUBLISHED / VERIFIED BY AUTHOR SCREENSHOTS**, not “not deposited.” Public record https://zenodo.org/records/23689714; version DOI `10.5281/zenodo.23689714`; all-version DOI `10.5281/zenodo.23689713`; Book v1.0.0; creator displayed **Nasr, Joe**; 159-page PDF; custom all-rights-reserved license. This file below preserves the **historical pre-deposit preparation** as it existed; its original status, required next steps and proposed deposit form are **SUPERSEDED for the live record**. No second deposit. Exact uploaded bytes and live API metadata remain NOT RECHECKED. See [current cross-platform register](../../docs/EXTERNAL_PLATFORM_RECONCILIATION_2026-11-06.md).\n\n# The Composer’s Prompt – Zenodo deposit preparation
 
 **Status:** PREPARED LOCALLY IN REPOSITORY / NOT SUBMITTED / NOT DEPOSITED / DOI UNKNOWN.
