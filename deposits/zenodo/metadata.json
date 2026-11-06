@@ -1,6 +1,6 @@
 {
   "schema": "zenodo-preparation-v1",
-  "status": "DRAFT_NOT_SUBMITTED",
+  "status": "HISTORICAL_PREPARATION_SUPERSEDED_BY_LIVE_PUBLISHED_RECORD",
   "resource_type": {
     "type": "publication",
     "subtype": "book",
@@ -74,9 +74,9 @@
     "repository_relation": "reference-only; choose formal related-identifier relation only when verified",
     "interactive_edition": "separate artifact; do not assert identical version or transfer CC BY license"
   },
-  "doi": null,
-  "concept_doi": null,
-  "record_url": null,
+  "doi": "10.5281/zenodo.23689714",
+  "concept_doi": "10.5281/zenodo.23689713",
+  "record_url": "https://zenodo.org/records/23689714",
   "orcid": null,
   "affiliation": null,
   "funding": null,
@@ -87,18 +87,17 @@
   "duplicate_record_check": "PENDING",
   "approval": "NOT_GRANTED",
   "identity_verification": "GitHub source/archive blob matches locked release; independent PDF internals and Zenodo existing-record/DOI status NOT RECHECKED.",
-  "preparation_scope_note": "This is an unsent historical repository preparation package; status DRAFT_NOT_SUBMITTED applies only to this preparatory metadata file, not the actual published Zenodo Book. Do not create another deposit.",
+  "preparation_scope_note": "HISTORICAL local preparation plan, not actual deposited metadata. Live published Zenodo Book record takes precedence. No new submission; do not use draft/approval fields as current state.",
   "external_published_record_2026_11_06": {
-    "evidence": "author-provided screenshots of public Zenodo UI",
-    "status": "PUBLISHED_VERIFIED_BY_SCREENSHOT",
+    "evidence": "LIVE_OFFICIAL_ZENODO_API_HTTP_200_CACHE_BYPASS_2026_11_06",
+    "status": "PUBLISHED",
     "url": "https://zenodo.org/records/23689714",
     "version_doi": "10.5281/zenodo.23689714",
     "all_versions_doi": "10.5281/zenodo.23689713",
+    "exact_title": "The Composer's Prompt",
     "version": "1.0.0",
     "resource_type": "Book",
     "creator_display": "Nasr, Joe",
-    "pdf_pages_shown": 159,
-    "rights": "All rights reserved",
-    "binary_checksum_match": "NOT_RECHECKED"
+    "binary_checksum_match": "NOT_VERIFIED"
   }
 }
