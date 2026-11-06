@@ -1,3 +1,7 @@
+> **CURRENT PUBLICATION FACT – 6 November 2026:** The separate [Harvard Dataverse dataset `10.7910/DVN/STHUVV`](https://doi.org/10.7910/DVN/STHUVV) is **PUBLISHED / RELEASED v1.1** (latest release 4 November 2026), verified by the official live API HTTP 200. The historical readiness/candidate work below must **not** be interpreted as the current publication status or as instructions to resubmit. Exact byte identity between local candidate files and the eight released dataset files remains unverified. The copyrighted Book is distinct and excluded. See [current reconciliation](../../docs/EXTERNAL_PLATFORM_RECONCILIATION_2026-11-06.md).
+
+## Historical pre-release documentation
+
 # Harvard candidate file classes and decision
 
 **Not a public-upload manifest.** The separately prepared v2.5 candidate exists in the review bundle `COMPOSERS_PROMPT_HARVARD_GITHUB_CANONICAL_V2_5.zip`; these files have not been validated as a release-ready dataset or imported into this repository directory.
