@@ -1,3 +1,7 @@
+> **CURRENT PUBLICATION FACT – 6 November 2026:** The separate [Harvard Dataverse dataset `10.7910/DVN/STHUVV`](https://doi.org/10.7910/DVN/STHUVV) is **PUBLISHED / RELEASED v1.1** (latest release 4 November 2026), verified by the official live API HTTP 200. The historical readiness/candidate work below must **not** be interpreted as the current publication status or as instructions to resubmit. Exact byte identity between local candidate files and the eight released dataset files remains unverified. The copyrighted Book is distinct and excluded. See [current reconciliation](../../docs/EXTERNAL_PLATFORM_RECONCILIATION_2026-11-06.md).
+
+## Historical pre-release documentation
+
 **Current-release status (2026-11-03): FIX – Any previously recorded binary or derived-data checks below are historical and are NOT RECHECKED against the current locked PDF. Source-data checks must be rerun before deposit.**
 
 # Harvard Dataverse readiness audit — 27 October 2026
