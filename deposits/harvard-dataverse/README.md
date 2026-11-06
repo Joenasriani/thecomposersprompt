@@ -1,4 +1,4 @@
-# Harvard Dataverse — readiness only
+> **DISCREPANCY NOTICE (2026-11-06):** The **repository's curated educational dataset** remains DEVELOP FURTHER / NOT READY per its own documented evidence. A separate earlier conversation mentioned a Harvard dataset “submitted for review” and identifier `10.7910/DVN/ZCZ0NA`, but its current authenticated record, scope, status and relationship to this candidate were **not verified**. Do not equate the two or silently claim a completed public deposit. See [external-platform reconciliation](../../docs/EXTERNAL_PLATFORM_RECONCILIATION_2026-11-06.md).\n\n# Harvard Dataverse — readiness only
 
 **DEVELOP FURTHER / NOT READY / NOT DEPOSITED. No DOI or acceptance verified.**
 
