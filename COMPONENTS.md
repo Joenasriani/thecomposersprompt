@@ -14,7 +14,9 @@ This repository contains **different artifacts and workflows**, not interchangea
 | Harvard Dataverse preparation | `deposits/harvard-dataverse/` | Deposit-specific documentation and metadata | Dataverse workstream | NOT READY / NOT DEPOSITED |
 | Landing deployment ownership | `websites/landing/` | Landing source, build script and deployment instructions | Landing-page workstream | VERCEL READY |
 
-See [external-platform reconciliation (2026-11-06)](docs/EXTERNAL_PLATFORM_RECONCILIATION_2026-11-06.md) for current platform states and verification limits. Historical deposit-readiness documents below are preserved as pre-publication history, not current Zenodo status.\n\n## Governing rules
+See [external-platform reconciliation (2026-11-06)](docs/EXTERNAL_PLATFORM_RECONCILIATION_2026-11-06.md) for current platform states and verification limits. Historical deposit-readiness documents below are preserved as pre-publication history, not current Zenodo status.
+
+## Governing rules
 
 1. The canonical **final book** is `book/The_Composers_Prompt_Joe_Nasr.pdf`, Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`. Its file, layout, cover, pages and embedded metadata are locked. It must not be edited as part of any other workstream.
 2. The final book title is **The Composer’s Prompt**, subtitle **Music Theory and Harmony for Computational Music Prompting**. Publication credit **J. Nasr**. Copyright holder **Joseph Ribal Nasr**. Rights: © 2026, all rights reserved; free to read, not an open redistribution license.
