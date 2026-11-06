@@ -1,3 +1,7 @@
+> **CURRENT RESULT:** A related educational harmonic-reference dataset is **PUBLISHED** under [Harvard Dataverse DOI 10.7910/DVN/STHUVV](https://doi.org/10.7910/DVN/STHUVV), version **1.1 RELEASED** on 4 November 2026 (live API verified 6 November). The historical candidate analysis below is **not** the current publication status. File-level matching between these candidate CSVs and the released dataset's deposited files is **not verified**. Do not submit again or relicense the separate copyrighted Book.
+
+## Historical pre-release proposal
+
 # Music-theory harmonic specification examples — Harvard candidate
 
 **Type:** nonempirical curated educational reference **Dataset** (Dataverse publication object type), not empirical observations or a peer-reviewed research publication. **Status: NOT READY, NOT DEPOSITED.**
