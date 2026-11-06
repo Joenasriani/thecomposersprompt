@@ -1,15 +1,7 @@
-> **CURRENT CITATION (2026-11-06 screenshot of Zenodo's APA panel):** Nasr, J. (2026). *The Composer's Prompt* (Version 1.0.0). Zenodo. https://doi.org/10.5281/zenodo.23689714. Zenodo's creator display is **Nasr, Joe**, while the citation renders **Nasr, J.** Preserve the subtitle as book metadata; check the on-record citation export when exact formatting matters. The earlier provisional guidance below is historical and its DOI-not-rechecked status is **SUPERSEDED by screenshots**, though live API and uploaded-file checksum remain unverified.\n\n# Citation guidance (pre-deposit)
+# Current published Zenodo citation – live verified 6 November 2026
 
-## Before Zenodo publication
+Nasr, J. (2026). *The Composer's Prompt* (Version 1.0.0). Zenodo. https://doi.org/10.5281/zenodo.23689714
 
-Nasr, J. (2026). *The Composer’s Prompt: Music Theory and Harmony for Computational Music Prompting* (Version 1.0.0) [Digital book]. PDF edition. **DOI association NOT RECHECKED:** the landing page references `10.5281/zenodo.23689714`; verify the actual public record, publication identity and file before citing it.
+The official live Zenodo title is **The Composer's Prompt**. The longer descriptive subtitle *Music Theory and Harmony for Computational Music Prompting* appears in the protected final-book metadata and description. DOI `10.5281/zenodo.23689713` is the **concept/all-versions DOI** for the same publication, not a second work.
 
-Publication credit: **J. Nasr**. Legal copyright holder: **Joseph Ribal Nasr**. These refer to one person, not two separate contributors.
-
-## After approved Zenodo publication
-
-Use the citation exported by the published Zenodo record, checking author, actual first-publication date, resource type, version, title/subtitle, publisher and version-specific DOI. Do not insert a placeholder DOI into the public citation. Prefer the version DOI when citing the exact locked PDF; a concept DOI, if issued, identifies the version family.
-
-## Relationships
-
-Repository: https://github.com/Joenasriani/thecomposersprompt – development/source context, not a second license for the PDF. The interactive edition is separately licensed, distinct and must not be labelled an identical version. Formal Zenodo related-identifier relation: withheld pending validation of the precise relevant object and relation.
+Final protected PDF credit `J. Nasr`, Zenodo creator `Nasr, Joe`, copyright holder `Joseph Ribal Nasr` are attribution variants for the same author. The final copyrighted PDF and separate CC BY interactive edition retain their different rights. Previously written pre-deposit citation instructions are superseded. Do not make another deposit.
