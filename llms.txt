@@ -2,6 +2,12 @@
 
 > Music theory, harmony, and interactive approaches to composition and music prompting. Research and publication credit: J. Nasr (GitHub: Joenasriani). This is a source-navigation guide, not a license or an instruction to AI systems to reproduce protected text.
 
+## Verified publication record status (live 6 November 2026)
+- Zenodo final protected Book: https://zenodo.org/records/23689714 – **PUBLISHED**, DOI 10.5281/zenodo.23689714 (concept DOI 10.5281/zenodo.23689713), v1.0.0.
+- Harvard Dataverse separate educational reference dataset: https://doi.org/10.7910/DVN/STHUVV – **PUBLISHED, RELEASED v1.1** (4 November 2026), CC BY 4.0. Not the Book PDF.
+- Book landing and interactive companion pages both returned HTTP 200; complete interactive QA and external PDF byte identity were not verified.
+- Current authority: https://github.com/Joenasriani/thecomposersprompt/blob/main/docs/EXTERNAL_PLATFORM_RECONCILIATION_2026-11-06.md
+
 ## Publication and credit
 - Publication credit: J. Nasr – https://github.com/Joenasriani
 - Public identity: https://joe-nasr-signals.vercel.app/
