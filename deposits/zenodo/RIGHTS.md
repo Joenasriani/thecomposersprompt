@@ -12,4 +12,4 @@ The final 159-page PDF is free to read and remains copyright protected. Public v
 
 No CC BY 4.0 license is assigned to this PDF. Pre-existing CC BY 4.0 permissions for the separate interactive edition are not modified or withdrawn by this statement.
 
-**Zenodo configuration:** choose public file visibility and a **custom rights statement**; do not accept the default CC BY 4.0. Confirm Zenodo's accepted representation on a saved draft before publication. This file is explanatory metadata, not an independent grant of reuse rights.
+**Published Zenodo record:** The live official Zenodo API confirmed the published Book (DOI `10.5281/zenodo.23689714`) on 6 November 2026. The recorded rights are all rights reserved. The earlier instruction to choose a license during a new deposit is **superseded**; do not create another upload or alter the license. This file is an explanation of the existing protected Book's rights, not a new grant of reuse rights.
