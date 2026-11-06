@@ -86,5 +86,19 @@
   "original_publisher_verification": "PENDING",
   "duplicate_record_check": "PENDING",
   "approval": "NOT_GRANTED",
-  "identity_verification": "GitHub source/archive blob matches locked release; independent PDF internals and Zenodo existing-record/DOI status NOT RECHECKED."
+  "identity_verification": "GitHub source/archive blob matches locked release; independent PDF internals and Zenodo existing-record/DOI status NOT RECHECKED.",
+  "preparation_scope_note": "This is an unsent historical repository preparation package; status DRAFT_NOT_SUBMITTED applies only to this preparatory metadata file, not the actual published Zenodo Book. Do not create another deposit.",
+  "external_published_record_2026_11_06": {
+    "evidence": "author-provided screenshots of public Zenodo UI",
+    "status": "PUBLISHED_VERIFIED_BY_SCREENSHOT",
+    "url": "https://zenodo.org/records/23689714",
+    "version_doi": "10.5281/zenodo.23689714",
+    "all_versions_doi": "10.5281/zenodo.23689713",
+    "version": "1.0.0",
+    "resource_type": "Book",
+    "creator_display": "Nasr, Joe",
+    "pdf_pages_shown": 159,
+    "rights": "All rights reserved",
+    "binary_checksum_match": "NOT_RECHECKED"
+  }
 }
