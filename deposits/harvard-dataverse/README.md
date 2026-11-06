@@ -1,4 +1,14 @@
-> **DISCREPANCY NOTICE (2026-11-06):** The **repository's curated educational dataset** remains DEVELOP FURTHER / NOT READY per its own documented evidence. A separate earlier conversation mentioned a Harvard dataset “submitted for review” and identifier `10.7910/DVN/ZCZ0NA`, but its current authenticated record, scope, status and relationship to this candidate were **not verified**. Do not equate the two or silently claim a completed public deposit. See [external-platform reconciliation](../../docs/EXTERNAL_PLATFORM_RECONCILIATION_2026-11-06.md).\n\n# Harvard Dataverse — readiness only
+# Harvard Dataverse – current released dataset and historical preparation
+
+**PUBLISHED / RELEASED – verified live 6 November 2026.** The separate educational reference dataset [10.7910/DVN/STHUVV](https://doi.org/10.7910/DVN/STHUVV), titled *Music Theory and Harmony Dataset: Chord Progressions and Harmonic Specifications from The Composer’s Prompt*, is dataset ID **14381133**, version **1.1 RELEASED** on **4 November 2026**, first published **1 November 2026**, licensed **CC BY 4.0**. Official Harvard Dataverse API returned HTTP 200. The previously pending metadata review has been completed and released. **Do not submit this record again.**
+
+**IMPORTANT SCOPE:** Historical local candidate CSVs and their preparation audit below have not been byte-checked against the eight files currently recorded by Harvard Dataverse. Treat old `NOT READY / NOT DEPOSITED` statements as **historical pre-release assessments**, not current publication status. The copyrighted final Book is a separate Zenodo publication and must not be added or relicensed through the dataset.
+
+**Separate record:** Historical book-related `10.7910/DVN/ZCZ0NA` is *not* the released dataset; its public URL returned HTTP 404, which does not prove deletion or continued review. For the current record inventory see [platform reconciliation](../../docs/EXTERNAL_PLATFORM_RECONCILIATION_2026-11-06.md).
+
+## Historical pre-release qualification – not the current publication status
+
+# Harvard Dataverse — readiness only
 
 **DEVELOP FURTHER / NOT READY / NOT DEPOSITED. No DOI or acceptance verified.**
 
