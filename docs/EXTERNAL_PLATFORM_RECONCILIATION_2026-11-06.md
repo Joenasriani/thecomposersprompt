@@ -11,8 +11,8 @@ This record reflects screenshots supplied by the author during the 2026-11-06 ON
 - **Authority boundary:** the deposited creator name **Joe Nasr** and repository's locked publication credit **J. Nasr** refer to one person; the cover displays **Joe Nasr**. Preserve the original release lock; document the discrepancy rather than silently rewriting copyright or PDF identity.
 
 ## ResearchGate – account approved, upload blocked
-- Authenticated profile settings screenshot showed **joenasr@gmail.com** as primary email and **j.nasr@saedubai.com** as additional; this is the same account.
-- ResearchGate approval email to SAE was dated **2026-11-04**. This verifies account approval, **not** acceptance of a particular publication.
+- Authenticated profile settings screenshot showed two verified email identities on the same account (primary and additional). Account addresses are omitted from this public repository register.
+- ResearchGate account approval correspondence was dated **2026-11-04**. This verifies account approval, **not** acceptance of a particular publication.
 - Manual Book form populated the account author **Joseph Nasr**. A PDF-select/upload step repeatedly showed the generic red **“An error occurred”**. It is **not proven** to be PDF corruption.
 - Repeated attempts were followed by an **“Access is temporarily restricted”** security page (unusual activity detected on device/network). User acknowledged repeated attempts. **Do not treat temporary restriction as account rejection or DOI invalidity.**
 - **State:** ACCOUNT_APPROVED / PROFILE_EMAILS_CONFIRMED_BY_SCREENSHOT / BOOK_RECORD_NOT_VERIFIED / FILE_UPLOAD_FAILED / ACCESS_TEMPORARILY_RESTRICTED.
