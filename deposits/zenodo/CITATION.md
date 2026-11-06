@@ -1,4 +1,4 @@
-# Citation guidance (pre-deposit)
+> **CURRENT CITATION (2026-11-06 screenshot of Zenodo's APA panel):** Nasr, J. (2026). *The Composer's Prompt* (Version 1.0.0). Zenodo. https://doi.org/10.5281/zenodo.23689714. Zenodo's creator display is **Nasr, Joe**, while the citation renders **Nasr, J.** Preserve the subtitle as book metadata; check the on-record citation export when exact formatting matters. The earlier provisional guidance below is historical and its DOI-not-rechecked status is **SUPERSEDED by screenshots**, though live API and uploaded-file checksum remain unverified.\n\n# Citation guidance (pre-deposit)
 
 ## Before Zenodo publication
 
