@@ -79,14 +79,24 @@ assert.match(ext,/renderPiano/,'Harmonic reference must use shared renderer');
 
 const audioSource=read('music/audio-engine.js');assert.match(audioSource,/export async function playNotes/,'Single shared audio engine required');assert.doesNotMatch(js,/createOscillator/);assert.doesNotMatch(ext,/createOscillator/);assert.doesNotMatch(sharedPiano,/chapter-6-5\\.js/,'Shared piano must not depend on chapter model');
 
+// Chapters 1–5 have migrated to the chapter-reference renderer. Historical
+// main.js pilots are preserved but are NOT loaded by their current HTML pages.
 for(const suffix of ['1','2','3','3-5','4','5']){
  const page=read('lessons/chapter-'+suffix+'/index.html');
- const script=read('lessons/chapter-'+suffix+'/main.js');
- assert.match(page,/data-lesson-root/,'Missing lesson mount for '+suffix);
- assert.match(page,/lesson\.css/,'Missing shared styling for '+suffix);
- assert.match(script,/mountLesson/,'Shared lesson runtime absent in '+suffix);
- assert.match(script,/defineLesson/,'Validated lesson contract absent in '+suffix);
+ assert.match(page,/id="chapter-data"/,'Missing embedded lesson definition for '+suffix);
+ assert.match(page,/src="\.\.\/chapter-reference\.js"/,'Current chapter reference runtime missing for '+suffix);
+ assert.match(page,/id="reference-piano"/,'Shared pitch reference UI missing for '+suffix);
+ assert.match(page,/id="reference-prompt"/,'Prompt reference missing for '+suffix);
+ assert.doesNotMatch(page,/src="\.\/main\.js"/,'Historical pilot main.js must not be loaded by '+suffix);
  assert.match(modular,new RegExp('lessons/chapter-'+suffix+'/'),'Modular chapter link absent for '+suffix);
 }
+const lessonIndex=JSON.parse(read('lessons/chapter-inventory.json'));
+assert.equal(lessonIndex.chapters.length,37,'Keep explicit inventory of all 37 chapters');
+for(const chapter of lessonIndex.chapters){
+ const present=existsSync(resolve(root,'lessons',chapter.id,'index.html'));
+ assert.equal(chapter.status,present?'source-present-qa-not-rechecked':'missing-source','Chapter inventory/source mismatch: '+chapter.id);
+}
+assert.equal(lessonIndex.chapters.filter(c=>c.status==='source-present-qa-not-rechecked').length,36,'36 chapter source pages expected at this audited baseline');
+assert.equal(lessonIndex.chapters.find(c=>c.id==='chapter-33')?.status,'missing-source','Chapter 33 is an explicit unresolved source gap');
 assert.match(read('lessons/lesson-runtime.js'),/validateExamples/,'Renderer must verify section/example parity');
 assert.match(read('vercel.json'),/"deploymentEnabled": false/,'Vercel must remain manual-only');
