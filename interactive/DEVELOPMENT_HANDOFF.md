@@ -1,41 +1,29 @@
-# START HERE — Interactive app continuity
-Updated 2026-10-27. Repo: https://github.com/Joenasriani/thecomposersprompt ; branch `main`.
+# The Composer's Prompt – current interactive handoff
+**Audited:** 2026-11-07 against GitHub `main` at `82da54fef00ee928677c92436c6e450860452665` (pre-documentation commit). **Authority:** this file is the only active operational AI handoff for the interactive application. Recheck HEAD before relying on the snapshot.
 
-## Hard scope boundary
-**The complete interactive app lives under `interactive/`, which is its individual application root.** Do not modify the repository root or any sibling project. This includes external `.github/` workflows. Existing external workflows may be inspected, but must not be edited during normal interactive development.
+## Scope and precedence
+This is a **music-education interactive companion**, not a conventional level-based game. The repository also owns a separately locked final PDF, landing page, and research deposits. Interactive development writes only to `interactive/`. Treat `book/`, `publication.json`, `book/FINAL_RELEASE_LOCK.json`, `deposits/`, `websites/`, root `index.html`, and `.github/` as protected, unless separately authorized. Never change published book bytes or blur reserved-rights PDF vs pre-existing CC BY 4.0 interactive material. Historical plans are not instructions: see [archive](archive/historical-guidance/README.md).
 
-## Resume protocol
-1. Fetch the latest `main` SHA and enumerate `interactive/`.
-2. Read this file, `PROJECT_STATUS.md`, `COMPONENT-MANIFEST.json`, `CHAPTER_PROGRESS.md`, `DESIGN_SYSTEM.md`, `MUSIC_THEORY_RULES.md`, `QA-ACCEPTANCE.md`, `ARCHITECTURE-AND-DEPLOYMENT.md` and `CHANGELOG.md`.
-3. Reconcile documentation against actual files, tests and deployed behavior; correct discrepancies **inside this folder only**.
-4. Verify latest GitHub Actions and Pages statuses; browser rendering/audio must be checked separately. Do not claim PASS without evidence.
-5. Build modules, tests, artwork, assets, documentation and any app-local tooling only within `interactive/`. Commit work to the authorized branch and report SHA.
+## Verified source baseline
+- Canonical *intended* interactive address: https://thecomposersprompt-lab.vercel.app/; application source entry `interactive/index.html`, static application with Vercel project root previously documented as `interactive/`. **Current production deployment commit and actual browser behavior are NOT VERIFIED.** A prior note reported READY at `728d435`, not evidence that current `main` is deployed.
+- `interactive/vercel.json` currently contains `"deploymentEnabled": false`; production deployment is **manual-only, NOT AUTHORIZED by this documentation audit**. GitHub Pages uses a different repository-root publication; never equate it with the Vercel lab.
+- `interactive/lessons/chapter-inventory.json` contains **37 chapter entries**. Exactly **36 chapter HTML index pages** exist in the inspected tree (all entries except `chapter-33`). Presence means SOURCE PRESENT only, not book parity, reviewed pedagogy, audio QA, or accepted release.
+- Chapter 6.5 is the separately built reference keyboard/harmony/notation lesson. `lessons/lesson-runtime.js`, `lesson-contract.js`, `music/pitch.js`, `piano-renderer.js`, `audio-engine.js` and specialized Chapter 6.5 files exist. Other lessons have source pages but have **not** received full page-by-page editorial, functional, accessibility or browser acceptance.
+- `interactive/obsolete/index.html` described by older docs is **ABSENT** on current main. Legacy workbook remains as repository-root `index.html`, which is OUT OF SCOPE. Do not recreate or delete either without an explicit migration decision.
+- `assets/composers-prompt-title.svg` exists; the previously planned light WebP logo is **ABSENT**. Do not fabricate the asset.
+- `interactive/package.json` reports app package version `0.1.0`. `book/FINAL_RELEASE_LOCK.json` and `publication.json` report the **separate PDF book release v1.0.0**, 159 pages, Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`. No GitHub Releases exist as checked on 2026-11-07. These identifiers describe different artifacts; do not claim an interactive v1.0.0 release.
+- Existing October QA/checkpoints and source test implementations are historical evidence, not certification of current production. CI, local Node tests, Chromium execution, real-device audio, mobile responsiveness, lesson correctness, CDN/VexFlow rendering, and live Vercel commit alignment require fresh checks.
 
-## Current implementation
-`index.html` is the local app home. Chapter 6.5 reference lesson: `lessons/chapter-6-5/`. Pitch and chord model: `music/chapter-6-5.js`; staff geometry: `music/staff-model.js`. Tests: `tests/`.
-Minimum piano keyboard: seven **white** keys with appropriate black keys; expand only for the played range. Preserve note and marker precision and mobile responsiveness.
-Dark logo `assets/composers-prompt-title.svg` exists. Light logo `assets/composers-prompt-title-light.webp` does not yet exist in the repository; its upload is deliberately deferred; preserve fallback.
+## Start a new AI thread safely
+1. Read this handoff, then `interactive/README.md`, `interactive/lessons/chapter-inventory.json`, `interactive/COMPONENT-MANIFEST.json`, `interactive/QA-ACCEPTANCE.md`, and the actual files to change.
+2. Fetch current main commit and compare with this audit anchor; check issues/PRs and latest Actions results. Do not assume README status is runtime proof.
+3. Confirm whether each feature is **SOURCE PRESENT / STATIC TEST PASS / BROWSER PASS / LIVE DEPLOY VERIFIED / NOT RECHECKED / BLOCKED**. Record evidence, command, commit, and time for each claim.
+4. Run `cd interactive && npm install && npm test`; for browser acceptance install pinned Playwright/Chromium, then run `npm run test:browser`. Do not report PASS unless actually executed. Verify 320, 375, 768, 1024 and 1440px; pointer/keyboard/touch; sound unlock, note accuracy and click-free envelopes; VexFlow notation and fallback; screen-reader accessibility; links and deep routes.
+5. Compare each chapter against the locked book source **read-only**; prioritize actual Chapter 33 gap and distinguish complete educational parity from an available HTML page.
+6. Update this one handoff and relevant factual registers after any change, keeping superseded guidance in the historical archive. Do not duplicate competing 'current' instructions.
+7. Do not deploy or change Vercel settings, routes, book, legal/license metadata or independent workstreams without explicit authorization.
 
-## Next quality gate
-Verify Chapter 6.5 in a browser (notation clefs/accidentals/ledger lines/chord collisions, playback and piano note alignment at 320/375/768/1024/1440 widths). Then extract shared components under this root. Pilot Chapters 1 and 2 before scaling.
-
-## “Update repo” convention
-Audit current interactive source; synchronize README, handoff, manifest, status, architecture, design and theory rules, chapter progress, QA, changelog and app-local tests. Commit **only `interactive/**` files** and check CI. Keep sibling projects protected and record unresolved evidence accurately.
-
-## Browser QA gate — 2026-10-27
-Run `tests/browser-chapter-6-5.spec.mjs` with Playwright Chromium against an accessible local static server or Pages URL. This test was committed but not executable in the current disconnected browser environment. Review conventional clef rendering and staff engraving manually. **Do not extract components or start mass chapter conversion until the actual browser gate passes.**
-
-## Canonical interactive web address — 2026-10-27
-- **Canonical public URL:** https://thecomposersprompt-lab.vercel.app/
-- Vercel project: `thecomposersprompt-lab` (`prj_9WZWGf5PTxXP90SloTeGncV4DWJH`). Project root directory is configured as `interactive`; framework is set to Other/none for static delivery of this folder's `index.html`.
-- The URL must expose only the standalone `interactive/` application at the domain root, including `/lessons/chapter-6-5/`. Do not use the GitHub Pages /thecomposersprompt/interactive/ path as the canonical link.
-- Domain assignment is verified; **the new deployment and browser response still require confirmation**. This change is configuration-only until a new production deployment finishes.
-- No change to sibling websites, separate book, or repository-root public entry.
-
-## Current baseline · 2026-10-27 (supersedes older deployment and legacy-home notes)
-- Canonical app: https://thecomposersprompt-lab.vercel.app/ ; Vercel project root `interactive/`, static/no framework. Domain assignment verified; fresh build and browser response **NOT RECHECKED**. Latest READY deployment remains older commit `728d435` as checked.
-- `interactive/index.html` is now the active modern application homepage. The former workbook copy was archived bit-for-bit at `interactive/obsolete/index.html` and marked historical/read-only. Repository-root `index.html` remains unchanged outside scope; GitHub Pages still publishes it separately.
-- Chapter 6.5: the custom piano SVG is an interactive per-note Web Audio pilot (pointer, Enter, Space), preserving seven-white-key minimum and note dots; full chord-building and real touch/audio QA are PENDING.
-- Optional VexFlow 5.0.0 compact staff is supporting notation only; keyboard, visualizations, prompts and sound remain independent. No MuseScore/LilyPond/score editing systems.
-- Final acceptance: browser confirmation at 320/375/768/1024/1440, clefs/accidentals, piano sound/touch, accessibility, navigation/asset paths, light artwork, and Vercel production deployment **NOT RECHECKED**.
-- No changes to root landing, the final book, `.github/`, other projects, or external publication rights.
+## Conflict disposition (2026-11-07)
+- The older `PROJECT_STATUS.md`, `CHAPTER_PROGRESS.md`, `README.md`, `ARCHITECTURE-AND-DEPLOYMENT.md`, `QA-ACCEPTANCE.md`, `QA-PILOT-GATE.md`, and previous handoff are preserved under the dated historical archive. Their obsolete conclusions were replaced with pointers or updated factual guidance.
+- Source presence (36 pages) supersedes old "all other chapters not started" claims. The absent `obsolete/index.html` and absent Chapter 33 page are unresolved discrepancies, NOT silently filled.
+- **No source/runtime, book, deployment config, or external service modified by this documentation-only reconciliation.**

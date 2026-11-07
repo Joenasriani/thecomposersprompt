@@ -46,3 +46,9 @@ These are source-history summaries, not proof of independently checked browser b
 - PASS static integrity: commit `d71d7b0` (GitHub workflow successful).
 - NOT RECHECKED: real browser audio playback, polyphony/retrigger behavior, mobile touch, VexFlow engraving and multi-viewport appearance.
 - Remaining gates: a reusable lesson data/interaction contract, reproducible Playwright execution, verified deployment provenance, accurate documentation and runtime error handling. This checkpoint does not approve mass-producing chapters.
+
+## 2026-11-07 – Documentation authority reconciliation
+- Preserved the seven superseded operational documents verbatim in `archive/historical-guidance/2026-11-07/`.
+- Consolidated AI continuity in one active `DEVELOPMENT_HANDOFF.md` and corrected chapter source inventory: 36/37 HTML lesson pages, Chapter 33 absent.
+- Recorded distinct book v1.0.0 and interactive package v0.1.0 identities, absent old obsolete-home file, manual-only deployment, unverified browser/audio/live release.
+- No interactive runtime, production deployment, PDF or independent workstream modified.

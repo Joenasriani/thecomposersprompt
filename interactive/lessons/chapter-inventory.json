@@ -1,228 +1,228 @@
 {
   "source": "The Composer’s Prompt, final 158-page edition (user-provided source); titles transcribed from published contents",
-  "status": "chapter titles checked; section-level inventory not yet complete",
+  "status": "2026-11-07 source existence reconciled; NOT browser/content/production verification",
   "chapters": [
     {
       "number": "1",
       "id": "chapter-1",
       "title": "The Composer's New Instrument",
-      "status": "pilot-under-development"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "2",
       "id": "chapter-2",
       "title": "Why the Machine Needs Your Theory",
-      "status": "pilot-under-development"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "3",
       "id": "chapter-3",
       "title": "Four Strategies for Prompting Theory",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "3.5",
       "id": "chapter-3-5",
       "title": "The Prompt Architecture",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "4",
       "id": "chapter-4",
       "title": "The Emotional Grammar of Intervals",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "5",
       "id": "chapter-5",
       "title": "Scales and Modes",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "6",
       "id": "chapter-6",
       "title": "Key and Tonal Center as Containers",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "6.5",
       "id": "chapter-6-5",
       "title": "From Scales to Chords",
-      "status": "implemented-under-qa"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "7",
       "id": "chapter-7",
       "title": "Progressions and the Translation Matrix",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "8",
       "id": "chapter-8",
       "title": "The Temporal Grid",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "9",
       "id": "chapter-9",
       "title": "Melodic Contour and Texture",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "10",
       "id": "chapter-10",
       "title": "The Level 1 Specification",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "11",
       "id": "chapter-11",
       "title": "Harmonic Function, Phrase, and Cadence",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "12",
       "id": "chapter-12",
       "title": "The Melodic Line and Voice Leading",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "13",
       "id": "chapter-13",
       "title": "ARR-SPEC — From Harmony to Section Design",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "14",
       "id": "chapter-14",
       "title": "Extensions and Alterations",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "15",
       "id": "chapter-15",
       "title": "Modal Interchange",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "16",
       "id": "chapter-16",
       "title": "Secondary Dominants and Tonicization",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "17",
       "id": "chapter-17",
       "title": "Voicing and Voice Leading",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "18",
       "id": "chapter-18",
       "title": "Parallel Harmony and Planing",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "19",
       "id": "chapter-19",
       "title": "The Level 3 Composition Specification",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "20",
       "id": "chapter-20",
       "title": "Modulation and Musical Form",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "21",
       "id": "chapter-21",
       "title": "The Timeline, Not the Equipment List",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "22",
       "id": "chapter-22",
       "title": "Specification Before Generation",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "23",
       "id": "chapter-23",
       "title": "The Generation Campaign",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "24",
       "id": "chapter-24",
       "title": "Negative, Weighted, and Reference Control",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "25",
       "id": "chapter-25",
       "title": "Section Editing, Stems, and the DAW",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "26",
       "id": "chapter-26",
       "title": "The Four Composer–Specifier Competencies",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "27",
       "id": "chapter-27",
       "title": "Exercises from Sound to Specification",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "28",
       "id": "chapter-28",
       "title": "Learning by Teaching and Correcting",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "28.5",
       "id": "chapter-28-5",
       "title": "The Three Loops and the Harmony Decision Record",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "29",
       "id": "chapter-29",
       "title": "Suno – Translating the Musical Plan",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "30",
       "id": "chapter-30",
       "title": "Udio – Prose, Sections and Evidence",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "31",
       "id": "chapter-31",
       "title": "What Changes Between Tools?",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "31.5",
       "id": "chapter-31-5",
       "title": "Other Generation and Composition Workflows",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "32",
       "id": "chapter-32",
       "title": "The Complete Specification – Unified Capstone",
-      "status": "not-implemented"
+      "status": "source-present-qa-not-rechecked"
     },
     {
       "number": "33",
       "id": "chapter-33",
       "title": "Advanced Scales, Modes & Computational Composition",
-      "status": "not-implemented"
+      "status": "missing-source"
     }
   ]
 }

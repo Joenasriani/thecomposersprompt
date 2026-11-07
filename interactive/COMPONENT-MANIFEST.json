@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "workstream": "interactive",
   "applicationTitle": "The Composer’s Prompt",
-  "updated": "2026-10-27",
+  "updated": "2026-11-07",
   "productionIntendedEntry": "interactive/index.html (Vercel project root interactive/)",
   "migrationState": "modern interactive homepage; older workbook removed from application, retained by Git history",
   "manifestScope": "interactive-owned sources only",
@@ -46,8 +46,8 @@
       "id": "light-logo",
       "path": "interactive/assets/composers-prompt-title-light.webp",
       "role": "deferred-light-theme-image",
-      "state": "PENDING user upload; absent on main",
-      "qa": "BLOCKED missing asset"
+      "state": "ABSENT / deferred",
+      "qa": "NOT AVAILABLE"
     },
     {
       "id": "dark-logo",
@@ -88,6 +88,13 @@
       "role": "MIDI pitch spelling regression fixture",
       "state": "implemented",
       "qa": "PASS prior integrity workflow"
+    },
+    {
+      "id": "chapter-pages",
+      "path": "interactive/lessons/chapter-*/index.html",
+      "role": "36 source pages of 37 chapter inventory entries; chapter-33 absent",
+      "state": "SOURCE_PRESENT_PARTIAL",
+      "qa": "Browser / parity NOT RECHECKED"
     }
   ],
   "protectedSources": [
@@ -134,7 +141,7 @@
       "framework": null,
       "lastCheckedBranch": "main",
       "lastReadyGitSha": "728d4354cdfb8ffd95e56a055222631e69180094",
-      "status": "config verified; deployment of current main NOT RECHECKED"
+      "status": "Manual-only per interactive/vercel.json; current live deployment SHA/browser QA NOT VERIFIED 2026-11-07"
     },
     "bookLanding": {
       "project": "thecomposersprompt-book",
@@ -148,15 +155,11 @@
       "complete actual desktop/mobile/touch/audio/accessibility QA",
       "ensure runtime third-party licensing notices"
     ],
-    "productionChangeAuthorized": true
+    "productionChangeAuthorized": false
   },
   "continuity": {
     "startHere": "interactive/DEVELOPMENT_HANDOFF.md",
-    "projectStatus": "interactive/PROJECT_STATUS.md",
-    "chapters": "interactive/CHAPTER_PROGRESS.md",
-    "design": "interactive/DESIGN_SYSTEM.md",
-    "musicRules": "interactive/MUSIC_THEORY_RULES.md",
-    "changelog": "interactive/CHANGELOG.md"
+    "historicalGuidance": "interactive/archive/historical-guidance/README.md"
   },
   "scopePolicy": {
     "ownedPathPrefix": "interactive/",
@@ -171,5 +174,6 @@
       "deposits/",
       ".github/"
     ]
-  }
+  },
+  "auditSourceCommit": "82da54fef00ee928677c92436c6e450860452665"
 }

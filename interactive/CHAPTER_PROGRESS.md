@@ -1,14 +1,5 @@
-# Interactive chapter progress
+# Interactive chapter progress – source inventory (2026-11-07)
 
-Source: final supplied edition of *The Composer’s Prompt*. The 37 identified chapter headings are listed in `lessons/chapter-inventory.json` (including half-numbered chapters). This is a title inventory, not a complete subsection transcription.
+**Authority:** [DEVELOPMENT_HANDOFF.md](DEVELOPMENT_HANDOFF.md). Historical register: [archive](archive/historical-guidance/2026-11-07/CHAPTER_PROGRESS.md).
 
-| Item | Source | Code | Browser QA |
-|---|---|---|---|
-| Chapter inventory | 37 chapter headings checked | PASS | N/A |
-| Shared lesson runtime | Pilot-based contract | IMPLEMENTED | NOT RECHECKED |
-| Chapter 1 | Book chapter 1 | PILOT | NOT RECHECKED |
-| Chapter 2 | Book chapter 2 | PILOT | NOT RECHECKED |
-| Chapters 3, 3.5, 4, 5 | Approved book pages 8–21 | PILOT | NOT RECHECKED |\n| Chapter 6.5 | Book chapter 6.5 | IMPLEMENTED | NOT RECHECKED |
-| All other chapters | Book chapter index | NOT STARTED | NOT RECHECKED |
-
-PILOT is not complete chapter parity. Notation, device audio, mobile layout and screen-reader checks are pending. Approved book and repo-root files remain untouched. Vercel deployment is intentionally disabled until explicitly approved. GitHub Pages CI may publish changes independently.
+`lessons/chapter-inventory.json` lists 37 chapter identifiers; **36** have a corresponding `lessons/chapter-*/index.html` in GitHub main at `82da54fef00ee928677c92436c6e450860452665`. Chapter **33** is missing. Chapters 1–5 were earlier described as pilots, and 6.5 as a specialized reference lesson; later pages are source-present, **not** independently certified for lesson completeness, book fidelity, audio, browser QA or production delivery. Do not interpret old `not-implemented` statuses as absence of source; do not interpret HTML presence as release PASS. See the JSON register for per-chapter source status.
