@@ -17,11 +17,14 @@ GitHub live trees for `Joenasriani/thecomposersprompt` and private `Joenasriani/
 
 The local `deposits/harvard-dataverse/` files and its earlier readiness reports are historical **candidate/pre-release materials**. The precise file-by-file relationship to the live Harvard dataset's eight released files remains **unverified**. Do not resubmit a published dataset or claim a second dataset based on these files.
 
-## No additional publication confirmed
+## New distribution verification – 7 November 2026
+
+**ResearchGate Book: PUBLIC PAGE VERIFIED (HTTP 200).** [Publication 417607181](https://www.researchgate.net/publication/417607181_The_Composer%27s_Prompt_Music_Theory_and_Harmony_for_Computational_Music_Prompting) identifies *The Composer's Prompt: Music Theory and Harmony for Computational Music Prompting*, displays the October 2026 date, author link [Joseph Nasr](https://www.researchgate.net/profile/Joseph-Nasr-9), publisher Zenodo and the same version DOI `10.5281/zenodo.23689714`. The abstract contains the Interactive Companion URL, and ResearchGate displays **PDF Available / Download full-text PDF** with content uploaded 7 November 2026. This is a **distribution copy/metadata listing for the existing Zenodo Book**, not an additional work or DOI. The PDF's SHA/hash and page 159 have **not** been verified specifically on ResearchGate, and ResearchGate research-unit affiliation has **not** been checked. Prior upload errors/HTTP 403 reflect historical access failure, not current publication state.
+
+## Other destination states
 
 | Destination | Current defensible state |
 | --- | --- |
-| **ResearchGate** | Account approval reported from authenticated evidence; earlier PDF upload failed. Public ResearchGate access returned HTTP 403. **No separately hosted ResearchGate Book publication has been verified**, and a 403 does not establish rejection. |
 | **Google Play Books / Google Books** | Two catalog items previously visible in Partner Center, including this Book and *Dorking*. The earlier preliminary policy-review outcome and public storefront listings have **not** been independently verified. Catalog presence does not equal publication. |
 | **Harvard Dataverse historical book identifier `10.7910/DVN/ZCZ0NA`** | Separate from the released `STHUVV` dataset; public page returned HTTP 404. **Not publicly accessible at checked URL**; deletion, draft and review status remain unknown. |
 | **ORCID** | The official public works API returned the six unique Zenodo DOIs (6 Nov 2026). Two entries share ICF-AI DOI `10.5281/zenodo.23504055`; investigate record-specific identifiers before any removal. ORCID is a listing, not another publication. |
