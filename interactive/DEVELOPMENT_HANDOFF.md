@@ -1,41 +1,32 @@
-# The Composer's Prompt – active Interactive Lab AI handoff
-**Updated:** 2026-11-13. **Only active interactive handoff.** Read the [repository-wide handoff](../AI_HANDOFF.md) first.
+# The Composer's Prompt – current Interactive Lab AI handoff
 
-## Approved target
-**Live final reference:** https://thecomposersprompt-lab.vercel.app/ .
-**Owned application source:** `interactive/index.html`, `interactive/lessons/`, `interactive/music/`, `interactive/assets/`, `interactive/tests/`.
-**Production Vercel project:** `thecomposersprompt-lab` (`prj_9WZWGf5PTxXP90SloTeGncV4DWJH`); source project root documented as `interactive/`.
-**Verified READY deployment:** `dpl_Bbnd2LEmpTCf6jofU5KPqvNYQ6Ln` from Git commit `8b249db74ec865ccc69c14180c098ab7ec9293a0`.
-**Git auto-deployment:** disabled in `interactive/vercel.json`. Do **not** enable or trigger deployment merely to align commit SHAs.
+**Current release verified:** 2026-11-13. This is the **only active operational handoff** for the interactive component; read [repo authority](../AI_HANDOFF.md) and [component README](README.md) first.
 
-## Source comparison – important nuance
-Comparing deployed Git SHA `8b249db` to pre-documentation application-source head `9018ccc` yielded **92 additional commits**, but **no changed lesson HTML, app homepage HTML, or audio/piano/layout runtime files**. The differences within `interactive/` are documentation, inventory JSON and an integrity test. Do not describe the lab as 92 *feature updates* behind. Git commit divergence still exists and served/browser parity has not been independently verified; the approved live deployment must be preserved.
+## Exact production state
+- Canonical site: https://thecomposersprompt-lab.vercel.app/
+- Vercel project: `thecomposersprompt-lab` (`prj_9WZWGf5PTxXP90SloTeGncV4DWJH`), project root `interactive/`, framework `null` (static).
+- Production deployment: `dpl_2vKCJyC4DpSGfbcRAHRFpuXbonmf`, **READY**, official alias assigned. Deployed Git commit: `6621f9e1afd0f147ad104a222b1bab0c3c118e2a`. Github `main` was identical at immediate post-release verification.
+- Historical `dpl_Bbnd2LEmpTCf6jofU5KPqvNYQ6Ln` at `8b249db` is **superseded**, not current production.
+- `interactive/vercel.json` disables automatic Git deployment. Do not change this; explicit author permission is needed for another deployment. Subsequent documentation commits may make GitHub `main` ahead of deployed SHA without altering live app runtime.
 
-## Book/lesson coverage
-- Verified locked **159-page** final PDF is `../book/The_Composers_Prompt_Joe_Nasr.pdf`, Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`; the author-uploaded final is byte-identical.
-- The book definitively contains **Chapter 33 – Advanced Scales, Modes & Computational Composition**, printed pp.110–122, physical PDF pp.115–127.
-- `lessons/chapter-inventory.json` contains **37** chapter entries; prior source inventory found **36** standalone HTML lesson pages. `lessons/chapter-33/index.html` returns NOT FOUND at both production source commit and current main.
-- Check whether Chapter 33 is already included in the app's **embedded reader or bookdata** before claiming readers cannot access it. Do not invent a new lesson, copy a generic template, or edit approved live design solely from the 404.
-- Chapter 6.5 has a specialized piano/notation reference; `lessons/lesson-runtime.js`, `lesson-contract.js`, `music/pitch.js`, `piano-renderer.js`, `audio-engine.js` are source references requiring fresh runtime checks.
-- Historical `interactive/obsolete/index.html` and previously proposed light-theme WebP logo were absent at prior audit. Never fabricate assets or recreate an archive based on obsolete docs.
-- Interactive package version `0.1.0` is separate from published PDF book v`1.0.0`; avoid cross-edition claims.
+## Source and educational coverage
+- Entry: `interactive/index.html` includes **43 reading entries** (preface, 36 numbered/supplementary chapter readings, 6 appendices) and generates interactive lesson links from chapter data.
+- Inventory: `lessons/chapter-inventory.json` has **37** standalone chapter IDs, all source-present. These include Chapter 3.5, 6.5, 28.5 and 31.5.
+- **Chapter 33:** `lessons/chapter-33/index.html` was added, included in reader/navigation, and published with the current Vercel production Git source. A-reference scale sets, comparison controls, a theory-check exercise in `lessons/chapter-practice.js`, reusable piano, audio and notation modules are included. It is an **adaptation** of the final PDF chapter, not exact figure-by-figure transcription.
+- Shared modules: `lessons/chapter-reference.js`, `lessons/lesson-runtime.js`, `lessons/lesson-contract.js`, `lessons/chapter-practice.js`; `music/pitch.js`, `music/piano-renderer.js`, `music/audio-engine.js`, `music/compact-notation.js`, `music/interactive-piano.js`. Chapter 6.5 remains specialized. `chapters.html` is a legacy pilot index, not the current full chapter navigator.
+- The final book is a separate locked 159-page PDF `../book/The_Composers_Prompt_Joe_Nasr.pdf`, Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`. Chapter 33 printed pp.110–122, PDF pp.115–127. Do not modify or relicense it. Book release v1.0.0 is not interactive app package v0.1.0.
 
-## Protected material and ownership
-Final book, `publication.json`, `book/FINAL_RELEASE_LOCK.json`, deposits, landing, `.github/`, root historical `index.html`, `stage1/` and `prototype/` are distinct scopes. Preserve the final book copyright (all rights reserved, free to read). Existing CC BY 4.0 interactive grants remain applicable where they already existed. Do not relicense the final book via the repo license.
+## Audit evidence hierarchy
+- **PASS, production metadata/build:** source Git SHA, Vercel build completed, READY state and canonical alias assigned.
+- **PASS, static inspection:** 9/9 focused Chapter 33 checks for source wiring, chapter order, 37 inventory, pitch examples, sequential scale routing, theory-check registration and manual deployment guard.
+- **NOT VERIFIED:** live HTTP body/browser rendering, touch and audio, notation engraving/fallback, contrast/screen-reader accessibility, responsive widths 320/375/768/1024/1440, all-chapter editorial accuracy, exact PDF figure parity.
+- **NOT EXECUTED:** whole `npm test`, configured Playwright suite. Do not call unperformed checks PASS; an unrelated Vercel book deployment status is not Lab QA.
 
-## Start and verify safely
-1. Read this file, `README.md`, `lessons/chapter-inventory.json`, `COMPONENT-MANIFEST.json`, `QA-ACCEPTANCE.md`, and actual source files.
-2. Fetch current Git HEAD, deployed Vercel source SHA, and compare changed paths. Keep code, book and experimental surfaces separate.
-3. Run reproducible source validation (`cd interactive && npm install && npm test`); only mark PASS if executed. For browser QA use configured Playwright/Chromium (`npm run test:browser`) if available.
-4. Verify responsive widths 320 / 375 / 768 / 1024 / 1440 px; actual navigation, deep links, HTML chapter links, keyboard/pointer/touch, Web Audio unlocking and correct pitch, VexFlow/staff accuracy, reduced-motion and screen-reader affordances.
-5. Compare each lesson against locked book text read-only, distinguish a source page from editorial, theoretical and UX acceptance.
-6. For Chapter 33, inspect integrated reader and live URL first. Resolve the standalone-page gap only through faithful, approved work; verify no changes to other lessons or audio behavior.
-7. Record status as SOURCE PRESENT / TEST PASS / BROWSER PASS / LIVE VERIFIED / NOT RECHECKED / BLOCKED, with command, SHA and date. Do not claim final release QA from READY metadata.
-8. Update this one active handoff, status, README and manifest on validated changes. Historical notes live in `archive/historical-guidance/`; do not publish conflicting active handoffs.
-
-## Known limits – 13 November 2026
-We verified source diff and PDF provenance, *not* actual browser rendering/audio, a complete 36-page editorial pass, deployed asset binary parity, or full responsive accessibility acceptance. No runtime source, deployment config or final PDF was changed in this documentation synchronization.
-
-## 2026-11-13 Chapter 33 implementation update
-
-Following author direction to add the missing chapter, created `interactive/lessons/chapter-33/index.html` from the **final locked 159-page PDF** as a matching standalone lesson (theoretical A-reference scale formulas, comparative keyboard examples, prompts, cross-cultural limitations, and guided exercises). Added the chapter to `interactive/index.html` embedded `bookdata`, automatically exposing it in reader and chapter navigation. Updated inventory and source-validation assertions: **37/37 standalone lesson HTML files now SOURCE PRESENT**. The earlier missing Chapter 33 statements above are historical pre-implementation findings. This is a source-level change; **Vercel remains on previous approved deployment**, and local browser/music/audio QA, complete PDF text/figure parity and production deployment are NOT RECHECKED. Preserve existing chapters/layout/audio and do not claim final acceptance.
+## Start / change / validate safely
+1. Fetch new GitHub head and **current** Vercel deployment metadata; compare filenames and commits, not only generic source hashes.
+2. Inspect the actual files being changed and this handoff. Preserve other 36 lesson files and shared audio behavior.
+3. Run `cd interactive && npm install && npm test`; then `npm run test:browser` with Chromium where available, and verify screen-size, pointer/keyboard/touch, notes, VexFlow notation, accessibility and routing.
+4. For Chapter 33 confirm rendered reader/navigation and `/lessons/chapter-33/`, compare pitched scale examples and exercises against the locked PDF, and identify intentional adaptation versus omitted figures.
+5. Protect `../book/`, `../publication.json`, `../deposits/`, `../websites/`, root `index.html`, `../stage1/`, `../prototype/` and `.github/` unless separately authorized. Preserve existing interactive/material and third-party licensing notices.
+6. Update active status, README, chapter inventory, QA/manifest, repo-wide handoff and `../llms.txt` **only** with verified facts. Archive prior guidance rather than perpetuating stale “missing chapter” or pre-release banners.
+7. Do not auto-deploy, change licenses, edit the locked PDF or claim full browser/audio release acceptance from READY metadata.
