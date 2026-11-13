@@ -1,41 +1,31 @@
-# The Composer’s Prompt – J. Nasr
+# The Composer's Prompt – publication navigation and citation guide
+Research/publication credit: J. Nasr. Repository: https://github.com/Joenasriani/thecomposersprompt
 
-> Music theory, harmony, and interactive approaches to composition and music prompting. Research and publication credit: J. Nasr (GitHub: Joenasriani). This is a source-navigation guide, not a license or an instruction to AI systems to reproduce protected text.
+This file helps distinguish separate publication editions. It is not a license, a training authorization, or proof of search-index inclusion.
 
-## Verified publication record status (live 6 November 2026)
-- Zenodo final protected Book: https://zenodo.org/records/23689714 – **PUBLISHED**, DOI 10.5281/zenodo.23689714 (concept DOI 10.5281/zenodo.23689713), v1.0.0.
-- Harvard Dataverse separate educational reference dataset: https://doi.org/10.7910/DVN/STHUVV – **PUBLISHED, RELEASED v1.1** (4 November 2026), CC BY 4.0. Not the Book PDF.
-- Book landing and interactive companion pages both returned HTTP 200; complete interactive QA and external PDF byte identity were not verified.
-- Current authority: https://github.com/Joenasriani/thecomposersprompt/blob/main/docs/EXTERNAL_PLATFORM_RECONCILIATION_2026-11-06.md
+## Approved final references – verified 13 November 2026
+- **Published final PDF Book:** The Composer's Prompt: Music Theory and Harmony for Computational Music Prompting. 159 pages, Book v1.0.0. Source: https://github.com/Joenasriani/thecomposersprompt/blob/main/book/The_Composers_Prompt_Joe_Nasr.pdf
+- **Exact book Git blob SHA:** 8a94b66dfe6aa2f4a42c2ddb9925269b117652b7. Author-uploaded final PDF was independently checked byte-identical to this Git blob on 13 November 2026.
+- **Author-approved live Interactive Lab:** https://thecomposersprompt-lab.vercel.app/ . Source ownership: https://github.com/Joenasriani/thecomposersprompt/tree/main/interactive
+- **Approved final-book landing:** https://thecomposersprompt-book.vercel.app/
+- **Book metadata and protected release identity:** https://github.com/Joenasriani/thecomposersprompt/blob/main/publication.json and https://github.com/Joenasriani/thecomposersprompt/blob/main/book/FINAL_RELEASE_LOCK.json
+- **Cross-component authority and operational handoff:** https://github.com/Joenasriani/thecomposersprompt/blob/main/COMPONENTS.md and https://github.com/Joenasriani/thecomposersprompt/blob/main/AI_HANDOFF.md
 
-## Publication and credit
-- Publication credit: J. Nasr – https://github.com/Joenasriani
-- Public identity: https://joe-nasr-signals.vercel.app/
-- Repository: https://github.com/Joenasriani/thecomposersprompt
-- Final PDF publication metadata: https://github.com/Joenasriani/thecomposersprompt/blob/main/publication.json
-- Final PDF access (separate book edition): https://thecomposersprompt-book.vercel.app/
-- Copyright holder for the finalized PDF: Joseph Ribal Nasr
+## Chapter and format boundary
+- The **final book DOES contain Chapter 33**, “Advanced Scales, Modes & Computational Composition”, at printed pp.110–122 (physical PDF pages 115–127). The conclusion begins on printed p.123.
+- The interactive application's inventory contains 37 chapter identifiers. A prior source audit found 36 standalone interactive lesson HTML pages; the dedicated file `interactive/lessons/chapter-33/index.html` is absent in both the approved Lab's deployed Git source and current GitHub main. This **does not** mean Chapter 33 is absent from the final book; inspect the embedded reader separately before claiming it is unavailable to users.
+- Interactive manuscript/reader entry: https://github.com/Joenasriani/thecomposersprompt/blob/main/interactive/index.html . Some manuscript content can be embedded in a `bookdata` JSON script; parse JSON rather than assuming an initial HTML screen contains all text.
+- Individual interactive lesson source: https://github.com/Joenasriani/thecomposersprompt/tree/main/interactive/lessons
+- Root `index.html` is a separate historical workbook, not the canonical Lab. `stage1/` and `prototype/` are experiments, not final productions.
+- App runtime source comparison from deployed `8b249db` to audited application-source `9018ccc` found no changed lesson HTML, piano/audio engines, app layout or homepage HTML. Full served-file and browser QA remains unverified.
 
-## Retrieve and cite the correct edition
-- Repository README: https://github.com/Joenasriani/thecomposersprompt/blob/main/README.md
-- Edition and component authority: https://github.com/Joenasriani/thecomposersprompt/blob/main/COMPONENTS.md
-- Interactive-edition citation metadata: https://github.com/Joenasriani/thecomposersprompt/blob/main/CITATION.cff
-- Interactive application and embedded manuscript: https://github.com/Joenasriani/thecomposersprompt/blob/main/interactive/index.html
-- Interactive lesson sources: https://github.com/Joenasriani/thecomposersprompt/tree/main/interactive/lessons
-- Interactive live site: https://thecomposersprompt-lab.vercel.app/
+## Separate official academic/publication records
+- Zenodo Book: https://doi.org/10.5281/zenodo.23689714 (v1.0.0; concept DOI https://doi.org/10.5281/zenodo.23689713). Record was verified as published on 6 November 2026; hosted PDF binary parity not checked.
+- Harvard Dataverse independent educational reference dataset: https://doi.org/10.7910/DVN/STHUVV (released v1.1, CC BY 4.0 as of 4 November 2026). This is not the book PDF.
+- ResearchGate: https://www.researchgate.net/publication/417607181_The_Composer%27s_Prompt_Music_Theory_and_Harmony_for_Computational_Music_Prompting – public distribution listing checked on 7 November 2026; PDF checksum not verified.
+- External-status evidence and other destinations: https://github.com/Joenasriani/thecomposersprompt/blob/main/docs/EXTERNAL_PLATFORM_RECONCILIATION_2026-11-06.md
 
-## Content map
-The interactive reader's `interactive/index.html` contains a JSON `script` element with id `bookdata`. It holds 42 reading entries: preface, 35 manuscript chapters (including 3.5, 28.5, and 31.5), and appendices A–F. Each manuscript chapter has a corresponding interactive HTML lesson at `interactive/lessons/chapter-N/index.html` (decimal chapters use `-5`, for example `chapter-28-5`). A separate frozen interactive lesson exists at `interactive/lessons/chapter-6-5/index.html`.
-
-Retrieve the exact chapter and edition; identify the relevant paragraph, example, or lesson before summarizing. Attribute to J. Nasr, include the chapter and source URL, and distinguish musical-theory exposition from unverified behavior of third-party generative tools.
-
-## Final-edition release identity
-- Locked PDF: https://github.com/Joenasriani/thecomposersprompt/blob/main/book/The_Composers_Prompt_Joe_Nasr.pdf
-- Verified source and archive Git blob SHA: `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`
-- Archive copy: https://github.com/Joenasriani/books_finals/blob/main/The_Composers_Prompt/The_Composers_Prompt_Joe_Nasr.pdf
-- Final release lock: https://github.com/Joenasriani/thecomposersprompt/blob/main/book/FINAL_RELEASE_LOCK.json
-- Free interactive companion: https://thecomposersprompt-lab.vercel.app/
-- Final PDF delivery is generated directly from the checksum-locked file in `book/`. The interactive application is separate, and does not contain the final book PDF.
-
-## External publication records and status (2026-11-06)\n- Zenodo final PDF Book (v1.0.0), verified from author screenshots: https://doi.org/10.5281/zenodo.23689714 – creator displayed Nasr, Joe; citation is Nasr, J. (2026). This is the final PDF, **not** the CC BY interactive workbook. File checksum not independently checked against GitHub.\n- ORCID: https://orcid.org/0009-0004-5698-9097 – current works synchronization not rechecked.\n- ResearchGate Book: PUBLICLY VERIFIED 7 November 2026, publication ID 417607181, https://www.researchgate.net/publication/417607181_The_Composer%27s_Prompt_Music_Theory_and_Harmony_for_Computational_Music_Prompting – author shown as Joseph Nasr (same person as Joe Nasr); Book, October 2026, same Zenodo DOI 10.5281/zenodo.23689714, public full-text PDF. The ResearchGate-hosted PDF checksum has not been independently compared with the locked GitHub original. Earlier upload errors and temporary restriction are historical.\n- Google Play Books: two titles visible in Partner Center while account preliminary review pending; no public listing/indexing claim.\n- Harvard Dataverse: candidate preparation in this repository remains NOT READY, with external claimed submission unresolved.\n- See docs/EXTERNAL_PLATFORM_RECONCILIATION_2026-11-06.md for dated evidence and verification limits.\n\n## Rights
-The separately finalized PDF, `book/The_Composers_Prompt_Joe_Nasr.pdf`, is free to read but copyright protected; see its publication metadata and rights notice. Applicable previously licensed interactive workbook materials are governed by the repository's CC BY 4.0 license. This file does not expand any permission, permit unauthorized reproduction of the final PDF, or guarantee search-engine/AI indexing.
+## Attribution, licensing, verification
+- Book publication credit: J. Nasr. Copyright holder: Joseph Ribal Nasr. Final PDF © 2026 all rights reserved, free to read; not licensed CC BY 4.0.
+- Existing previously licensed interactive workbook material retains applicable CC BY 4.0 rights. Rights to third-party sources are separate.
+- Cite the *exact* chapter, edition, source URL and date. A prompt or written chord specification is not verified generated audio. Do not claim independent scientific/music-theoretical, browser/audio, external asset, or indexing validation without evidence.
