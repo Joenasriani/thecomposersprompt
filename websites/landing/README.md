@@ -24,3 +24,7 @@ The book is published free to read and copyright protected, © 2026 Joseph Ribal
 - Protect the locked PDF, publication metadata, unrelated root workbook, `stage1/`, deposits and live Lab.
 
 See [COMPONENTS.md](../../COMPONENTS.md), [publication.json](../../publication.json), and [AI_HANDOFF.md](../../AI_HANDOFF.md).
+
+## Interactive Lab cross-reference – latest verified release (13 November 2026)
+
+The **separate** Interactive Lab is https://thecomposersprompt-lab.vercel.app/, Vercel READY production deployment `dpl_2vKCJyC4DpSGfbcRAHRFpuXbonmf` from Git commit `6621f9e1afd0f147ad104a222b1bab0c3c118e2a`. Its deployed Git source includes Chapter 33 in the embedded reader and dedicated `interactive/lessons/chapter-33/index.html` lesson, completing **37/37** standalone lesson sources. This does not change the authority, deployment, rights or build of this **separate workstream**. Focused Chapter 33 source checks passed, while full browser, audio and PDF-figure fidelity remain unverified. Consult [repository AI handoff](../../AI_HANDOFF.md) for current operational precedence; do not infer a new deployment solely from later documentation commits.
