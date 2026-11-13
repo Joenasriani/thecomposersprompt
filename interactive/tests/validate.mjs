@@ -96,7 +96,16 @@ for(const chapter of lessonIndex.chapters){
  const present=existsSync(resolve(root,'lessons',chapter.id,'index.html'));
  assert.equal(chapter.status,present?'source-present-qa-not-rechecked':'missing-source','Chapter inventory/source mismatch: '+chapter.id);
 }
-assert.equal(lessonIndex.chapters.filter(c=>c.status==='source-present-qa-not-rechecked').length,36,'36 chapter source pages expected at this audited baseline');
-assert.equal(lessonIndex.chapters.find(c=>c.id==='chapter-33')?.status,'missing-source','Chapter 33 is an explicit unresolved source gap');
+assert.equal(lessonIndex.chapters.filter(c=>c.status==='source-present-qa-not-rechecked').length,37,'All 37 chapter source pages expected');
+assert.equal(lessonIndex.chapters.find(c=>c.id==='chapter-33')?.status,'source-present-qa-not-rechecked','Chapter 33 lesson source required');
 assert.match(read('lessons/lesson-runtime.js'),/validateExamples/,'Renderer must verify section/example parity');
 assert.match(read('vercel.json'),/"deploymentEnabled": false/,'Vercel must remain manual-only');
+
+// Final-book Chapter 33 must appear in both the embedded manuscript reader and the standalone learning path.
+const chapter33=read('lessons/chapter-33/index.html');
+assert.match(chapter33,/33\.12 Chapter summary/,'Chapter 33 final module missing');
+assert.match(chapter33,/id="reference-piano"/,'Chapter 33 keyboard missing');
+assert.match(chapter33,/src="\.\.\/chapter-reference\.js"/,'Chapter 33 must use shared lesson renderer');
+const bookdata=JSON.parse((home.match(/<script id="bookdata" type="application\/json">([\s\S]*?)<\/script>/)||[])[1]||'[]');
+assert.equal(bookdata.filter(x=>/^Chapter 33:/.test(x.title)).length,1,'Chapter 33 must be in the reader exactly once');
+assert.equal(bookdata.length,43,'43 reader entries including Chapter 33');
