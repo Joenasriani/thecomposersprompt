@@ -1,30 +1,26 @@
-# Final-book landing website
+# The Composer's Prompt – final-book landing website
+**Last reconciled:** 2026-11-13. **This is NOT the Interactive Lab.**
 
-**Source:** `websites/landing/index.html`  
-**Build:** `node websites/landing/build.mjs` from repository root  
-**Output:** `websites/landing/dist/` (generated, not authoritative)  
-**Vercel project:** `thecomposersprompt-book`  
-**Branch:** `main`  
-**Production domain:** https://thecomposersprompt-book.vercel.app/  
-**Vercel project:** `prj_kldrSI2Wa72Gpm8ivIe150gDzfGu`  
-**Verified production deployment:** `dpl_BStkZdpEjdNpRf6SQVV3bgMd462e` (READY; commit `97703f4e0e521a14befd3057cf723188a7310a8b`)
+## Production and source
+- **Approved landing:** https://thecomposersprompt-book.vercel.app/
+- **Vercel project:** `thecomposersprompt-book` (`prj_kldrSI2Wa72Gpm8ivIe150gDzfGu`)
+- **Verified READY production deployment:** `dpl_3cFPGj37kjYai5cxMwJvsr2ZVeVk` at source Git SHA `56f7ffe9f2f18ca2c05e06f9e633e12e9b0dc137`.
+- **Source:** `websites/landing/index.html`, build script `websites/landing/build.mjs`.
+- **Build:** from repository root `node websites/landing/build.mjs`.
+- **Generated output:** `websites/landing/dist/`, not a new or authoritative book edition.
+- **Legacy source:** `book/index.html` retained for compatibility; do not treat it as primary.
+- **Separate approved Lab:** https://thecomposersprompt-lab.vercel.app/, owned by `interactive/`.
 
-The canonical final PDF remains `book/The_Composers_Prompt_Joe_Nasr.pdf` with Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`. Build copies the current final source to the stable public URL `The_Composers_Prompt_Joe_Nasr.pdf` only after verifying its Git blob SHA. It never changes the authoritative source. Do not commit `dist/` outputs as new publication versions.
+## Locked final PDF
+The exact author-uploaded **159-page** final PDF has Git blob SHA `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`, matching `book/The_Composers_Prompt_Joe_Nasr.pdf`. Chapter 33 is in the book at printed pp.110–122. The build checks that source blob before copying the canonical PDF into generated output. Never hand-edit/re-export the protected PDF or commit generated `dist/` output as a new edition.
 
-**Legacy landing HTML:** `book/index.html` is superseded as the standalone landing source, but intentionally retained until cross-project deployment review. The root `index.html` and `stage1/` belong to the separate interactive edition and must not be changed by this workstream.
+The book is published free to read and copyright protected, © 2026 Joseph Ribal Nasr, all rights reserved. The existing CC BY 4.0 license for previously licensed interactive material does not automatically license this PDF.
 
-**Verification:** Vercel deployment READY; domain assignment verified through Vercel. Public HTTP, responsive visual QA, actual PDF request and bookstore publication remain NOT RECHECKED or BLOCKED until tested. No PayPal.
+## Delivery and verification
+- Vercel production metadata: **READY**, domain assigned.
+- **NOT RECHECKED:** actual public page/browser rendering, generated/served PDF checksum, all responsive views, click-through download, and external platform byte identity. READY is not an audio/functional/download test.
+- The landing build emits SEO `robots.txt` and `sitemap.xml` and uses the approved cover assets.
+- A separate voluntary **Support the Work** link `https://www.paypal.com/ncp/payment/CPDJMD3HV9D6Y` exists in landing source; it does not gate downloading the free book and is not checkout product identity. No PayPal transaction test was performed or authorized.
+- Protect the locked PDF, publication metadata, unrelated root workbook, `stage1/`, deposits and live Lab.
 
-See `../../COMPONENTS.md` and `../../publication.json`.
-
-## SEO and voluntary support
-
-The landing build emits `robots.txt` and `sitemap.xml` from the canonical landing URL and serves the original approved WebP/PNG cover files. `websites/landing/index.html` includes a separate voluntary **Support the Work** link to `https://www.paypal.com/ncp/payment/CPDJMD3HV9D6Y`. This contribution link is not the publication checkout, does not gate the PDF, and must not be copied into the bookstore's `checkout` identity or paid-product records. No payment test is authorized. The book remains free to read and download.
-
-**Status:** Vercel production deployment READY for the version containing the free interactive companion. Public HTTP, PDF bytes served, and responsive visual QA remain NOT RECHECKED. The generated PDF uses the exact canonical filename and checksum-locked source.
-
-**Interactive companion:** https://thecomposersprompt-lab.vercel.app/ (independent of the final PDF edition).
-
-## Live deployment source reconciliation – 13 November 2026
-
-Vercel production deployment `dpl_cLuDumpxxwNSyvghf4maQDXnckCx` reports **READY**, production domain `thecomposersprompt-book.vercel.app`, Git branch `main` and source commit `9018ccce7f71844a948383ef6a8e049b46228169`. GitHub compare at the audit anchor showed that commit was identical to `main`. This supersedes the older READY deployment `dpl_BStkZdpEjdNpRf6SQVV3bgMd462e` cited above. Later documentation-only commits do not prove a new deployed build. Public page content, mobile/breakpoint quality, served PDF bytes and external downloads were **not** independently retested in this audit. Protected PDF and build rules remain unchanged. See [cross-workstream handoff](../../AI_HANDOFF.md).
+See [COMPONENTS.md](../../COMPONENTS.md), [publication.json](../../publication.json), and [AI_HANDOFF.md](../../AI_HANDOFF.md).
