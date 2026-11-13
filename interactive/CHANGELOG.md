@@ -61,3 +61,10 @@ These are source-history summaries, not proof of independently checked browser b
 - Corrected active README, manifest, chapter inventory/progress, QA documentation and handoffs without editing final book or interactive runtime.
 - Chapter 33 standalone HTML remains missing in the approved Lab source and current GitHub; investigate integrated reader and desired chapter UX before creating anything.
 - No deployment, browser/audio acceptance, external PDF checksum or publication action performed.
+
+## 2026-11-13 – Chapter 33 lesson source added
+- Added final-book Chapter 33 (printed pp.110–122) as `lessons/chapter-33/index.html`, preserving existing chapter design and shared chapter-reference piano runtime.
+- Added it to `interactive/index.html` embedded reader; existing generated chapter navigation links to it automatically.
+- Updated inventory and validation expectations: **37 of 37 chapter HTML sources now present**.
+- The new lesson contains curated scale formulas, comparisons, prompts and exercises grounded in the locked book; not yet fully figure-/text-parity audited.
+- **Not deployed:** canonical Vercel Interactive Lab remains on pre-Chapter-33 source. Browser, audio, mobile and test execution require verification before release claims.
