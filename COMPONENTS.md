@@ -6,7 +6,8 @@ This repository contains **different artifacts and workflows**, not interchangea
 | --- | --- | --- | --- | --- |
 | Final book | `book/The_Composers_Prompt_Joe_Nasr.pdf` | Immutable, 159-page PDF | Book release | FINAL LOCKED |
 | Release metadata | `publication.json` and `book/FINAL_RELEASE_LOCK.json` | Final book identity and checksum | Book release | FINAL LOCKED |
-| Interactive workbook | root `index.html` | Existing self-contained interactive edition | Interactive website | SEPARATE EDITION |
+| Root interactive workbook | root `index.html` | Historical self-contained workbook / GitHub Pages source | Interactive website | SEPARATE SOURCE, not canonical Lab |
+| Interactive Lab | `interactive/index.html` and `interactive/lessons/` | Canonical source of the user-approved Vercel interactive experience | Interactive website | GIT RUNTIME SOURCE MATCHES DEPLOYED COMMIT, FULL LIVE QA UNVERIFIED |
 | Interactive experiment | `stage1/` | Vite-based experimental interface | Interactive website | WORK IN PROGRESS |
 | Editorial prototype | `prototype/` | Prototype, not final PDF or live landing | Interactive website | PROTOTYPE |
 | Book landing page | `websites/landing/index.html` | Standalone source, built with locked PDF copied into deploy output | Landing-page workstream | LIVE PAGE HTTP 200 (2026-11-06); DOWNLOAD HASH UNCHECKED |
@@ -37,3 +38,11 @@ The website build and interactive application reference the single canonical loc
 - Zenodo: read `deposits/zenodo/README.md`; isolate deposit-specific material.
 - Harvard Dataverse: read `deposits/harvard-dataverse/README.md`; isolate deposit-specific material.
 - Landing: read `websites/landing/README.md`; validate the deployment root before moving the HTML.
+
+## Verified final-reference reconciliation – 13 November 2026
+
+- **Approved final book:** author-uploaded 159-page `The_Composers_Prompt_Joe_Nasr.pdf`, Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`, byte-identical to the existing locked repository PDF. Chapter 33 exists in the book on printed pages 110–122 (PDF pages 115–127).
+- **Approved interactive experience:** https://thecomposersprompt-lab.vercel.app/ . Vercel production is READY from commit `8b249db74ec865ccc69c14180c098ab7ec9293a0`. Compared with the pre-documentation GitHub head `9018ccc`, **no changes occurred in interactive lesson HTML, audio engines, or application layout files**. The 92 intervening commits include documentation, an inventory JSON change, an interactive validation test change, and other book/publication work. Therefore application runtime source was not blindly copied or overwritten. Actual served HTML/assets, browser QA, and mobile/audio operation remain NOT RECHECKED.
+- **Chapter 33:** the matching standalone lesson file is absent from current GitHub main **and** the production deployment's source commit. Do not claim every final-book chapter has an HTML lesson or generate an unapproved replacement.
+- **Approved final-book landing:** https://thecomposersprompt-book.vercel.app/ . Production deployment `dpl_3cFPGj37kjYai5cxMwJvsr2ZVeVk` is READY and reports Git source commit `56f7ffe9f2f18ca2c05e06f9e633e12e9b0dc137`; this is a documentation-only commit, not a claim of new book content.
+- Full evidence/limits are in [AI_HANDOFF.md](AI_HANDOFF.md). No application deployment, protected PDF edit, license change, or publication upload made during reconciliation.
