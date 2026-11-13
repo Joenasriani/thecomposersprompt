@@ -1,3 +1,5 @@
+> **Chapter 33 implementation (13 November 2026):** The final 159-page PDF contains Chapter 33. A matching standalone lesson and embedded reader entry now exist in GitHub `main`, completing the **37/37 lesson source inventory**. The current live Vercel Lab has **not** been redeployed and full interactive QA remains pending. This supersedes earlier 'Chapter 33 missing' notes below.
+
 > **Final approved artifacts verified 13 November 2026:** The uploaded 159-page final PDF exactly matches the locked GitHub PDF blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`; Chapter 33 exists in its printed pages 110–122. The approved live Interactive Lab is [thecomposersprompt-lab.vercel.app](https://thecomposersprompt-lab.vercel.app/). Its deployed Git source has no intervening lesson HTML or application layout/audio source changes up to the audited application-source head; **the Chapter 33 standalone lesson HTML is missing in both Git refs**, and actual browser/live byte QA is not complete. [Authoritative AI handoff](AI_HANDOFF.md).
 
 > **Earlier deployment/source audit (13 November 2026):** [Repository-wide AI handoff](AI_HANDOFF.md) documents verified GitHub/Vercel deployment identities and outstanding QA. The book landing's production deployment matches the audited application-source commit `9018ccc` (documentation-only commits after that audit do not constitute new application releases); the interactive lab's production deployment is **92 commits behind that source baseline**, but commit comparison shows **no intervening changes to lesson HTML, app layout, or audio runtime sources**. The difference includes documentation, inventory/test edits and other book work; do not imply 92 missing app changes. No application deployment was performed in this audit.
@@ -50,7 +52,7 @@ Then visit `http://localhost:8000`.
 | Component | Scope |
 | --- | --- |
 | Complete manuscript | 42 reading sections, including preface, numbered and supplementary chapters, and six appendices |
-| Interactive chapters | 37 inventory chapter entries (including .5 chapters), 36 identified standalone HTML lesson pages; Chapter 33 standalone page absent |
+| Interactive chapters | 37 inventoried chapter entries and 37 standalone HTML lesson sources, including newly added Chapter 33 (deployment pending) |
 | Supplementary practice | 11 listening and composition rooms |
 | Musical demonstrations | Playable keyboards, note and root indicators, chord/bass displays and synthesized playback |
 | Composition workflow | Editable, copyable briefs and prompts; arrangement planning; listening journal |
