@@ -16,3 +16,7 @@
 | Rights | Preserve reserved-rights locked book and existing CC BY interactive grant; audit third-party notices | **GUARDRAIL ACTIVE; specific notices NOT RECHECKED** |
 
 An HTML page, historical CI pass, or HTTP 200 is not browser acceptance. No production deployment is authorized by this audit.
+
+## New implementation, acceptance pending – 13 November 2026
+
+Chapter 33 is now SOURCE PRESENT in both the dedicated lesson route and the embedded reader; the source inventory is 37/37. Earlier missing-source statuses in the historical matrix above are superseded. New validation assertions added to `tests/validate.mjs`; test execution, audio notation, browser viewport QA, exact chapter text/figure parity and production promotion remain NOT RECHECKED. Do not claim live availability before Vercel deployment and checks.
