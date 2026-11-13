@@ -1,5 +1,10 @@
-# Interactive chapter progress – source inventory (2026-11-07)
+# Interactive chapter progress – approved-final reconciliation (2026-11-13)
 
-**Authority:** [DEVELOPMENT_HANDOFF.md](DEVELOPMENT_HANDOFF.md). Historical register: [archive](archive/historical-guidance/2026-11-07/CHAPTER_PROGRESS.md).
+**Authority:** [DEVELOPMENT_HANDOFF.md](DEVELOPMENT_HANDOFF.md). [Historical progress, 2026-11-07](archive/historical-guidance/2026-11-07/CHAPTER_PROGRESS.md).
 
-`lessons/chapter-inventory.json` lists 37 chapter identifiers; **36** have a corresponding `lessons/chapter-*/index.html` in GitHub main at `82da54fef00ee928677c92436c6e450860452665`. Chapter **33** is missing. Chapters 1–5 were earlier described as pilots, and 6.5 as a specialized reference lesson; later pages are source-present, **not** independently certified for lesson completeness, book fidelity, audio, browser QA or production delivery. Do not interpret old `not-implemented` statuses as absence of source; do not interpret HTML presence as release PASS. See the JSON register for per-chapter source status.
+- The exact final 159-page PDF has **Chapter 33 – Advanced Scales, Modes & Computational Composition**, printed pages **110–122**, physical PDF pages **115–127**.
+- `lessons/chapter-inventory.json` contains **37** chapter IDs. The previous audited Git tree contained **36** standalone chapter HTML files; `lessons/chapter-33/index.html` is absent in both the deployed production Git source `8b249db` and current `main`.
+- The 36 HTML pages are **SOURCE PRESENT only**, not independently certified for chapter parity, music/theory correctness, audio, browser, accessibility, responsiveness or release acceptance.
+- Check the integrated app reader's manuscript content before declaring Chapter 33 unavailable to users. Do not fabricate a standalone lesson to hide an inventory discrepancy.
+- The approved live Lab is https://thecomposersprompt-lab.vercel.app/ . Compared with deployed Git source, audited application-source commit `9018ccc` has no intervening lesson HTML, app homepage, layout, or music/audio runtime source differences. Browser/served-file parity is NOT RECHECKED.
+- Specialized Chapter 6.5 lesson and earlier Chapter 1–5 pilot descriptions remain contextual, not an acceptance certificate.
