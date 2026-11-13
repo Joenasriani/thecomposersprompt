@@ -32,3 +32,7 @@ Open the local URL printed by Vite. For production compilation, run `npm run bui
 - VexFlow: MIT https://github.com/vexflow/vexflow/blob/main/LICENSE
 
 The project workbook uses CC BY 4.0, whereas these third-party libraries retain their respective MIT licenses; preserve dependency license notices when distributing bundled assets.
+
+## Approved-final relationship – 2026-11-13
+
+This `stage1/` mini-project remains **experimental and independent**, not the author-approved live Interactive Lab. The approved interactive production reference is https://thecomposersprompt-lab.vercel.app/ (source `interactive/`); the authoritative final book is the locked, independently verified 159-page PDF under `book/`. Do not promote this Vite experiment into `interactive/` or publish its `dist/` in place of the approved app without a separately accepted design and QA review. No experiment build or browser QA was performed during the 13 November documentation reconciliation.
