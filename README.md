@@ -1,8 +1,4 @@
-> **Chapter 33 implementation (13 November 2026):** The final 159-page PDF contains Chapter 33. A matching standalone lesson and embedded reader entry now exist in GitHub `main`, completing the **37/37 lesson source inventory**. The current live Vercel Lab has **not** been redeployed and full interactive QA remains pending. This supersedes earlier 'Chapter 33 missing' notes below.
-
-> **Final approved artifacts verified 13 November 2026:** The uploaded 159-page final PDF exactly matches the locked GitHub PDF blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`; Chapter 33 exists in its printed pages 110–122. The approved live Interactive Lab is [thecomposersprompt-lab.vercel.app](https://thecomposersprompt-lab.vercel.app/). Its deployed Git source has no intervening lesson HTML or application layout/audio source changes up to the audited application-source head; **the Chapter 33 standalone lesson HTML is missing in both Git refs**, and actual browser/live byte QA is not complete. [Authoritative AI handoff](AI_HANDOFF.md).
-
-> **Earlier deployment/source audit (13 November 2026):** [Repository-wide AI handoff](AI_HANDOFF.md) documents verified GitHub/Vercel deployment identities and outstanding QA. The book landing's production deployment matches the audited application-source commit `9018ccc` (documentation-only commits after that audit do not constitute new application releases); the interactive lab's production deployment is **92 commits behind that source baseline**, but commit comparison shows **no intervening changes to lesson HTML, app layout, or audio runtime sources**. The difference includes documentation, inventory/test edits and other book work; do not imply 92 missing app changes. No application deployment was performed in this audit.
+> **Current verified Interactive Lab release – 13 November 2026:** [Live Lab](https://thecomposersprompt-lab.vercel.app/) – **READY**, Vercel production deployment `dpl_2vKCJyC4DpSGfbcRAHRFpuXbonmf`, source commit `6621f9e1afd0f147ad104a222b1bab0c3c118e2a`. GitHub `main` was verified **identical** to that deployed commit immediately after release. Chapter 33 is included in the embedded manuscript/navigation and has a standalone lesson at [interactive/lessons/chapter-33/](interactive/lessons/chapter-33/); all **37/37** inventoried lesson pages are source-present. The final book is the separately locked **159-page** PDF, and Chapter 33 appears on printed pages 110–122. Focused Chapter 33 static audit **9/9 checks passed**. Vercel build and alias assignment passed. Full browser/mobile/audio, accessibility and figure-by-figure book parity remain **NOT VERIFIED**. [Current AI handoff](AI_HANDOFF.md).
 
 > **Live-verified publications – 6 November 2026:** Final protected Book *The Composer's Prompt* is [PUBLISHED at Zenodo](https://zenodo.org/records/23689714), DOI [10.5281/zenodo.23689714](https://doi.org/10.5281/zenodo.23689714), version 1.0.0; [10.5281/zenodo.23689713](https://doi.org/10.5281/zenodo.23689713) is the **concept DOI for the same book**. The separate educational reference [Harvard Dataverse dataset](https://doi.org/10.7910/DVN/STHUVV) is **PUBLISHED, RELEASED v1.1** as of 4 November 2026. Both official APIs returned HTTP 200. The [book landing](https://thecomposersprompt-book.vercel.app/) and [interactive companion](https://thecomposersprompt-lab.vercel.app/) also returned HTTP 200; this does not certify audio/browser behavior or downloadable PDF hashes. See [live status audit](docs/EXTERNAL_PLATFORM_RECONCILIATION_2026-11-06.md).
 
@@ -52,13 +48,13 @@ Then visit `http://localhost:8000`.
 | Component | Scope |
 | --- | --- |
 | Complete manuscript | 43 reading entries, including preface, numbered and supplementary chapters, and six appendices |
-| Interactive chapters | 37 inventoried chapter entries and 37 standalone HTML lesson sources, including newly added Chapter 33 (deployment pending) |
+| Interactive chapters | 37 inventoried chapter entries and 37 standalone HTML lesson sources, including Chapter 33 (deployed in the verified release) |
 | Supplementary practice | 11 listening and composition rooms |
 | Musical demonstrations | Playable keyboards, note and root indicators, chord/bass displays and synthesized playback |
 | Composition workflow | Editable, copyable briefs and prompts; arrangement planning; listening journal |
 | Reading tools | Searchable chapter contents and browser-local reading progress |
 
-The manuscript develops ideas from intervals, scales and modes through harmonic function, chromaticism, modulation, arrangement and evaluation of generated material. The final PDF contains **Chapter 33** (printed pages 110–122). The interactive chapter inventory names **37 chapters**, but only **36 standalone lesson HTML pages** were identified; the Chapter 33 lesson is absent from both the deployed source commit and current GitHub main. The complete interactive lesson coverage and browser/audio acceptance are **not** certified. The frozen **Chapter 6.5** is a separate interactive reference, while the eleven listening rooms remain supplementary demonstrations.
+The manuscript develops ideas from intervals, scales and modes through harmonic function, chromaticism, modulation, arrangement and evaluation of generated material. The final PDF contains **Chapter 33** (printed pages 110–122). The interactive chapter inventory lists **37 chapters**, and all **37 standalone lesson HTML sources** exist, including Chapter 33 in the production source. The complete interactive lesson coverage and browser/audio acceptance are **not** certified. The frozen **Chapter 6.5** is a separate interactive reference, while the eleven listening rooms remain supplementary demonstrations.
 
 ### Interactive practice rooms
 
@@ -88,7 +84,7 @@ This repository provides explicit, inspectable entry points for readers, search 
 | Publication metadata | [`publication.json`](publication.json) | Final PDF identity, authorship, access, deployment metadata |
 | Citation metadata | [`CITATION.cff`](CITATION.cff) | Citation for the developing interactive edition |
 | Component authority | [`COMPONENTS.md`](COMPONENTS.md) | Distinguish the final PDF, interactive edition, and separate web properties |
-| Complete interactive manuscript | [`interactive/index.html`](interactive/index.html) | Embedded `bookdata` JSON: 43 reading entries (preface, 35 chapters, six appendices) |
+| Complete interactive manuscript | [`interactive/index.html`](interactive/index.html) | Embedded `bookdata` JSON: 43 reading entries (preface, 36 numbered/supplementary chapter readings, six appendices) |
 | Interactive lessons | [`interactive/lessons/`](interactive/lessons/) | Chapter-specific HTML and musical demonstrations |
 | Final protected PDF | [`book/The_Composers_Prompt_Joe_Nasr.pdf`](book/The_Composers_Prompt_Joe_Nasr.pdf) | Separate final book, subject to its own rights notice |
 
