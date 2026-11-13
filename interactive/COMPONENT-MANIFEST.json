@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "workstream": "interactive",
   "applicationTitle": "The Composer’s Prompt",
-  "updated": "2026-11-07",
+  "updated": "2026-11-13",
   "productionIntendedEntry": "interactive/index.html (Vercel project root interactive/)",
   "migrationState": "modern interactive homepage; older workbook removed from application, retained by Git history",
   "manifestScope": "interactive-owned sources only",
@@ -140,12 +140,17 @@
       "rootDirectory": "interactive",
       "framework": null,
       "lastCheckedBranch": "main",
-      "lastReadyGitSha": "728d4354cdfb8ffd95e56a055222631e69180094",
-      "status": "Manual-only per interactive/vercel.json; current live deployment SHA/browser QA NOT VERIFIED 2026-11-07"
+      "lastReadyGitSha": "8b249db74ec865ccc69c14180c098ab7ec9293a0",
+      "status": "READY deployment metadata verified 2026-11-13; current audited main source 92 commits ahead; app NOT synchronized; browser/audio/QA NOT RECHECKED; manual deployment only",
+      "lastReadyDeploymentId": "dpl_Bbnd2LEmpTCf6jofU5KPqvNYQ6Ln",
+      "githubComparisonBaseline": "9018ccce7f71844a948383ef6a8e049b46228169",
+      "githubAheadOfProductionCommits": 92
     },
     "bookLanding": {
       "project": "thecomposersprompt-book",
-      "status": "separate; excluded from this workstream"
+      "deploymentId": "dpl_cLuDumpxxwNSyvghf4maQDXnckCx",
+      "gitSha": "9018ccce7f71844a948383ef6a8e049b46228169",
+      "status": "Separate workstream. Production READY at source audit anchor, PDF bytes/browser unverified."
     }
   },
   "gates": {
