@@ -52,3 +52,7 @@
 
 ## Evidence and audit limits
 2026-11-13 inspection used local author-uploaded PDF, file page inspection and Git blob hash; GitHub direct file reads and comparisons; Vercel deployment/project metadata. Direct public browser fetch returned cache/access errors; no full automated Git-tree enumeration, npm/browser audio tests, or served-file checksum was completed. Older status claims remain historical and must not be promoted to currently verified PASS.
+
+## Chapter 33 implemented in GitHub source – 2026-11-13
+
+Author requested adding Chapter 33 to the existing interactive lessons. Created `interactive/lessons/chapter-33/index.html` based on the locked 159-page final PDF, and added it to `interactive/index.html` embedded reader source. The existing data-driven chapter navigation now includes it. `interactive/lessons/chapter-inventory.json` reports **37/37 standalone chapter HTML pages SOURCE PRESENT**. Earlier 36/37 and absent Chapter 33 descriptions above are pre-implementation history. The new lesson uses the shared chapter-reference/keyboard/audio framework. **Full source-to-PDF text and figure parity, browser/mobile/audio/notation acceptance, reproducible test execution and live Vercel deployment remain NOT RECHECKED**. The author-approved existing production was not overwritten or redeployed.
