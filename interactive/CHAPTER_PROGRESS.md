@@ -8,3 +8,7 @@
 - Check the integrated app reader's manuscript content before declaring Chapter 33 unavailable to users. Do not fabricate a standalone lesson to hide an inventory discrepancy.
 - The approved live Lab is https://thecomposersprompt-lab.vercel.app/ . Compared with deployed Git source, audited application-source commit `9018ccc` has no intervening lesson HTML, app homepage, layout, or music/audio runtime source differences. Browser/served-file parity is NOT RECHECKED.
 - Specialized Chapter 6.5 lesson and earlier Chapter 1–5 pilot descriptions remain contextual, not an acceptance certificate.
+
+## Chapter 33 added – 13 November 2026
+
+The earlier missing-page statement above is superseded: the repository now has **37/37** standalone lesson HTML pages, and the embedded reader includes Chapter 33. The dedicated page uses the existing reference-piano/audio lesson framework and presents A-reference scale formulas, comparisons, exercises and prompt studies sourced from the locked final book. These are **source-present**, not full fidelity, audio or live browser acceptance. The Vercel production version has not been redeployed.
