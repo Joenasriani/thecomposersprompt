@@ -35,7 +35,8 @@ const tasks={
 '30':{heading:'Udio constraint audit',question:'What is needed before trusting a structural prompt?',answers:['Listen for the requested section behavior','Assume the token is obeyed','Check only output duration'],correct:0,why:'Section and arrangement behavior require inspection.'},
 '31':{heading:'Cross-tool translation',question:'What should remain invariant across tools?',answers:['Underlying musical intent and testable constraints','Every interface keyword','The output filename'],correct:0,why:'Translate the specification, then adapt syntax to each tool.'},
 '31-5':{heading:'Tool-landscape comparison',question:'What provides a fair tool comparison?',answers:['Same brief and explicit acceptance criteria','Different unrelated prompts','Promotional feature claims only'],correct:0,why:'A consistent task and criteria separate differences in execution.'},
-'32':{heading:'Capstone diagnostic',question:'What completes a full musical specification study?',answers:['Brief, generated result, evidence and revision','Prompt text alone','A genre label'],correct:0,why:'A complete study compares a designed specification with actual musical output.'}
+'32':{heading:'Capstone diagnostic',question:'What completes a full musical specification study?',answers:['Brief, generated result, evidence and revision','Prompt text alone','A genre label'],correct:0,why:'A complete study compares a designed specification with actual musical output.'},
+'33':{heading:'Advanced scale comparison',question:'Which pitch distinguishes A Dorian from A Aeolian when A remains the reference pitch?',answers:['F-sharp versus F natural','G-sharp versus G natural','C-sharp versus C natural'],correct:0,why:'Both collections contain A B C D E G; A Dorian uses F-sharp while A Aeolian uses F natural. This is a written comparison, not proof of generated audio.'}
 };
 export function buildPractice(chapter){
  const lesson=tasks[chapter];if(!lesson)return;
