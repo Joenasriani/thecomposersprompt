@@ -1,14 +1,12 @@
-# Interactive chapter progress – approved-final reconciliation (2026-11-13)
+# Interactive Lab chapter progress – verified 13 November 2026
 
-**Authority:** [DEVELOPMENT_HANDOFF.md](DEVELOPMENT_HANDOFF.md). [Historical progress, 2026-11-07](archive/historical-guidance/2026-11-07/CHAPTER_PROGRESS.md).
+**Live:** https://thecomposersprompt-lab.vercel.app/ – production deployment `dpl_2vKCJyC4DpSGfbcRAHRFpuXbonmf` from `6621f9e1afd0f147ad104a222b1bab0c3c118e2a`, READY.
 
-- The exact final 159-page PDF has **Chapter 33 – Advanced Scales, Modes & Computational Composition**, printed pages **110–122**, physical PDF pages **115–127**.
-- `lessons/chapter-inventory.json` contains **37** chapter IDs. The previous audited Git tree contained **36** standalone chapter HTML files; `lessons/chapter-33/index.html` is absent in both the deployed production Git source `8b249db` and current `main`.
-- The 36 HTML pages are **SOURCE PRESENT only**, not independently certified for chapter parity, music/theory correctness, audio, browser, accessibility, responsiveness or release acceptance.
-- Check the integrated app reader's manuscript content before declaring Chapter 33 unavailable to users. Do not fabricate a standalone lesson to hide an inventory discrepancy.
-- The approved live Lab is https://thecomposersprompt-lab.vercel.app/ . Compared with deployed Git source, audited application-source commit `9018ccc` has no intervening lesson HTML, app homepage, layout, or music/audio runtime source differences. Browser/served-file parity is NOT RECHECKED.
-- Specialized Chapter 6.5 lesson and earlier Chapter 1–5 pilot descriptions remain contextual, not an acceptance certificate.
+- The machine-readable [chapter inventory](lessons/chapter-inventory.json) has **37 chapter IDs** and **37 standalone source-present HTML lessons**, including supplemental chapters 3.5, 6.5, 28.5 and 31.5.
+- Chapter 33 – **Advanced Scales, Modes & Computational Composition** – is in the locked book on printed pp.110–122. Its [interactive lesson](lessons/chapter-33/index.html), shared piano examples, theory-check module and main reader/navigation entry are in the **deployed Git source**.
+- Main `index.html` embedded reader has **43 entries**: preface, 36 numbered/supplementary chapter readings and six appendices.
+- **Quality status:** 37/37 **SOURCE PRESENT**, *not* 37/37 browser-certified. The focused Chapter 33 static check recorded 9/9 PASS; whole-suite test execution, theory/notation completeness, accessible responsive behavior and audible hardware playback remain unverified.
+- The Chapter 33 lesson is an adaptation of the final PDF and does not replicate every engraved scale figure verbatim.
+- Specialized Chapter 6.5 interactions and the other chapter files are preserved. The auxiliary `chapters.html` pilot index is not the canonical full chapter navigator.
 
-## Chapter 33 added – 13 November 2026
-
-The earlier missing-page statement above is superseded: the repository now has **37/37** standalone lesson HTML pages, and the embedded reader includes Chapter 33. The dedicated page uses the existing reference-piano/audio lesson framework and presents A-reference scale formulas, comparisons, exercises and prompt studies sourced from the locked final book. These are **source-present**, not full fidelity, audio or live browser acceptance. The Vercel production version has not been redeployed.
+Read [active handoff](DEVELOPMENT_HANDOFF.md), [QA](QA-ACCEPTANCE.md), and [history](archive/historical-guidance/README.md). Do not use old “Chapter 33 missing” entries as current status.
