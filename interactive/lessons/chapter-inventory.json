@@ -1,6 +1,6 @@
 {
   "source": "The Composer’s Prompt, final locked 159-page PDF edition (GitHub blob 8a94b66dfe6aa2f4a42c2ddb9925269b117652b7); titles checked against the final PDF contents",
-  "status": "2026-11-13: 37 of 37 chapter lesson HTML files source-present; Chapter 33 now in interactive reader, homepage navigation and dedicated lesson; live deployment/functional/music/audio QA NOT RECHECKED",
+  "status": "2026-11-13: 37/37 standalone chapter lesson HTML sources, including Chapter 33, included in READY Vercel production source commit 6621f9e (dpl_2vKCJyC4DpSGfbcRAHRFpuXbonmf). GitHub main matched this commit at deployment check. Complete browser/audio/accessibility and book-figure parity NOT VERIFIED.",
   "chapters": [
     {
       "number": "1",
@@ -224,5 +224,12 @@
       "title": "Advanced Scales, Modes & Computational Composition",
       "status": "source-present-qa-not-rechecked"
     }
-  ]
+  ],
+  "liveSourceRelease": {
+    "url": "https://thecomposersprompt-lab.vercel.app/",
+    "deploymentId": "dpl_2vKCJyC4DpSGfbcRAHRFpuXbonmf",
+    "gitSha": "6621f9e1afd0f147ad104a222b1bab0c3c118e2a",
+    "state": "READY",
+    "verification": "Vercel metadata and build log; actual browser/audio QA unverified"
+  }
 }
