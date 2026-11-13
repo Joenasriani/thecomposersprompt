@@ -1,50 +1,54 @@
-# The Composer's Prompt – repository-wide AI handoff
-**Audit date:** 2026-11-13. **GitHub main audit anchor:** `9018ccce7f71844a948383ef6a8e049b46228169`.
-**Purpose:** Preserve source/release authority across separate components; do not interpret this document as deployment or browser acceptance.
+# The Composer's Prompt – authoritative repository-wide AI handoff
+**Reconciled:** 2026-11-13. **Repository:** `Joenasriani/thecomposersprompt` (`main`). **Approved final reference artifacts:** author-supplied final locked PDF and https://thecomposersprompt-lab.vercel.app/.
 
-## First read and boundaries
-1. Read `COMPONENTS.md`, `publication.json`, and `book/FINAL_RELEASE_LOCK.json`.
-2. For interactive development, read `interactive/DEVELOPMENT_HANDOFF.md`, `interactive/README.md`, `interactive/COMPONENT-MANIFEST.json`, and `interactive/lessons/chapter-inventory.json`.
-3. For final book landing, read `websites/landing/README.md` and `websites/landing/build.mjs`.
-4. For experiments, consult `stage1/README.md` and `prototype/`; these are **not** automatically deployable production applications.
-5. Deposits under `deposits/` and historical records are separate publication/research workflows. Do not treat superseded readiness reports as current instructions.
+## Non-negotiable authority and source precedence
+1. **Published PDF book:** `book/The_Composers_Prompt_Joe_Nasr.pdf` is immutable. The actual author-uploaded 159-page PDF was compared byte-for-byte using Git blob hashing: `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`, identical to the repository's locked blob. `publication.json` and `book/FINAL_RELEASE_LOCK.json` control the book release v1.0.0. Publication credit **J. Nasr**, copyright © 2026 **Joseph Ribal Nasr**, all rights reserved; free to read, not CC BY 4.0.
+2. **Approved interactive application:** https://thecomposersprompt-lab.vercel.app/ . Git source owned by `interactive/`; active entry `interactive/index.html`, chapters `interactive/lessons/`, music/audio components in `interactive/music/`. Preserve the currently approved interaction design, audio, routing, and lesson sources. Do not replace live-approved source with an older or experimental version.
+3. **Final-book landing:** https://thecomposersprompt-book.vercel.app/ . Source in `websites/landing/` and generated PDF from the locked file; **not** the interactive lab.
+4. **Other internal surfaces:** root `index.html` is a separate historical self-contained workbook / GitHub Pages source; `stage1/` is a Vite work-in-progress; `prototype/` is an editorial prototype. `interactive/experiments/` contains preserved experiments. None is the approved production Lab by default.
+5. **Separate publishing/data surfaces:** `deposits/zenodo/`, `deposits/harvard-dataverse/`, and `docs/EXTERNAL_PLATFORM_RECONCILIATION_2026-11-06.md`. Zenodo Book DOI `10.5281/zenodo.23689714` and Harvard dataset DOI `10.7910/DVN/STHUVV` are independent artifacts. Older deposit readiness documents can be historical.
+6. **Historical operational instructions** are under `interactive/archive/historical-guidance/`, not current authority. Active interactive handoff is `interactive/DEVELOPMENT_HANDOFF.md`. Read that before editing the lab.
 
-## Verified repository and Vercel production mapping
-- GitHub: `Joenasriani/thecomposersprompt`, default branch `main`; compared `9018ccce7f71844a948383ef6a8e049b46228169...main` on 2026-11-13 and found **identical**.
-- Final-book landing: https://thecomposersprompt-book.vercel.app/ – Vercel production deployment `dpl_cLuDumpxxwNSyvghf4maQDXnckCx` was **READY**, sourced from `main` commit `9018ccce7f71844a948383ef6a8e049b46228169`, with the production domain in its aliases. **Commit parity PASS**, but HTTP content, actual PDF response checksum, and browser/mobile QA **NOT RECHECKED** in this audit.
-- Interactive lab: https://thecomposersprompt-lab.vercel.app/ – production deployment `dpl_Bbnd2LEmpTCf6jofU5KPqvNYQ6Ln` was **READY**, sourced from `main` commit `8b249db74ec865ccc69c14180c098ab7ec9293a0`. GitHub compare reports **main ahead by 92 commits** and no commits behind. Therefore **production is NOT source-synchronized**. No interactive deployment performed. Its `interactive/vercel.json` explicitly has `git.deploymentEnabled: false`.
-- **Never equate READY with visual/browser/audio/pass status.** Vercel production commit parity is not file-by-file diff against generated build assets.
+## Confirmed final book PDF
+- Uploaded PDF page count **159**; Git blob SHA matches locked GitHub PDF exactly.
+- The actual final contents and chapter pages contain **Chapter 33 – Advanced Scales, Modes & Computational Composition**. It starts on printed p.110 = PDF page 115, and continues through printed p.122 = PDF page 127. Conclusion begins printed p.123 = PDF page 128.
+- PDF is final and must not be modified or re-exported to “fix” the interactive edition.
+- Publicly served Vercel/Zenodo/ResearchGate PDF checksums were **not** independently compared here. Do not claim external byte-identical delivery.
 
-## Source inventory and release authority
-| Area | Authority | State |
-| --- | --- | --- |
-| Final locked PDF | `book/The_Composers_Prompt_Joe_Nasr.pdf` and lock metadata | Book v1.0.0; immutable source Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`; externally downloaded bytes unverified |
-| Book landing | `websites/landing/` | Production git commit matches main; runtime/served PDF bytes not verified |
-| Interactive lab | `interactive/` | Production 92 main commits behind; source QA and deployment acceptance not established |
-| Root workbook | `index.html` | Separate historical/self-contained interactive edition; not interchangeable with lab |
-| Stage 1 experiment | `stage1/` | Vite experimental build, WIP, no production acceptance |
-| Editorial prototype | `prototype/` | Prototype, not published final book or live landing |
-| Research deposits | `deposits/` | Distinct; preserve published records and rights boundaries |
-| Historical guidance | `interactive/archive/historical-guidance/` | Read-only history, never governing handoff |
+## Actual production provenance (verified Vercel metadata, 2026-11-13)
+| Site | Production deployment | Deployed Git SHA | Result |
+| --- | --- | --- | --- |
+| Interactive Lab | `dpl_Bbnd2LEmpTCf6jofU5KPqvNYQ6Ln` | `8b249db74ec865ccc69c14180c098ab7ec9293a0` | READY / approved destination, browser QA not rechecked |
+| Book landing | `dpl_3cFPGj37kjYai5cxMwJvsr2ZVeVk` | `56f7ffe9f2f18ca2c05e06f9e633e12e9b0dc137` | READY; served PDF bytes not rechecked |
 
-**Interactive chapter discrepancy:** Inventory documents 37 chapter IDs and the 2026-11-07 source audit reported 36 HTML lesson pages; `interactive/lessons/chapter-33/index.html` was independently fetched on 2026-11-13 and returned 404. Do not describe all 37 as delivered. Full 36-page existence and content parity were not independently re-enumerated in this audit.
+**Important correction to the earlier “92 commits behind” wording:** GitHub compare `8b249db...9018ccc` shows 92 commits of difference, but **no file changes to interactive lesson HTML, application layout, piano/audio runtime, or core app index**. Differences in `interactive/` are documentation, the chapter-inventory JSON, and a validation test. Other changes affect book/publication/landing work. This means the inspected Git source for the approved Lab's app runtime remains the same; it does **not** certify runtime-asset byte parity or UI/audio browser behavior. Subsequent documentation-only commits increase SHA distance without changing app runtime.
 
-## Intellectual property and naming
-- The final *The Composer's Prompt: Music Theory and Harmony for Computational Music Prompting* PDF is copyright © 2026 Joseph Ribal Nasr, all rights reserved, free to read; publication credit J. Nasr.
-- Existing separately licensed interactive materials retain their applicable CC BY 4.0 grants. Never imply that the locked PDF inherits CC BY 4.0.
-- The educational book/companion, Vite experiment, website landing, and external datasets must not silently share version numbers, release claims, or licenses.
-- No publication, upload, license change, repository deletion, or production deployment occurred as part of this audit.
+**Deployment control:** `interactive/vercel.json` has `git.deploymentEnabled: false`. Do not change this setting or deploy simply to synchronize commit labels. A documented difference in Git SHA alone is not proof that the approved application is outdated.
 
-## Safe continuation checklist
-1. Recheck GitHub main HEAD and the production deployment ID + SHA for **each** domain; if different, supersede this dated baseline.
-2. Inspect actual app file tree and deployment roots, compare Vercel build/runtime assets against the correct source commit; do not merely compare README text.
-3. Run reproducible tests where possible; separately do desktop/mobile browser, responsive layout, navigation, links, audible audio and music-theory correctness checks. Record commands and results, with NOT RECHECKED when unavailable.
-4. Resolve missing Chapter 33 through source/locked-book parity and editorial acceptance; do **not** generate missing lesson content from assumptions.
-5. Reconcile the root interactive workbook and lab as separate deployments; identify whether the older root Pages site is intentionally supported before modifying it.
-6. Build and test the experimental `stage1/` in isolation; do not merge it into the lab without authorization.
-7. Preserve final PDF checksum, metadata, publications, deposits, CI, and all unrelated functionality. Keep one current interactive handoff at `interactive/DEVELOPMENT_HANDOFF.md`.
-8. Update factual README/status/handoff **after** verified changes. Archive superseded directions rather than keeping conflicting active instructions.
-9. Only deploy the interactive source with explicit deployment authorization, and recheck production aliases and behavior afterwards.
+## Book-to-interactive coverage gap
+- The book has Chapter 33 (verified from the 159-page PDF).
+- `interactive/lessons/chapter-inventory.json` lists **37** chapter IDs; prior inspection identified **36** standalone chapter HTML pages.
+- `interactive/lessons/chapter-33/index.html` returned 404 from both current main and the **actual Lab deployment source commit** `8b249db`. Do not claim Chapter 33 is absent from the final PDF or that all book chapters have standalone lessons.
+- **Status:** open editorial/functional coverage gap, *not* permission to fabricate a lesson or change the approved live UI. Before writing a lesson, inspect the existing homepage reader and routing: Chapter 33 may already have readable manuscript text even without a standalone HTML lesson. Confirm intended chapter-33 UX against book text and the original lab design; obtain verified acceptance before publication.
 
-## Evidence limits for 2026-11-13
-Direct connector checks: GitHub search/repository, README and selected component source files, Git compare, Vercel deployment metadata. No full Git tree enumeration, local npm/Playwright execution, independent mobile QA, audio playback, PDF binary download/checksum, or public-browser HTTP acceptance was completed. Treat these as open, not PASS.
+## Current source state and verification levels
+- **PASS – binary provenance:** final uploaded PDF equals GitHub locked PDF Git blob.
+- **PASS – deployed source comparison:** no intervening changes to `interactive/` app index, lesson HTML, music engines, or layout files between deployed commit and audited source ref `9018ccc`.
+- **PASS – repository docs:** scope, rights, final book contents, URL and deployment metadata reconciled on 2026-11-13.
+- **SOURCE PRESENT (not certified):** 36 previously identified interactive lesson HTML pages.
+- **MISSING SOURCE:** standalone Chapter 33 page.
+- **NOT RECHECKED:** actual Vercel served JS/HTML/PDF bytes; desktop/mobile/touch/audio/notation testing; all-chapter editorial parity; accessibility and complete end-to-end navigation.
+- **NOT TOUCHED:** final PDF bytes, code, audio assets, deployment settings, repository licensing and public publication records. No redeployment.
+
+## Safe AI continuation procedure
+1. Identify exact workstream and latest Git SHA; compare with correct production deployment's Git SHA.
+2. Read `COMPONENTS.md`, appropriate local README, this handoff, then `interactive/DEVELOPMENT_HANDOFF.md` for app work, plus `publication.json`/release lock for book work.
+3. Inspect changed files. Do not infer runtime changes from total commit counts; scope comparisons to app paths and generated outputs.
+4. Verify actual app in browsers at 320 / 375 / 768 / 1024 / 1440 px, light/dark, keyboard/touch/audio, notation/fallback, navigation/deep links, and accessibility. Run recorded `interactive/` tests before calling PASS; distinguish static from real-device tests.
+5. For Chapter 33 compare the final PDF (printed pp.110–122) against existing integrated reader, lesson inventory, and live routes before any UI or content changes.
+6. Keep protected PDF and rights boundaries unchanged; experiments are never automatic publication sources.
+7. Update `README.md`, `interactive/README.md`, inventory/status/manifest and this handoff **after** proven source changes, with dated evidence and explicit unknowns.
+8. No automatic production deployment, release, archive deletion, DOI/publication submission, payment change or license switch.
+
+## Evidence and audit limits
+2026-11-13 inspection used local author-uploaded PDF, file page inspection and Git blob hash; GitHub direct file reads and comparisons; Vercel deployment/project metadata. Direct public browser fetch returned cache/access errors; no full automated Git-tree enumeration, npm/browser audio tests, or served-file checksum was completed. Older status claims remain historical and must not be promoted to currently verified PASS.
