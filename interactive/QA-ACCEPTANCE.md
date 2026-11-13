@@ -1,30 +1,35 @@
-# Interactive QA acceptance matrix – updated 2026-11-13
+# Interactive Lab – QA acceptance evidence (current: 13 November 2026)
 
-**Current operational authority:** [DEVELOPMENT_HANDOFF.md](DEVELOPMENT_HANDOFF.md). [Earlier QA assumptions](archive/historical-guidance/2026-11-07/QA-ACCEPTANCE.md) are retained for history only.
+## Verified live release
+- **Canonical:** https://thecomposersprompt-lab.vercel.app/
+- **Project/deployment:** `thecomposersprompt-lab` / `dpl_2vKCJyC4DpSGfbcRAHRFpuXbonmf`.
+- **Source Git SHA:** `6621f9e1afd0f147ad104a222b1bab0c3c118e2a` on `main`. At post-deployment inspection, `main` compared **identical** to the deployed commit.
+- **Build:** Vercel log showed successful clone, completed build and “Deployment completed”; status **READY**, official alias assigned without errors.
+- **Chapter inventory:** 37/37 HTML lesson sources present; Chapter 33 was in the deployed Git source and the embedded reader.
 
-| Area | Required observation | Status at this documentation audit |
+## Verification matrix
+| Gate | Requirement | Evidenced status |
 | --- | --- | --- |
-| Source completeness | 37 inventory IDs map to standalone HTML lesson pages | **36/37 previously identified; Chapter 33 exists in the final PDF, but dedicated lesson HTML absent at deployed source and current main** |
-| Automated source and music tests | Run `cd interactive && npm install && npm test` on latest checked out SHA | **NOT RECHECKED** |
-| Browser pilot and chapter tests | Run `npm run test:browser` with installed Chromium, capture results and console | **NOT RECHECKED** |
-| Responsive UI | Validate 320, 375, 768, 1024, 1440px, overflow, both themes | **NOT RECHECKED** |
-| Musical and notation correctness | Review intervals, pitch/spellings, chords, timing, VexFlow clefs/accidentals/ledger lines vs audio | **NOT RECHECKED** |
-| Audio/touch | Verify real-device unlock, chord scheduling, click-free attack/release and no stuck notes | **NOT RECHECKED** |
-| Accessibility | Keyboard focus, semantics, reduced motion, screen reader and contrast | **NOT RECHECKED** |
-| Content parity | Read-only compare every lesson text/diagram/exercise to locked final book | **NOT RECHECKED** |
-| Deployment | Inspect current Vercel commit, routes, CDN dependency, HTTP and device behavior | **READY production metadata VERIFIED** at Git SHA `8b249db`; no intervening lesson HTML/homepage/audio source changes in inspected compare; **actual browser/device/served assets NOT RECHECKED**; automatic deployment disabled |
-| Rights | Preserve reserved-rights locked book and existing CC BY interactive grant; audit third-party notices | **GUARDRAIL ACTIVE; specific notices NOT RECHECKED** |
+| Repository source coverage | 37 chapter IDs, 37 corresponding standalone HTML lesson pages | **SOURCE PRESENT 37/37**; not complete content QA |
+| Chapter 33 structure/wiring | Reader entry, link generation, standalone HTML, shared piano/audio/notator, theory check, tests/inventory | **PASS 9/9 static inspection checks**, not executed end-to-end |
+| Deployment/build | Correct Vercel project, new production Git source, READY, official alias | **PASS – Vercel metadata + build log** |
+| Protection | No final PDF or existing 36 chapter HTML files overwritten by the Chapter 33 change | **PASS – scoped Git comparison** |
+| Automated Node tests | `cd interactive && npm install && npm test` | **NOT EXECUTED/NOT VERIFIED** |
+| Playwright/browser suite | `npm run test:browser` in supported environment | **NOT EXECUTED/NOT VERIFIED** |
+| Browser content/routes | Actual rendered Lab homepage and `/lessons/chapter-33/`, navigation and response bodies | **NOT INDEPENDENTLY VERIFIED** |
+| Responsive/mobile/theme | 320/375/768/1024/1440px; both themes; no overflow | **NOT RECHECKED** |
+| Audio and touch | Sequential scale pitches, unlock, tap, no stuck notes, envelope | **NOT RECHECKED ON HARDWARE** |
+| Engraving | VexFlow 5.0.0 scale notation, spelling, clefs, accidentals, fallback | **NOT RECHECKED IN BROWSER** |
+| Accessibility | Keyboard interaction, focus, reduced motion, screen reader, contrast | **NOT RECHECKED** |
+| Book parity | Accurate conceptual relation of Chapter 33 with locked final PDF pp.110–122 | **ADAPTED SOURCE**, not full text/figure transcription |
+| External PDF delivery | Served PDF downloads match protected book blob | **NOT RECHECKED** |
 
-An HTML page, historical CI pass, or HTTP 200 is not browser acceptance. No production deployment is authorized by this audit.
+## Source checks actually performed
+Nine focused static checks passed: 1. lesson structure/shared module; 2. scale-kind sequential reference playback routing; 3. four seven-pitch A-reference arrays; 4. exactly one Chapter 33 reader entry directly before Appendix A; 5. 37 source-present inventory records; 6. reader HTML closing tags and final module; 7. practice module active Chapter 33 question; 8. source test expectations updated to 37 lessons/43 reader entries; 9. `git.deploymentEnabled: false` guard preserved.
 
-## New implementation, acceptance pending – 13 November 2026
+These checks are **not** an execution of the complete `npm test` or browser suite. They do not validate audio synthesis, visual correctness, full educational parity, network delivery, or third-party script availability. The final PDF is separately locked; the new lesson uses curated scales/exercises and does not reproduce all original printed figures.
 
-Chapter 33 is now SOURCE PRESENT in both the dedicated lesson route and the embedded reader; the source inventory is 37/37. Earlier missing-source statuses in the historical matrix above are superseded. New validation assertions added to `tests/validate.mjs`; test execution, audio notation, browser viewport QA, exact chapter text/figure parity and production promotion remain NOT RECHECKED. Do not claim live availability before Vercel deployment and checks.
+## Release and continuation
+The 13 November 2026 production deployment succeeded from commit `6621f9e`. The earlier release `dpl_Bbnd2LEmpTCf6jofU5KPqvNYQ6Ln` is **historical**. Subsequent documentation-only GitHub commits are **not** new production releases; they do not require changing the manual-only Vercel setting.
 
-## Chapter 33 focused static verification – 13 November 2026
-
-Nine direct source-level checks were performed against connected GitHub main after the Chapter 33 addition. **9/9 PASS** for these limited invariants: standalone page structure and shared import; scale-kind sequential playback routing; pitch-spelling of four A-reference examples; exactly one Chapter 33 reader entry before Appendix A; 37 inventory entries marked source-present; reader HTML closing tags and final module; Chapter 33 theory check wired in the shared practice controller; test assertions updated to 37 lesson sources and 43 reading entries; and manual-only deployment guard retained. These are **static inspection checks**, not a full execution of `npm test` or browser tests.
-
-The GitHub diff from `5d8d24f` to current main confirms: **no modifications to the immutable book PDF**, **no existing chapter-N/index.html pages overwritten**; new Chapter 33 page, embedded reader source, inventory, shared exercise registry, test assertions and documentation were changed. The authored HTML is a **curated adaptation of the PDF Chapter 33**. It is **not a page-for-page transcription**: book figures/engraved scale diagrams were not reproduced individually. Therefore PDF visual/figure parity and full editorial verbatim parity are **OPEN**, not PASS.
-
-**Independent execution not established:** No GitHub Actions workflow runs were associated with audit commit `ab4fa8e` in the checked PR-filtered workflow endpoint. The combined commit status reported a success for **Vercel book landing**, not for the Lab's interactive browser/audio tests. The live Lab URL could not be fetched reliably through the available public web client (cache/access error). No production Lab deploy performed. Do not mark production, audio, mobile, dark/light and accessibility gates as PASS on this basis.
+For further release acceptance, run and record complete Node/browser tests, responsive/accessible/mobile/audio verification, and actual served content checks. Do not promote an unrun gate to PASS. Active operational reference: [DEVELOPMENT_HANDOFF.md](DEVELOPMENT_HANDOFF.md).
