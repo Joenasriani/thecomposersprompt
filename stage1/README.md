@@ -36,3 +36,7 @@ The project workbook uses CC BY 4.0, whereas these third-party libraries retain 
 ## Approved-final relationship – 2026-11-13
 
 This `stage1/` mini-project remains **experimental and independent**, not the author-approved live Interactive Lab. The approved interactive production reference is https://thecomposersprompt-lab.vercel.app/ (source `interactive/`); the authoritative final book is the locked, independently verified 159-page PDF under `book/`. Do not promote this Vite experiment into `interactive/` or publish its `dist/` in place of the approved app without a separately accepted design and QA review. No experiment build or browser QA was performed during the 13 November documentation reconciliation.
+
+## Interactive Lab cross-reference – latest verified release (13 November 2026)
+
+The **separate** Interactive Lab is https://thecomposersprompt-lab.vercel.app/, Vercel READY production deployment `dpl_2vKCJyC4DpSGfbcRAHRFpuXbonmf` from Git commit `6621f9e1afd0f147ad104a222b1bab0c3c118e2a`. Its deployed Git source includes Chapter 33 in the embedded reader and dedicated `interactive/lessons/chapter-33/index.html` lesson, completing **37/37** standalone lesson sources. This does not change the authority, deployment, rights or build of this **separate workstream**. Focused Chapter 33 source checks passed, while full browser, audio and PDF-figure fidelity remain unverified. Consult [repository AI handoff](../../AI_HANDOFF.md) for current operational precedence; do not infer a new deployment solely from later documentation commits.
