@@ -1,6 +1,6 @@
 {
-  "source": "The Composer’s Prompt, final 158-page edition (user-provided source); titles transcribed from published contents",
-  "status": "2026-11-07 source existence reconciled; NOT browser/content/production verification",
+  "source": "The Composer’s Prompt, final locked 159-page PDF edition (GitHub blob 8a94b66dfe6aa2f4a42c2ddb9925269b117652b7); titles checked against the final PDF contents",
+  "status": "2026-11-13: book Chapter 33 verified at printed pages 110–122 (PDF pages 115–127); interactive chapter-33 HTML ABSENT in current main and the deployed Vercel Git source commit; full interactive browser/audio QA not rechecked",
   "chapters": [
     {
       "number": "1",
