@@ -1,6 +1,6 @@
 {
   "source": "The Composer’s Prompt, final locked 159-page PDF edition (GitHub blob 8a94b66dfe6aa2f4a42c2ddb9925269b117652b7); titles checked against the final PDF contents",
-  "status": "2026-11-13: book Chapter 33 verified at printed pages 110–122 (PDF pages 115–127); interactive chapter-33 HTML ABSENT in current main and the deployed Vercel Git source commit; full interactive browser/audio QA not rechecked",
+  "status": "2026-11-13: 37 of 37 chapter lesson HTML files source-present; Chapter 33 now in interactive reader, homepage navigation and dedicated lesson; live deployment/functional/music/audio QA NOT RECHECKED",
   "chapters": [
     {
       "number": "1",
@@ -222,7 +222,7 @@
       "number": "33",
       "id": "chapter-33",
       "title": "Advanced Scales, Modes & Computational Composition",
-      "status": "missing-source"
+      "status": "source-present-qa-not-rechecked"
     }
   ]
 }
