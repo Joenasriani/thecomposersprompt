@@ -51,7 +51,7 @@ Then visit `http://localhost:8000`.
 
 | Component | Scope |
 | --- | --- |
-| Complete manuscript | 42 reading sections, including preface, numbered and supplementary chapters, and six appendices |
+| Complete manuscript | 43 reading entries, including preface, numbered and supplementary chapters, and six appendices |
 | Interactive chapters | 37 inventoried chapter entries and 37 standalone HTML lesson sources, including newly added Chapter 33 (deployment pending) |
 | Supplementary practice | 11 listening and composition rooms |
 | Musical demonstrations | Playable keyboards, note and root indicators, chord/bass displays and synthesized playback |
@@ -88,7 +88,7 @@ This repository provides explicit, inspectable entry points for readers, search 
 | Publication metadata | [`publication.json`](publication.json) | Final PDF identity, authorship, access, deployment metadata |
 | Citation metadata | [`CITATION.cff`](CITATION.cff) | Citation for the developing interactive edition |
 | Component authority | [`COMPONENTS.md`](COMPONENTS.md) | Distinguish the final PDF, interactive edition, and separate web properties |
-| Complete interactive manuscript | [`interactive/index.html`](interactive/index.html) | Embedded `bookdata` JSON: 42 reading entries (preface, 35 chapters, six appendices) |
+| Complete interactive manuscript | [`interactive/index.html`](interactive/index.html) | Embedded `bookdata` JSON: 43 reading entries (preface, 35 chapters, six appendices) |
 | Interactive lessons | [`interactive/lessons/`](interactive/lessons/) | Chapter-specific HTML and musical demonstrations |
 | Final protected PDF | [`book/The_Composers_Prompt_Joe_Nasr.pdf`](book/The_Composers_Prompt_Joe_Nasr.pdf) | Separate final book, subject to its own rights notice |
 
