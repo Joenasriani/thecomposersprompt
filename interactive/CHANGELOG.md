@@ -1,5 +1,7 @@
 # Interactive development changelog
 
+> **Current authority:** [DEVELOPMENT_HANDOFF.md](DEVELOPMENT_HANDOFF.md), reconciled 13 November 2026. The older dated “Current baseline” below is historical and **not** a current production deployment claim. The obsolete 728d435 READY note and obsolete/index.html claim were superseded; do not act on them.
+
 ## 2026-10-27 — Continuity and repository ownership
 - Declared `interactive/` the sole application root in a multi-project repository.
 - Updated machine-readable inventory and added handoff, status, chapter register, design and theory rules.
@@ -52,3 +54,10 @@ These are source-history summaries, not proof of independently checked browser b
 - Consolidated AI continuity in one active `DEVELOPMENT_HANDOFF.md` and corrected chapter source inventory: 36/37 HTML lesson pages, Chapter 33 absent.
 - Recorded distinct book v1.0.0 and interactive package v0.1.0 identities, absent old obsolete-home file, manual-only deployment, unverified browser/audio/live release.
 - No interactive runtime, production deployment, PDF or independent workstream modified.
+
+## 2026-11-13 – Approved final reference reconciliation
+- Matched the user-uploaded final 159-page PDF to locked GitHub Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`; directly confirmed Chapter 33 on printed pp.110–122.
+- Verified actual Lab production source `8b249db`, READY; compared its Git tree to audited source `9018ccc` and found no changed lesson HTML/homepage/audio/layout runtime files (92 additional commits concern publication, docs, interactive inventory, and a test).
+- Corrected active README, manifest, chapter inventory/progress, QA documentation and handoffs without editing final book or interactive runtime.
+- Chapter 33 standalone HTML remains missing in the approved Lab source and current GitHub; investigate integrated reader and desired chapter UX before creating anything.
+- No deployment, browser/audio acceptance, external PDF checksum or publication action performed.
