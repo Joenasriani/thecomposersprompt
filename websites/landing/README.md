@@ -24,3 +24,7 @@ The landing build emits `robots.txt` and `sitemap.xml` from the canonical landin
 **Status:** Vercel production deployment READY for the version containing the free interactive companion. Public HTTP, PDF bytes served, and responsive visual QA remain NOT RECHECKED. The generated PDF uses the exact canonical filename and checksum-locked source.
 
 **Interactive companion:** https://thecomposersprompt-lab.vercel.app/ (independent of the final PDF edition).
+
+## Live deployment source reconciliation – 13 November 2026
+
+Vercel production deployment `dpl_cLuDumpxxwNSyvghf4maQDXnckCx` reports **READY**, production domain `thecomposersprompt-book.vercel.app`, Git branch `main` and source commit `9018ccce7f71844a948383ef6a8e049b46228169`. GitHub compare at the audit anchor showed that commit was identical to `main`. This supersedes the older READY deployment `dpl_BStkZdpEjdNpRf6SQVV3bgMd462e` cited above. Later documentation-only commits do not prove a new deployed build. Public page content, mobile/breakpoint quality, served PDF bytes and external downloads were **not** independently retested in this audit. Protected PDF and build rules remain unchanged. See [cross-workstream handoff](../../AI_HANDOFF.md).
