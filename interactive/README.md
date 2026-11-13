@@ -1,15 +1,23 @@
-# The Composer's Prompt – interactive companion
+# The Composer's Prompt – Interactive Lab
 
-**START HERE:** [Current AI handoff](DEVELOPMENT_HANDOFF.md). This is the only active operational handoff. [Status](PROJECT_STATUS.md), [chapter register](CHAPTER_PROGRESS.md), [QA criteria](QA-ACCEPTANCE.md), [component manifest](COMPONENT-MANIFEST.json), and [historical archive](archive/historical-guidance/README.md) are subordinate references.
+**Approved live site:** https://thecomposersprompt-lab.vercel.app/  
+**Live Chapter 33:** https://thecomposersprompt-lab.vercel.app/lessons/chapter-33/  
+**Vercel production:** `dpl_2vKCJyC4DpSGfbcRAHRFpuXbonmf` – **READY**, Git SHA `6621f9e1afd0f147ad104a222b1bab0c3c118e2a` (13 November 2026). The official domain is assigned, and GitHub `main` matched this commit immediately after deployment. Later documentation changes do not alter the production build.
 
-This is one **interactive music-education application** inside a larger publication repository. Source root: `interactive/`; main HTML entry: `index.html`; lesson pages: `lessons/chapter-*/index.html`; music utilities: `music/`; tests: `tests/`. The book PDF, root workbook, website, deposits, workflow files and metadata are separate protected workstreams.
+## What is here
+- Application homepage/embedded manuscript: `interactive/index.html`, including **43 reader entries**: preface, 36 numbered/half-numbered chapter readings, six appendices.
+- **37 of 37 inventoried standalone lesson source pages** under `lessons/chapter-*/index.html`, including [Chapter 33](lessons/chapter-33/index.html). The separate Chapter 6.5 lesson is counted among the 37.
+- Shared lesson behavior: `lessons/chapter-reference.js`, `lessons/chapter-practice.js`, `music/audio-engine.js`, `music/piano-renderer.js`, `music/compact-notation.js`; Chapter 6.5 has additional specialized components.
+- Source-level content inventory: `lessons/chapter-inventory.json`. Its `source-present-qa-not-rechecked` statuses mean **source exists**, not complete theory, browser or audio certification.
+- Auxiliary `chapters.html` is an older pilot index, **not** the full navigational authority. The live application uses `index.html` and its generated 37-chapter navigation.
 
-The inspected tree has **36 lesson HTML pages of 37 listed chapters**; Chapter 33 is missing. Page existence is NOT QA or book-parity certification. The package version is `0.1.0`, distinct from the final protected book v1.0.0. Vercel auto-deployment is disabled in `vercel.json`. The intended canonical lab URL is https://thecomposersprompt-lab.vercel.app/; current runtime release provenance is **NOT VERIFIED**. Run `npm test` and `npm run test:browser` after installing dependencies, and record results rather than assuming PASS.
+## Book relationship
+The authoritative final book is the separately locked **159-page** `../book/The_Composers_Prompt_Joe_Nasr.pdf`, Git blob `8a94b66dfe6aa2f4a42c2ddb9925269b117652b7`. Chapter 33 appears at printed pp.110–122. The interactive Chapter 33 lesson uses selected exercises, scale comparisons and prompts adapted from it, rather than reproducing every figure verbatim. Book v1.0.0 and interactive package v0.1.0 are different release identities. Existing interactive CC BY 4.0 terms do not relicense the protected book.
 
-**13 November 2026 update:** Vercel reports the interactive production site at commit `8b249db` while GitHub application-source audit anchor `9018ccc` is **92 commits ahead**. Deployment status READY is not functional acceptance. The documented manual-deploy restriction remains. See [current interactive handoff](DEVELOPMENT_HANDOFF.md) and [repository-wide handoff](../AI_HANDOFF.md); do not assume current GitHub source matches the live lab.
+## Verified release and QA limits
+- **PASS:** Vercel production build READY, domain alias and Git source SHA; focused 9/9 Chapter 33 static checks; Chapter 33 embedded reader and standalone route present in deployed Git source.
+- **NOT RECHECKED:** full automated tests, actual public browser responsiveness, mobile/touch, audible playback, notation accuracy, accessibility, all-chapter curriculum parity or externally served PDF checksum.
+- `vercel.json` has `git.deploymentEnabled: false`. Any future production deployment requires an explicit instruction; documentation changes are not a reason to redeploy.
 
-**Final reference reconciliation (13 November 2026):** The approved Lab is the existing production URL above. The actual lesson HTML and app runtime source have no changes in the Git comparison from production ref `8b249db` to source audit anchor `9018ccc`; differences in that interval are documentation, inventory, tests and other workstreams. Do not interpret the 92-commit count as 92 missing app changes. The uploaded locked 159-page book definitively contains Chapter 33 (PDF pages 115–127), but no standalone `lessons/chapter-33/index.html` exists in either ref. This is a content-coverage gap, not a missing chapter in the book. Full deployed byte/browser/audio parity is NOT RECHECKED.
-
-## Chapter 33 source addition (13 November 2026)
-
-Dedicated lesson: [`lessons/chapter-33/index.html`](lessons/chapter-33/index.html). The embedded manuscript now includes Chapter 33 and the existing chapter-navigation generator exposes its lesson link. All 37 inventoried chapters now have a corresponding HTML source. Chapter 33 references the final-book content (printed pp.110–122) in the existing piano/notation reference pattern, but the source has **not** passed full editorial parity, real-browser/audio verification or Vercel production promotion. Earlier 36/37 statements above describe the pre-implementation audit and are superseded here.
+## Commands and operational handoff
+From `interactive/`: `npm install && npm test`; browser suite `npm run test:browser` where Chromium/Playwright is installed. Do not label these PASS without actual execution. See [current active AI handoff](DEVELOPMENT_HANDOFF.md), [QA matrix](QA-ACCEPTANCE.md), [component manifest](COMPONENT-MANIFEST.json) and [repo-wide authority](../AI_HANDOFF.md). Historical guidance belongs under [archive](archive/historical-guidance/README.md), not to active instructions.
