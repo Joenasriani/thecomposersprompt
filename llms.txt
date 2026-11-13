@@ -11,13 +11,19 @@ This file helps distinguish separate publication editions. It is not a license, 
 - **Book metadata and protected release identity:** https://github.com/Joenasriani/thecomposersprompt/blob/main/publication.json and https://github.com/Joenasriani/thecomposersprompt/blob/main/book/FINAL_RELEASE_LOCK.json
 - **Cross-component authority and operational handoff:** https://github.com/Joenasriani/thecomposersprompt/blob/main/COMPONENTS.md and https://github.com/Joenasriani/thecomposersprompt/blob/main/AI_HANDOFF.md
 
+## Current live interactive source (Vercel metadata checked 13 November 2026)
+- Live Chapter 33 lesson: https://thecomposersprompt-lab.vercel.app/lessons/chapter-33/
+- Machine-readable chapter inventory: https://github.com/Joenasriani/thecomposersprompt/blob/main/interactive/lessons/chapter-inventory.json
+- Release evidence and remaining QA: https://github.com/Joenasriani/thecomposersprompt/blob/main/interactive/QA-ACCEPTANCE.md
+- These references support retrieval/navigation, **not claims of verified music playback or educational/audio accuracy**.
+
 ## Chapter and format boundary
 - The **final book DOES contain Chapter 33**, “Advanced Scales, Modes & Computational Composition”, at printed pp.110–122 (physical PDF pages 115–127). The conclusion begins on printed p.123.
-- The interactive application's inventory contains 37 chapter identifiers. A prior source audit found 36 standalone interactive lesson HTML pages; the dedicated file `interactive/lessons/chapter-33/index.html` is absent in both the approved Lab's deployed Git source and current GitHub main. This **does not** mean Chapter 33 is absent from the final book; inspect the embedded reader separately before claiming it is unavailable to users.
+- The live Interactive Lab's production source contains **37/37** chapter lesson pages, including `interactive/lessons/chapter-33/index.html`. Its main `interactive/index.html` embeds **43 reading entries**, including Chapter 33, and generates the corresponding navigation. Chapter 33 is a curated interactive adaptation, not a page-for-page copy of all final PDF figures.
 - Interactive manuscript/reader entry: https://github.com/Joenasriani/thecomposersprompt/blob/main/interactive/index.html . Some manuscript content can be embedded in a `bookdata` JSON script; parse JSON rather than assuming an initial HTML screen contains all text.
 - Individual interactive lesson source: https://github.com/Joenasriani/thecomposersprompt/tree/main/interactive/lessons
 - Root `index.html` is a separate historical workbook, not the canonical Lab. `stage1/` and `prototype/` are experiments, not final productions.
-- App runtime source comparison from deployed `8b249db` to audited application-source `9018ccc` found no changed lesson HTML, piano/audio engines, app layout or homepage HTML. Full served-file and browser QA remains unverified.
+- **Live Vercel deployment:** `dpl_2vKCJyC4DpSGfbcRAHRFpuXbonmf` READY, source Git SHA `6621f9e1afd0f147ad104a222b1bab0c3c118e2a`, canonical alias `thecomposersprompt-lab.vercel.app`. GitHub `main` matched this release SHA at the time of post-release inspection. Focused Chapter 33 static audit: 9/9 PASS. Full browser/mobile/audio/accessibility QA is unverified.
 
 ## Separate official academic/publication records
 - Zenodo Book: https://doi.org/10.5281/zenodo.23689714 (v1.0.0; concept DOI https://doi.org/10.5281/zenodo.23689713). Record was verified as published on 6 November 2026; hosted PDF binary parity not checked.
