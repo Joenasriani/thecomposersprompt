@@ -35,3 +35,7 @@ Final book, `publication.json`, `book/FINAL_RELEASE_LOCK.json`, deposits, landin
 
 ## Known limits – 13 November 2026
 We verified source diff and PDF provenance, *not* actual browser rendering/audio, a complete 36-page editorial pass, deployed asset binary parity, or full responsive accessibility acceptance. No runtime source, deployment config or final PDF was changed in this documentation synchronization.
+
+## 2026-11-13 Chapter 33 implementation update
+
+Following author direction to add the missing chapter, created `interactive/lessons/chapter-33/index.html` from the **final locked 159-page PDF** as a matching standalone lesson (theoretical A-reference scale formulas, comparative keyboard examples, prompts, cross-cultural limitations, and guided exercises). Added the chapter to `interactive/index.html` embedded `bookdata`, automatically exposing it in reader and chapter navigation. Updated inventory and source-validation assertions: **37/37 standalone lesson HTML files now SOURCE PRESENT**. The earlier missing Chapter 33 statements above are historical pre-implementation findings. This is a source-level change; **Vercel remains on previous approved deployment**, and local browser/music/audio QA, complete PDF text/figure parity and production deployment are NOT RECHECKED. Preserve existing chapters/layout/audio and do not claim final acceptance.
